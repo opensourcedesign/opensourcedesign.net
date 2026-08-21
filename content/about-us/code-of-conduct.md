@@ -63,7 +63,7 @@ Most of our community are adults and should know when it's ok to flirt with othe
 
 ## Artificial Intelligence and Automated Tools
 
-As AI-assisted design and development tools such as Codex, Claude Code, etc. become increasingly common in open source workflows, we ask that community members and contributors apply the same values outlined in this Code of Conduct when using these tools. Contributors remain responsible for reviewing and validating any AI-generated code or content before submitting it to the project.
+Please do not submit AI-generated code changes, issues, documentation, or code reviews. 
 
 ## Where this CoC is upheld
 
