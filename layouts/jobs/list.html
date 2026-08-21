@@ -48,7 +48,7 @@
     {{/* Editorial header */}}
     <header class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between" aria-labelledby="jobs-heading">
       <div class="max-w-2xl">
-        <h1 id="jobs-heading" class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl dark:text-slate-50">{{ .Title }}</h1>
+        <h1 id="jobs-heading" class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl dark:text-slate-50">{{ .Title | default "Jobs" }}</h1>
         {{ with .Content }}
           <div class="prose prose-slate dark:prose-invert mt-4 max-w-none text-lg">{{ . }}</div>
         {{ else }}
