@@ -521,6 +521,10 @@
     - name: "Course: How to Contribute to an Open Source Project on GitHub"
       url: https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github
 
+    - name: FrontendAtlas Machine Coding
+      url: https://frontendatlas.com/machine-coding
+      description: Freemium frontend interview practice with 500+ UI and JavaScript prompts, browser-based challenges, and structured preparation paths; the public catalog and selected practice are free, with optional Premium features.
+
 - id: learn-design
   title: Learn to design
   items:
