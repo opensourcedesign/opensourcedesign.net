@@ -54,17 +54,17 @@
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div class="space-y-2 sm:col-span-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="organization">Project name <span class="text-red-500">*</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="organization" name="organization" placeholder="e.g., Nextcloud, GNOME, LibreOffice" required />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="organization" name="organization" placeholder="e.g., Nextcloud, GNOME, LibreOffice" required />
             </div>
 
             <div class="space-y-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="org_url">Project website <span class="text-red-500">*</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="org_url" name="org_url" type="url" inputmode="url" placeholder="https://..." required />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="org_url" name="org_url" type="url" inputmode="url" placeholder="https://..." required />
             </div>
 
             <div class="space-y-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="license">Project license URL <span class="text-red-500">*</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="license" name="license" type="url" inputmode="url" placeholder="https://github.com/..." required />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="license" name="license" type="url" inputmode="url" placeholder="https://github.com/..." required />
               <p class="text-xs text-slate-500">Link to an OSI/FSF approved license.</p>
             </div>
           </div>
@@ -77,20 +77,20 @@
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div class="space-y-2 sm:col-span-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="title">Job title <span class="text-red-500">*</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="title" name="title" placeholder="e.g., UX Designer needed for mobile app redesign" required />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="title" name="title" placeholder="e.g., UX Designer needed for mobile app redesign" required />
               <p class="text-xs text-slate-500">Say what the task is and name your project - the title stands alone in lists, feeds, and search results.</p>
               <p class="hidden text-xs font-medium text-amber-700" id="title-hint" aria-live="polite"></p>
             </div>
 
             <div class="space-y-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="role">Job category <span class="text-red-500">*</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="role" name="role" placeholder="e.g., UX Design" required />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="role" name="role" placeholder="e.g., UX Design" required />
               <p class="text-xs text-slate-500">e.g., Web design, UX review, Branding</p>
             </div>
 
             <div class="space-y-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="deadline">Application deadline <span class="text-slate-400">(optional)</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="deadline" name="deadline" type="date" />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="deadline" name="deadline" type="date" />
               <p class="text-xs text-slate-500">The posting is automatically marked as expired after this date. Postings older than a year are closed automatically.</p>
             </div>
           </div>
@@ -121,11 +121,11 @@
               <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
                 <div>
                   <label class="text-xs font-medium text-slate-500" for="rate_min">From</label>
-                  <input class="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="rate_min" name="rate_min" type="number" min="0" step="any" inputmode="decimal" placeholder="50" />
+                  <input class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="rate_min" name="rate_min" type="number" min="0" step="any" inputmode="decimal" placeholder="50" />
                 </div>
                 <div>
                   <label class="text-xs font-medium text-slate-500" for="rate_max">To <span class="text-slate-400">(optional)</span></label>
-                  <input class="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="rate_max" name="rate_max" type="number" min="0" step="any" inputmode="decimal" placeholder="75" />
+                  <input class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="rate_max" name="rate_max" type="number" min="0" step="any" inputmode="decimal" placeholder="75" />
                 </div>
                 <div>
                   <label class="text-xs font-medium text-slate-500" for="rate_currency">Currency</label>
@@ -154,7 +154,7 @@
             </fieldset>
             <div class="space-y-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="paid_details">Compensation notes <span class="text-slate-400">(optional)</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="paid_details" name="paid_details" placeholder="e.g., negotiable, equity possible, fixed budget" />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="paid_details" name="paid_details" placeholder="e.g., negotiable, equity possible, fixed budget" />
             </div>
           </div>
 
@@ -189,13 +189,13 @@
           <div class="space-y-2">
             <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="description">Job description <span class="text-red-500">*</span></label>
             <p class="text-xs text-slate-500">Describe what you need help with. Markdown is supported.</p>
-            <textarea class="min-h-48 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="description" name="description" placeholder="We are looking for a designer to help us..." required></textarea>
+            <textarea class="min-h-48 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="description" name="description" placeholder="We are looking for a designer to help us..." required></textarea>
           </div>
 
           <div class="space-y-2">
             <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="deliverables">Deliverables <span class="text-slate-400">(optional)</span></label>
             <p class="text-xs text-slate-500">What specific deliverables are you expecting? One per line.</p>
-            <textarea class="min-h-32 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="deliverables" name="deliverables" placeholder="Logo in SVG format&#10;Style guide PDF&#10;Figma source files"></textarea>
+            <textarea class="min-h-32 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="deliverables" name="deliverables" placeholder="Logo in SVG format&#10;Style guide PDF&#10;Figma source files"></textarea>
           </div>
         </fieldset>
 
@@ -206,30 +206,30 @@
           <div class="space-y-2">
             <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="how_to_apply">How to apply <span class="text-red-500">*</span></label>
             <p class="text-xs text-slate-500">How should designers contact you? One per line: email, URL, GitHub handle, etc.</p>
-            <textarea class="min-h-32 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="how_to_apply" name="how_to_apply" placeholder="yourname@example.com&#10;https://github.com/yourproject/issues" required></textarea>
+            <textarea class="min-h-32 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="how_to_apply" name="how_to_apply" placeholder="yourname@example.com&#10;https://github.com/yourproject/issues" required></textarea>
           </div>
 
           <div class="space-y-2">
             <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="email">Your email <span class="text-slate-400">(for status updates, not published)</span></label>
             <p class="text-xs text-slate-500">We'll email you here once your posting is reviewed and published. This is kept private and never shown on the site.</p>
-            <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" />
+            <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" />
           </div>
 
           <div class="space-y-2">
             <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="links">Relevant links <span class="text-slate-400">(optional)</span></label>
             <p class="text-xs text-slate-500">Design docs, contributing guide, existing design files, etc. One per line.</p>
-            <textarea class="min-h-24 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="links" name="links" placeholder="https://github.com/yourproject/CONTRIBUTING.md"></textarea>
+            <textarea class="min-h-24 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="links" name="links" placeholder="https://github.com/yourproject/CONTRIBUTING.md"></textarea>
           </div>
 
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div class="space-y-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="github_handle">Your GitHub <span class="text-slate-400">(optional)</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="github_handle" name="github_handle" placeholder="@username" />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="github_handle" name="github_handle" placeholder="@username" />
             </div>
 
             <div class="space-y-2">
               <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="tags">Tags <span class="text-slate-400">(optional)</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="tags" name="tags" placeholder="ux, mobile, figma" />
+              <input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="tags" name="tags" placeholder="ux, mobile, figma" />
             </div>
           </div>
 
