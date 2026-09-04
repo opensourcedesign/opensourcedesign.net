@@ -411,7 +411,7 @@ async function verifyTurnstile(secret, token, request) {
 /* Markdown generation (mirrors generateMarkdown in job-form.html)            */
 /* -------------------------------------------------------------------------- */
 
-function buildMarkdown(data, env, edit) {
+export function buildMarkdown(data, env, edit) {
   const now = new Date();
   const today =
     now.getUTCFullYear() +
