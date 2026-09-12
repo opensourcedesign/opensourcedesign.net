@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>lead | Open Source Design</title><link>https://opensourcedesign.net/pr-preview/pr-631/tags/lead/</link><description>We are a community of designers and developers aiming to push more open design processes and improve the user experience and interface design of open source software.</description><language>en</language><copyright>© 2026 Open Source Design. Content licensed under CC BY-SA 4.0.</copyright><lastBuildDate>Sat, 12 Sep 2026 11:53:52 +0000</lastBuildDate><generator>Hugo 0.164.0</generator><docs>https://www.rssboard.org/rss-specification</docs><atom:link href="https://opensourcedesign.net/pr-preview/pr-631/tags/lead/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://opensourcedesign.net/pr-preview/pr-631/images/opensourcedesign-logo-icon.png</url><title>Open Source Design</title><link>https://opensourcedesign.net/pr-preview/pr-631/</link><width>144</width><height>144</height></image><item><title>Voluntary Basic Income Through Group Income</title><link>https://opensourcedesign.net/pr-preview/pr-631/jobs/voluntary-basic-income-through-group-income/</link><guid isPermaLink="true">https://opensourcedesign.net/pr-preview/pr-631/jobs/voluntary-basic-income-through-group-income/</guid><pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate><dc:creator>okTurtles Foundation</dc:creator><description>This is a copy of our official listing. Please see that for most up-to-date info!
+Lead Frontend Developer Want to work on basic income with us?
+This is an opportunity to:
+Make basic income a reality for potentially millions of people. Impact how the world’s economy works and the way groups and communities interact. Use the latest technologies in decentralized application design. You’ll work with a team of experts to finish the prototype of Group Income that will be used by real groups during our trial phrase.</description><content:encoded>&lt;div style="margin-bottom:1.5em;padding:1em;background:#f8f9fa;border-radius:8px;"&gt;&lt;p&gt;&lt;strong&gt;Organization:&lt;/strong&gt; okTurtles Foundation&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Status:&lt;/strong&gt; closed&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Compensation:&lt;/strong&gt; paid, fulltime, negotiated&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Role:&lt;/strong&gt; Lead Frontend Developer&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;This is a copy of &lt;a href="https://groupincome.org/positions/"&gt;our official listing&lt;/a&gt;. Please see that for most up-to-date info!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="lead-frontend-developer"&gt;Lead Frontend Developer&lt;/h2&gt;
+&lt;p&gt;Want to work on basic income with us?&lt;/p&gt;
+&lt;p&gt;This is an opportunity to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make basic income a reality for potentially millions of people.&lt;/li&gt;
+&lt;li&gt;Impact how the world&amp;rsquo;s economy works and the way groups and communities interact.&lt;/li&gt;
+&lt;li&gt;Use the latest technologies in decentralized application design.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You&amp;rsquo;ll work with a team of experts to finish &lt;a href="https://github.com/okTurtles/group-income-simple"&gt;the prototype&lt;/a&gt; of &lt;a href="https://groupincome.org/"&gt;Group Income&lt;/a&gt; that will be used by real groups during our trial phrase.&lt;/p&gt;
+&lt;h3 id="requirements"&gt;Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;You&amp;rsquo;re a &amp;ldquo;designer&amp;rdquo; in the Apple sense. While you might not know much Photoshop, you do know how to make solid, user-friendly, secure applications.&lt;/li&gt;
+&lt;li&gt;JavaScript, HTML, CSS expert.&lt;/li&gt;
+&lt;li&gt;Expert in at least 1 other programming language.&lt;/li&gt;
+&lt;li&gt;Fully grok git, and have made meaningful contributions to open source projects (your own or others).&lt;/li&gt;
+&lt;li&gt;Fully grok &lt;a href="https://www.youtube.com/watch?v=7S1IqaSLrq8"&gt;decentralization&lt;/a&gt;, or are excited to learn.&lt;/li&gt;
+&lt;li&gt;Strong understanding of frontend security concepts. You know what to do. You know what not to do. And you certainly know the difference between asymmetric and symmetric encryption.&lt;/li&gt;
+&lt;li&gt;Able to competently use GPG and other secure communications tools.&lt;/li&gt;
+&lt;li&gt;Autodidact.&lt;/li&gt;
+&lt;li&gt;Fluent in English.&lt;/li&gt;
+&lt;li&gt;Are reliable; you don&amp;rsquo;t make commitments you won&amp;rsquo;t keep.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="nice-to-have"&gt;Nice To Have&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Knowledge of &lt;a href="https://github.com/vuejs/vue"&gt;Vue.js&lt;/a&gt;, the framework we&amp;rsquo;re using.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="compensation"&gt;Compensation&lt;/h3&gt;
+&lt;p&gt;Negotiated hourly rate, based on experience.&lt;/p&gt;
+&lt;h3 id="perk-membership-in-the-group-income-developers-group"&gt;Perk: Membership in the Group Income Developers Group&lt;/h3&gt;
+&lt;p&gt;After receiving the position and making at least one successful pull request, you&amp;rsquo;ll be granted membership in a Group Income Group (GIG) that&amp;rsquo;s specially purposed for Group Income contributors and is sustained by voluntary contributions from other GIGs. Members retain membership for one year after their most recent contribution, unless voted out (&amp;ldquo;disowned&amp;rdquo;) by the existing members. Any funds you receive from this group are entirely separate and unrelated to any compensation you receive for contract work.&lt;/p&gt;
+&lt;p&gt;This Lead Frontend Developer will be eligible for one of the &lt;strong&gt;five lifetime&lt;/strong&gt; &amp;ldquo;founders seats&amp;rdquo; in the developer GIG. The lifetime seats will go to the top 5 contributors to Group Income once it reaches its 1.0 public debut (the major release that comes after the prototype).&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll post additional details about this special developer GIG to our blog.&lt;/p&gt;
+&lt;h3 id="directions"&gt;Directions&lt;/h3&gt;
+&lt;p&gt;To apply, email &lt;code&gt;hi [at] okturtles.com&lt;/code&gt; the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Description of your technical background, why you are applying for this position, and why we should choose you.&lt;/li&gt;
+&lt;li&gt;Links to the source code of at least two software projects that you&amp;rsquo;re most proud of (at least one of which must be in JavaScript).&lt;/li&gt;
+&lt;li&gt;In your own words, what the difference between asymmetric and symmetric encryption is.
+&lt;ul&gt;
+&lt;li&gt;Bonus: send an encrypted email. Fingerprint: &lt;code&gt;0xC32DE6664644751C9B80D9984B4D4371A884B988&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, &lt;strong&gt;we recommend&lt;/strong&gt; (but don&amp;rsquo;t require) sending a DM to &lt;a href="https://twitter.com/Group_Income"&gt;@Group_Income&lt;/a&gt; with the subject of your email to make sure it doesn&amp;rsquo;t get lost due to spam filters.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="volunteer"&gt;Volunteer&lt;/h2&gt;
+&lt;p&gt;Most of the people who work on Group Income do so as volunteers. If you&amp;rsquo;d like to join our volunteer team, &lt;a href="https://groupincome.org/"&gt;get in touch with us&lt;/a&gt;. We&amp;rsquo;re looking for designers, developers, and writers.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Whether you&amp;rsquo;re a contractor or volunteer, every regular contributor to the development of Group Income will be added to the developer GIG mentioned above.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="about-okturtles-foundation"&gt;About okTurtles Foundation&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://okturtles.com/team/"&gt;okTurtles Foundation&lt;/a&gt; is a registered Florida non-profit. Our research, education, and development efforts go to supporting beneficial decentralization technologies. Our work has been covered in &lt;a href="https://techcrunch.com/2015/11/21/and-realpolitik-for-free/"&gt;TechCrunch&lt;/a&gt;, &lt;a href="http://www.vice.com/read/the-cryptocurrency-based-schemes-that-would-pay-everyone-just-for-being-alive-456"&gt;VICE&lt;/a&gt;, &lt;a href="https://www.engadget.com/2014/09/29/okturtles/"&gt;Engadget&lt;/a&gt;, and elsewhere on the web.&lt;/p&gt;
+&lt;div style="margin-top:1.5em;padding:1em;background:#e8f5e9;border-radius:8px;"&gt;&lt;p&gt;&lt;strong&gt;How to Apply:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Email hi@okturtles.com with your technical background, why you are applying, and links to at least two software projects (one in JavaScript).&lt;/p&gt;&lt;/div&gt;&lt;p style="margin-top:2em;font-size:0.9em;color:#666;"&gt;&lt;a href="https://opensourcedesign.net/pr-preview/pr-631/jobs/voluntary-basic-income-through-group-income/"&gt;Read more on opensourcedesign.net →&lt;/a&gt;&lt;/p&gt;</content:encoded><category>vue</category><category>decentralization</category><category>javascript</category><category>frontend</category><category>lead</category><category>basic income</category><category>Jobs</category></item></channel></rss>

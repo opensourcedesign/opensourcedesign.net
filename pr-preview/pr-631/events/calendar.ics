@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Open Source Design//Events Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Open Source Design Events
+X-WR-CALDESC:Meetups, online calls, conference tracks, and community gatherings from Open Source Design.
+BEGIN:VEVENT
+UID:a7d3077c94df8bab96da6beb695b9fe8@opensourcedesign.net
+DTSTAMP:20260912T115352Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270201
+SUMMARY:Call for Participation: Open Source Design Devroom at FOSDEM 2027
+DESCRIPTION:Call for Participation: Open Source Design and Open User Research Devroom at FOSDEM 2027 FOSDEM is the Free and Open source Software Developers’ European Meeting\, a free and non-commercial two-day weekend event that offers all open source contributors a place to meet\, share ideas\, learn and collaborate.\nEvery year\, thousands of free and open source software contributors from all over the world gather at the event in Brussels\, Belgium. After the success of open source design at previous FOSDEM’s\, we are gearing up for the next edition of FOSDEM\, taking place at the Université Libre Brussels on January 30th & 31st 2027.\n
+LOCATION:Université Libre Brussels\, Brussels\, Belgium
+URL:https://opensourcedesign.net/pr-preview/pr-631/events/2027-01-30-call-for-participation-open-source-design-devroom-at-fosdem-2027/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:51ecacb2d7f4656c90ee96ac5ec873ae@opensourcedesign.net
+DTSTAMP:20260912T115352Z
+DTSTART;VALUE=DATE:20260701
+RRULE:FREQ=MONTHLY;BYDAY=1WE
+SUMMARY:Open Source Design monthly call
+DESCRIPTION:Join us for our monthly get together where we talk about all things Open Source Design. Everyone is welcome.\nThese monthly meetings happen as a voice/video call using Jitsi at meet.jit.si/opensourcedesign.\nTo see what we talked about in previous meetings\, check out the “Monthly call” category on the forum.\nTo get notifications of this meeting and other events\, you can subscribe to our Open Source Design events calendar: Open Source Design calendar\n
+LOCATION:Online
+URL:https://opensourcedesign.net/pr-preview/pr-631/events/monthly-online-meeting/
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
+
