@@ -1,6 +1,6 @@
 ---
 title: "Logo and basic branding for FLOxford, Oxford's local free, libre, and open-source software group"
-status: searching
+status: filled
 date_posted: "2026-08-15"
 date: "2026-08-15T15:58:23.305Z"
 organization: "FLOxford"
