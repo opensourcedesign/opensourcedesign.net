@@ -217,6 +217,10 @@
         - text: GitHub
           url: https://github.com/tabler/tabler-icons
 
+     - name: SVGicons.com
+        url: https://svgicons.com/
+        description: Search and browse open-source SVG icon sets with source and license context.
+
 - id: fonts
   title: Fonts
   note: "Some of these platforms also take submissions, so if you designed a font with an open license, submit it there!"
