@@ -130,11 +130,10 @@
     visibility: hidden;
     pointer-events: none;
   }
-  [data-theme-toggle] :is(.osd-theme-icon-light, .osd-theme-icon-system, .osd-theme-icon-dark) {
+  [data-theme-toggle] :is(.osd-theme-icon-light, .osd-theme-icon-dark) {
     display: none;
   }
   [data-theme-toggle][data-theme-state="light"] .osd-theme-icon-light,
-  [data-theme-toggle][data-theme-state="system"] .osd-theme-icon-system,
   [data-theme-toggle][data-theme-state="dark"] .osd-theme-icon-dark {
     display: block;
   }
