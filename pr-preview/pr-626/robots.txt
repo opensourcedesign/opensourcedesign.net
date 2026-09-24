@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://opensourcedesign.net/pr-preview/pr-626/sitemap.xml
