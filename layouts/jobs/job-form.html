@@ -188,13 +188,13 @@
 
           <div class="space-y-2">
             <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="description">Job description <span class="text-red-500">*</span></label>
-            <p class="text-xs text-slate-500">Describe what you need help with. Markdown is supported.</p>
+            <p class="text-xs text-slate-500">Describe what you need help with. Markdown is preserved; raw HTML is escaped for security.</p>
             <textarea class="min-h-48 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="description" name="description" placeholder="We are looking for a designer to help us..." required></textarea>
           </div>
 
           <div class="space-y-2">
             <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="deliverables">Deliverables <span class="text-slate-400">(optional)</span></label>
-            <p class="text-xs text-slate-500">What specific deliverables are you expecting? One per line.</p>
+            <p class="text-xs text-slate-500">What specific deliverables are you expecting? One per line. Markdown is preserved; raw HTML is escaped for security.</p>
             <textarea class="min-h-32 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="deliverables" name="deliverables" placeholder="Logo in SVG format&#10;Style guide PDF&#10;Figma source files"></textarea>
           </div>
         </fieldset>
