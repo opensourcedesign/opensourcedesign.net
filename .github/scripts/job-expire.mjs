@@ -37,9 +37,15 @@ for (const file of fs.readdirSync(DIR).filter((f) => f.endsWith('.md'))) {
   else if (freshest && freshest < cutoff) reason = 'no update since ' + freshest;
   if (!reason) continue;
 
-  const next = text.replace(fmMatch[0], fmMatch[0].replace(
-    /^(status:\s*)(['"]?)searching\2\s*$/m, '$1expired'));
-  if (next === text) continue;
+  // Case-insensitive like the status check above ("Searching" passed it but
+  // never matched here), and keep the line's own ending (a CRLF file must not
+  // end up with one LF-only line).
+  const next = text.replace(fmMatch[0], () => fmMatch[0].replace(
+    /^(status:[ \t]*)(['"]?)searching\2[ \t]*(\r?)$/im, '$1expired$3'));
+  if (next === text) {
+    console.warn('::warning file=' + full + '::lapsed (' + reason + ') but its status line could not be rewritten');
+    continue;
+  }
   fs.writeFileSync(full, next);
   expired.push(file + ' (' + reason + ')');
 }
