@@ -697,9 +697,13 @@ function hasControlChars(s) {
 // The site renders Markdown with goldmark's `unsafe` renderer, so raw HTML in
 // a submission would go live on merge. Escape tag-openers (<script, </div,
 // <!--, <?) while keeping Markdown autolinks (<https://…>, <mailto:…>) intact.
+// Hugo also runs shortcodes in page content: a submitted "{{< x >}}" would
+// embed arbitrary built-in shortcodes (or break the build if unknown), so
+// break up the "{{<" / "{{%" delimiters with an entity that renders as "{".
 function sanitizeMarkdown(v) {
   return String(v == null ? '' : v)
-    .replace(/<(?=[a-zA-Z/!?])(?!(?:https?:\/\/|mailto:)[^\s<>]*>)/g, '&lt;');
+    .replace(/<(?=[a-zA-Z/!?])(?!(?:https?:\/\/|mailto:)[^\s<>]*>)/g, '&lt;')
+    .replace(/\{\{(\s*[<%])/g, '{&#123;$1');
 }
 
 // Normalize every line terminator YAML or a browser might honour (a lone \r

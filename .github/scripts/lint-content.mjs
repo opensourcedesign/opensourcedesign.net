@@ -159,6 +159,12 @@ function lintFile(file) {
 
   lintBody(body, errors, warnings);
 
+  // Hugo runs shortcodes in page content; postings come from public forms,
+  // so a shortcode there would embed unreviewed content or break the build.
+  if ((isJob || isEvent) && /\{\{\s*[<%]/.test(body)) {
+    errors.push('Hugo shortcode syntax (`{{<` / `{{%`) is not allowed in postings - write `{&#123;<` to show it literally');
+  }
+
   return { errors, warnings };
 }
 
