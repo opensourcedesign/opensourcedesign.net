@@ -1,7 +1,9 @@
-{{/* Default robots directive; overridden by {{ define "robots" }} on 404. */}}
-{{ if and .IsPage (eq .Section "jobs") }}
-  {{ $jm := partial "functions/job-status-meta.html" . }}
-  {{ if $jm.noindex }}noindex, follow{{ else }}index, follow{{ end }}
-{{ else }}
-index, follow
-{{ end }}
+{{- /* Default robots directive; overridden by {{ define "robots" }} on 404 and
+     the moderation dashboard. Also used by sitemap.xml to leave out noindex
+     pages. Whitespace-trimmed: the value goes straight into a content="". */ -}}
+{{- if and .IsPage (eq .Section "jobs") -}}
+  {{- $jm := partial "functions/job-status-meta.html" . -}}
+  {{- if $jm.noindex }}noindex, follow{{ else }}index, follow{{ end -}}
+{{- else -}}
+  index, follow
+{{- end -}}
