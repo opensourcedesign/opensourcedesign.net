@@ -24,7 +24,9 @@ export function init(cfg) {
   }
 
   function renderJobs(data) {
-    var jobs = (data && data.jobs) || [];
+    // A failed or non-JSON response: keep the build-time list and counts.
+    if (!data || !Array.isArray(data.jobs)) return;
+    var jobs = data.jobs;
     var open = jobs.filter(isOpen);
     var total = data.total_count != null ? data.total_count : jobs.length;
     var openCount = data.open_count != null ? data.open_count : open.length;

@@ -10,6 +10,10 @@
     {{ $heroWebp = ($b.Process "webp q60").RelPermalink }}
   {{ end }}
   {{ $forumURL := site.Params.forumURL | default "https://discourse.opensourcedesign.net" }}
+  {{/* Build-time job pulse: the no-JS baseline, and what stays on screen if
+       home-pulse.js can't fetch /jobs/index.json (it refreshes both). */}}
+  {{ $allJobs := partial "functions/job-postings.html" . }}
+  {{ $openJobs := partial "functions/open-jobs.html" $allJobs }}
   <section class="relative overflow-hidden bg-slate-950 text-white">
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" {{ if $heroJpg }}style="background-image: url('{{ $heroJpg }}'); background-image: image-set(url('{{ $heroWebp }}') type('image/webp'), url('{{ $heroJpg }}') type('image/jpeg'));"{{ else }}style="background-image: url('{{ partial "site-path.html" "/images/2017-fosdem-picture-compressed-blur30px.jpg" }}');"{{ end }}></div>
     {{/* Directional scrim keeps the left-set type legible over the photo. */}}
@@ -24,7 +28,7 @@
         <a class="osd-hero-cta rounded-lg px-6 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" href="{{ partial "site-path.html" "/resources/how-to-join/" }}">Join us</a>
         <a class="rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" href="{{ partial "site-path.html" "/resources/" }}">Resources</a>
       </div>
-      <p class="mt-8 text-sm text-slate-400" id="osd-home-hero-stats">Loading open job count…</p>
+      <p class="mt-8 text-sm text-slate-400" id="osd-home-hero-stats">{{ len $openJobs }} design jobs open right now, {{ len $allJobs }}+ posted by open source projects over the years.</p>
     </div>
   </section>
 
@@ -89,7 +93,13 @@
             <a class="text-sm font-medium text-slate-600 dark:text-slate-400 transition hover:text-slate-950 dark:hover:text-slate-100" href="{{ partial "site-path.html" "/jobs/" }}">All jobs →</a>
           </div>
           <ul class="mt-5" role="list" id="osd-home-jobs">
-            <li class="py-3 text-sm text-slate-500 dark:text-slate-400">Loading open jobs…</li>
+            {{/* Same markup home-pulse.js renders. */}}
+            {{ range first 5 $openJobs.ByDate.Reverse }}
+              {{ $paid := eq (lower (printf "%v" (.Params.compensation | default ""))) "paid" }}
+              <li class="border-b border-slate-200 dark:border-slate-700 last:border-0"><a class="group flex items-baseline gap-3 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="{{ .RelPermalink }}"><span class="h-2 w-2 shrink-0 self-center rounded-full {{ cond $paid "bg-emerald-500" "bg-violet-500" }}" title="{{ cond $paid "Paid" "Volunteer" }}" aria-hidden="true"></span><span class="line-clamp-2 text-sm leading-snug text-slate-700 dark:text-slate-300 transition group-hover:text-slate-950 dark:group-hover:text-slate-100">{{ .Title }}</span></a></li>
+            {{ else }}
+              <li class="py-3 text-sm text-slate-500 dark:text-slate-400">No open jobs yet.</li>
+            {{ end }}
           </ul>
           <div class="mt-5 space-y-2 text-sm">
             <a class="osd-btn-primary" href="{{ partial "site-path.html" "/jobs/job-form/" }}">Post a job</a>
