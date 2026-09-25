@@ -28,7 +28,7 @@ jobs:
        startsWith(github.event.pull_request.head.ref, 'resource/'))
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Look up submitter email
         id: lookup
@@ -105,7 +105,7 @@ jobs:
 
       - name: Send rejection email
         if: steps.lookup.outputs.found == 'true'
-        uses: dawidd6/action-send-mail@42942bc2f8fba4e611b459a018967a6a7c78c68c # v17
+        uses: dawidd6/action-send-mail@67ce3558d613188179559c61d3565140cf389968 # v22
         with:
           server_address: ${{ secrets.SMTP_HOST }}
           server_port: ${{ secrets.SMTP_PORT }}
