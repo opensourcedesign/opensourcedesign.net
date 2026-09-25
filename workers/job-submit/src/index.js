@@ -201,16 +201,9 @@ async function handleSubmit(request, env) {
   }
 
   // Optional, best-effort per-IP daily cap (only if a RATE_LIMIT KV is bound).
-  if (env.RATE_LIMIT) {
-    const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
-    const day = new Date().toISOString().slice(0, 10);
-    const key = 'rl:' + day + ':' + ip;
-    const cur = parseInt((await env.RATE_LIMIT.get(key)) || '0', 10) || 0;
-    const max = parseInt(env.RATE_LIMIT_MAX || '5', 10) || 5;
-    if (cur >= max) {
-      return json({ ok: false, error: 'Too many submissions today. Please try again tomorrow.' }, 429);
-    }
-    await env.RATE_LIMIT.put(key, String(cur + 1), { expirationTtl: 86400 });
+  const rateLimit = await checkRateLimit(request, env);
+  if (rateLimit.exceeded) {
+    return json({ ok: false, error: 'Too many submissions today. Please try again tomorrow.' }, 429);
   }
 
   // Resource suggestions edit data/resources.yaml instead of adding a
@@ -222,6 +215,7 @@ async function handleSubmit(request, env) {
     } catch (err) {
       return prFailResponse(err);
     }
+    await rateLimit.consume();
     if (data.email && String(data.email).trim() && env.EMAILS) {
       const days = parseInt(env.EMAIL_TTL_DAYS || '90', 10) || 90;
       try {
@@ -318,6 +312,7 @@ async function handleSubmit(request, env) {
   } catch (err) {
     return prFailResponse(err);
   }
+  await rateLimit.consume();
 
   // Store the submitter email privately for the merge-time notification.
   if (data.email && String(data.email).trim() && env.EMAILS) {
@@ -334,6 +329,31 @@ async function handleSubmit(request, env) {
   }
 
   return json({ ok: true, pr_url: pr.html_url });
+}
+
+/**
+ * Per-IP daily submission cap backed by the optional RATE_LIMIT KV. Only
+ * submissions that actually open a pull request count (call consume() after
+ * success): a duplicate warning, a validation error or a GitHub failure must
+ * not use up someone's quota. KV is eventually consistent, so this is a soft
+ * limit that a burst of parallel requests can exceed.
+ */
+async function checkRateLimit(request, env) {
+  if (!env.RATE_LIMIT) return { exceeded: false, consume: async () => {} };
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+  const key = 'rl:' + new Date().toISOString().slice(0, 10) + ':' + ip;
+  const cur = parseInt((await env.RATE_LIMIT.get(key)) || '0', 10) || 0;
+  const max = parseInt(env.RATE_LIMIT_MAX || '5', 10) || 5;
+  return {
+    exceeded: cur >= max,
+    consume: async () => {
+      try {
+        await env.RATE_LIMIT.put(key, String(cur + 1), { expirationTtl: 86400 });
+      } catch (e) {
+        // Best effort: never fail a submission that already opened a PR.
+      }
+    },
+  };
 }
 
 async function handleLookup(request, env, url) {
