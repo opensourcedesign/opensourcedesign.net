@@ -57,15 +57,17 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        # Three-dot diff: only what the PR changed since it branched off, not
+        # files that changed on main in the meantime (base.sha is main's tip).
         run: |
-          files="$(git diff --diff-filter=AM --name-only "$BASE_SHA" "$HEAD_SHA" -- 'content/jobs/*.md' 'content/events/*.md' 'content/resources/*.md' 'content/resources/articles/*.md')"
+          files="$(git diff --diff-filter=AM --name-only "$BASE_SHA...$HEAD_SHA" -- 'content/jobs/*.md' 'content/events/*.md' 'content/resources/*.md' 'content/resources/articles/*.md')"
           if [ -n "$files" ]; then
             # shellcheck disable=SC2086
             node .github/scripts/lint-content.mjs $files
           else
             echo "No job/event/resource content changed."
           fi
-          data_files="$(git diff --diff-filter=AM --name-only "$BASE_SHA" "$HEAD_SHA" -- 'data/resources.yaml' 'data/bibliography.yaml')"
+          data_files="$(git diff --diff-filter=AM --name-only "$BASE_SHA...$HEAD_SHA" -- 'data/resources.yaml' 'data/bibliography.yaml')"
           if [ -n "$data_files" ]; then
             npm install --no-save yaml@2
             node .github/scripts/lint-data-yaml.mjs
