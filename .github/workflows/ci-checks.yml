@@ -52,6 +52,9 @@ jobs:
       - name: Deploy wait helper
         run: node --test .github/scripts/wait-for-deploy.test.mjs
 
+      - name: Submission status comment
+        run: node --test .github/scripts/submission-status-render.test.mjs
+
       - name: Worker YAML parser in sync
         run: node .github/scripts/sync-worker-yaml-front-matter.mjs --check
 

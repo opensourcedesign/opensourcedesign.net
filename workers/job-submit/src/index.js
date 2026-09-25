@@ -801,6 +801,7 @@ async function createResourcePullRequest(env, data) {
   });
 
   const body = [
+    ...submitterNote('resource suggestion'),
     'Automated resource suggestion from the [suggest form](https://opensourcedesign.net/resources/suggest/).',
     '',
     '| Field | Value |',
@@ -958,8 +959,17 @@ async function uniquePath(env, owner, repo, base, path) {
   return path;
 }
 
+// First thing the submitter sees if they open the PR from the form's success
+// screen: GitHub's checks list reads like a verdict to people new to GitHub.
+function submitterNote(noun) {
+  return [
+    '> **Thanks for your ' + noun + '!** Nothing else is needed from you: a volunteer moderator will review it here, and the bot comment below shows a preview and the progress. The automated checks help the moderators - a red mark there does not mean your submission was rejected.',
+    '',
+  ];
+}
+
 function prBody(data, filePath, edit) {
-  const lines = [];
+  const lines = submitterNote(edit ? 'job posting update' : 'job posting');
   if (edit) {
     lines.push('Automated **edit** of an existing posting, submitted from the job edit form.');
     lines.push('');
@@ -988,7 +998,7 @@ function prBody(data, filePath, edit) {
 }
 
 function eventPrBody(data, filePath, edit) {
-  const lines = [];
+  const lines = submitterNote(edit ? 'event update' : 'event');
   if (edit) {
     lines.push('Automated **edit** of an existing event, submitted from the event edit form.');
     lines.push('');

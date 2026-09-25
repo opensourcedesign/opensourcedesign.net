@@ -73,16 +73,6 @@ jobs:
             node .github/scripts/lint-data-yaml.mjs
           fi
 
-      - name: Post submission preview comment
-        if: github.event_name == 'pull_request'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          HEAD_REF: ${{ github.head_ref }}
-          PREVIEW_BASE: https://opensourcedesign.net/pr-preview/pr-${{ github.event.pull_request.number }}
-        run: node .github/scripts/submission-preview-comment.mjs
-
       - name: Lint changed content files on push
         if: github.event_name == 'push'
         env:
