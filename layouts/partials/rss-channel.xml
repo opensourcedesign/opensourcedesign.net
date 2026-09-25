@@ -51,14 +51,6 @@
 {{- with .Params.location }}{{ $fullContent = printf "%s<p><strong>Location:</strong> %s</p>" $fullContent . }}{{ end -}}
 {{- $fullContent = printf "%s</div>" $fullContent -}}
 {{- end -}}
-{{- if eq .Section "people" -}}
-{{- $fullContent = printf "%s<div style=\"margin-bottom:1.5em;padding:1em;background:#f8f9fa;border-radius:8px;\">" $fullContent -}}
-{{- with .Params.name }}{{ $fullContent = printf "%s<p><strong>Name:</strong> %s</p>" $fullContent . }}{{ end -}}
-{{- with .Params.status }}{{ $fullContent = printf "%s<p><strong>Status:</strong> %s</p>" $fullContent . }}{{ end -}}
-{{- with .Params.availability }}{{ $fullContent = printf "%s<p><strong>Availability:</strong> %s</p>" $fullContent . }}{{ end -}}
-{{- with .Params.website }}{{ $fullContent = printf "%s<p><strong>Website:</strong> <a href=\"%s\">%s</a></p>" $fullContent . . }}{{ end -}}
-{{- $fullContent = printf "%s</div>" $fullContent -}}
-{{- end -}}
 {{- $fullContent = printf "%s%s" $fullContent .Content -}}
 {{- if eq .Section "jobs" -}}
 {{- with .Params.how_to_apply -}}

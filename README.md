@@ -299,7 +299,6 @@ Content that appears on multiple pages is managed through YAML files in `data/`:
 | `resources.yaml` | Curated resources directory shown on `/resources/links/` |
 | `bibliography.yaml` | Bibliography shown on `/resources/bibliography/` |
 | `quicklinks.yaml` | Footer navigation links |
-| `summits.yaml` | Past summit event information |
 
 ## Styling Guidelines
 

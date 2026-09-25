@@ -253,18 +253,6 @@
         {{ $article = merge $article (dict "author" $jsonAuthor) }}
         <script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
       {{ end }}
-    {{ else if eq .Section "people" }}
-      {{ if .IsPage }}
-        {{ $person := dict
-          "@context" "https://schema.org"
-          "@type" "Person"
-          "name" (.Params.name | default .Title)
-          "description" (.Summary | plainify)
-          "url" .Permalink
-        }}
-        {{ with .Params.website }}{{ $person = merge $person (dict "sameAs" .) }}{{ end }}
-        <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
-      {{ end }}
     {{ end }}
 
     {{/* Self-hosted Inter variable font (woff2 only - universally supported).
