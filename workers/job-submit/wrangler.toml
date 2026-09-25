@@ -43,8 +43,7 @@ RATE_LIMIT_MAX = "5"
 binding = "EMAILS"
 id = "a1b92469f51c4677a252d77f58561109"
 
-# --- Per-IP rate limiting (recommended). Create the namespace, paste the id,
-# then uncomment:
+# --- Per-IP daily submission cap (RATE_LIMIT_MAX). Created with:
 #   npx wrangler kv namespace create RATE_LIMIT
 [[kv_namespaces]]
 binding = "RATE_LIMIT"

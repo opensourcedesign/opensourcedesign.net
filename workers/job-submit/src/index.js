@@ -23,7 +23,6 @@
  * Routes:
  *   POST /submit         -> { ok, pr_url }
  *   GET  /lookup?pr=<n>  -> { ok, found, email, title, kind }  (Bearer LOOKUP_SECRET)
- *   DELETE /lookup?pr=<n> -> { ok, deleted }  (Bearer LOOKUP_SECRET; legacy - prefer /rejection-sent)
  *   GET  /rejection-sent?pr=<n> -> { ok, sent }  (Bearer LOOKUP_SECRET)
  *   POST /rejection-sent?pr=<n> -> { ok, marked }  (Bearer LOOKUP_SECRET; idempotent)
  */
@@ -59,9 +58,6 @@ export default {
     // Server-to-server only (no CORS headers needed).
     if (url.pathname === '/lookup' && request.method === 'GET') {
       return handleLookup(request, env, url);
-    }
-    if (url.pathname === '/lookup' && request.method === 'DELETE') {
-      return handleForget(request, env, url);
     }
     if (url.pathname === '/rejection-sent' && request.method === 'GET') {
       return handleRejectionSentGet(request, env, url);
@@ -225,7 +221,7 @@ async function handleSubmit(request, env) {
     }
     await rateLimit.consume();
     if (data.email && String(data.email).trim() && env.EMAILS) {
-      const days = parseInt(env.EMAIL_TTL_DAYS || '90', 10) || 90;
+      const days = parseInt(env.EMAIL_TTL_DAYS || '180', 10) || 180;
       try {
         await env.EMAILS.put(
           'pr:' + pr.number,
@@ -324,7 +320,7 @@ async function handleSubmit(request, env) {
 
   // Store the submitter email privately for the merge-time notification.
   if (data.email && String(data.email).trim() && env.EMAILS) {
-    const days = parseInt(env.EMAIL_TTL_DAYS || '90', 10) || 90;
+    const days = parseInt(env.EMAIL_TTL_DAYS || '180', 10) || 180;
     try {
       await env.EMAILS.put(
         'pr:' + pr.number,
@@ -383,19 +379,6 @@ async function handleLookup(request, env, url) {
   return json({ ok: true, found: true, email: rec.email, title: rec.title || '', kind: rec.kind || 'job' });
 }
 
-async function handleForget(request, env, url) {
-  const auth = request.headers.get('Authorization') || '';
-  if (!env.LOOKUP_SECRET || !safeEqual(auth, 'Bearer ' + env.LOOKUP_SECRET)) {
-    return json({ ok: false, error: 'Unauthorized' }, 401);
-  }
-  const pr = url.searchParams.get('pr');
-  if (!pr) return json({ ok: false, error: 'Missing pr parameter.' }, 400);
-  if (!env.EMAILS) return json({ ok: true, deleted: false });
-
-  await env.EMAILS.delete('pr:' + pr);
-  return json({ ok: true, deleted: true });
-}
-
 function authLookup(request, env) {
   const auth = request.headers.get('Authorization') || '';
   if (!env.LOOKUP_SECRET || !safeEqual(auth, 'Bearer ' + env.LOOKUP_SECRET)) {
@@ -422,7 +405,7 @@ async function handleRejectionSentMark(request, env, url) {
   if (!pr) return json({ ok: false, error: 'Missing pr parameter.' }, 400);
   if (!env.EMAILS) return json({ ok: true, marked: false });
 
-  const days = parseInt(env.EMAIL_TTL_DAYS || '90', 10) || 90;
+  const days = parseInt(env.EMAIL_TTL_DAYS || '180', 10) || 180;
   await env.EMAILS.put('rejected:' + pr, '1', { expirationTtl: days * 86400 });
   return json({ ok: true, marked: true });
 }
@@ -787,7 +770,8 @@ async function createResourcePullRequest(env, data) {
   const text = b64decode(existing.content);
 
   const catId = String(data.category).trim();
-  const catRe = new RegExp('^- id: ' + catId.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&') + '\\s*$', 'm');
+  // catId is validated to [a-z0-9-] in handleSubmit, so it needs no regex escaping.
+  const catRe = new RegExp('^- id: ' + catId + '\\s*$', 'm');
   const catMatch = text.match(catRe);
   if (!catMatch) throw new Error('Unknown category: ' + catId);
 
