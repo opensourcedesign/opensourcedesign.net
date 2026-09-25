@@ -66,7 +66,8 @@
           {{ end }}
           {{ if $liveUpcoming }}
             <ul class="mt-5" role="list">
-              {{ range first 3 (sort $liveUpcoming "Date" "desc") }}
+              {{/* Soonest first, by start date (.Date is the submission time). */}}
+              {{ range first 3 (sort $liveUpcoming "Params.eventStart" "asc") }}
                 <li class="border-b border-slate-200 dark:border-slate-700 last:border-0">
                   <a class="group block py-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="{{ .RelPermalink }}">
                     <span class="font-semibold leading-snug text-slate-900 dark:text-slate-100 decoration-slate-300 underline-offset-4 transition group-hover:text-slate-950 dark:group-hover:text-slate-100 group-hover:underline">{{ .Title }}</span>
