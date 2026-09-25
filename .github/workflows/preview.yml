@@ -71,13 +71,17 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
-      - name: Cache Hugo resources
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      # Restore-only: this job builds untrusted PR code under
+      # pull_request_target, where a saved cache would land in main's scope and
+      # could be restored (and deployed) by the production build. Reuse the
+      # production cache read-only instead.
+      - name: Restore Hugo resources cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: resources/_gen
-          key: hugo-resources-${{ hashFiles('assets/**', 'hugo.toml', 'layouts/partials/resolve-image.html', 'layouts/_default/_markup/render-image.html') }}
+          key: hugo-resources-prod-${{ hashFiles('assets/**', 'hugo.toml', 'layouts/partials/resolve-image.html', 'layouts/_default/_markup/render-image.html') }}
           restore-keys: |
-            hugo-resources-
+            hugo-resources-prod-
 
       # Same Tailwind compile as hugo-build.yml so previews ship the static
       # stylesheet exactly like production (baseof.html falls back to the

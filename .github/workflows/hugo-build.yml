@@ -68,14 +68,16 @@ jobs:
 
       # Cache Hugo's processed asset derivatives (resized images, AVIF/WebP
       # encodes). This skips expensive re-encoding when the source images and
-      # image templates are unchanged, keeping builds fast.
+      # image templates are unchanged, keeping builds fast. The prod- prefix is
+      # only ever saved by this workflow on main; previews restore it
+      # read-only, so a PR can't plant files that end up deployed.
       - name: Cache Hugo resources
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: resources/_gen
-          key: hugo-resources-${{ hashFiles('assets/**', 'hugo.toml', 'layouts/partials/resolve-image.html', 'layouts/_default/_markup/render-image.html') }}
+          key: hugo-resources-prod-${{ hashFiles('assets/**', 'hugo.toml', 'layouts/partials/resolve-image.html', 'layouts/_default/_markup/render-image.html') }}
           restore-keys: |
-            hugo-resources-
+            hugo-resources-prod-
 
       # Compile Tailwind to a small static stylesheet for production. Local
       # contributors still need no build step (issue #556): when this file is
