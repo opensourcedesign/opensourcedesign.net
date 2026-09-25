@@ -1,0 +1,72 @@
+# One status comment on each form submission PR (job/, job-edit/, event/,
+# event-edit/, resource/ branches opened by the job-submit Worker), written
+# for the person who used the form first: what happens next, the preview
+# link once it is live, and the automated check results folded away for
+# moderators. It replaces the separate "submission preview" and "PR site
+# preview" bot comments, which read like a verdict to submitters.
+#
+# .github/scripts/submission-status.mjs rebuilds the comment from the PR and
+# its current check runs, so it re-runs whenever the PR changes or one of the
+# workflows below completes, and newer runs simply cancel older ones.
+#
+# Security: runs in the base repository context (pull_request_target /
+# workflow_run) with a write token, so it only checks out main and reads the
+# submitted files as data through the API - it never runs PR code.
+name: Submission status
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, closed]
+  workflow_run:
+    workflows: ["Lint changed content", "Accessibility", "Repository checks", "PR Preview"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: "Pull request number to refresh"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: read
+
+concurrency:
+  group: submission-status-${{ github.event.pull_request.number || github.event.workflow_run.pull_requests[0].number || inputs.pr || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  status:
+    name: Status comment
+    # Only submission branches in this repository (not forks, not other PRs).
+    if: >-
+      (github.event_name == 'workflow_dispatch') ||
+      (github.event_name == 'pull_request_target' &&
+        github.event.pull_request.head.repo.full_name == github.repository &&
+        (startsWith(github.event.pull_request.head.ref, 'job/') ||
+         startsWith(github.event.pull_request.head.ref, 'job-edit/') ||
+         startsWith(github.event.pull_request.head.ref, 'event/') ||
+         startsWith(github.event.pull_request.head.ref, 'event-edit/') ||
+         startsWith(github.event.pull_request.head.ref, 'resource/'))) ||
+      (github.event_name == 'workflow_run' &&
+        github.event.workflow_run.head_repository.full_name == github.repository &&
+        github.event.workflow_run.pull_requests[0].number &&
+        (startsWith(github.event.workflow_run.head_branch, 'job/') ||
+         startsWith(github.event.workflow_run.head_branch, 'job-edit/') ||
+         startsWith(github.event.workflow_run.head_branch, 'event/') ||
+         startsWith(github.event.workflow_run.head_branch, 'event-edit/') ||
+         startsWith(github.event.workflow_run.head_branch, 'resource/')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Default ref for these events is the default branch: trusted code only.
+      - name: Checkout main
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+
+      - name: Update the status comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number || github.event.workflow_run.pull_requests[0].number || inputs.pr }}
+        run: node .github/scripts/submission-status.mjs

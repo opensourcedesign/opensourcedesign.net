@@ -148,7 +148,10 @@ jobs:
           target-folder: pr-preview/pr-${{ github.event.pull_request.number }}
           commit-message: Deploy preview for PR ${{ github.event.pull_request.number }}
 
+      # Form submissions get the link in their status comment instead
+      # (submission-status.yml), once the preview is actually being served.
       - name: Comment PR preview link
+        if: ${{ !(startsWith(github.event.pull_request.head.ref, 'job/') || startsWith(github.event.pull_request.head.ref, 'job-edit/') || startsWith(github.event.pull_request.head.ref, 'event/') || startsWith(github.event.pull_request.head.ref, 'event-edit/') || startsWith(github.event.pull_request.head.ref, 'resource/')) }}
         uses: marocchino/sticky-pull-request-comment@70d2764d1a7d5d9560b100cbea0077fc8f633987 # v3.0.2
         with:
           header: pr-preview
@@ -239,6 +242,7 @@ jobs:
           clean: true
 
       - name: Note preview removed
+        if: ${{ !(startsWith(github.event.pull_request.head.ref, 'job/') || startsWith(github.event.pull_request.head.ref, 'job-edit/') || startsWith(github.event.pull_request.head.ref, 'event/') || startsWith(github.event.pull_request.head.ref, 'event-edit/') || startsWith(github.event.pull_request.head.ref, 'resource/')) }}
         uses: marocchino/sticky-pull-request-comment@70d2764d1a7d5d9560b100cbea0077fc8f633987 # v3.0.2
         with:
           header: pr-preview
