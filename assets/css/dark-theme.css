@@ -167,6 +167,21 @@ html.dark :is(
   color: var(--color-slate-100) !important;
 }
 
+/* Focused fields: the forced border above would otherwise also win over
+   focus:border-slate-900, and the slate-900/20 focus ring is invisible on a
+   slate-900 field, leaving no visible focus state in dark mode. */
+html.dark :is(
+  input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]),
+  textarea,
+  select
+):not(.osd-on-light):focus {
+  border-color: var(--color-slate-300) !important;
+}
+
+html.dark .focus\:ring-slate-900\/20:focus {
+  --tw-ring-color: color-mix(in oklab, var(--color-slate-100) 35%, transparent);
+}
+
 html.dark :is(input, textarea)::placeholder {
   color: var(--color-slate-500);
 }

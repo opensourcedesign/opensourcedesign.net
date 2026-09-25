@@ -90,6 +90,14 @@
     outline-offset: 2px;
   }
 
+  /* The slate-900 rings above vanish on the dark page (also slate-900), so
+     flip them light. Kept in this layer so focus-visible:outline-none
+     utilities still win where a component draws its own ring. */
+  html.dark :focus-visible,
+  html.dark :is(a, button, summary):focus-visible {
+    outline-color: rgb(241 245 249 / 0.9); /* slate-100 */
+  }
+
   /* Respect reduced-motion preferences globally (honors the OS/browser setting). */
   @media (prefers-reduced-motion: reduce) {
     *,
