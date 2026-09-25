@@ -237,7 +237,8 @@ var form = document.getElementById('osd-job-form');
             bannerText.textContent = 'You are editing ' + editFile + '. The live posting stays unchanged until the update is approved.';
             banner.hidden = false;
           }
-          document.title = document.title.replace(/^Post a Job/, 'Edit Job Posting');
+          // The page title is "Submit a Job | …" (content/jobs/job-form.md).
+          document.title = document.title.replace(/^(?:Submit|Post) a Job/, 'Edit Job Posting');
 
           if (note) note.textContent = 'Loading current posting\u2026';
           var rawURL = repoURL.replace('https://github.com/', 'https://raw.githubusercontent.com/') +
