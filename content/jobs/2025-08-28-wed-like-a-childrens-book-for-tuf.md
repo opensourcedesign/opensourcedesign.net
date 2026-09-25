@@ -22,6 +22,7 @@ how_to_apply:
 github_handle: JustinCappos
 tags: [book]
 date: '2025-08-28T13:01:00.036Z'
+slug: "wed-like-a-childrens-book-for-tuf"
 ---
 Want to make a children's book?
 

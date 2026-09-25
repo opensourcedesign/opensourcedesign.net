@@ -23,7 +23,6 @@
  * Routes:
  *   POST /submit         -> { ok, pr_url }
  *   GET  /lookup?pr=<n>  -> { ok, found, email, title, kind }  (Bearer LOOKUP_SECRET)
- *   DELETE /lookup?pr=<n> -> { ok, deleted }  (Bearer LOOKUP_SECRET; legacy - prefer /rejection-sent)
  *   GET  /rejection-sent?pr=<n> -> { ok, sent }  (Bearer LOOKUP_SECRET)
  *   POST /rejection-sent?pr=<n> -> { ok, marked }  (Bearer LOOKUP_SECRET; idempotent)
  */
@@ -35,6 +34,10 @@ const GH_API = 'https://api.github.com';
 // Defensive input caps (the form validates too, but never trust the client).
 const MAX_FIELD = 8000;        // generous cap for most fields + Turnstile token
 const MAX_DESCRIPTION = 30000; // description / deliverables may be longer
+// Titles end up in file and branch names, URLs and PR titles (GitHub caps
+// those at 256 characters); the forms set the same maxlength.
+const MAX_TITLE = 150;
+const MAX_SLUG = 100;
 
 export default {
   async fetch(request, env) {
@@ -55,9 +58,6 @@ export default {
     // Server-to-server only (no CORS headers needed).
     if (url.pathname === '/lookup' && request.method === 'GET') {
       return handleLookup(request, env, url);
-    }
-    if (url.pathname === '/lookup' && request.method === 'DELETE') {
-      return handleForget(request, env, url);
     }
     if (url.pathname === '/rejection-sent' && request.method === 'GET') {
       return handleRejectionSentGet(request, env, url);
@@ -139,6 +139,10 @@ async function handleSubmit(request, env) {
   // Defense-in-depth format/length validation (the forms validate too).
   const lengthError = checkLengths(data);
   if (lengthError) return json({ ok: false, error: lengthError }, 400);
+  const titleField = kind === 'resource' ? 'name' : 'title';
+  if (String(data[titleField]).trim().length > MAX_TITLE) {
+    return json({ ok: false, error: 'The ' + (kind === 'resource' ? 'name' : 'title') + ' is too long (at most ' + MAX_TITLE + ' characters).' }, 400);
+  }
   if (kind === 'event') {
     if (!isIsoDate(data.start_date)) {
       return json({ ok: false, error: 'Start date must be a valid YYYY-MM-DD date.' }, 400);
@@ -153,6 +157,9 @@ async function handleSubmit(request, env) {
       return json({ ok: false, error: 'Event website must be a valid http(s) URL.' }, 400);
     }
   } else if (kind === 'resource') {
+    // The description is a <textarea>, so pressing Enter is normal: fold line
+    // breaks into spaces (it's stored as one YAML line) instead of rejecting.
+    if (data.description) data.description = normalizeText(data.description).replace(/\s+/g, ' ').trim();
     if (!isHttpUrl(data.url)) {
       return json({ ok: false, error: 'The resource URL must be a valid http(s) URL.' }, 400);
     }
@@ -198,16 +205,9 @@ async function handleSubmit(request, env) {
   }
 
   // Optional, best-effort per-IP daily cap (only if a RATE_LIMIT KV is bound).
-  if (env.RATE_LIMIT) {
-    const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
-    const day = new Date().toISOString().slice(0, 10);
-    const key = 'rl:' + day + ':' + ip;
-    const cur = parseInt((await env.RATE_LIMIT.get(key)) || '0', 10) || 0;
-    const max = parseInt(env.RATE_LIMIT_MAX || '5', 10) || 5;
-    if (cur >= max) {
-      return json({ ok: false, error: 'Too many submissions today. Please try again tomorrow.' }, 429);
-    }
-    await env.RATE_LIMIT.put(key, String(cur + 1), { expirationTtl: 86400 });
+  const rateLimit = await checkRateLimit(request, env);
+  if (rateLimit.exceeded) {
+    return json({ ok: false, error: 'Too many submissions today. Please try again tomorrow.' }, 429);
   }
 
   // Resource suggestions edit data/resources.yaml instead of adding a
@@ -219,8 +219,9 @@ async function handleSubmit(request, env) {
     } catch (err) {
       return prFailResponse(err);
     }
+    await rateLimit.consume();
     if (data.email && String(data.email).trim() && env.EMAILS) {
-      const days = parseInt(env.EMAIL_TTL_DAYS || '90', 10) || 90;
+      const days = parseInt(env.EMAIL_TTL_DAYS || '180', 10) || 180;
       try {
         await env.EMAILS.put(
           'pr:' + pr.number,
@@ -234,10 +235,14 @@ async function handleSubmit(request, env) {
     return json({ ok: true, pr_url: pr.html_url });
   }
 
+  // The live job index (/jobs/index.json, built by Hugo) backs the duplicate
+  // check and URL slug allocation for jobs; null when it can't be fetched.
+  const jobIndex = kind === 'job' ? await fetchJobIndex(env) : null;
+
   // Duplicate detection for new jobs: compare against the live job index and
   // ask for confirmation (the form re-submits with force_duplicate).
   if (kind === 'job' && !edit && !data.force_duplicate) {
-    const dup = await findDuplicateJob(env, data);
+    const dup = findDuplicateJob(jobIndex, data);
     if (dup) {
       return json({
         ok: false,
@@ -281,6 +286,11 @@ async function handleSubmit(request, env) {
     edit.author = fm.scalar('author');
     edit.layout = fm.scalar('layout');
     edit.recurrence = fm.scalar('recurrence'); // e.g. the monthly community call
+    if (kind === 'job' && !edit.slug && !edit.url) {
+      // Legacy postings derive their URL from the title; pin the URL they
+      // already have so an edited title doesn't move (and break) the page.
+      edit.slug = currentJobSlug(jobIndex, edit.path);
+    }
     // The poster may change the status from the edit form (close a job,
     // cancel an event); anything not on the whitelist keeps the current value.
     const requested = String(data.status || '').trim();
@@ -295,7 +305,10 @@ async function handleSubmit(request, env) {
       : (fm.scalar('status') || (kind === 'event' ? 'upcoming' : 'searching'));
   }
 
-  const built = kind === 'event' ? buildEventMarkdown(data, env, edit) : buildMarkdown(data, env, edit);
+  // New jobs get an explicit, unique `slug:` so the URL is known before Hugo
+  // builds it and two postings with the same title never share a URL.
+  const jobSlug = kind === 'job' && !edit ? uniqueJobSlug(jobIndex, capSlug(slugify(data.title)) || 'posting') : '';
+  const built = kind === 'event' ? buildEventMarkdown(data, env, edit) : buildMarkdown(data, env, edit, jobSlug);
 
   let pr;
   try {
@@ -303,10 +316,11 @@ async function handleSubmit(request, env) {
   } catch (err) {
     return prFailResponse(err);
   }
+  await rateLimit.consume();
 
   // Store the submitter email privately for the merge-time notification.
   if (data.email && String(data.email).trim() && env.EMAILS) {
-    const days = parseInt(env.EMAIL_TTL_DAYS || '90', 10) || 90;
+    const days = parseInt(env.EMAIL_TTL_DAYS || '180', 10) || 180;
     try {
       await env.EMAILS.put(
         'pr:' + pr.number,
@@ -319,6 +333,31 @@ async function handleSubmit(request, env) {
   }
 
   return json({ ok: true, pr_url: pr.html_url });
+}
+
+/**
+ * Per-IP daily submission cap backed by the optional RATE_LIMIT KV. Only
+ * submissions that actually open a pull request count (call consume() after
+ * success): a duplicate warning, a validation error or a GitHub failure must
+ * not use up someone's quota. KV is eventually consistent, so this is a soft
+ * limit that a burst of parallel requests can exceed.
+ */
+async function checkRateLimit(request, env) {
+  if (!env.RATE_LIMIT) return { exceeded: false, consume: async () => {} };
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+  const key = 'rl:' + new Date().toISOString().slice(0, 10) + ':' + ip;
+  const cur = parseInt((await env.RATE_LIMIT.get(key)) || '0', 10) || 0;
+  const max = parseInt(env.RATE_LIMIT_MAX || '5', 10) || 5;
+  return {
+    exceeded: cur >= max,
+    consume: async () => {
+      try {
+        await env.RATE_LIMIT.put(key, String(cur + 1), { expirationTtl: 86400 });
+      } catch (e) {
+        // Best effort: never fail a submission that already opened a PR.
+      }
+    },
+  };
 }
 
 async function handleLookup(request, env, url) {
@@ -338,19 +377,6 @@ async function handleLookup(request, env, url) {
   if (!rec || !rec.email) return json({ ok: true, found: false });
 
   return json({ ok: true, found: true, email: rec.email, title: rec.title || '', kind: rec.kind || 'job' });
-}
-
-async function handleForget(request, env, url) {
-  const auth = request.headers.get('Authorization') || '';
-  if (!env.LOOKUP_SECRET || !safeEqual(auth, 'Bearer ' + env.LOOKUP_SECRET)) {
-    return json({ ok: false, error: 'Unauthorized' }, 401);
-  }
-  const pr = url.searchParams.get('pr');
-  if (!pr) return json({ ok: false, error: 'Missing pr parameter.' }, 400);
-  if (!env.EMAILS) return json({ ok: true, deleted: false });
-
-  await env.EMAILS.delete('pr:' + pr);
-  return json({ ok: true, deleted: true });
 }
 
 function authLookup(request, env) {
@@ -379,7 +405,7 @@ async function handleRejectionSentMark(request, env, url) {
   if (!pr) return json({ ok: false, error: 'Missing pr parameter.' }, 400);
   if (!env.EMAILS) return json({ ok: true, marked: false });
 
-  const days = parseInt(env.EMAIL_TTL_DAYS || '90', 10) || 90;
+  const days = parseInt(env.EMAIL_TTL_DAYS || '180', 10) || 180;
   await env.EMAILS.put('rejected:' + pr, '1', { expirationTtl: days * 86400 });
   return json({ ok: true, marked: true });
 }
@@ -411,7 +437,7 @@ async function verifyTurnstile(secret, token, request) {
 /* Markdown generation (mirrors generateMarkdown in job-form.html)            */
 /* -------------------------------------------------------------------------- */
 
-function buildMarkdown(data, env, edit) {
+function buildMarkdown(data, env, edit, urlSlug) {
   const now = new Date();
   const today =
     now.getUTCFullYear() +
@@ -422,7 +448,7 @@ function buildMarkdown(data, env, edit) {
   const isoDate = (edit && edit.date) || now.toISOString();
   const status = (edit && edit.status) || 'searching';
 
-  const slug = datePosted + '-' + slugify(data.title);
+  const slug = datePosted + '-' + (urlSlug || capSlug(slugify(data.title)) || 'posting');
   const dir = (env.CONTENT_DIR || 'content/jobs').replace(/\/+$/, '');
   const path = edit ? edit.path : dir + '/' + slug + '.md';
 
@@ -436,6 +462,7 @@ function buildMarkdown(data, env, edit) {
   fm.push('status: ' + status);
   fm.push('date_posted: ' + yq(datePosted));
   fm.push('date: ' + yq(isoDate));
+  if (urlSlug) fm.push('slug: ' + yq(urlSlug));
   if (edit) {
     pushPreservedIdentity(fm, edit);
     fm.push('last_updated: ' + yq(today));
@@ -476,7 +503,7 @@ function buildMarkdown(data, env, edit) {
   }
   fm.push('---');
   fm.push('');
-  fm.push(sanitizeMarkdown(String(data.description || '').trim()));
+  fm.push(sanitizeMarkdown(normalizeText(data.description).trim()));
   fm.push('');
 
   return { path, slug, markdown: fm.join('\n') };
@@ -510,7 +537,7 @@ function buildEventMarkdown(data, env, edit) {
   const start = String(data.start_date).trim();
   const end = data.end_date ? String(data.end_date).trim() : '';
 
-  const slug = start + '-' + slugify(data.title);
+  const slug = start + '-' + (capSlug(slugify(data.title)) || 'event');
   const dir = (env.CONTENT_DIR_EVENTS || 'content/events').replace(/\/+$/, '');
   const path = edit ? edit.path : dir + '/' + slug + '.md';
 
@@ -528,7 +555,7 @@ function buildEventMarkdown(data, env, edit) {
   fm.push('location: ' + yq(data.location));
   fm.push('---');
   fm.push('');
-  fm.push(sanitizeMarkdown(String(data.description || '').trim()));
+  fm.push(sanitizeMarkdown(normalizeText(data.description).trim()));
   if (data.website) {
     fm.push('');
     // encodeURI keeps the URL working but percent-encodes <, >, " and
@@ -564,7 +591,16 @@ function slugify(str) {
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+// Keep URL/file slugs readable: cut long ones at a word (hyphen) boundary.
+function capSlug(slug) {
+  if (slug.length <= MAX_SLUG) return slug;
+  const cut = slug.slice(0, MAX_SLUG);
+  const at = cut.lastIndexOf('-');
+  return at > MAX_SLUG / 2 ? cut.slice(0, at) : cut;
 }
 
 /** Bigram Dice similarity of two slugs (0..1). */
@@ -587,12 +623,11 @@ function diceSimilarity(a, b) {
 }
 
 /**
- * Best-effort duplicate check for new job submissions against the site's
- * machine-readable index (/jobs/index.json, built by Hugo). Only open
- * (`searching`) postings count - reposting a solved job is legitimate.
- * Fails open: a network hiccup must never block a real submission.
+ * The site's machine-readable job index (/jobs/index.json, built by Hugo), or
+ * null when it can't be fetched. Callers fail open: a network hiccup must
+ * never block a real submission.
  */
-async function findDuplicateJob(env, data) {
+async function fetchJobIndex(env) {
   try {
     const base = (env.SITE_BASE_URL || 'https://opensourcedesign.net').replace(/\/+$/, '');
     const res = await fetch(base + '/jobs/index.json', {
@@ -601,20 +636,57 @@ async function findDuplicateJob(env, data) {
     });
     if (!res.ok) return null;
     const index = await res.json();
-    const newTitle = slugify(data.title);
-    const newOrg = slugify(data.organization || '');
-    for (const job of index.jobs || []) {
-      if (String(job.status || '').toLowerCase() !== 'searching') continue;
-      const title = slugify(job.title || '');
-      if (!title || !newTitle) continue;
-      if (title === newTitle) return job;
-      const sameOrg = newOrg && slugify(job.organization || '') === newOrg;
-      if (sameOrg && diceSimilarity(title, newTitle) >= 0.8) return job;
-    }
+    return index && Array.isArray(index.jobs) ? index : null;
   } catch (e) {
-    // Fail open.
+    return null;
+  }
+}
+
+/**
+ * Best-effort duplicate check for new job submissions. Only open
+ * (`searching`) postings count - reposting a solved job is legitimate.
+ */
+function findDuplicateJob(index, data) {
+  if (!index) return null;
+  const newTitle = slugify(data.title);
+  const newOrg = slugify(data.organization || '');
+  for (const job of index.jobs) {
+    if (String(job.status || '').toLowerCase() !== 'searching') continue;
+    const title = slugify(job.title || '');
+    if (!title || !newTitle) continue;
+    if (title === newTitle) return job;
+    const sameOrg = newOrg && slugify(job.organization || '') === newOrg;
+    if (sameOrg && diceSimilarity(title, newTitle) >= 0.8) return job;
   }
   return null;
+}
+
+// Section pages that live under /jobs/ and must never be shadowed by a posting.
+const RESERVED_JOB_SLUGS = ['job-form', 'archive', 'writing-job-posts', 'index', 'feed', 'feed-paid', 'feed-volunteer'];
+
+function jobUrlSlug(url) {
+  const m = String(url || '').match(/^\/jobs\/([^/]+)\/$/);
+  if (!m) return '';
+  try { return decodeURIComponent(m[1]).toLowerCase(); } catch (e) { return m[1].toLowerCase(); }
+}
+
+/** First of base, base-2, base-3, ... that no existing posting's URL uses. */
+function uniqueJobSlug(index, base) {
+  const taken = new Set(RESERVED_JOB_SLUGS);
+  for (const job of (index && index.jobs) || []) {
+    const s = jobUrlSlug(job.url);
+    if (s) taken.add(s);
+  }
+  let slug = base;
+  for (let n = 2; taken.has(slug); n++) slug = base + '-' + n;
+  return slug;
+}
+
+/** The URL slug the live site currently serves for a job file ('' if unknown). */
+function currentJobSlug(index, path) {
+  const file = String(path).split('/').pop();
+  const job = ((index && index.jobs) || []).find((j) => j.file === file);
+  return job ? jobUrlSlug(job.url) : '';
 }
 
 function yq(v) {
@@ -644,13 +716,30 @@ function hasControlChars(s) {
 // The site renders Markdown with goldmark's `unsafe` renderer, so raw HTML in
 // a submission would go live on merge. Escape tag-openers (<script, </div,
 // <!--, <?) while keeping Markdown autolinks (<https://…>, <mailto:…>) intact.
+// Hugo also runs shortcodes in page content: a submitted "{{< x >}}" would
+// embed arbitrary built-in shortcodes (or break the build if unknown), so
+// break up the "{{<" / "{{%" delimiters with an entity that renders as "{".
 function sanitizeMarkdown(v) {
   return String(v == null ? '' : v)
-    .replace(/<(?=[a-zA-Z/!?])(?!(?:https?:\/\/|mailto:)[^\s<>]*>)/g, '&lt;');
+    .replace(/<(?=[a-zA-Z/!?])(?!(?:https?:\/\/|mailto:)[^\s<>]*>)/g, '&lt;')
+    .replace(/\{\{(\s*[<%])/g, '{&#123;$1');
 }
 
+// Normalize every line terminator YAML or a browser might honour (a lone \r
+// ends a line in YAML) to \n and drop the remaining control characters except
+// tab, so multi-line fields can't smuggle a line break past linesToList.
+function normalizeText(s) {
+  return String(s == null ? '' : s)
+    .replace(/\r\n?|[\u0085\u2028\u2029]/g, '\n')
+    // eslint-disable-next-line no-control-regex
+    .replace(/[\x00-\x08\x0b-\x1f\x7f]/g, '');
+}
+
+// One trimmed item per line. Every returned item is free of line breaks and
+// control characters, so it is safe inside a YAML block scalar (deliverables)
+// as well as in a quoted scalar.
 function linesToList(s) {
-  return String(s || '').split(/\r?\n/).map((x) => x.trim()).filter(Boolean);
+  return normalizeText(s).split('\n').map((x) => x.trim()).filter(Boolean);
 }
 
 function tagsToList(s) {
@@ -681,7 +770,8 @@ async function createResourcePullRequest(env, data) {
   const text = b64decode(existing.content);
 
   const catId = String(data.category).trim();
-  const catRe = new RegExp('^- id: ' + catId.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&') + '\\s*$', 'm');
+  // catId is validated to [a-z0-9-] in handleSubmit, so it needs no regex escaping.
+  const catRe = new RegExp('^- id: ' + catId + '\\s*$', 'm');
   const catMatch = text.match(catRe);
   if (!catMatch) throw new Error('Unknown category: ' + catId);
 
@@ -710,32 +800,32 @@ async function createResourcePullRequest(env, data) {
     sha: ref.object.sha,
   });
 
-  await gh(env, 'PUT', `/repos/${owner}/${repo}/contents/${encodeURIPath(path)}`, {
-    message: 'Suggest resource: ' + data.name,
-    content: b64encode(updated),
-    branch,
-    sha: existing.sha,
-  });
-
-  const cell = (v) => String(v == null ? '' : v).replace(/\|/g, '\\|').replace(/\r?\n/g, ' ');
   const body = [
     'Automated resource suggestion from the [suggest form](https://opensourcedesign.net/resources/suggest/).',
     '',
     '| Field | Value |',
     '| ----- | ----- |',
     '| Name | ' + cell(data.name) + ' |',
-    '| URL | ' + cell(data.url) + ' |',
+    '| URL | ' + cellText(data.url) + ' |',
     '| Category | ' + cell(catId) + ' |',
     ...(data.description ? ['| Description | ' + cell(data.description) + ' |'] : []),
     '',
     'Review the link before merging (relevance, licensing, no dead/spam URL).',
   ].join('\n');
 
-  const pr = await gh(env, 'POST', `/repos/${owner}/${repo}/pulls`, {
-    title: 'Resource suggestion: ' + data.name,
-    head: branch,
-    base,
-    body,
+  const pr = await cleanUpBranchOnError(env, branch, async () => {
+    await gh(env, 'PUT', `/repos/${owner}/${repo}/contents/${encodeURIPath(path)}`, {
+      message: 'Suggest resource: ' + data.name,
+      content: b64encode(updated),
+      branch,
+      sha: existing.sha,
+    });
+    return gh(env, 'POST', `/repos/${owner}/${repo}/pulls`, {
+      title: 'Resource suggestion: ' + data.name,
+      head: branch,
+      base,
+      body,
+    });
   });
 
   const label = env.PR_LABEL_RESOURCE || 'resource-suggestion';
@@ -769,26 +859,28 @@ async function createPullRequest(env, built, data, kind, edit) {
     sha: baseSha
   });
 
-  // 3. Commit the file. New submissions get a collision-free path; edits
-  //    update the existing file in place (the contents API needs its SHA).
   const noun = isEvent ? 'event' : 'job';
-  const filePath = edit ? built.path : await uniquePath(env, owner, repo, base, built.path);
-  await gh(env, 'PUT', `/repos/${owner}/${repo}/contents/${encodeURIPath(filePath)}`, {
-    message: (edit ? 'Update ' + noun + ': ' : 'Add ' + noun + ': ') + data.title,
-    content: b64encode(built.markdown),
-    branch,
-    ...(edit ? { sha: edit.sha } : {})
-  });
-
-  // 4. Open the pull request.
   const prTitle = edit
     ? (isEvent ? 'Event edit: ' : 'Job edit: ')
     : (isEvent ? 'Event submission: ' : 'Job submission: ');
-  const pr = await gh(env, 'POST', `/repos/${owner}/${repo}/pulls`, {
-    title: prTitle + data.title,
-    head: branch,
-    base,
-    body: isEvent ? eventPrBody(data, filePath, edit) : prBody(data, filePath, edit)
+  const pr = await cleanUpBranchOnError(env, branch, async () => {
+    // 3. Commit the file. New submissions get a collision-free path; edits
+    //    update the existing file in place (the contents API needs its SHA).
+    const filePath = edit ? built.path : await uniquePath(env, owner, repo, base, built.path);
+    await gh(env, 'PUT', `/repos/${owner}/${repo}/contents/${encodeURIPath(filePath)}`, {
+      message: (edit ? 'Update ' + noun + ': ' : 'Add ' + noun + ': ') + data.title,
+      content: b64encode(built.markdown),
+      branch,
+      ...(edit ? { sha: edit.sha } : {})
+    });
+
+    // 4. Open the pull request.
+    return gh(env, 'POST', `/repos/${owner}/${repo}/pulls`, {
+      title: prTitle + data.title,
+      head: branch,
+      base,
+      body: isEvent ? eventPrBody(data, filePath, edit) : prBody(data, filePath, edit)
+    });
   });
 
   // 5. Label it (best-effort; the merge workflow keys off the branch name, not the label).
@@ -825,9 +917,32 @@ async function gh(env, method, path, body) {
   let out;
   try { out = text ? JSON.parse(text) : {}; } catch (e) { out = { raw: text }; }
   if (!resp.ok) {
-    throw new Error((out && out.message) ? out.message : 'GitHub API ' + resp.status);
+    // Status, route and GitHub's message end up in the Worker logs via
+    // prFailResponse, so a failed submission can be diagnosed.
+    const err = new Error('GitHub API ' + resp.status + ' ' + method + ' ' + path.split('?')[0] +
+      ((out && out.message) ? ': ' + out.message : ''));
+    err.status = resp.status;
+    throw err;
   }
   return out;
+}
+
+/**
+ * Run the steps that follow creating a submission branch; if any of them
+ * fails, delete the branch again (best effort) so failed submissions don't
+ * leave stray branches behind, then rethrow.
+ */
+async function cleanUpBranchOnError(env, branch, steps) {
+  try {
+    return await steps();
+  } catch (err) {
+    try {
+      await gh(env, 'DELETE', `/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/git/refs/heads/${encodeURIPath(branch)}`);
+    } catch (e) {
+      console.error('Could not delete branch ' + branch + ' after a failed submission:', e.message);
+    }
+    throw err;
+  }
 }
 
 // Returns the first path variant (foo.md, foo-2.md, foo-3.md, ...) that does not
@@ -856,8 +971,8 @@ function prBody(data, filePath, edit) {
   lines.push('| Field | Value |');
   lines.push('| --- | --- |');
   lines.push('| Project | ' + cell(data.organization) + ' |');
-  lines.push('| Website | ' + cell(data.org_url) + ' |');
-  lines.push('| License | ' + cell(data.license) + ' |');
+  lines.push('| Website | ' + cellText(data.org_url) + ' |');
+  lines.push('| License | ' + cellText(data.license) + ' |');
   lines.push('| Role | ' + cell(data.role) + ' |');
   lines.push('| Compensation | ' + cell(data.compensation) + (data.paid_details ? ' (' + cell(data.paid_details) + ')' : '') + ' |');
   if (data.rate_min) {
@@ -865,7 +980,7 @@ function prBody(data, filePath, edit) {
     lines.push('| Rate | ' + cell(range + ' ' + (data.rate_currency || 'USD') + ' per ' + (data.rate_period || 'hour')) + ' |');
   }
   if (data.deadline) lines.push('| Apply by | ' + cell(data.deadline) + ' |');
-  if (data.github_handle) lines.push('| Submitter GitHub | ' + cell(data.github_handle) + ' |');
+  if (data.github_handle) lines.push('| Submitter GitHub | ' + githubHandle(data.github_handle) + ' |');
   lines.push('| File | `' + filePath + '` |');
   lines.push('');
   lines.push('Review the file, then merge to publish. The submitter is emailed on merge or if the PR is closed without merging (their address is stored privately and is not shown here).');
@@ -888,14 +1003,33 @@ function eventPrBody(data, filePath, edit) {
   lines.push('| Dates | ' + cell(formatEventDate(data.start_date, data.end_date)) + ' |');
   if (data.time) lines.push('| Time | ' + cell(data.time) + ' |');
   lines.push('| Location | ' + cell(data.location) + ' |');
-  if (data.website) lines.push('| Website | ' + cell(data.website) + ' |');
+  if (data.website) lines.push('| Website | ' + cellText(data.website) + ' |');
   lines.push('| File | `' + filePath + '` |');
   lines.push('');
   lines.push('Review the file, then merge to publish. The submitter is emailed on merge or if the PR is closed without merging (their address is stored privately and is not shown here).');
   return lines.join('\n');
 }
 
+// GitHub notifies everyone @mentioned in a PR body, so submitted values
+// (organization, role, resource name, …) could ping arbitrary users. A
+// zero-width space after "@" breaks the mention without changing the text.
+const ZWSP = String.fromCharCode(0x200b);
+function noMentions(s) {
+  return String(s).replace(/@(?=[A-Za-z0-9])/g, '@' + ZWSP);
+}
+
+// The submitter's own GitHub handle is mentioned on purpose so they can
+// follow the pull request; anything that isn't a valid handle is escaped.
+function githubHandle(v) {
+  const h = String(v || '').trim().replace(/^@/, '');
+  return /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$/.test(h) ? '@' + h : cell(v);
+}
+
 function cell(s) {
+  return noMentions(cellText(s));
+}
+
+function cellText(s) {
   return String(s == null ? '' : s).replace(/\|/g, '\\|').replace(/\r?\n/g, ' ');
 }
 
@@ -971,7 +1105,7 @@ function errMsg(err) {
 }
 
 function prFailResponse(err) {
-  console.error('Pull request creation failed:', err);
+  console.error('Pull request creation failed: ' + errMsg(err));
   return json({
     ok: false,
     error: 'Could not create pull request. Please try again later or open one manually on GitHub.',

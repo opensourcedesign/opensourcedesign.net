@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Open Source Design is at FOSDEM 2023!"
-date: 2022-02-03
+date: 2023-02-03
 categories:
   - "design"
   - "conference"
@@ -11,6 +11,8 @@ location: université Libre Brussels, Belgium
 time: 13:00 to 17:00 CET 
 status: past
 permalink: /2023/02/03/fosdem-2023-annoucement
+aliases:
+  - /2023/02/03/fosdem-2023-annoucement/
 ---
 
 

@@ -13,6 +13,7 @@ how_to_apply:
   - Chris Samson <development@ctemplar.com
 github_handle: ''
 date: '2021-12-12T02:00:14.383Z'
+slug: "angular-front-end-developer"
 ---
 CTemplar is looking for front end developers with expertise in Angular, HTML and CSS.
 

@@ -23,4 +23,5 @@ how_to_apply:
 tags: [web design]
 date: '2018-04-12T08:46:03.700Z'
 ---
- 
+
+ventas is an open source ecommerce platform developed from scratch with a functional programming mindset. The main competitors would be Prestashop, WooCommerce and Shopify (just to give an idea of what we're aiming for). See the README for more information about the goals and the rationale.

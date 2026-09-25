@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: '@olivierodo'
 tags: [games, pixel art]
 date: '2022-08-16T16:15:36.066Z'
+slug: "create-asset-for-the-gamification-of-our-project"
 ---
 Hi 👋,
 Our small community project is about to get gamified. After doing some research with our UX designer contributor we are ready to start building our gamification flow.

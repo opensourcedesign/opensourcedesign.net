@@ -16,3 +16,12 @@ date: '2018-02-11T15:31:29.860Z'
 slug: uxui-desiger
 ---
 
+Hello all, 
+
+I'm working on an application on IPFS (https://ipfs.io/). My goal is to create an application to simplify the use of IPFS : 
+
+- Manage ipfs node
+- Synchronise and file on IPFS
+- Add and search metadata
+
+I don't have UX/UI skills, so I want someone to help me to define a identity for this application.

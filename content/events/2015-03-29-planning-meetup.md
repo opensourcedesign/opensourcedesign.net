@@ -10,6 +10,8 @@ location: online
 time: 15:00–16:30 CET (UTC +1:00)
 status: past
 permalink: /2015/03/29/planning-meetup
+aliases:
+  - /2015/03/29/planning-meetup/
 ---
 
 In our [last meetup](/events/2015-03-15-berlin-open-source-design-meetup/) we outlined a bunch of good plans.

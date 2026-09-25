@@ -1,0 +1,28 @@
+{{- /*
+  inline-markdown: render one line of submitter-provided front matter text
+  (a "How to apply" note, a related link, a deliverable) as inline Markdown -
+  **bold**, *italic*, `code`, [label](https://…) and bare URLs / emails - the
+  same subset the job form preview shows, so a post looks the way its author
+  saw it before submitting.
+
+  Usage: {{ partial "inline-markdown.html" (dict "page" $page "text" $line) }}
+
+  The text is untrusted and goldmark runs with `unsafe = true`, so raw HTML is
+  neutralised first: <https://…>, <mailto:…> and <name@example.org> autolinks
+  are unwrapped (goldmark's linkify still links them) and every other "<" is
+  escaped. Shortcode delimiters are broken up so "{{<" can't invoke one.
+  A leading block marker ("- GitHub: …", "1. …", "# …", "> …") is escaped so
+  the line stays inline text instead of becoming a list, heading or quote.
+  Links go through the render-link hook's URL scheme allowlist.
+*/ -}}
+{{- $s := trim (printf "%v" (.text | default "")) " \t" -}}
+{{- $s = replaceRE `^([-*+>])(\s)` `\$1$2` $s -}}
+{{- $s = replaceRE `^(#{1,6})(\s|$)` `\$1$2` $s -}}
+{{- $s = replaceRE `^(\d+)([.)])(\s)` `$1\$2$3` $s -}}
+{{- $s = replaceRE `<((?:https?://|mailto:)[^\s<>]+)>` "$1" $s -}}
+{{- /* <name@example.org>, also with the spaces some posters add to dodge
+       scrapers (<name @ example.org>) - linkify turns it into a mailto. */ -}}
+{{- $s = replaceRE `<\s*([A-Za-z0-9._%+-]+)\s*@\s*([A-Za-z0-9.-]+\.[A-Za-z]{2,})\s*>` "$1@$2" $s -}}
+{{- $s = replace $s "<" "&lt;" -}}
+{{- $s = replaceRE `\{\{(\s*[<%])` "{&#123;$1" $s -}}
+{{- .page.RenderString (dict "display" "inline") $s -}}

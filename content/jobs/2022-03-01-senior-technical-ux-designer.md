@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: '@yetudada'
 tags: [design, user research, prototyping, python]
 date: '2022-03-01T09:04:18.430Z'
+slug: "senior-technical-ux-designer"
 ---
 [Kedro](https://kedro.readthedocs.io/en/stable/01_introduction/01_introduction.html) is an open-source Python framework, hosted by the Linux Foundation's LF AI & Data organisation. We're looking for a technical UX designer capable of applying design principles to a technical Python product. 
 

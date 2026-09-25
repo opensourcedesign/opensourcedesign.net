@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: '@Nalaxon'
 tags: [logo, graphic design]
 date: '2022-06-13T13:41:00.301Z'
+slug: "design-of-2023-conference-logo"
 ---
 **Grazer Linuxtage** is an annually conference about free and open hard and software,
 based in Graz,

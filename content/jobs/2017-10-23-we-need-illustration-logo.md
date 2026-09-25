@@ -14,6 +14,7 @@ how_to_apply:
   - 'https://github.com/lk-geimfari/mimesis'
 tags: [logo, illustration, mimesis, python]
 date: '2017-10-22T21:59:02.047Z'
+slug: "we-need-illustration-logo"
 ---
 It would be awesome if someone would draw our current logo in better quality with transparency. Our logo is very cute octopus.  If you're love octopuses then contact me.
 

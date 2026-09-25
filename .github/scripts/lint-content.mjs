@@ -22,6 +22,7 @@ const NOT_POSTINGS = new Set([
   '_index.md',
   'archive.md',
   'how-to-post.md',
+  'writing-job-posts.md', // the posting guide (content/jobs/writing-job-posts.md)
   'job-form.md',
   'event-form.md',
   'suggest.md',
@@ -91,6 +92,17 @@ function lintFile(file) {
   const isEvent = kind === 'event';
   const isResource = kind === 'resource';
 
+  // A lone \r (or U+2028/U+2029) is a line break to YAML but invisible in a
+  // diff: inside a `|-` block it can end the block and inject front matter
+  // keys (aliases, url, …). The submission Worker strips these; flag any that
+  // slip through a manual edit.
+  // eslint-disable-next-line no-control-regex
+  const stray = text.match(/\r(?!\n)|[\u2028\u2029\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/);
+  if (stray) {
+    const line = text.slice(0, stray.index).split('\n').length;
+    errors.push(`line ${line}: stray control character U+${stray[0].charCodeAt(0).toString(16).toUpperCase().padStart(4, '0')} (a lone carriage return or similar) - remove it; it can break out of the front matter`);
+  }
+
   const fmMatch = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
   if (!fmMatch) {
     errors.push('missing or unterminated front matter block (`---` fences)');
@@ -128,6 +140,11 @@ function lintFile(file) {
     if (isJob && !hasYamlKey(fm, 'date_posted')) {
       errors.push('front matter: `date_posted` is required for jobs');
     }
+    // Pinning the URL keeps it stable across title edits and Hugo upgrades,
+    // and lets CI scripts link to the page without re-deriving Hugo's slug.
+    if (isJob && !hasYamlKey(fm, 'slug') && !hasYamlKey(fm, 'url')) {
+      errors.push('front matter: `slug` is required for jobs (the URL segment, e.g. `slug: "ux-designer"` for /jobs/ux-designer/) - check the URL is not already taken');
+    }
     if (isJob && !hasYamlKey(fm, 'compensation')) {
       warnings.push('front matter: no `compensation` (paid/gratis) - the posting will show "Unspecified"');
     }
@@ -142,6 +159,12 @@ function lintFile(file) {
   }
 
   lintBody(body, errors, warnings);
+
+  // Hugo runs shortcodes in page content; postings come from public forms,
+  // so a shortcode there would embed unreviewed content or break the build.
+  if ((isJob || isEvent) && /\{\{\s*[<%]/.test(body)) {
+    errors.push('Hugo shortcode syntax (`{{<` / `{{%`) is not allowed in postings - write `{&#123;<` to show it literally');
+  }
 
   return { errors, warnings };
 }

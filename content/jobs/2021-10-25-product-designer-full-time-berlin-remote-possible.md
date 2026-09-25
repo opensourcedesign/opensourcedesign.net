@@ -16,6 +16,7 @@ how_to_apply:
   - 'https://jolocom.io/hiring-product-designer/'
 github_handle: 'https://github.com/jolocom'
 date: '2021-10-25T11:10:51.302Z'
+slug: "product-designer-full-time-berlin-remote-possible"
 ---
 Jolocom is for a talented Product Designer to join us in our journey of putting people, organizations, and machines in control of their data using decentralized identity management technology.
 It's a full-time role. Starting asap.

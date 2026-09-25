@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: dburka
 tags: [full-time, ui, ux, information design]
 date: '2022-02-23T09:54:20.390Z'
+slug: "simple-product-designer"
 ---
 We’re hiring a full-time Product Designer to work with us on a wide variety of product design work related to the web-based Simple Dashboard (for health administrators), the Simple mobile app (for healthcare workers), and the BP Passport mobile app (for patients).
 

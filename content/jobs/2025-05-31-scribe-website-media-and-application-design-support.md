@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: '@andrewtavis'
 tags: [web design, app design, ui, ux]
 date: '2025-05-31T12:48:36.817Z'
+slug: "scribe-website-media-and-application-design-support"
 ---
 The [Scribe community](https://github.com/scribe-org) makes Wikidata powered language learning applications. Our main applications are an iOS and soon to be released Android application that has keyboards for second language learners with functionalities like translation, verb conjugation and noun annotation to learn genders. As a community we're looking for design support to help us with the launch of our website at scri.be as well as designs for the applications that we work on. The current Figma designs can be found via the following link:
 

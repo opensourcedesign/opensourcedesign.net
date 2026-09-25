@@ -14,5 +14,6 @@ how_to_apply:
   - "* Chat https://gitter.im/loklak/loklak\r\n* Website: https://loklak.org\r\n* Issue: https://github.com/loklak/loklak_artwork/issues/1"
 tags: [loklak, p2p search, social media search, logo]
 date: '2018-01-25T00:10:48.232Z'
+slug: "help-to-fix-design-issues-of-logo-for-print"
 ---
 The job is to provide a logo for the loklak p2p search engine project in CMYK and with standard printing requirements in svg and pdf format. The logo is already there, but we need to be able to print it. Please see more details in the relevant issue here: https://github.com/loklak/loklak_artwork/issues/1

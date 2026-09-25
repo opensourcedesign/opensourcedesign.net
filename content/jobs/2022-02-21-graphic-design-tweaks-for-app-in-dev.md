@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: ''
 tags: [ux]
 date: '2022-02-21T11:34:30.393Z'
+slug: "graphic-design-tweaks-for-app-in-dev"
 ---
 we have a couple of days paid work available for graphic design tweaks on an app in development on bubble.io
 please get in touch today as it is urgent!

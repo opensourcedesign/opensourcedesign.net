@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: '@keunes'
 tags: [logo, branding]
 date: '2020-05-26T20:31:47.618Z'
+slug: "new-logo-to-go-with-major-app-update"
 ---
 _AntennaPod is a podcast manager and player for Android. Contrary to many of its competitors, it is open source (MIT License), developed and translated by volunteers, gratis and ad-free._
 

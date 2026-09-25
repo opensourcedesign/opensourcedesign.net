@@ -5,11 +5,8 @@
 {{ $status := $raw }}
 {{ if in (slice "solved" "resolved" "completed") $raw }}{{ $status = "filled" }}{{ end }}
 {{ $isOpen := eq $status "searching" }}
-{{ $deadlinePassed := false }}
-{{ with .Params.deadline }}
-  {{ $d := (time.AsTime (printf "%v" .)).Format "2006-01-02" }}
-  {{ if lt $d (now.Format "2006-01-02") }}{{ $deadlinePassed = true }}{{ end }}
-{{ end }}
-{{ $isExpired := or (eq $status "expired") (and $isOpen $deadlinePassed) }}
+{{/* A "searching" posting past its deadline or a year old counts as expired
+     before job-expire's status flip lands (functions/job-lapsed.html). */}}
+{{ $isExpired := or (eq $status "expired") (and $isOpen (partial "functions/job-lapsed.html" .)) }}
 {{ $noindex := or $isExpired (in (slice "filled" "closed" "expired") $status) }}
 {{ return (dict "raw" $raw "status" $status "open" $isOpen "expired" $isExpired "noindex" $noindex) }}

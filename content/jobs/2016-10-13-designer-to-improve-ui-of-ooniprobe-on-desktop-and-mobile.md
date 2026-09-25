@@ -14,6 +14,7 @@ how_to_apply: See the GitHub repository (TheTorProject) or description below
 aliases:
   - /jobs/2016-10-13-OONI-UX-Designer/
 
+slug: "designer-to-improve-ui-of-ooniprobe-on-desktop-and-mobile"
 ---
 
 The [Open Observatory of Network Interference (OONI)](https://ooni.torproject.org),

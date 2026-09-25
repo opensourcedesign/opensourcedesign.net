@@ -18,6 +18,7 @@ how_to_apply:
 github_handle: ''
 tags: [poster, graphic design, sign making, typography]
 date: '2024-01-04T11:16:17.883Z'
+slug: "ux-clinic-poster-design-for-open-source-design"
 ---
 Open Source Design runs design clinics at various conferences and we’d like to make sure we can decorate our stand and our helpers for the clinic! things we’ll need:
 

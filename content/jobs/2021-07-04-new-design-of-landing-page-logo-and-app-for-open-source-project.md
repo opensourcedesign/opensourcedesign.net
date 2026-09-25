@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: IvanBernatovic
 tags: [logo, app design, ui, ux]
 date: '2021-07-04T10:50:43.948Z'
+slug: "new-design-of-landing-page-logo-and-app-for-open-source-project"
 ---
 Collabfinder is an open-source platform for finding collaborators for your projects (apps, libraries, UI toolkits, whatever you want to work on actually).  would like to have a complete redesign of everything as the current look is based on the boilerplate project. I'm open to changing everything - logo, landing page, name, app, typography etc. I didn't market the app properly yet (shared it only in a few places) as there are still some useful features to be added; it only has ~40 registered users right now so it's can't be used just yet (therefore I'm posting my help request here as well).
 

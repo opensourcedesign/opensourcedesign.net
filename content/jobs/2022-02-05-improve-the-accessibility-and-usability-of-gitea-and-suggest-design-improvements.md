@@ -19,6 +19,7 @@ how_to_apply:
 github_handle: ''
 tags: [ui, accessibility]
 date: '2022-02-05T18:40:00.844Z'
+slug: "improve-the-accessibility-and-usability-of-gitea-and-suggest-design-improvements"
 ---
 Gitea wants an accessibility review and designers to come and suggest improvements to the tool based on user insight and feedback.
 Designer would ned to support the volunteer developer team in understanding the process of design improvements from user insights so communicate and participate in the communications of the contributor community.

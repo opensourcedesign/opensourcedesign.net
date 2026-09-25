@@ -1,5 +1,5 @@
 ---
-_id: 00000000-0000-0000-0000-000000000057
+_id: 00000000-0000-0000-0000-000000000056
 layout: jobs
 title: Inkscape Open Symbols UX/UI
 slug: inkscape-open-symbols-ux-ui

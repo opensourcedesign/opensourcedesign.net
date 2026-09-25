@@ -18,6 +18,7 @@ date: '2019-06-28T17:12:36.845Z'
 aliases:
   - /jobs/2019-06-28-/
 
+slug: "design-review-of-a-few-screens"
 ---
 Wobbly is a chat app similar to whatsapp, but specifically for starting a union in a workplace.
 

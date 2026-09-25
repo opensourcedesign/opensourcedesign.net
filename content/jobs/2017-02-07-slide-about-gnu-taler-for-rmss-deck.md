@@ -16,6 +16,7 @@ date: '2017-02-07T09:46:09.006Z'
 aliases:
   - /jobs/2017-02-07-slide about GNU Taler for RMS's deck/
 
+slug: "slide-about-gnu-taler-for-rmss-deck"
 ---
 
 [GNU Taler](https://taler.net/) is a new electronic payment system, and RMS would like to have 1-3 slides to show while he is talking about it when giving talks.

@@ -16,7 +16,6 @@ how_to_apply:
 tags:
   - comment-subscription
 date: '2018-03-13T22:32:47.814Z'
-message: ''
 ---
 
 Zamphyr Internship Program is an opportunity to be a part of a revolutionary startup set out to change technology education as we know it. You will be working on open-source technologies in education, improving our platform and spreading the vision of universal educational change to people and developer communities.

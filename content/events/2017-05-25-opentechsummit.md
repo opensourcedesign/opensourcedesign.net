@@ -11,6 +11,8 @@ location: freiLand, Berlin-Potsdam
 time: 10:00-18:30
 status: past
 permalink: /2017/05/25/opentechsummit
+aliases:
+  - /2017/05/25/opentechsummit/
 ---
 
 [![Open Source Design track at OpenTechSummit 2017](/images/events/opentechsummit-2017.jpg)](https://twitter.com/opensrcdesign/status/865185759246077952)

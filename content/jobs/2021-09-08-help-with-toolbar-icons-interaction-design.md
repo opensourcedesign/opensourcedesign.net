@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: '@ghutchis'
 tags: [icons, interaction design, branding]
 date: '2021-09-09T16:41:09.402Z'
+slug: "help-with-toolbar-icons-interaction-design"
 ---
 Avogadro is a leading 3D molecular design and visualization tool, downloaded over 1 million times. As coders and scientists, we need help with icon design and UI / UX as we finish Avogadro 2.0
 

@@ -18,6 +18,7 @@ how_to_apply:
 github_handle: ''
 tags: [user research, usability testing]
 date: '2025-04-01T18:33:42.988Z'
+slug: "second-team-member-for-user-research"
 ---
 Forgejo is a self-hosted platform for software development (version tracking and project management).
 

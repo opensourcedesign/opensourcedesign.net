@@ -1,4 +1,6 @@
-# Dependabot watches workers/ (npm workspaces: job-submit + wrangler toolchain).
+# Dependabot watches workers/ (npm workspaces: job-submit + wrangler toolchain)
+# and the GitHub Actions used by the workflows. Actions are pinned to full
+# commit SHAs with a "# vX" comment; Dependabot updates both together.
 # Hugo, Tailwind, and Pagefind are pinned in CI workflows, not package.json.
 version: 2
 updates:
@@ -12,3 +14,14 @@ updates:
       wrangler:
         patterns:
           - wrangler
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      actions:
+        patterns:
+          - "*"

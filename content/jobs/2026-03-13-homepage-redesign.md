@@ -16,5 +16,6 @@ how_to_apply:
 github_handle: asernasr
 tags: ''
 date: '2026-03-13T19:15:49.331Z'
+slug: "homepage-redesign"
 ---
 Redesign of our homepage at figranium.dev, you are free to do whatever you want, but our tagline is "Deterministic Control for an Agentic World" and you cannot alter or change the logos/icons

@@ -2,7 +2,10 @@
 # The homepage still refreshes via the Worker /forum proxy in the browser.
 #
 # main is branch-protected (PRs required), so this workflow does not push there.
-# When topics change it dispatches hugo-build, which refreshes the cache before deploy.
+# When the topics change it dispatches hugo-build, which refreshes the cache
+# before deploy. "Changed" means different from the last topics this workflow
+# saw: the committed data/forum-pulse.json is only a placeholder, so each run
+# records a hash of the topic list in the Actions cache and compares with that.
 name: Refresh forum pulse cache
 
 on:
@@ -31,8 +34,23 @@ jobs:
           FORUM_URL: https://discourse.opensourcedesign.net
         run: node .github/scripts/forum-pulse-cache.mjs
 
+      - name: Check whether these topics were seen before
+        id: seen
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: data/forum-pulse.json
+          key: forum-pulse-${{ steps.fetch.outputs.topics_hash }}
+          lookup-only: true
+
       - name: Trigger site rebuild
-        if: steps.fetch.outputs.changed == 'true'
+        if: steps.seen.outputs.cache-hit != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run hugo-build.yml --ref main
+
+      - name: Remember these topics
+        if: steps.seen.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: data/forum-pulse.json
+          key: forum-pulse-${{ steps.fetch.outputs.topics_hash }}

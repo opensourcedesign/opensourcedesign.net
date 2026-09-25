@@ -46,6 +46,12 @@ jobs:
       - name: Link check issue parser
         run: node --test .github/scripts/link-check-issue.test.mjs
 
+      - name: Job and event URL helpers
+        run: node --test .github/scripts/job-url.test.mjs
+
+      - name: Deploy wait helper
+        run: node --test .github/scripts/wait-for-deploy.test.mjs
+
       - name: Worker YAML parser in sync
         run: node .github/scripts/sync-worker-yaml-front-matter.mjs --check
 

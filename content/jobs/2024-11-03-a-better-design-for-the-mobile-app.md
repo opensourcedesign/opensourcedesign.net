@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: github@metacreature
 tags: [graphic design, app design]
 date: '2024-11-03T00:17:02.817Z'
+slug: "a-better-design-for-the-mobile-app"
 ---
 I need a design for a tecnical finished eBook-Reader app. 
 That means the layout is done, but the colors and shapes of the elements are horrible. a new app-icon would be also cool.

@@ -15,6 +15,7 @@ how_to_apply: Contact UX@simplysecure.org
 aliases:
   - /jobs/2016-04-19-VisualDesignerForTorStyleGuide/
 
+slug: "tor-style-guide-standardized-colors-typography-logo-usage"
 ---
 The Tor Project is seeking to create a visual and typographic style guide to harmonize and professionalize the presentation of its various efforts.
 

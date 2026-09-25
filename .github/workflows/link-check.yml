@@ -11,7 +11,7 @@ permissions:
   issues: write
 
 env:
-  HUGO_VERSION: 0.164.0
+  HUGO_VERSION: 0.166.0
 
 jobs:
   linkcheck:

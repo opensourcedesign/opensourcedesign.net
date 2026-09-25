@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  HUGO_VERSION: 0.164.0
+  HUGO_VERSION: 0.166.0
   # Keep in lockstep with the @tailwindcss/browser version pinned in
   # layouts/_default/baseof.html (the local-dev Play CDN fallback).
   TAILWIND_VERSION: 4.3.3
@@ -45,7 +45,12 @@ jobs:
 
   build-and-deploy:
     needs: changes
-    if: github.event_name == 'workflow_dispatch' || needs.changes.outputs.site == 'true'
+    # `changes` is skipped on workflow_dispatch, and a job whose needs were
+    # skipped is itself skipped unless its condition calls a status function -
+    # so the dispatch branch needs !cancelled()/!failure() to ever run.
+    if: >-
+      ${{ !cancelled() && !failure() &&
+      (github.event_name == 'workflow_dispatch' || needs.changes.outputs.site == 'true') }}
     runs-on: ubuntu-latest
     steps:
       # Actions are pinned to full commit SHAs (supply-chain hardening).
@@ -63,14 +68,19 @@ jobs:
 
       # Cache Hugo's processed asset derivatives (resized images, AVIF/WebP
       # encodes). This skips expensive re-encoding when the source images and
-      # image templates are unchanged, keeping builds fast.
-      - name: Cache Hugo resources
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      # image templates are unchanged, keeping builds fast. The prod- prefix is
+      # only ever saved by this workflow on main; previews restore it
+      # read-only, so a PR can't plant files that end up deployed. Restore and
+      # save are separate steps so the cache is saved even when a later step
+      # fails (actions/cache only saves after a fully successful job).
+      - name: Restore Hugo resources cache
+        id: resources-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: resources/_gen
-          key: hugo-resources-${{ hashFiles('assets/**', 'hugo.toml', 'layouts/partials/resolve-image.html', 'layouts/_default/_markup/render-image.html') }}
+          key: hugo-resources-prod-${{ hashFiles('assets/**', 'hugo.toml', 'layouts/partials/resolve-image.html', 'layouts/_default/_markup/render-image.html') }}
           restore-keys: |
-            hugo-resources-
+            hugo-resources-prod-
 
       # Compile Tailwind to a small static stylesheet for production. Local
       # contributors still need no build step (issue #556): when this file is
@@ -80,6 +90,13 @@ jobs:
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
+
+      # Fail in seconds on a broken data file (like the resources.yaml indent
+      # error of #633) instead of after minutes of cold Hugo image processing.
+      - name: Validate data YAML
+        run: |
+          npm install --no-save yaml@2
+          node .github/scripts/lint-data-yaml.mjs
 
       - name: Compile Tailwind CSS
         run: |
@@ -96,13 +113,24 @@ jobs:
           rm pagefind.tar.gz
           chmod +x pagefind
 
+      # Best effort: if Discourse is down, build with the committed
+      # data/forum-pulse.json (the homepage also refreshes it client-side)
+      # rather than blocking the deploy.
       - name: Refresh forum pulse cache
+        continue-on-error: true
         env:
           FORUM_URL: https://discourse.opensourcedesign.net
         run: node .github/scripts/forum-pulse-cache.mjs
 
       - name: Build site
         run: bash .github/scripts/build-hugo-site.sh production
+
+      - name: Save Hugo resources cache
+        if: always() && steps.resources-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: resources/_gen
+          key: ${{ steps.resources-cache.outputs.cache-primary-key }}
 
       # Mirror public/ to gh-pages root but keep pr-preview/ so production
       # deploys do not wipe open PR previews (see preview.yml).
@@ -113,32 +141,41 @@ jobs:
           set -euo pipefail
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
           workdir="gh-pages-deploy"
-          preview_backup=""
-          rm -rf "$workdir"
-          if git clone --depth=1 --branch=gh-pages \
-            "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" \
-            "$workdir" 2>/dev/null; then
-            :
-          else
-            mkdir "$workdir"
-            git -C "$workdir" init
-            git -C "$workdir" checkout --orphan gh-pages
-            git -C "$workdir" remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
-          fi
-          if [ -d "$workdir/pr-preview" ]; then
-            preview_backup=$(mktemp -d)
-            cp -a "$workdir/pr-preview" "$preview_backup/"
-          fi
-          find "$workdir" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
-          cp -a public/. "$workdir/"
-          if [ -n "$preview_backup" ] && [ -d "$preview_backup/pr-preview" ]; then
-            cp -a "$preview_backup/pr-preview" "$workdir/"
-          fi
-          git -C "$workdir" add -A
-          if git -C "$workdir" diff --staged --quiet; then
-            echo "No gh-pages changes to deploy"
-            exit 0
-          fi
-          git -C "$workdir" commit -m "deploy: Hugo site from ${GITHUB_SHA}"
-          git -C "$workdir" push origin HEAD:gh-pages
+          # PR preview deploys and cleanups (preview.yml, their own concurrency
+          # groups) also push to gh-pages and can land between our clone and
+          # push. A rejected push starts over from a fresh clone, so their
+          # pr-preview/ changes are kept rather than overwritten.
+          for attempt in 1 2 3 4 5; do
+            rm -rf "$workdir"
+            if ! git clone --depth=1 --branch=gh-pages "$remote" "$workdir" 2>/dev/null; then
+              mkdir "$workdir"
+              git -C "$workdir" init
+              git -C "$workdir" checkout --orphan gh-pages
+              git -C "$workdir" remote add origin "$remote"
+            fi
+            preview_backup=""
+            if [ -d "$workdir/pr-preview" ]; then
+              preview_backup=$(mktemp -d)
+              cp -a "$workdir/pr-preview" "$preview_backup/"
+            fi
+            find "$workdir" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+            cp -a public/. "$workdir/"
+            if [ -n "$preview_backup" ] && [ -d "$preview_backup/pr-preview" ]; then
+              cp -a "$preview_backup/pr-preview" "$workdir/"
+            fi
+            git -C "$workdir" add -A
+            if git -C "$workdir" diff --staged --quiet; then
+              echo "No gh-pages changes to deploy"
+              exit 0
+            fi
+            git -C "$workdir" commit -m "deploy: Hugo site from ${GITHUB_SHA}"
+            if git -C "$workdir" push origin HEAD:gh-pages; then
+              exit 0
+            fi
+            echo "::warning::gh-pages moved during the deploy (attempt ${attempt}); retrying from a fresh clone"
+            sleep $((attempt * 10))
+          done
+          echo "::error::Could not push to gh-pages after 5 attempts"
+          exit 1

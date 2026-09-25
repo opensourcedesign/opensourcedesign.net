@@ -14,6 +14,7 @@ how_to_apply: Contact https://github.com/stephenfin,irc:sfinucan,mailto:stephenf
 aliases:
   - /jobs/2016-06-28-Patchwork-logo/
 
+slug: "patchwork-logo"
 ---
 Patchwork is a tool used for parse mails from a development mailing list, extract any patches, and display in a web UI. Patchwork is widely deployed around the internet: sites include [kernel.org](https://patchwork.kernel.org/), [ozlabs.org](https://patchwork.ozlabs.org/), [dpdk.org](http://dpdk.org/dev/patchwork/) and [linaro.org](https://patches.linaro.org/).
 

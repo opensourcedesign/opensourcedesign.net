@@ -12,6 +12,7 @@ status: filled
 compensation: gratis
 date_posted: 2016-11-21
 how_to_apply: Contact via GitHub (libretro) — https://github.com/libretro/retroarch-assets/issues/17
+slug: "icons-designer"
 ---
 The idea is to finish [flatui icons theme](https://github.com/libretro/retroarch-assets/issues/17) for xmb menu theme which will be available in [RetroArch](http://www.libretro.com/index.php/retroarch-2) and [Lakka](http://www.lakka.tv) distribution.
 

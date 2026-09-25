@@ -10,6 +10,8 @@ location: bnvk Haus/online
 time: 13:00–18:00 CET (UTC +1:00)
 status: past
 permalink: /2015/03/15/berlin-open-source-design-meetup
+aliases:
+  - /2015/03/15/berlin-open-source-design-meetup/
 ---
 
 Let’s meet and work on driving the Open Soure Design movement forward! Everyone who wants to contribute is welcome.

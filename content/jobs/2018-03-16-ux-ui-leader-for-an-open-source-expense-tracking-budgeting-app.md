@@ -18,3 +18,5 @@ how_to_apply:
 date: '2018-03-17T00:56:22.850Z'
 slug: uxui-leader-for-an-open-source-expense-tracking-and-budgeting-app
 ---
+
+Expensa is an open source project for expense tracking and budgeting. Design work includes leading the UI effort

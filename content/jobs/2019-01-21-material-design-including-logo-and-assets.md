@@ -13,6 +13,7 @@ how_to_apply:
   - sriram.s@outlook.in
 tags: [logo, branding, material design]
 date: '2019-01-21T05:22:56.306Z'
+slug: "material-design-including-logo-and-assets"
 ---
 The project is to convert the blood donation flow to push based, where the donors register in our app and set a base location. If any request posted near them for blood or platelets, they will get a push notification to which they can respond. 
 This is open source, free forever, ad-free, no revenue expected project.

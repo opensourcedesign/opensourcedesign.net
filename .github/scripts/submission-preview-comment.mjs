@@ -6,6 +6,7 @@
  */
 import fs from 'node:fs';
 import { gh } from './github-api.mjs';
+import { eventPath, jobPath } from './job-url.mjs';
 import { submissionMeta } from './submission-meta.mjs';
 import { readYamlScalar } from './yaml-front-matter.mjs';
 
@@ -16,31 +17,14 @@ const PR_NUMBER = process.env.PR_NUMBER;
 const HEAD_REF = process.env.HEAD_REF || '';
 const PREVIEW_BASE = (process.env.PREVIEW_BASE || '').replace(/\/+$/, '');
 
-function slugify(str) {
-  return String(str || '')
-    .trim()
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
-}
-
 function isSubmissionRef(ref) {
   return /^(job|job-edit|event|event-edit|resource)\//.test(ref);
 }
 
-function previewPath(file, fm, ref) {
+function previewPath(file, text) {
   if (file === 'data/resources.yaml') return '/resources/links/';
-  if (file.startsWith('content/jobs/')) {
-    const slug = readYamlScalar(fm, 'slug') || slugify(readYamlScalar(fm, 'title'));
-    return slug ? '/jobs/' + slug + '/' : '/jobs/';
-  }
-  if (file.startsWith('content/events/')) {
-    const slug = readYamlScalar(fm, 'slug') || slugify(file.split('/').pop().replace(/\.md$/, ''));
-    return slug ? '/events/' + slug + '/' : '/events/';
-  }
+  if (file.startsWith('content/jobs/')) return jobPath(text) || '/jobs/';
+  if (file.startsWith('content/events/')) return eventPath(file, text) || '/events/';
   return '/';
 }
 
@@ -58,7 +42,7 @@ function summarize(file, text, ref) {
   if (readYamlScalar(fm, 'category')) rows.push(['Category', readYamlScalar(fm, 'category')]);
   if (readYamlScalar(fm, 'url')) rows.push(['URL', readYamlScalar(fm, 'url')]);
 
-  const path = previewPath(file, fm, ref);
+  const path = previewPath(file, text);
   const previewUrl = PREVIEW_BASE ? PREVIEW_BASE + path : '';
   const liveGuess = SITE.replace(/\/+$/, '') + path;
 

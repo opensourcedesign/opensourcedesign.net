@@ -44,7 +44,7 @@ This is where you will need to some investigation and clicking through their lin
 
 All projects must pass these criteria to be approved. 
 If everything looks good, in the top right there is a "Submit comments" button.
-![screenshot of submit commments button](/images/resources/maintainingjobsubmissions/submitreviewbutton.png)
+![screenshot of submit comments button](/images/resources/maintainingjobsubmissions/submitreviewbutton.png)
 
 You can either request changes, approve, or comment without explicit approval. If you approve, leave a comment letting us know it looks good.
 ![screenshot of submit comments dropdown and a comment saying looks good to me](/images/resources/maintainingjobsubmissions/submitreviewmenu.png)
@@ -55,7 +55,7 @@ Click submit review and you're done! Congrats on your first approval and contrib
 
 ### Pull request preview
 In the PR, you can preview the job post by the "Conversation" tab and scrolling down. You will see a link called "PR Preview" to see it on the actually website.
-![screenshot of PR prview under conversation tab](/images/resources/maintainingjobsubmissions/preview.png)
+![screenshot of PR preview under conversation tab](/images/resources/maintainingjobsubmissions/preview.png)
 
 ### Improving description and deliverables of job submissions
 Many projects struggle to know what they are looking for. If the deliverables or description are unclear and would benefit from more direction, feel free to leave a comment on their pull request.

@@ -1,0 +1,21 @@
+{{/* True when a job page has lapsed by date: its application deadline has
+     passed, or it is more than 365 days since the most recent of date_posted
+     and last_updated. Same rule as .github/scripts/job-expire.mjs, which
+     proposes the matching `status: expired` change in a pull request - until
+     that is merged, templates treat a lapsed `searching` posting as expired.
+     Dates are compared as YYYY-MM-DD strings (non-ISO values are ignored). */}}
+{{ $lapsed := false }}
+{{ $isoDay := `^\d{4}-\d{2}-\d{2}` }}
+{{ $today := now.Format "2006-01-02" }}
+{{ $cutoff := (now.Add (time.ParseDuration "-8760h")).Format "2006-01-02" }}
+{{ with .Params.deadline }}
+  {{ $d := substr (printf "%v" .) 0 10 }}
+  {{ if and (findRE $isoDay $d) (lt $d $today) }}{{ $lapsed = true }}{{ end }}
+{{ end }}
+{{ $posted := "" }}
+{{ with .Params.date_posted }}{{ $posted = substr (printf "%v" .) 0 10 }}{{ end }}
+{{ $updated := "" }}
+{{ with .Params.last_updated }}{{ $updated = substr (printf "%v" .) 0 10 }}{{ end }}
+{{ $freshest := cond (gt $updated $posted) $updated $posted }}
+{{ if and (findRE $isoDay $freshest) (lt $freshest $cutoff) }}{{ $lapsed = true }}{{ end }}
+{{ return $lapsed }}

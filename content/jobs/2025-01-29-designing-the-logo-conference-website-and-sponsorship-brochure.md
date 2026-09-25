@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: palnabarun
 tags: [logo, branding, web design]
 date: '2025-01-29T07:11:37.486Z'
+slug: "designing-the-logo-conference-website-and-sponsorship-brochure"
 ---
 We require designs of our conference logo, designs and wireframes for our website, content layout templates for our blog, designs for a sponsorship brochure and a few other related assets for the general theme and design of the conference.
 

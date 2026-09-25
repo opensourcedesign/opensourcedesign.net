@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: activey
 tags: [logo, branding, open source, framework]
 date: '2024-12-28T18:37:49.302Z'
+slug: "logo-for-an-opensource-java-framework"
 ---
 I'm looking for a kind person that could deliver a logo for my Java framework ;) I'm working on a project after hours, releasing it under MIT license.
 

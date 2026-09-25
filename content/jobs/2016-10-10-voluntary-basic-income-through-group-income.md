@@ -17,6 +17,7 @@ how_to_apply: Email hi@okturtles.com with your technical background, why you are
 aliases:
   - /jobs/2016-10-10-BasicIncome-Through-Group-Income-Frontend-Lead/
 
+slug: "voluntary-basic-income-through-group-income"
 ---
 
 **This is a copy of [our official listing](https://groupincome.org/positions/). Please see that for most up-to-date info!**

@@ -17,3 +17,6 @@ tags: [ux]
 date: '2018-02-17T17:19:11.694Z'
 slug: ux-designer-contracted
 ---
+
+Kiwix desktop is a simple desktop application for Linux and Windows that provides internet content to people without internet access. To do so, it reads files from a local library (or first imports them from our servers) and displays them as the original websites would appear online. Therefore, think of Kiwix as a very simplified web browser that has content from Wikipedia, Khan Academy, and other freely licensed resources.
+Being now almost 10 years old, Kiwix needs however a full revamp of its user interface.

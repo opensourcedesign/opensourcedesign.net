@@ -15,5 +15,6 @@ how_to_apply:
 github_handle: ''
 tags: [web design, application form]
 date: '2020-07-24T14:39:25.284Z'
+slug: "new-website-to-reflect-our-services-and-commitment-to-the-foss-community"
 ---
 Fosshost is a provider of free cloud hosting services to the free and open source software community.  We advocate and promote the use of linux operating systems and software to more than 30 open source projects, which allows projects to be able to flourish and grow, without funding (or no funding at all) expensive hosting bills.  We remove the worry many projects often have of when "free credits" will expire by giving projects a permanent home for all of their hosting and development needs.  We are an inclusive project that sits firmly within the foss community and we believe in sharing our resources for common goals. Our community is global and we are in more than four countries which allows us to provide reach to projects in the USA, UK and Europe.

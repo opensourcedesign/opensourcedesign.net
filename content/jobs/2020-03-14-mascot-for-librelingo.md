@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [mascot, graphic design]
 date: '2020-03-14T07:49:06.247Z'
+slug: "mascot-for-librelingo"
 ---
 LibreLingo is an experiment to create a community-driven language-learning platform. We are looking for a mascot for this project.
 

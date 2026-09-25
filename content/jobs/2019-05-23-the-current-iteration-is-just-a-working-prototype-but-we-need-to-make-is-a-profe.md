@@ -19,6 +19,7 @@ date: '2019-05-23T09:43:44.056Z'
 aliases:
   - /jobs/2019-05-23-/
 
+slug: "the-current-iteration-is-just-a-working-prototype-but-we-need-to-make-is-a-professional-looking-one"
 ---
 Some of the project main goals are:
 

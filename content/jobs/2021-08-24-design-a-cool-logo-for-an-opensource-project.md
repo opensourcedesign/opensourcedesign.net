@@ -15,5 +15,6 @@ how_to_apply:
 github_handle: ''
 tags: [logo, design]
 date: '2021-08-24T20:23:29.237Z'
+slug: "design-a-cool-logo-for-an-opensource-project"
 ---
 Design a cool Logo for an OpenSource Project - we will integrate it

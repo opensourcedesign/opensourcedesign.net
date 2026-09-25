@@ -45,19 +45,19 @@
 
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div class="space-y-2 sm:col-span-2">
-              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="title">Event name <span class="text-red-500">*</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="title" name="title" placeholder="e.g., Open Source Design Devroom at FOSDEM 2027" required />
+              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="title">Event name <span class="text-red-600 dark:text-red-400">*</span></label>
+              <input class="osd-input" id="title" name="title" placeholder="e.g., Open Source Design Devroom at FOSDEM 2027" maxlength="150" required />
             </div>
 
             <div class="space-y-2">
-              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="website">Event website <span class="text-slate-400">(optional)</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="website" name="website" type="url" inputmode="url" placeholder="https://..." />
+              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="website">Event website <span class="text-slate-500">(optional)</span></label>
+              <input class="osd-input" id="website" name="website" type="url" inputmode="url" placeholder="https://..." />
               <p class="text-xs text-slate-500">Registration page, program, or announcement.</p>
             </div>
 
             <div class="space-y-2">
-              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="location">Location <span class="text-red-500">*</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="location" name="location" placeholder="e.g., Brussels, Belgium - or Online" required />
+              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="location">Location <span class="text-red-600 dark:text-red-400">*</span></label>
+              <input class="osd-input" id="location" name="location" placeholder="e.g., Brussels, Belgium - or Online" required />
             </div>
           </div>
         </fieldset>
@@ -68,19 +68,19 @@
 
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
             <div class="space-y-2">
-              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="start_date">Start date <span class="text-red-500">*</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="start_date" name="start_date" type="date" required />
+              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="start_date">Start date <span class="text-red-600 dark:text-red-400">*</span></label>
+              <input class="osd-input" id="start_date" name="start_date" type="date" required />
             </div>
 
             <div class="space-y-2">
-              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="end_date">End date <span class="text-slate-400">(optional)</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="end_date" name="end_date" type="date" />
+              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="end_date">End date <span class="text-slate-500">(optional)</span></label>
+              <input class="osd-input" id="end_date" name="end_date" type="date" />
               <p class="text-xs text-slate-500">Leave empty for a one-day event.</p>
             </div>
 
             <div class="space-y-2">
-              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="time">Time <span class="text-slate-400">(optional)</span></label>
-              <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="time" name="time" placeholder="e.g., 18:00–19:00 CET" />
+              <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="time">Time <span class="text-slate-500">(optional)</span></label>
+              <input class="osd-input" id="time" name="time" placeholder="e.g., 18:00–19:00 CET" />
               <p class="text-xs text-slate-500">Include the timezone.</p>
             </div>
           </div>
@@ -112,15 +112,15 @@
           <legend class="w-full border-b border-slate-200 pb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">3 · Details &amp; contact</legend>
 
           <div class="space-y-2">
-            <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="description">Event description <span class="text-red-500">*</span></label>
+            <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="description">Event description <span class="text-red-600 dark:text-red-400">*</span></label>
             <p class="text-xs text-slate-500">What is the event about? Who is it for? How can people join? Markdown is supported.</p>
-            <textarea class="min-h-48 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="description" name="description" placeholder="Join us for..." required></textarea>
+            <textarea class="osd-input min-h-48" id="description" name="description" placeholder="Join us for..." required></textarea>
           </div>
 
           <div class="space-y-2">
             <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="email">Your email <span class="text-slate-400">(for status updates, not published)</span></label>
             <p class="text-xs text-slate-500">We'll email you here once your event is reviewed and published. This is kept private and never shown on the site.</p>
-            <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" />
+            <input class="osd-input" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" />
           </div>
 
           {{ with site.Params.turnstileSiteKey }}

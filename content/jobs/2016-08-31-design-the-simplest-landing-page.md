@@ -12,6 +12,7 @@ status: filled
 compensation: gratis
 date_posted: '2016-08-31'
 how_to_apply: Contact bdavidxyz@gmail.com
+slug: "design-the-simplest-landing-page"
 ---
 
  I'm writing an open-source tool dedicated to landing-page : https://bdavidxyz.github.io/zee/

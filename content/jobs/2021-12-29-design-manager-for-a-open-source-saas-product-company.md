@@ -14,6 +14,7 @@ how_to_apply:
   - 'Please submit your profile in this page - https://angel.co/l/2w4E8R'
 github_handle: ''
 date: '2021-12-29T14:26:22.914Z'
+slug: "design-manager-for-a-open-source-saas-product-company"
 ---
 About Appsmith
 

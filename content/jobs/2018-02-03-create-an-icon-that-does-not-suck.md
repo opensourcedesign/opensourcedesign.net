@@ -16,7 +16,9 @@ how_to_apply:
 tags:
   - comment-subscription
 date: '2018-02-03T20:03:08.072Z'
-hidden: true
+# Was Jekyll's "hidden: true" (Hugo ignores it): keep the page, leave it out of lists.
+build:
+  list: never
 ---
 I am @grindhold and recently designed a software that enables people to install many MSI-Installers at once, thus avoiding those endless Next → Next → Next → Finish sessions while not losing configurability of the Packages.
 

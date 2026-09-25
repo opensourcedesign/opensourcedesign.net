@@ -1,8 +1,11 @@
 # Shared path filters for GitHub Actions (dorny/paths-filter).
-# hugo-build.yml gates deploy on the `site` filter below (single source of truth).#
+# hugo-build.yml gates deploy on the `site` filter below (single source of truth).
 # site    — files that change Hugo output (build, deploy, PR preview, a11y)
-# content — job/event/resource markdown and curated YAML lists
+# content — job/event/resource markdown and curated YAML lists, plus the
+#           lint scripts content-lint.yml runs on them
 # forms   — submission form layouts/modules checked by ci-checks.yml
+# checks  — inputs of the repository checks (ci-checks.yml)
+# A workflow's own file and this file are listed so edits to them are tested.
 
 site:
   - 'content/**'
@@ -12,13 +15,14 @@ site:
   - 'static/**'
   - 'archetypes/**'
   - 'hugo.toml'
-  - 'CNAME'
   - '.github/scripts/build-hugo-site.sh'
   - '.github/workflows/hugo-build.yml'
   - '.github/workflows/preview.yml'
   - '.github/workflows/a11y.yml'
   - '.github/workflows/forum-pulse-cache.yml'
-  - '.github/scripts/generate-headers.mjs'
+  - '.github/scripts/forum-pulse-cache.mjs'
+  - '.github/scripts/lint-data-yaml.mjs'
+  - '.github/path-filters.yml'
 
 content:
   - 'content/jobs/**'
@@ -26,6 +30,15 @@ content:
   - 'content/resources/**'
   - 'data/resources.yaml'
   - 'data/bibliography.yaml'
+  - '.github/scripts/lint-content.mjs'
+  - '.github/scripts/lint-data-yaml.mjs'
+  - '.github/scripts/job-filename-rules.mjs'
+  - '.github/scripts/yaml-front-matter.mjs'
+  - '.github/scripts/submission-preview-comment.mjs'
+  - '.github/scripts/submission-meta.mjs'
+  - '.github/scripts/job-url.mjs'
+  - '.github/workflows/content-lint.yml'
+  - '.github/path-filters.yml'
 
 forms:
   - 'layouts/jobs/job-form.html'
@@ -53,6 +66,15 @@ checks:
   - '.github/scripts/yaml-front-matter.test.mjs'
   - '.github/scripts/sync-worker-yaml-front-matter.mjs'
   - '.github/scripts/job-redirect-aliases.mjs'
+  - '.github/scripts/job-filename-rules.mjs'
+  - '.github/scripts/link-check-issue.mjs'
+  - '.github/scripts/link-check-issue.test.mjs'
+  - '.github/scripts/github-api.mjs'
   - '.github/scripts/lint-data-yaml.mjs'
+  - '.github/scripts/job-url.mjs'
+  - '.github/scripts/job-url.test.mjs'
+  - '.github/scripts/wait-for-deploy.mjs'
+  - '.github/scripts/wait-for-deploy.test.mjs'
   - '.github/form-modules.sha256'
   - '.github/workflows/ci-checks.yml'
+  - '.github/path-filters.yml'

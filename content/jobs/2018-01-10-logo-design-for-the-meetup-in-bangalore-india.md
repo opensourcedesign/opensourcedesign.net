@@ -13,5 +13,6 @@ how_to_apply:
   - diversifyingopensource@gmail.com
 tags: [logo, graphic design]
 date: '2018-01-10T14:21:45.167Z'
+slug: "logo-design-for-the-meetup-in-bangalore-india"
 ---
 We're a meetup for encouraging and celebrating underrepresented people in open source. And currently looking for someone who can design a logo for our meetup group.

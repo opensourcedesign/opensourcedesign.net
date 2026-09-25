@@ -26,11 +26,36 @@ var form = document.getElementById('osd-job-form');
         var outExtra = document.getElementById('osd-result-extra');
         var submitBtn = document.getElementById('osd-submit');
 
+        // Turnstile tokens are single-use: the Worker spends one on every
+        // request, whatever the outcome. Reset the widget after each attempt
+        // and wait for a fresh token, so a retry - e.g. "Post anyway" after a
+        // duplicate warning - doesn't fail with "Captcha verification failed".
+        var turnstileBox = form.querySelector('.cf-turnstile');
+        function turnstileValue() {
+          var el = form.querySelector('[name="cf-turnstile-response"]');
+          return el && el.value ? String(el.value) : '';
+        }
+        function resetTurnstile() {
+          try {
+            if (turnstileBox && window.turnstile && typeof window.turnstile.reset === 'function') window.turnstile.reset(turnstileBox);
+          } catch (e) { /* widget not rendered yet */ }
+        }
+        function freshTurnstileToken(timeoutMs) {
+          return new Promise(function (resolve) {
+            var until = Date.now() + (timeoutMs || 10000);
+            (function poll() {
+              var token = turnstileValue();
+              if (token || !turnstileBox || Date.now() > until) return resolve(token);
+              setTimeout(poll, 250);
+            })();
+          });
+        }
+
         function slugify(str) {
           str = (str || '').trim().toLowerCase();
           str = str.normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
           str = str.replace(/[^a-z0-9\s-]/g, '');
-          str = str.replace(/\s+/g, '-').replace(/-+/g, '-');
+          str = str.replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
           return str;
         }
 
@@ -212,7 +237,8 @@ var form = document.getElementById('osd-job-form');
             bannerText.textContent = 'You are editing ' + editFile + '. The live posting stays unchanged until the update is approved.';
             banner.hidden = false;
           }
-          document.title = document.title.replace(/^Post a Job/, 'Edit Job Posting');
+          // The page title is "Submit a Job | …" (content/jobs/job-form.md).
+          document.title = document.title.replace(/^(?:Submit|Post) a Job/, 'Edit Job Posting');
 
           if (note) note.textContent = 'Loading current posting\u2026';
           var rawURL = repoURL.replace('https://github.com/', 'https://raw.githubusercontent.com/') +
@@ -243,7 +269,8 @@ var form = document.getElementById('osd-job-form');
             if (editMeta.date_posted) datePosted = editMeta.date_posted;
             if (editMeta.date) isoNow = editMeta.date;
           }
-          var slug = datePosted + '-' + slugify(data.title);
+          var urlSlug = slugify(data.title) || 'posting';
+          var slug = datePosted + '-' + urlSlug;
           var path = editFile ? 'content/jobs/' + editFile : 'content/jobs/' + slug + '.md';
 
           var applyList = linesToList(data.how_to_apply);
@@ -256,6 +283,9 @@ var form = document.getElementById('osd-job-form');
           fm.push('status: ' + (editFile ? (data.status || 'searching') : 'searching'));
           fm.push('date_posted: ' + yq(datePosted));
           fm.push('date: ' + yq(isoNow));
+          // Same explicit URL slug the Worker writes (it also de-duplicates
+          // against existing postings; check /jobs/<slug>/ is free by hand).
+          if (!editFile) fm.push('slug: ' + yq(urlSlug));
           if (editFile && editMeta) {
             if (editMeta.id) fm.push('_id: ' + yq(editMeta.id));
             if (editMeta.slug) fm.push('slug: ' + yq(editMeta.slug));
@@ -420,13 +450,16 @@ var form = document.getElementById('osd-job-form');
             return;
           }
 
-          var turnstile = document.querySelector('[name="cf-turnstile-response"]');
-          var turnstileToken = turnstile && turnstile.value ? String(turnstile.value) : '';
-
           if (endpoint) {
             try {
               if (submitBtn) submitBtn.disabled = true;
               if (note) note.textContent = 'Submitting…';
+
+              var turnstileToken = await freshTurnstileToken();
+              if (turnstileBox && !turnstileToken) {
+                if (note) note.textContent = 'Please complete the captcha check, then submit again.';
+                return;
+              }
 
               var resp = await fetch(endpoint, {
                 method: 'POST',
@@ -483,7 +516,7 @@ var form = document.getElementById('osd-job-form');
               var msg = (json && json.error) ? String(json.error) : 'Submission failed.';
               throw new Error(msg);
             } catch (err) {
-              if (note) note.textContent = 'Could not submit automatically. Use the fallback below.';
+              if (note) note.textContent = 'Could not submit automatically' + (err && err.message ? ' (' + err.message + ')' : '') + '. Try again, or use the fallback below.';
               out.classList.remove('border-emerald-200', 'bg-emerald-50');
               out.classList.add('border-slate-200', 'bg-white');
 
@@ -496,6 +529,7 @@ var form = document.getElementById('osd-job-form');
               return;
             } finally {
               if (submitBtn) submitBtn.disabled = false;
+              resetTurnstile();
             }
           }
 

@@ -14,9 +14,6 @@ how_to_apply:
   - sandra.muellrick@wikimedia.de
 tags: [interaction design, ux, usability]
 date: '2017-07-05T10:44:47.242Z'
-datum_inschrijving: '2017-07-05T10:44:47.242Z'
-doet_mee: true
-nieuwe_inschrijving: true
 ---
 As an UX/Interaction Designer (f/m) you will work on the Software behind projects like Wikipedia and Wikidata to improve their user experience and enable our communities to achieve our Vision: A world in which every single human being can freely share in the sum of all knowledge.
 

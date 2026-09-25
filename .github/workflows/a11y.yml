@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 env:
-  HUGO_VERSION: 0.164.0
+  HUGO_VERSION: 0.166.0
   TAILWIND_VERSION: 4.3.3
 
 jobs:

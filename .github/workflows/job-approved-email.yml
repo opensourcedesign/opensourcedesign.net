@@ -5,7 +5,9 @@ name: Email submitter when job or event is published
 # the submitter's private email - stored in Cloudflare KV by the Worker, keyed
 # by PR number - and notify them that their posting is live. The address is
 # never committed to the repo or shown in the PR; it is fetched at merge time
-# over an authenticated endpoint.
+# over an authenticated endpoint. The email waits until the live site serves a
+# build that includes the merge (wait-for-deploy.mjs); if the deploy doesn't
+# show up in time the run fails without emailing and can be re-run later.
 
 on:
   pull_request:
@@ -45,7 +47,12 @@ jobs:
             echo "found=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          resp="$(curl -fsS -H "Authorization: Bearer ${LOOKUP_SECRET}" "${LOOKUP_URL}?pr=${PR_NUMBER}" || true)"
+          # A Worker or network failure must fail the run (so it can be
+          # re-run), not pass as "no email on file" and silently skip.
+          if ! resp="$(curl -fsS --retry 3 --retry-all-errors -H "Authorization: Bearer ${LOOKUP_SECRET}" "${LOOKUP_URL}?pr=${PR_NUMBER}")"; then
+            echo "::error::Email lookup failed - the Worker was unreachable or returned an error."
+            exit 1
+          fi
           found="$(printf '%s' "$resp" | jq -r '.found // false')"
           if [ "$found" != "true" ]; then
             echo "No email on file for PR #${PR_NUMBER}; nothing to send."
@@ -95,6 +102,14 @@ jobs:
         env:
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
         run: node .github/scripts/approval-email-meta.mjs
+
+      - name: Wait for the site to deploy
+        if: steps.lookup.outputs.found == 'true'
+        timeout-minutes: 25
+        env:
+          SINCE: ${{ github.event.pull_request.merged_at }}
+          URL: ${{ steps.resolve.outputs.url }}
+        run: node .github/scripts/wait-for-deploy.mjs
 
       - name: Send notification email
         if: steps.lookup.outputs.found == 'true'

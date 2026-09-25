@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: '@flicstar'
 tags: [branding, web design]
 date: '2022-07-12T02:38:47.292Z'
+slug: "branding-advice-and-color-decisions"
 ---
 The content strategy working group of [The Good Docs Project](https://thegooddocsproject.dev/) is about to embark on a refresh of our website. 
 

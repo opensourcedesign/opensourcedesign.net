@@ -14,6 +14,9 @@ how_to_apply:
   - "For questions:"
   - "LinkedIn: https://www.linkedin.com/in/juliaro-draw/"
   - "Mastodon: https://mastodon.art/@juliaro"
+aliases:
+  - /jobs/senior-ux/ui-designer-openproject/
+slug: "senior-ux-ui-designer-openproject"
 ---
 
 At OpenProject, we build open-source project management and collaboration software used by organizations around the world. We believe good software does not begin with mockups or code, but with an understanding of people’s needs. Our users rely on our product to collaborate in agile product teams delivering software, plan infrastructure projects, organize research programs, and coordinate complex work across multiple teams and projects within enterprises. Our users build rockets, cars, or software using OpenProject and we are proud to empower teams worldwide to achieve great things together.

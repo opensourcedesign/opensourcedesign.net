@@ -18,5 +18,7 @@ how_to_apply:
   - "https://github.com/muonium\r\n\r\nhttps://framavox.org/g/KgLMT6H2/muonium"
 tags: [branding]
 date: '2018-02-05T21:43:07.923Z'
+slug: "design-website-for-muonium"
 ---
- 
+
+Muonium is a 100% free and open source, and end-to-end encrypted cloud storage. We're currently looking for someone who could possibly redesign our website (muonium.io).

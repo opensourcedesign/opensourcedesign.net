@@ -17,6 +17,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, branding, graphic design]
 date: '2022-02-14T14:31:27.168Z'
+slug: "graphic-designer-conference-logo-branding"
 ---
 [OpenStreetMap US](https://www.openstreetmap.us/) is seeking to hire a professional graphic designer to improve and further develop our annual conference logo and branding based on existing assets and guidelines. 
 

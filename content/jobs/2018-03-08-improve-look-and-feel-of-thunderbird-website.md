@@ -15,6 +15,7 @@ how_to_apply:
 tags:
   - comment-subscription
 date: '2018-03-08T20:44:46.854Z'
+slug: "improve-look-and-feel-of-thunderbird-website"
 ---
 Thunderbird, the desktop Email client used by 26 million users, is working to revamp our website and we're looking for a passionate web designer to help make the website look and feel more modern and improve the experience of using the website for our users.
 

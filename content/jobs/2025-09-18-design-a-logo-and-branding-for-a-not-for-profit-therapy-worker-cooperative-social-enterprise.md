@@ -22,6 +22,7 @@ how_to_apply:
 github_handle: commonground@therapy.coop
 tags: [logo, branding, design system]
 date: '2025-09-18T21:51:43.393Z'
+slug: "design-a-logo-and-branding-for-a-not-for-profit-therapy-worker-cooperative-social-enterprise"
 ---
 Logo design, Branding of a design or visual language that we can use to create our website
 

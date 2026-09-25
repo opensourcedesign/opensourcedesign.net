@@ -32,6 +32,7 @@ deliverables: |-
   Home screen
   Workout screen
   Vitals screen
+slug: "looking-for-designers-for-openstrap-an-open-source-fitness-app"
 ---
 
 I am the maintainer of OpenStrap. Looking for designers who can help design this app, not actually help complete design system setup. I don't want you to design the entire application, all I want is a proper design system with icons, fonts, layouts, UI direction, and major screens like workout, home, vitals and all those screens, base properly built. Once that's done I can pick it up from there.

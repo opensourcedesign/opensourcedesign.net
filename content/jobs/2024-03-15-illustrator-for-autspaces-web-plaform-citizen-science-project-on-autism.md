@@ -17,6 +17,7 @@ how_to_apply:
 github_handle: ''
 tags: [illustration, citizen science, web platform]
 date: '2024-03-15T13:48:35.848Z'
+slug: "illustrator-for-autspaces-web-plaform-citizen-science-project-on-autism"
 ---
 ## About AutSPACEs
 

@@ -17,6 +17,7 @@ how_to_apply:
 github_handle: '@ultimateownsz'
 tags: [logo, branding, pixel art]
 date: '2025-01-26T18:39:21.572Z'
+slug: "need-help-with-branding-for-foss-game"
 ---
 Our project aims to create a pirate themed 2D, topdown, turn based boardgame in Pygame.
 

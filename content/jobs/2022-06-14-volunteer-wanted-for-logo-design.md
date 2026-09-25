@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo]
 date: '2022-06-14T14:56:41.006Z'
+slug: "volunteer-wanted-for-logo-design"
 ---
 Hi all,
 

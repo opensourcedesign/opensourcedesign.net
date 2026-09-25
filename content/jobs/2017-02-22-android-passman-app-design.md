@@ -15,6 +15,7 @@ how_to_apply:
      Demo: https://demo.passman.cc"
 tags: [nextcloud, password manager, android, material design]
 date: '2017-02-22T12:49:36.851Z'
+slug: "android-passman-app-design"
 ---
 At the moment the android app is pretty default. 
 We would love a material design but as coders we're bad designers.

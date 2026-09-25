@@ -9,6 +9,8 @@ location: Folkets hus, Gothenburg
 time: pending
 status: past
 permalink: /2017/02/04/foss-north-2017
+aliases:
+  - /2017/02/04/foss-north-2017/
 ---
 
 [Foss North](https://foss-north.se) is an free / open source conference covering both software

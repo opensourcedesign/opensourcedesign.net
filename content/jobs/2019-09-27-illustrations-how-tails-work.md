@@ -14,6 +14,7 @@ status: filled
 compensation: Billable hours paid up to 2 000€, including meetings.
 date_posted: 2019-09-27
 how_to_apply: Contact sajolida@pimienta.org
+slug: "illustrations-on-what-is-tails-and-how-it-works"
 ---
 
 Tails, a portable operating system that protects your privacy and avoids

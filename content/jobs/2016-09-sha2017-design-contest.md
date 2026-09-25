@@ -14,6 +14,7 @@ status: closed
 compensation: gratis
 date_posted: 2016-09-13
 how_to_apply: Contact design@sha2017.org
+slug: "sha2017-call-for-designs"
 ---
 
 The upcoming Dutch hacker camp SHA2017 is looking for a design and therefore we ask YOU to submit a proposal.

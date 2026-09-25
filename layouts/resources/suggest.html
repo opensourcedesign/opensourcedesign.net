@@ -12,18 +12,18 @@
     <form id="osd-resource-form" class="mt-10 space-y-6 border-t border-slate-200 pt-10" novalidate>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div class="space-y-2">
-          <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="name">Name <span class="text-red-500">*</span></label>
-          <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="name" name="name" placeholder="e.g., Penpot" required />
+          <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="name">Name <span class="text-red-600 dark:text-red-400">*</span></label>
+          <input class="osd-input" id="name" name="name" placeholder="e.g., Penpot" maxlength="150" required />
         </div>
         <div class="space-y-2">
-          <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="url">URL <span class="text-red-500">*</span></label>
-          <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="url" name="url" type="url" placeholder="https://…" required />
+          <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="url">URL <span class="text-red-600 dark:text-red-400">*</span></label>
+          <input class="osd-input" id="url" name="url" type="url" placeholder="https://…" required />
         </div>
       </div>
 
       <div class="space-y-2">
-        <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="category">Category <span class="text-red-500">*</span></label>
-        <select class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="category" name="category" required>
+        <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="category">Category <span class="text-red-600 dark:text-red-400">*</span></label>
+        <select class="osd-input" id="category" name="category" required>
           {{ range hugo.Data.resources }}
             <option value="{{ .id }}">{{ .title }}</option>
           {{ end }}
@@ -32,13 +32,13 @@
       </div>
 
       <div class="space-y-2">
-        <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="description">Short description <span class="text-slate-400">(optional)</span></label>
-        <textarea class="min-h-24 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="description" name="description" maxlength="300" placeholder="One or two sentences on what it is and why it's useful."></textarea>
+        <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="description">Short description <span class="text-slate-500">(optional)</span></label>
+        <textarea class="osd-input min-h-24" id="description" name="description" maxlength="300" placeholder="One or two sentences on what it is and why it's useful."></textarea>
       </div>
 
       <div class="space-y-2">
         <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="email">Your email <span class="text-slate-400">(optional, never published)</span></label>
-        <input class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="email" name="email" type="email" placeholder="you@example.org" />
+        <input class="osd-input" id="email" name="email" type="email" placeholder="you@example.org" />
         <p class="text-xs text-slate-500">We'll let you know when your suggestion is published.</p>
       </div>
 
@@ -92,6 +92,31 @@
 
         function escHTML(s) {
           return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        // Turnstile tokens are single-use: the Worker spends one on every
+        // request, whatever the outcome. Reset the widget after each attempt
+        // and wait for a fresh token, so a retry doesn't fail with
+        // "Captcha verification failed".
+        var turnstileBox = form.querySelector('.cf-turnstile');
+        function turnstileValue() {
+          var el = form.querySelector('[name="cf-turnstile-response"]');
+          return el && el.value ? String(el.value) : '';
+        }
+        function resetTurnstile() {
+          try {
+            if (turnstileBox && window.turnstile && typeof window.turnstile.reset === 'function') window.turnstile.reset(turnstileBox);
+          } catch (e) { /* widget not rendered yet */ }
+        }
+        function freshTurnstileToken(timeoutMs) {
+          return new Promise(function (resolve) {
+            var until = Date.now() + (timeoutMs || 10000);
+            (function poll() {
+              var token = turnstileValue();
+              if (token || !turnstileBox || Date.now() > until) return resolve(token);
+              setTimeout(poll, 250);
+            })();
+          });
         }
 
         function showResult(title, bodyHtml, extraHtml) {
@@ -160,12 +185,14 @@
             return;
           }
 
-          var turnstile = document.querySelector('[name="cf-turnstile-response"]');
-          var turnstileToken = turnstile && turnstile.value ? String(turnstile.value) : '';
-
           try {
             if (submitBtn) submitBtn.disabled = true;
             if (note) note.textContent = 'Submitting…';
+            var turnstileToken = await freshTurnstileToken();
+            if (turnstileBox && !turnstileToken) {
+              if (note) note.textContent = 'Please complete the captcha check, then submit again.';
+              return;
+            }
             var resp = await fetch(endpoint, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -183,6 +210,7 @@
             if (note) note.textContent = 'Could not submit - please use the GitHub link below.';
           } finally {
             if (submitBtn) submitBtn.disabled = false;
+            resetTurnstile();
           }
         });
       })();

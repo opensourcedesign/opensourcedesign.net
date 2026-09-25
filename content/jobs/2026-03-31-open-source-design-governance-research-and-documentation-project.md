@@ -26,6 +26,7 @@ how_to_apply:
 github_handle: ''
 tags: [governance, design, community building, support, documentation, user research]
 date: '2026-04-01T08:22:48.621Z'
+slug: "open-source-design-governance-research-and-documentation-project"
 ---
 Please see this document for the full job description: [https://cloud.opensourcedesign.net/s/Ly6WTWYg4Gn5aQT](https://cloud.opensourcedesign.net/s/Ly6WTWYg4Gn5aQT)
 

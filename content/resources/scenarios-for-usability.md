@@ -26,7 +26,7 @@ Finding better, more concrete labels for buttons, menus and input fields.
 Labels shape expectations—and these expectations should match what
 the software actually will do.
 
-### Example: Don’t use implementation langauge in labels
+### Example: Don’t use implementation language in labels
 In this [issue on the inkscape project](https://gitlab.com/inkscape/inkscape/-/merge_requests/7048) (via [@ltlnx](https://g0v.social/@ltlnx/115883073086406019))
 user Adam Belis suggests to replace lables like “Insert node at min X” with “Add node to Left”: 
 Instead of terms referring to variable names (min X) the new lables use everyday concepts (to Left).
