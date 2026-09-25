@@ -35,6 +35,10 @@ const GH_API = 'https://api.github.com';
 // Defensive input caps (the form validates too, but never trust the client).
 const MAX_FIELD = 8000;        // generous cap for most fields + Turnstile token
 const MAX_DESCRIPTION = 30000; // description / deliverables may be longer
+// Titles end up in file and branch names, URLs and PR titles (GitHub caps
+// those at 256 characters); the forms set the same maxlength.
+const MAX_TITLE = 150;
+const MAX_SLUG = 100;
 
 export default {
   async fetch(request, env) {
@@ -139,6 +143,10 @@ async function handleSubmit(request, env) {
   // Defense-in-depth format/length validation (the forms validate too).
   const lengthError = checkLengths(data);
   if (lengthError) return json({ ok: false, error: lengthError }, 400);
+  const titleField = kind === 'resource' ? 'name' : 'title';
+  if (String(data[titleField]).trim().length > MAX_TITLE) {
+    return json({ ok: false, error: 'The ' + (kind === 'resource' ? 'name' : 'title') + ' is too long (at most ' + MAX_TITLE + ' characters).' }, 400);
+  }
   if (kind === 'event') {
     if (!isIsoDate(data.start_date)) {
       return json({ ok: false, error: 'Start date must be a valid YYYY-MM-DD date.' }, 400);
@@ -303,7 +311,7 @@ async function handleSubmit(request, env) {
 
   // New jobs get an explicit, unique `slug:` so the URL is known before Hugo
   // builds it and two postings with the same title never share a URL.
-  const jobSlug = kind === 'job' && !edit ? uniqueJobSlug(jobIndex, slugify(data.title) || 'posting') : '';
+  const jobSlug = kind === 'job' && !edit ? uniqueJobSlug(jobIndex, capSlug(slugify(data.title)) || 'posting') : '';
   const built = kind === 'event' ? buildEventMarkdown(data, env, edit) : buildMarkdown(data, env, edit, jobSlug);
 
   let pr;
@@ -457,7 +465,7 @@ function buildMarkdown(data, env, edit, urlSlug) {
   const isoDate = (edit && edit.date) || now.toISOString();
   const status = (edit && edit.status) || 'searching';
 
-  const slug = datePosted + '-' + (urlSlug || slugify(data.title) || 'posting');
+  const slug = datePosted + '-' + (urlSlug || capSlug(slugify(data.title)) || 'posting');
   const dir = (env.CONTENT_DIR || 'content/jobs').replace(/\/+$/, '');
   const path = edit ? edit.path : dir + '/' + slug + '.md';
 
@@ -546,7 +554,7 @@ function buildEventMarkdown(data, env, edit) {
   const start = String(data.start_date).trim();
   const end = data.end_date ? String(data.end_date).trim() : '';
 
-  const slug = start + '-' + (slugify(data.title) || 'event');
+  const slug = start + '-' + (capSlug(slugify(data.title)) || 'event');
   const dir = (env.CONTENT_DIR_EVENTS || 'content/events').replace(/\/+$/, '');
   const path = edit ? edit.path : dir + '/' + slug + '.md';
 
@@ -602,6 +610,14 @@ function slugify(str) {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
+}
+
+// Keep URL/file slugs readable: cut long ones at a word (hyphen) boundary.
+function capSlug(slug) {
+  if (slug.length <= MAX_SLUG) return slug;
+  const cut = slug.slice(0, MAX_SLUG);
+  const at = cut.lastIndexOf('-');
+  return at > MAX_SLUG / 2 ? cut.slice(0, at) : cut;
 }
 
 /** Bigram Dice similarity of two slugs (0..1). */
