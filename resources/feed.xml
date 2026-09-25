@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Resources | Open Source Design</title><link>https://opensourcedesign.net/resources/</link><description>Links, readings, and community-written guides for designers working in open source.</description><language>en</language><copyright>© 2026 Open Source Design. Content licensed under CC BY-SA 4.0.</copyright><lastBuildDate>Sun, 13 Sep 2026 03:22:58 +0000</lastBuildDate><generator>Hugo 0.164.0</generator><docs>https://www.rssboard.org/rss-specification</docs><atom:link href="https://opensourcedesign.net/resources/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://opensourcedesign.net/images/opensourcedesign-logo-icon.png</url><title>Open Source Design</title><link>https://opensourcedesign.net/</link><width>144</width><height>144</height></image><item><title>How to Join</title><link>https://opensourcedesign.net/resources/how-to-join/</link><guid isPermaLink="true">https://opensourcedesign.net/resources/how-to-join/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>How to participate in the Open Source Design community - the forum, community calls, social media, and GitHub.</description><content:encoded>&lt;p&gt;Participating in the open source design community can mean engaging in discussions about design in open source, joining our community calls or organizing events.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Resources | Open Source Design</title><link>https://opensourcedesign.net/resources/</link><description>Links, readings, and community-written guides for designers working in open source.</description><language>en</language><copyright>© 2026 Open Source Design. Content licensed under CC BY 4.0.</copyright><lastBuildDate>Fri, 25 Sep 2026 18:16:16 +0000</lastBuildDate><generator>Hugo 0.166.0</generator><docs>https://www.rssboard.org/rss-specification</docs><atom:link href="https://opensourcedesign.net/resources/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://opensourcedesign.net/images/favicons/apple-touch-icon.png</url><title>Open Source Design</title><link>https://opensourcedesign.net/</link></image><item><title>How to Join</title><link>https://opensourcedesign.net/resources/how-to-join/</link><guid isPermaLink="true">https://opensourcedesign.net/resources/how-to-join/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>How to participate in the Open Source Design community - the forum, community calls, social media, and GitHub.</description><content:encoded>&lt;p&gt;Participating in the open source design community can mean engaging in discussions about design in open source, joining our community calls or organizing events.&lt;/p&gt;
 &lt;p&gt;Often, people who join the community are designers working on open source software, developers interested in design or people from other professional backgrounds.&lt;/p&gt;
 &lt;p&gt;There are no formal requirements to take part in the community other than following the code of conduct.&lt;/p&gt;
 &lt;h2 id="communicating-well"&gt;Communicating well&lt;/h2&gt;
@@ -34,9 +34,9 @@ to add or change resources. --&gt;
 &lt;button class="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" id="resources-clear" aria-label="Clear search"&gt;Clear&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class="flex flex-wrap gap-1.5" role="group" aria-label="Filter by category"&gt;
-&lt;button class="osd-filter rounded-full border border-slate-900 bg-slate-900 px-3 py-1.5 text-[13px] font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="all" aria-pressed="true"&gt;All &lt;span class="opacity-60"&gt;134&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-900 bg-slate-900 px-3 py-1.5 text-[13px] font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="all" aria-pressed="true"&gt;All &lt;span class="opacity-60"&gt;135&lt;/span&gt;&lt;/button&gt;
 &lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="projects" aria-pressed="false"&gt;Projects &lt;span class="opacity-60"&gt;21&lt;/span&gt;&lt;/button&gt;
-&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="icons" aria-pressed="false"&gt;Icons &lt;span class="opacity-60"&gt;16&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="icons" aria-pressed="false"&gt;Icons &lt;span class="opacity-60"&gt;17&lt;/span&gt;&lt;/button&gt;
 &lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="fonts" aria-pressed="false"&gt;Fonts &lt;span class="opacity-60"&gt;11&lt;/span&gt;&lt;/button&gt;
 &lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="images" aria-pressed="false"&gt;Images &lt;span class="opacity-60"&gt;11&lt;/span&gt;&lt;/button&gt;
 &lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="cc-media" aria-pressed="false"&gt;Creative Commons media &lt;span class="opacity-60"&gt;4&lt;/span&gt;&lt;/button&gt;
@@ -50,7 +50,7 @@ to add or change resources. --&gt;
 &lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="learn-design" aria-pressed="false"&gt;Learn to design &lt;span class="opacity-60"&gt;3&lt;/span&gt;&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p class="mt-4 text-sm text-slate-500" aria-live="polite" aria-atomic="true"&gt;&lt;span id="resources-count"&gt;134&lt;/span&gt; resources&lt;/p&gt;
+&lt;p class="mt-4 text-sm text-slate-500" aria-live="polite" aria-atomic="true"&gt;&lt;span id="resources-count"&gt;135&lt;/span&gt; resources&lt;/p&gt;
 &lt;p class="mt-6 hidden text-sm text-slate-600" id="resources-empty" role="status"&gt;No resources match your filters. Try a different category or search term.&lt;/p&gt;
 &lt;div id="resources-directory"&gt;
 &lt;section class="resource-cat mt-10 scroll-mt-24" id="projects" data-cat="projects" aria-labelledby="cat-projects"&gt;
@@ -185,7 +185,7 @@ to add or change resources. --&gt;
 &lt;/ul&gt;
 &lt;/section&gt;
 &lt;section class="resource-cat mt-10 scroll-mt-24" id="icons" data-cat="icons" aria-labelledby="cat-icons"&gt;
-&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-icons"&gt;Icons &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;16&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-icons"&gt;Icons &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;17&lt;/span&gt;&lt;/h3&gt;
 &lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
 &lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons bitcoin icons open source icons made for bitcoin applications, free to use. mit licensed."&gt;
 &lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://bitcoinicons.com/" target="_blank" rel="noopener noreferrer"&gt;Bitcoin Icons&lt;/a&gt;
@@ -271,6 +271,10 @@ to add or change resources. --&gt;
 &lt;span class="text-slate-500"&gt;
 · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/tabler/tabler-icons" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
 &lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons svgicons.com search and browse open-source svg icon sets with source and license context."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://svgicons.com/" target="_blank" rel="noopener noreferrer"&gt;SVGicons.com&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Search and browse open-source SVG icon sets with source and license context.&lt;/span&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/section&gt;
@@ -1233,7 +1237,7 @@ terms, processes and practices.&lt;/p&gt;
 &lt;h3 id="how-does-it-help"&gt;How does it help?&lt;/h3&gt;
 &lt;p&gt;Labels shape expectations—and these expectations should match what
 the software actually will do.&lt;/p&gt;
-&lt;h3 id="example-dont-use-implementation-langauge-in-labels"&gt;Example: Don’t use implementation langauge in labels&lt;/h3&gt;
+&lt;h3 id="example-dont-use-implementation-language-in-labels"&gt;Example: Don’t use implementation language in labels&lt;/h3&gt;
 &lt;p&gt;In this &lt;a href="https://gitlab.com/inkscape/inkscape/-/merge_requests/7048"&gt;issue on the inkscape project&lt;/a&gt; (via &lt;a href="https://g0v.social/@ltlnx/115883073086406019"&gt;@ltlnx&lt;/a&gt;)
 user Adam Belis suggests to replace lables like “Insert node at min X” with “Add node to Left”:
 Instead of terms referring to variable names (min X) the new lables use everyday concepts (to Left).&lt;/p&gt;
@@ -1520,7 +1524,7 @@ If everything looks good, in the top right there is a &amp;ldquo;Submit comments
 &lt;source type="image/webp" srcset="https://opensourcedesign.net/images/resources/maintainingjobsubmissions/submitreviewbutton_hu_1daba3e8edbb3fc8.webp 480w, https://opensourcedesign.net/images/resources/maintainingjobsubmissions/submitreviewbutton_hu_7d07804531b77c25.webp 670w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
 &lt;img
 src="https://opensourcedesign.net/images/resources/maintainingjobsubmissions/submitreviewbutton.png"
-alt="screenshot of submit commments button"
+alt="screenshot of submit comments button"
 loading="lazy"
 decoding="async"
 class="mx-auto my-6 block rounded-lg shadow-sm"
@@ -1553,7 +1557,7 @@ height="594"
 &lt;source type="image/webp" srcset="https://opensourcedesign.net/images/resources/maintainingjobsubmissions/preview_hu_86e1403796cc8a03.webp 480w, https://opensourcedesign.net/images/resources/maintainingjobsubmissions/preview_hu_658108f267fa6d9.webp 960w, https://opensourcedesign.net/images/resources/maintainingjobsubmissions/preview_hu_a67b277097ffda04.webp 968w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
 &lt;img
 src="https://opensourcedesign.net/images/resources/maintainingjobsubmissions/preview.png"
-alt="screenshot of PR prview under conversation tab"
+alt="screenshot of PR preview under conversation tab"
 loading="lazy"
 decoding="async"
 class="mx-auto my-6 block rounded-lg shadow-sm"
