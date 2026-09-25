@@ -5,7 +5,9 @@ name: Email submitter when job or event is published
 # the submitter's private email - stored in Cloudflare KV by the Worker, keyed
 # by PR number - and notify them that their posting is live. The address is
 # never committed to the repo or shown in the PR; it is fetched at merge time
-# over an authenticated endpoint.
+# over an authenticated endpoint. The email waits until the live site serves a
+# build that includes the merge (wait-for-deploy.mjs); if the deploy doesn't
+# show up in time the run fails without emailing and can be re-run later.
 
 on:
   pull_request:
@@ -95,6 +97,14 @@ jobs:
         env:
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
         run: node .github/scripts/approval-email-meta.mjs
+
+      - name: Wait for the site to deploy
+        if: steps.lookup.outputs.found == 'true'
+        timeout-minutes: 25
+        env:
+          SINCE: ${{ github.event.pull_request.merged_at }}
+          URL: ${{ steps.resolve.outputs.url }}
+        run: node .github/scripts/wait-for-deploy.mjs
 
       - name: Send notification email
         if: steps.lookup.outputs.found == 'true'

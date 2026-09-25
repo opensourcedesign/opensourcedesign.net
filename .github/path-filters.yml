@@ -56,5 +56,7 @@ checks:
   - '.github/scripts/lint-data-yaml.mjs'
   - '.github/scripts/job-url.mjs'
   - '.github/scripts/job-url.test.mjs'
+  - '.github/scripts/wait-for-deploy.mjs'
+  - '.github/scripts/wait-for-deploy.test.mjs'
   - '.github/form-modules.sha256'
   - '.github/workflows/ci-checks.yml'
