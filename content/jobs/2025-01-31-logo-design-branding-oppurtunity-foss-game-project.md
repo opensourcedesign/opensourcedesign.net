@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ultimateownsz
 tags: [logo, branding, pixel art, python]
 date: '2025-01-31T00:11:24.861Z'
+slug: "logo-design-branding-oppurtunity-foss-game-project"
 ---
 **Organization:** PySeas *(soon to be PyCeas)*
 **Status:** Searching

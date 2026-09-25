@@ -17,6 +17,7 @@ tags:
 how_to_apply:
   - "hayden.chambers@canonical.com"
   - "https://grnh.se/iqyypnh31us"
+slug: "full-time-ux-designer-design-systems"
 ---
 
 Please apply through: https://grnh.se/iqyypnh31us

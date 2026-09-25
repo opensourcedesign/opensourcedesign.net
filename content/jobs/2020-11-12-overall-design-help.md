@@ -18,5 +18,6 @@ date: '2020-11-12T12:16:59.602Z'
 aliases:
   - /jobs/2020-11-12-/
 
+slug: "overall-design-help"
 ---
 We're looking for designers who want to get involved in a open design process for a tool and service that is 100% open source.

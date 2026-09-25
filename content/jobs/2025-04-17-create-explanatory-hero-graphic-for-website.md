@@ -15,5 +15,6 @@ how_to_apply:
 github_handle: '@raucao'
 tags: [graphic design, illustration]
 date: '2025-04-17T11:15:12.692Z'
+slug: "create-explanatory-hero-graphic-for-website"
 ---
 There's a big gaping hole on the frontpage of our website. It would be fantastic to have a graphic there, which would explain the concept of remoteStorage visually, and make the page more attractive and visually pleasing at the same time.

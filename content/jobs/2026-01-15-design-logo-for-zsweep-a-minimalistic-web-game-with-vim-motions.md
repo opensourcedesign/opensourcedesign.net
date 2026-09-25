@@ -16,5 +16,6 @@ how_to_apply:
 github_handle: oug-t
 tags: [logo, branding, design]
 date: '2026-01-15T23:14:18.875Z'
+slug: "design-logo-for-zsweep-a-minimalistic-web-game-with-vim-motions"
 ---
 Design a logo that will be put on the website page and as favicon for web zsweep.

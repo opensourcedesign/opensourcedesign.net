@@ -27,6 +27,7 @@ deliverables: |-
   Integration of new artwork and icons into the interface
   Accessibility preserved/improved (keyboard nav, ARIA, semantic HTML)
   Well-scoped UI/CSS improvements delivered as pull requests
+slug: "front-end-developer-ui-for-corro-an-accessibility-first-board-card-game-platform"
 ---
 
 Corro is an accessibility-first engine for online board and card games — built so that everyone plays the *same* game together, whatever their abilities. The name evokes a circle of people holding hands as equals, with no head of the table. Accessibility is the foundation of the codebase, not an afterthought. You can try it live at https://allwelcome.games.

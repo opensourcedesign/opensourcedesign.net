@@ -16,5 +16,6 @@ how_to_apply:
   - "Branding guideline: https://wiki.documentfoundation.org/Marketing/Branding\r\nAnnouncement: https://design.blog.documentfoundation.org/2017/06/28/competition-libreoffice-mascot/\r\n"
 tags: [mascot, branding, visual design]
 date: '2017-06-28T13:27:38.878Z'
+slug: "libreoffice-mascot"
 ---
 Design a new identifier for LibreOffice Community and ideally provide a name and a description to understand your idea. The task is described in detail at https://design.blog.documentfoundation.org/2017/06/28/competition-libreoffice-mascot/

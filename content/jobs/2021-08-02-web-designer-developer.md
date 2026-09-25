@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: ''
 tags: [web design, frontend, html, css, php]
 date: '2021-08-02T09:28:11.889Z'
+slug: "web-designer-developer"
 ---
 Our marketing team is looking for a new member: You would design and maintain our website. You'd be responsible for our online presence, both technical and design-wise, and work closely with the other marketers on messaging and content. We're looking for somebody with great design skills and some website maintenance experience, able to work remote in a small, self-guided team and willing to learn and try new things!
 

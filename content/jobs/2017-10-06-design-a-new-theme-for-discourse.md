@@ -14,6 +14,7 @@ how_to_apply:
   - 'https://github.com/discourse/discourse/wiki/Outreachy'
 tags: [html, css, javascript]
 date: '2017-10-06T11:46:18.531Z'
+slug: "design-a-new-theme-for-discourse"
 ---
 ## About Outreachy
 

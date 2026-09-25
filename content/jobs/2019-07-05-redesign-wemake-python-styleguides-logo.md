@@ -18,6 +18,7 @@ date: '2019-07-05T09:54:17.282Z'
 aliases:
   - /jobs/2019-07-05-/
 
+slug: "redesign-wemake-python-styleguides-logo"
 ---
 We have an existing logo that we love. It looks like this: 
 

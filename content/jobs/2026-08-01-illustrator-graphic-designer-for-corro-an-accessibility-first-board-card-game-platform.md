@@ -27,6 +27,7 @@ deliverables: |-
   A consistent visual style / mini art guidelines
   Interface icons and visual elements
   Source artwork in open, reusable formats (SVG where possible)
+slug: "illustrator-graphic-designer-for-corro-an-accessibility-first-board-card-game-platform"
 ---
 
 Corro is an accessibility-first engine for online board and card games — designed so that everyone plays the *same* game together, whatever their abilities. The name comes from the image of a circle of people holding hands as equals, with no head of the table. Accessibility isn't a feature we bolt on; it's the foundation of the architecture. You can try the live platform at https://allwelcome.games.

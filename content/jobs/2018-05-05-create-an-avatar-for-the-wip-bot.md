@@ -13,6 +13,7 @@ how_to_apply:
   - 'Gregor (project owner): https://github.com/gr2m/wip-bot/issues/67'
 tags: [logo]
 date: '2018-05-05T23:14:52.999Z'
+slug: "create-an-avatar-for-the-wip-bot"
 ---
 The current avatar of the [WIP app](https://github.com/apps/wip) was meant as a placeholder. Now that it’s quite popular it would be nice if we could create a proper logo for it. 
 

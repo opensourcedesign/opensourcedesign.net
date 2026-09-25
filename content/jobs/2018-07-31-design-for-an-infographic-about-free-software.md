@@ -14,6 +14,7 @@ how_to_apply:
   - "* https://fsfe.org/\r\n* https://publiccode.eu/"
 tags: [graphic design, data visualization, brochure, leaflet]
 date: '2018-07-31T12:03:04.317Z'
+slug: "design-for-an-infographic-about-free-software"
 ---
 We are looking for a designer who can create an infographic that visualizes the benefits of Free Software licences based on the imput that we gathered with our campaign group.
 

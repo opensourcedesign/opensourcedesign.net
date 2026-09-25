@@ -14,6 +14,7 @@ how_to_apply:
   - 'https://www.youtube.com/watch?v=ct9d-o7NrSg'
 tags: [ux, javascript, data reduction]
 date: '2017-10-15T10:00:42.878Z'
+slug: "design-a-simple-way-to-show-an-facebook-user-their-own-information-diet"
 ---
 fbtrex wants show to a facebook user about how the social media informs them.
 

@@ -13,6 +13,7 @@ how_to_apply:
   - Nikita Sobolev mail@sobolevn.me
 tags: [logo, python, open source]
 date: '2018-12-19T10:59:18.144Z'
+slug: "design-a-logo-for-an-open-source-code-quality-tool"
 ---
 We have just released a new tool to validate your `.env` files. 
 We want to improve the look and feel of the repository main page with a nice logo.

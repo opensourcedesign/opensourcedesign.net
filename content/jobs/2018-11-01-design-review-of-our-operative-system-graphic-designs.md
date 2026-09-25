@@ -14,6 +14,7 @@ how_to_apply:
   - 'https://www.sabayon.org/, https://github.com/Sabayon/artwork'
 tags: [logo, branding, graphic design, open source, linux, sabayon, gentoo]
 date: '2018-11-01T11:30:27.901Z'
+slug: "design-review-of-our-operative-system-graphic-designs"
 ---
 Sabayon is a Gentoo-based Open Source Linux Distribution. 
 

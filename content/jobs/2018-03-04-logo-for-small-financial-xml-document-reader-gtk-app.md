@@ -16,6 +16,7 @@ how_to_apply:
 tags: [logo, app design, gtk, gnome]
 date: '2018-03-04T21:40:02.892Z'
 data: '2018-03-04T21:40:02.892Z'
+slug: "logo-for-small-financial-xml-document-reader-gtk-app"
 ---
 CODAv is a small tabular CODA viewer application for Linux. CODA files encode European credit transfers (SEPA) in a standard way and financial people aren't that comfortable with XML files. The application aims to make it easier for them inspect the contents of the file.
 

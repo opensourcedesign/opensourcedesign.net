@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: joaodasilva
 tags: [logo]
 date: '2022-01-16T11:25:52.095Z'
+slug: "logo-for-open-source-project-and-design-contributors"
 ---
 Window.js is an open-source Javascript runtime for desktop graphics programming.
 

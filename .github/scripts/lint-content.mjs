@@ -139,6 +139,11 @@ function lintFile(file) {
     if (isJob && !hasYamlKey(fm, 'date_posted')) {
       errors.push('front matter: `date_posted` is required for jobs');
     }
+    // Pinning the URL keeps it stable across title edits and Hugo upgrades,
+    // and lets CI scripts link to the page without re-deriving Hugo's slug.
+    if (isJob && !hasYamlKey(fm, 'slug') && !hasYamlKey(fm, 'url')) {
+      errors.push('front matter: `slug` is required for jobs (the URL segment, e.g. `slug: "ux-designer"` for /jobs/ux-designer/) - check the URL is not already taken');
+    }
     if (isJob && !hasYamlKey(fm, 'compensation')) {
       warnings.push('front matter: no `compensation` (paid/gratis) - the posting will show "Unspecified"');
     }

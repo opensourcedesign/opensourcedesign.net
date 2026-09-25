@@ -16,6 +16,7 @@ how_to_apply:
   - 'Source code repository: https://github.com/kiwiirc/kiwiirc'
 tags: [chat, web, javascript, css, ux, communication]
 date: '2017-08-05T12:06:38.645Z'
+slug: "kiwi-irc-web-client-design"
 ---
 Kiwi IRC is a modern web IRC client built with Node.js and Vue.
 

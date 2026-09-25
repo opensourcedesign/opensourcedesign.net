@@ -13,6 +13,7 @@ how_to_apply:
   - "https://github.com/adithyadewneth2-rgb/ApexDeck/issues"
 deliverables: |-
   Logo in  SVG or PNG
+slug: "logo-design-for-apexdeck"
 ---
 
 I like to make logo for my project I want classic open source and add keyboard with so e pencils and brushes

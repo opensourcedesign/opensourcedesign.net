@@ -19,4 +19,5 @@ how_to_apply:
 tags: [logo, branding, app design, web design, privacy]
 date: '2018-04-04T13:02:23.497Z'
 timestamp: 1522846943
+slug: "logo-design-for-a-one-page-web-app"
 ---

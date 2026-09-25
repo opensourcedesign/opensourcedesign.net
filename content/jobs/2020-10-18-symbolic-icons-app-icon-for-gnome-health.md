@@ -17,6 +17,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, branding]
 date: '2020-10-18T16:38:57.300Z'
+slug: "symbolic-icons-app-icon-for-gnome-health"
 ---
 Hello,
 

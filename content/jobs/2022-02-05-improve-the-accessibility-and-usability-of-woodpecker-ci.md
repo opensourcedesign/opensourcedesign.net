@@ -18,6 +18,7 @@ how_to_apply:
 github_handle: ''
 tags: [ui, accessibility, usability, issue creation, interviews]
 date: '2022-02-05T18:36:07.258Z'
+slug: "improve-the-accessibility-and-usability-of-woodpecker-ci"
 ---
 Woodpecker is a CI tool
 

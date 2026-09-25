@@ -13,5 +13,6 @@ how_to_apply:
   - Antenore@simbiosi.org
   - 'http://github.com/FreeRDP/Remmina '
 date: '2018-03-21T18:04:28.583Z'
+slug: "logo-and-icons-review-of-our-remote-desktop-client"
 ---
 Remmina is

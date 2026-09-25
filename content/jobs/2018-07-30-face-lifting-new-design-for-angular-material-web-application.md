@@ -17,6 +17,7 @@ date: '2018-07-30T09:05:14.109Z'
 aliases:
   - /jobs/2018-07-30-/
 
+slug: "face-lifting-new-design-for-angular-material-web-application"
 ---
 Backbone is an experimental public web api application. Users can create a backend application (database / web api) through Backbone. It aims to help developers to create app prototypes for their front-end applications.
 

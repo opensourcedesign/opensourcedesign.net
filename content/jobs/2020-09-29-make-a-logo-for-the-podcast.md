@@ -20,6 +20,7 @@ date: '2020-09-28T23:17:06.060Z'
 aliases:
   - /jobs/2020-09-29-/
 
+slug: "make-a-logo-for-the-podcast"
 ---
 The SustainOSS UX & Design working group is starting a podcast that will be called 'SOSDesign' or 'SOS Design' which stands for 'Sustaining Open Source Design' (or Sustainable Open Source Design'. 
 We'd like to have a logo designed by the community that works across typical podcast platforms and works in the sizes expected of marketing (Usually square sizes).

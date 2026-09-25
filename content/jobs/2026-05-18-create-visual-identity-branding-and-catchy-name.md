@@ -16,6 +16,7 @@ how_to_apply:
 github_handle: GitHub @JuanTorres93
 tags: [logo, branding, color, typography, spacing, icons]
 date: '2026-05-18T08:39:54.654Z'
+slug: "create-visual-identity-branding-and-catchy-name"
 ---
 Love takes authenticity is a dating app with web and mobile interface, with focus on core personal values.
 

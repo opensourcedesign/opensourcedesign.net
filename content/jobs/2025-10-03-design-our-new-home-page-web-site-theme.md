@@ -16,6 +16,7 @@ how_to_apply:
 github_handle: '@gabek'
 tags: [web design, documentation]
 date: '2025-10-03T19:23:06.511Z'
+slug: "design-our-new-home-page--web-site-theme"
 ---
 Owncast is the free and open source live video streaming + chat server, allowing anybody to run their self-hosted live streams similar to the large big tech options.
 

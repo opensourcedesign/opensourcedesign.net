@@ -26,6 +26,7 @@ deliverables: |-
   Matching wordmark or logo-name lockup in SVG format. Ideally an Inkscape source SVG rather than a difficult-to-edit one. (LICENSE: CC0)
   Visual style guide, consistent with the logo, including a colour scheme (dark primary, dark secondary, light primary, light secondary; with Web Content Accessibility Guidelines AA-compliant contrast), typography, and suggestions like poster design. Can be a simple text file. (LICENSE: CC-BY-SA-4.0)
   (Optional; alternatively, give poster design suggestions in the style guide) A4 event poster template, in an OpenDocument format. (LICENSE: CC-BY-SA-4.0)
+slug: "logo-and-basic-branding-for-floxford-oxfords-local-free-libre-and-open-source-software-group"
 ---
 
 ## About us

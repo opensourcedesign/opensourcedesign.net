@@ -12,6 +12,7 @@ status: filled
 compensation: gratis
 date_posted: 2016-10-10
 how_to_apply: Contact niftylettuce@gmail.com
+slug: "the-best-node-js-mvc-framework-crocodilejs"
 ---
 
 # CrocodileJS Node JS MVC Framework Logo

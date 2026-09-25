@@ -11,6 +11,7 @@ compensation: "paid"
 deadline: "2026-09-04"
 how_to_apply:
   - "https://www.torproject.org/about/jobs/ux-lead/"
+slug: "tor-ux-lead"
 ---
 
 We are seeking a UX Lead to manage and grow our design team while shaping the user experience of our products, such as Tor Browser, Mullvad Browser, Tor VPN and Tails OS. This role is responsible for leading a team of designers, ensuring user experiences are intuitive, accessible, and aligned with both user needs and organizational priorities while helping build a strong, collaborative, and high-performing design culture.

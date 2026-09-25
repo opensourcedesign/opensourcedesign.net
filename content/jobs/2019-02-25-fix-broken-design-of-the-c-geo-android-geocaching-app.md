@@ -16,6 +16,7 @@ how_to_apply:
   - "https://github.com/cgeo/cgeo\r\nhttps://www.cgeo.org"
 tags: [app design, android, geocaching, redesign]
 date: '2019-02-25T13:43:34.399Z'
+slug: "fix-broken-design-of-the-cgeo-android-geocaching-app"
 ---
 c:geo an open-source, full-featured, always ready-to-go Geocaching application for Android devices.
 

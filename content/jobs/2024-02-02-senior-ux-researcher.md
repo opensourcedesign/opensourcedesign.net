@@ -16,5 +16,6 @@ how_to_apply:
 github_handle: '@matthiasdebaat'
 tags: [user research, product validation, stakeholder collaboration, home assistant, smart home]
 date: '2024-02-02T09:52:47.949Z'
+slug: "senior-ux-researcher"
 ---
 Nabu Casa is looking for a Senior User Experience Researcher to join our Product and Design team full-time, working primarily on Home Assistant, to help us understand our users better, identify their needs and pain points, and guide us towards a better user experience.

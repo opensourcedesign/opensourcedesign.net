@@ -14,6 +14,7 @@ how_to_apply:
   - "This is the repository: https://github.com/niccokunzmann/first_timer_scraper\r\nYou can view the web pages in these folders:\r\n- https://github.com/niccokunzmann/first_timer_scraper/tree/master/first_timer_scraper/templates\r\n- https://github.com/niccokunzmann/first_timer_scraper/tree/master/first_timer_scraper/static"
 tags: [html, css]
 date: '2017-05-30T09:14:26.488Z'
+slug: "style-the-website"
 ---
 This is a website to search for contributions on github by people who are new to a project.
 You can have a look if you like the design. If not, you are welcome to add your thoughts in the form of source code or an issue to discuss.

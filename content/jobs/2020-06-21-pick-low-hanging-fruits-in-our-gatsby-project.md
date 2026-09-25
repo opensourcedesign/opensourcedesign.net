@@ -14,5 +14,6 @@ how_to_apply:
   - 'Project is at gitlabhttps://gitlab.com/segitokutya/www01 '
 github_handle: ''
 date: '2020-06-20T23:44:08.338Z'
+slug: "pick-low-hanging-fruits-in-our-gatsby-project"
 ---
 Pick some low hanging fruits in our site design, add ideas, examples whatever. Site is about service dogs in hungarian. Extra languages like english or German plannes.

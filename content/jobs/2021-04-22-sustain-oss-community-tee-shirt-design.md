@@ -19,6 +19,7 @@ how_to_apply:
 github_handle: ''
 tags: [branding, logo, apparel]
 date: '2021-04-22T09:09:59.276Z'
+slug: "sustain-oss-community-tee-shirt-design"
 ---
 Sustian OSS is a community of practiioners and researchers working to create a world in which the software we all depend upon is suitably supported. We hold annual summits and amplify the work of those within the community through a regualr podcast: https://podcast.sustainoss.org/
 

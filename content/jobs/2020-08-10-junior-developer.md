@@ -14,5 +14,6 @@ how_to_apply:
   - 'https://www.hotosm.org/jobs/junior-developer/'
 github_handle: ''
 date: '2020-08-10T11:33:30.490Z'
+slug: "junior-developer"
 ---
 Humanitarian OpenStreetMap Team (HOT) is a US-based NGO and global community of thousands of volunteers working together to use maps and open data for humanitarian response and the Sustainable Development Goals. We’re seeking a skilled and enthusiastic ‘full-stack’ individual fluent in a variety of programming languages, databases, and front-end programming to support a passionate team of humanitarian hacktivists. The role will support the HOT tech team in collaboratively delivering a range of open source solutions that support HOT in our strategic ambition to map an area home to one billion people. The Junior Developer will be part of an agile team building tools to assist with the collection and communication of humanitarian data, coalescing around geospatial information. The work will predominantly be focused on backend ‘crunching’, however, front-end skills will also get a good workout. The successful candidate will have the opportunity to grow and be mentored by some of the humanitarian sector’s leading geospatial technologists.

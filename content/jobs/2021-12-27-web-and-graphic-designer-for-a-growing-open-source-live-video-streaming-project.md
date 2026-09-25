@@ -17,6 +17,7 @@ how_to_apply:
 github_handle: gabek
 tags: [web design, graphic design, ui]
 date: '2021-12-28T05:43:00.771Z'
+slug: "web-and-graphic-designer-for-a-growing-open-source-live-video-streaming-project"
 ---
 Owncast is a growing open source project that for over a year have empowered live streamers to take control over their live streams, no longer requiring them to hand over their content and their audience to the large, centralized corporate enterprises.
 

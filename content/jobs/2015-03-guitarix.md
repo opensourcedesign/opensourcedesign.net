@@ -11,6 +11,7 @@ status: filled
 compensation: gratis, open source
 date_posted: 2015-02-15
 how_to_apply: See the GitHub repository (brummer10) or description below
+slug: "create-audio-software-interface"
 ---
 
 Guitarix is a rack-based multi-effect audio software for linux.

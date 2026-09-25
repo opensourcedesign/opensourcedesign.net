@@ -17,6 +17,7 @@ date: '2020-04-20T18:29:53.825Z'
 aliases:
   - /jobs/2020-04-20-/
 
+slug: "ux-designer-for-our-open-source-project-urbannoise"
 ---
 Hello everyone,
 

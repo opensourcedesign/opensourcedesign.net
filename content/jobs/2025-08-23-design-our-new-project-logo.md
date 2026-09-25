@@ -17,6 +17,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, design, xmpp, mushrooms]
 date: '2025-08-23T14:16:41.212Z'
+slug: "design-our-new-project-logo"
 ---
 Muchrooms is a new(ish) project, it is a Jabber/XMPP group chat implementation in Rust. It focuses on testing, moderation and privacy. I recently got a grant from NLnet to work on it.
 

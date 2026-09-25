@@ -20,5 +20,6 @@ how_to_apply:
 tags: [privacy, web, javascript]
 date: '2018-02-09T15:48:13.529Z'
 timestamp: 1518191293
+slug: "helpful-ways-for-web-sites-to-warn-users-who-are-vulnerable-to-third-party-tracking"
 ---
  

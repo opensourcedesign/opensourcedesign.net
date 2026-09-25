@@ -14,6 +14,7 @@ how_to_apply:
   - "https://www.nager-it.de/\r\nhttps://fair-it-yourself.de/gehaeuse_en/"
 github_handle: ''
 date: '2021-02-05T07:17:39.758Z'
+slug: "help-us-to-redesign-our-fair-computer-mouse"
 ---
 The computer mouse of the German association Nager IT is the one, with the fairest working conditions on the market.
 However, some people who like the mission of Nager IT, would love to have another design for the mouse. For example people with large hands sometimes have problems with the little mouse.

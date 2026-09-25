@@ -13,6 +13,7 @@ how_to_apply:
   - Contact me by email (jpegx100@gmail.com) or Whatsapp (+55 86 99543 2434).
   - 'GitHub: https://github.com/jpegx100/ReceitasApp'
 date: '2017-02-27T13:44:21.012Z'
+slug: "graphic-designer-for-an-culinary-app"
 ---
 The project is an culinary APP, where the users can post and serch culinary
 recipes. The differential in this APP is that the user can search recipes by

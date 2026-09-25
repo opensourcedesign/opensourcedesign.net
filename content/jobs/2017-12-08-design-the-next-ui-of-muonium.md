@@ -14,6 +14,7 @@ how_to_apply:
   - "http://github.com/muonium\r\n\r\nhttps://framavox.org/g/KgLMT6H2/muonium"
 tags: [ui, web design]
 date: '2017-12-08T19:36:09.929Z'
+slug: "design-the-next-ui-of-muonium"
 ---
 Our project is a fully open source and end-to-end encrypted cloud storage software & provider.
 

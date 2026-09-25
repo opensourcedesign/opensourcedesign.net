@@ -16,6 +16,7 @@ date: '2020-07-24T03:08:52.274Z'
 aliases:
   - /jobs/2020-07-24-/
 
+slug: "css-improvements--mobile-friendly-navbar"
 ---
 Hello fellow OSS devs :)
 

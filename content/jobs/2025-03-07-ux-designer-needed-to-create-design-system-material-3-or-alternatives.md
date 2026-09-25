@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: 'https://github.com/TheXOrb'
 tags: [ux, design system, material design, iot, innovation, penpot]
 date: '2025-03-07T13:23:00.196Z'
+slug: "ux-designer-needed-to-create-design-system-material-3-or-alternatives"
 ---
 The X ORB AB is an innovative company focused on realizing groundbreaking semiconductor projects in 5G, IoT, and blockchain technology. We are seeking a dedicated and creative UX designer to help us develop a Design System, initially based on Google Material 3, but open to exploring other suitable options. This is a unique opportunity to shape our visual identity and create a world-class user experience.
 Your English skills are sufficient for good communication. It is a bonus if you have an understanding of the Swedish market.

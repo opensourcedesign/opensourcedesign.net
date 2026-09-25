@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, design]
 date: '2020-03-07T09:39:28.222Z'
+slug: "logo-for-website-and-app-icons"
 ---
 Pandoc is a universal document converter and publishing tool, capable of converting between a multitude of formats. Despite being a comparatively old open source project (turning 14 this year), pandoc does not yet have a logo or specific design. There have been long [discussions](https://groups.google.com/d/topic/pandoc-discuss/1bKIuyBnWaQ/discussion) about the topic, with ideas proposed over the past years – all failed, often because the designs were unusable as icons and/or not polished enough to be chosen as an official logo.
 

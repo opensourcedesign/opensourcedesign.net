@@ -16,6 +16,7 @@ date: '2017-01-24T12:03:58.981Z'
 aliases:
   - /jobs/2017-01-24-UI Designer for account management interface project/
 
+slug: "ui-designer-for-account-management-interface-project"
 ---
 
 "We need designs, in layered SVG (preferably using Inkscape) or CSS and HTML. Our frontend developers will convert your designs into the new interface.

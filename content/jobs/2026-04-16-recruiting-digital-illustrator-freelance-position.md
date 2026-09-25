@@ -16,6 +16,7 @@ how_to_apply:
   - >-
     https://perma.earth/recruiting-digital-illustrator-permaculture-e-learning-grow-project-grp-4/
 date: '2026-04-16T15:55:54.281Z'
+slug: "recruiting-digital-illustrator-freelance-position"
 ---
 - **Location:** Remote
 - **Timeline:** 3-year commitment (initial focus: Year 1 module build, March–November 2026)

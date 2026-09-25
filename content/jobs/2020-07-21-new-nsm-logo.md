@@ -18,5 +18,6 @@ how_to_apply:
 github_handle: ''
 tags: [logo, graphic design, audio, music, session management, api, osc, app design, encapsulation, fork]
 date: '2020-07-21T13:16:12.297Z'
+slug: "new-logo-for-nsm-osc-based-audio-session-manager-api-reference-gui-app"
 ---
 New Session Manager is a new community-led fork of NSM, the *de facto* libre audio session manager API in the JACK and audio production world. The fork brings a slightly better defined API, a new reference server and front-end GUI control app.

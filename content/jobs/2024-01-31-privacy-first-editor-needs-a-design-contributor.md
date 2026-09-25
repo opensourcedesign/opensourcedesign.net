@@ -14,6 +14,7 @@ how_to_apply:
   - 'https://skratchpad.xyz/'
 github_handle: lucasgonze
 date: '2024-01-31T17:21:51.773Z'
+slug: "privacy-first-editor-needs-a-design-contributor"
 ---
 The project is a minimalist editor for quickly writing something up. There's no privacy loss and no distraction. 
 
