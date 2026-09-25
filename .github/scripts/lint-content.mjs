@@ -22,6 +22,7 @@ const NOT_POSTINGS = new Set([
   '_index.md',
   'archive.md',
   'how-to-post.md',
+  'writing-job-posts.md', // the posting guide (content/jobs/writing-job-posts.md)
   'job-form.md',
   'event-form.md',
   'suggest.md',
