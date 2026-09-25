@@ -20,7 +20,7 @@
     {{ $join := .GetPage "how-to-join" }}
     {{ with $join }}
       <h2 class="mt-12 text-xs font-semibold uppercase tracking-widest text-slate-500">New to the community?</h2>
-      <nav class="mt-2 border-t border-slate-200" aria-label="newcomer guides"></nav>
+      <nav class="mt-2 border-t border-slate-200" aria-label="newcomer guides">
         <a class="group flex items-center justify-between gap-4 border-b border-slate-200 py-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="{{ .RelPermalink }}">
           <span class="min-w-0">
             <span class="block font-semibold leading-snug text-slate-900 decoration-slate-300 underline-offset-4 group-hover:underline">{{ .Title }}</span>
