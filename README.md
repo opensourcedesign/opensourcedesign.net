@@ -32,7 +32,7 @@ Before you begin, ensure you have the following installed:
 - **Hugo** (extended version; matches CI)
 - **Git** - [Download Git](https://git-scm.com/)
 
-That's all — **no Node.js or npm** required for everyday work. See [How the CSS Works](#how-the-css-works) for how styling is built locally vs on the live site. Two optional standalone binaries:
+That's all — **no Node.js or npm** required for everyday work (the `npx` commands below are optional, and the standalone Tailwind CLI covers them without Node.js; Node.js is only needed to run the CI scripts in `.github/scripts/`). See [How the CSS Works](#how-the-css-works) for how styling is built locally vs on the live site. Two optional standalone binaries:
 
 - **[Pagefind](https://github.com/Pagefind/pagefind/releases)** (*optional*) - generates the search index; only needed to test search locally (CI downloads it automatically)
 - **[Tailwind standalone CLI](https://github.com/tailwindlabs/tailwindcss/releases)** (*optional*) - only needed to regenerate `compiled.css` or the vendored typography stylesheet locally
@@ -130,11 +130,14 @@ The site's look-and-feel comes from Tailwind utility classes in the HTML templat
 opensourcedesign.net/
 ├── .devcontainer/    # GitHub Codespaces config (Hugo + preview on port 1313)
 ├── .github/
-│   ├── path-filters.yml  # Shared CI path allowlists (site / content / forms)
-│   ├── scripts/      # announce-jobs.mjs - posts new jobs to Mastodon & Bluesky
-│   └── workflows/    # hugo-build (deploy), job-approved-email / job-rejected-email,
-│                     # job-expire (daily auto-expiry), job-announce (social media),
-│                     # content-lint (PR checks), preview (PR previews), link-check (weekly)
+│   ├── path-filters.yml  # Shared CI path allowlists (site / content / forms / checks)
+│   ├── scripts/      # CI helpers: job expiry, social announcements, email lookups,
+│                     # content/data lint, job URL helpers (job-url.mjs), tests (*.test.mjs)
+│   └── workflows/    # hugo-build (deploy), preview (PR previews), a11y, ci-checks,
+│                     # content-lint, job-approved-email / job-rejected-email,
+│                     # job-expire (daily, opens an expiry PR), job-reminder (weekly),
+│                     # job-announce (social media), forum-pulse-cache (every 12 h),
+│                     # link-check (1st and 15th of each month)
 ├── archetypes/       # Hugo content templates for new pages
 ├── assets/
 │   └── css/
@@ -144,11 +147,11 @@ opensourcedesign.net/
 │       ├── typography.src.css  # Source/safelist for the typography (prose) bundle
 │       └── typography.css      # Pre-compiled prose styles (regenerate via Tailwind CLI, don't edit)
 ├── content/          # All website content in Markdown
-│   ├── about-us/     # About, manifesto, governance, by-laws, code of conduct, how to join
+│   ├── about-us/     # About, manifesto, goals, governance, by-laws, code of conduct, moderation dashboard
 │   ├── events/       # Event announcements and write-ups
 │   ├── jobs/         # Job listings
-│   ├── resources/    # Curated directory + sub-pages: articles/ and reading.md (bibliography)
-│   └── ...           # Standalone pages (forum, imprint, brand, etc.)
+│   ├── resources/    # Hub + sub-pages: links.md (directory), bibliography.md, how-to-join.md, guides, articles/
+│   └── ...           # Standalone pages (imprint, brand) and the homepage (_index.md)
 ├── data/             # YAML data files for dynamic content
 ├── layouts/          # Hugo HTML templates
 ├── static/           # Static assets (images, fonts, downloads)
@@ -175,14 +178,15 @@ GitHub Actions workflows skip expensive Hugo builds when a change cannot affect 
 | Filter | Paths | Used by |
 |--------|-------|---------|
 | `site` | `content/`, `data/`, `layouts/`, `assets/`, `static/`, `hugo.toml`, … | Production deploy, PR previews, accessibility checks |
-| `content` | Job/event/resource markdown and curated YAML | Content lint |
+| `content` | Job/event/resource markdown, curated YAML, and the lint scripts | Content lint |
 | `forms` | Submission form layouts and JS modules | Documented for form-related checks |
+| `checks` | Job files, data, form modules, and the scripts/tests the repository checks run | Repository checks |
 
 **Production** ([`hugo-build.yml`](.github/workflows/hugo-build.yml)) runs on pushes to `main` only when `site` paths change. Use *Actions → Build and Deploy Hugo → Run workflow* to force a full deploy (e.g. after a docs-only merge when you want to refresh caches).
 
 **Pull requests:** the preview and accessibility workflows always start, but the Hugo build step is skipped when the PR touches only docs, README, or `workers/`. A bot comment notes when the preview was skipped. Preview cleanup on PR close always runs so `gh-pages/pr-preview/` does not accumulate stale folders.
 
-**Cheap checks** ([`ci-checks.yml`](.github/workflows/ci-checks.yml), [`content-lint.yml`](.github/workflows/content-lint.yml)) still run when their respective paths change; content lint only examines files changed in the commit or PR, not the entire corpus.
+**Cheap checks** ([`ci-checks.yml`](.github/workflows/ci-checks.yml), [`content-lint.yml`](.github/workflows/content-lint.yml)) still run when their respective paths change; content lint only examines files changed in the commit or PR, not the entire corpus. `checks` (Repository checks), `a11y` (Accessibility) and `lint` (Lint changed content) are required status checks on `main`; a job skipped by its path filter counts as passing.
 
 > **Search:** Search is a site-wide modal (opened from the header search button, or with <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd> or <kbd>/</kbd>), powered by [Pagefind](https://pagefind.app/). The index lives in `public/pagefind/` and is generated by running the `pagefind` binary against the built site; the Pagefind assets are lazy-loaded the first time the dialog is opened. During `hugo server` the index is not built, so the modal only returns results after a production build followed by `pagefind --site public`.
 
@@ -202,11 +206,11 @@ All content lives as Markdown in `content/`. The site uses the following section
 
 | Section | Path | What it holds |
 |---------|------|---------------|
-| About Us | `content/about-us/` | About page, manifesto, governance, by-laws, code of conduct, how to join |
+| About Us | `content/about-us/` | About page, manifesto, goals, governance, by-laws, code of conduct, moderation dashboard |
 | Events | `content/events/` | Event announcements and write-ups — or use the [event form](https://opensourcedesign.net/events/event-form/) |
 | Jobs | `content/jobs/` | Job listings — or use the [job form](https://opensourcedesign.net/jobs/job-form/) |
 | Resources | `content/resources/` | Hub page with sub-pages: the curated links directory at `/resources/links/` (suggest new links via the [suggest form](https://opensourcedesign.net/resources/suggest/)), the bibliography at `/resources/bibliography/` (`/resources/reading/` redirects there), and community articles at `/resources/articles/` (`/articles/` redirects there) |
-| Standalone | `content/*.md` | `forum`, `imprint`, `brand`, and the homepage (`_index.md`) |
+| Standalone | `content/*.md` | `imprint`, `brand`, and the homepage (`_index.md`) |
 
 ### Editing Process
 
@@ -222,7 +226,7 @@ The recommended workflow for any content change:
 ### Adding a Job Post
 
 1. Navigate to `content/jobs/`
-2. Create a new `.md` file following the existing format (date-prefixed filename, e.g. `2025-03-15-role-title.md`)
+2. Create a new `.md` file following the existing format (date-prefixed filename, e.g. `2025-03-15-role-title.md`) with a `slug:` for its URL (`slug: "role-title"` → `/jobs/role-title/`; content lint requires it, and `hugo new content/jobs/2025-03-15-role-title.md` fills it in)
 3. Or use the online form at [opensourcedesign.net/jobs/job-form/](https://opensourcedesign.net/jobs/job-form/)
 
 Links in `how_to_apply` automatically get a recognisable service icon on the job page (GitHub, GitLab, Codeberg, F-Droid, Figma, Matrix, LinkedIn, app stores, …) based on the URL's host; unknown hosts fall back to a generic link icon and emails get an envelope. To support another service, add a host rule and its SVG path to `layouts/partials/apply-icon.html`.
@@ -235,13 +239,13 @@ To update an existing posting (fix details, mark it as filled or closed), use th
 
 Around six weeks after publication, posters of still-open jobs get a **reminder email** asking whether the position is still open (`job-reminder.yml`, weekly; it maps each file back to its submission PR and pulls the email from the Worker's KV store - manually committed postings are skipped).
 
-**Expiration:** postings can carry an optional `deadline: YYYY-MM-DD` (application deadline, settable from the form). Once the deadline passes, the posting shows an "expired" notice and moves from `/jobs/` to `/jobs/archive/`. A daily GitHub Action (`job-expire.yml`) also flips `status: searching` to `status: expired` when the deadline has passed, or when a posting is over a year old with no update - so the front matter catches up with what the site already shows. Re-open an expired posting by editing it and selecting "Still searching" (clear or move the deadline first).
+**Expiration:** postings can carry an optional `deadline: YYYY-MM-DD` (application deadline, settable from the form). Once the deadline passes, the posting shows an "expired" notice and moves from `/jobs/` to `/jobs/archive/`. The site treats a `searching` posting as expired as soon as its deadline has passed or it is over a year old with no update (`layouts/partials/functions/job-lapsed.html`). A daily GitHub Action (`job-expire.yml`) then opens (or updates) a pull request from `bot/expire-jobs` that flips those postings to `status: expired` - `main` is protected, so a maintainer merges it - so the front matter catches up with what the site already shows. Re-open an expired posting by editing it and selecting "Still searching" (clear or move the deadline first).
 
 **Feeds:** besides the main `/jobs/feed.xml`, filtered feeds exist at `/jobs/feed-paid.xml` and `/jobs/feed-volunteer.xml` (linked from the jobs page) so people can subscribe only to the postings they care about.
 
 **Social cards:** every job page gets a generated 1200×630 Open Graph image (horizontal brand logo, title, organization, paid/volunteer, deadline on a light slate-50 background) so shared links unfurl nicely. They're built by `layouts/partials/social-card.html` from the committed `assets/images/og-card-base.png` plus the Inter fonts in `assets/fonts/og/`; Hugo composites the job-specific text at build time. A posting with an explicit `image` front matter keeps that image instead.
 
-**Content lint:** pull requests touching `content/jobs/` or `content/events/` run `content-lint.yml`, which validates front matter (required fields, status enums, ISO dates) and catches the classic Markdown pitfalls (4-space indents rendering as code blocks, `###Heading` without a space, `•` pseudo-bullets) before a broken page can be merged.
+**Content lint:** `content-lint.yml` lints the job, event and resource files a pull request changes. It validates front matter (required fields including `slug` for jobs, status enums, ISO dates), rejects stray control characters and Hugo shortcodes in postings, and catches the classic Markdown pitfalls (4-space indents rendering as code blocks, `###Heading` without a space, `•` pseudo-bullets) before a broken page can be merged.
 
 ### Social Media Announcements
 
@@ -274,12 +278,12 @@ To update an existing event (fix details, mark it as cancelled), use the "Edit t
 1. To add, change, or remove a curated tool or link, edit `data/resources.yaml` - each entry is a few YAML lines (`name`, `url`, optional `description` and extra `links`), grouped into categories. No HTML or template knowledge needed; the file's header comment documents the format. Non-Git users can use the [suggest form](https://opensourcedesign.net/resources/suggest/) instead (linked from `/resources/links/`) - it opens a moderated pull request that inserts the entry into the right category, via the same Cloudflare Worker as the job and event forms.
 2. To add a talk, article, paper, or book to the **Bibliography**, add an entry to `data/bibliography.yaml`.
 3. Both lists render wherever their shortcode is placed in a page's Markdown: `{{</* resources */>}}` for the filterable directory (in `content/resources/links.md`) and `{{</* bibliography */>}}` for the bibliography (in `content/resources/bibliography.md`, with `heading="false"` since the page provides its own title). Move or copy a shortcode to relocate its list.
-4. New resource sub-pages (e.g. the guide texts proposed in issue #554) are Markdown files in `content/resources/` with `layout: resource-page` and a `weight` that controls their order on the `/resources/` hub. Two of the four proposed guides are still draft placeholders - fill in the body and remove `draft: true` to publish.
+4. New resource sub-pages (e.g. the guide texts proposed in issue #554) are Markdown files in `content/resources/` with `layout: resource-page` and a `weight` that controls their order on the `/resources/` hub. `compare-existing-solutions.md` is still a draft placeholder - fill in the body and remove `draft: true` to publish.
 
 ### Editing an About Us Page
 
 1. Navigate to `content/about-us/`
-2. Edit the relevant Markdown file (`_index.md`, `manifesto.md`, `governance.md`, `by-laws.md`, `code-of-conduct.md`)
+2. Edit the relevant Markdown file (`_index.md`, `manifesto.md`, `goals.md`, `governance.md`, `by-laws.md`, `code-of-conduct.md`; `moderation.md` is the maintainers' dashboard page and has no body)
 
 ### Further Documentation
 
