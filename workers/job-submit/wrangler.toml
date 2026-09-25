@@ -3,6 +3,12 @@ main = "src/index.js"
 compatibility_date = "2025-09-01"
 workers_dev = true
 
+# Keep Worker logs (e.g. the GitHub status and message logged when a
+# submission can't open its pull request) so failures can be diagnosed in the
+# Cloudflare dashboard instead of only via a live `wrangler tail`.
+[observability]
+enabled = true
+
 # --- Public, non-secret configuration -------------------------------------
 # Override any of these in the Cloudflare dashboard or here as needed.
 [vars]

@@ -816,13 +816,6 @@ async function createResourcePullRequest(env, data) {
     sha: ref.object.sha,
   });
 
-  await gh(env, 'PUT', `/repos/${owner}/${repo}/contents/${encodeURIPath(path)}`, {
-    message: 'Suggest resource: ' + data.name,
-    content: b64encode(updated),
-    branch,
-    sha: existing.sha,
-  });
-
   const body = [
     'Automated resource suggestion from the [suggest form](https://opensourcedesign.net/resources/suggest/).',
     '',
@@ -836,11 +829,19 @@ async function createResourcePullRequest(env, data) {
     'Review the link before merging (relevance, licensing, no dead/spam URL).',
   ].join('\n');
 
-  const pr = await gh(env, 'POST', `/repos/${owner}/${repo}/pulls`, {
-    title: 'Resource suggestion: ' + data.name,
-    head: branch,
-    base,
-    body,
+  const pr = await cleanUpBranchOnError(env, branch, async () => {
+    await gh(env, 'PUT', `/repos/${owner}/${repo}/contents/${encodeURIPath(path)}`, {
+      message: 'Suggest resource: ' + data.name,
+      content: b64encode(updated),
+      branch,
+      sha: existing.sha,
+    });
+    return gh(env, 'POST', `/repos/${owner}/${repo}/pulls`, {
+      title: 'Resource suggestion: ' + data.name,
+      head: branch,
+      base,
+      body,
+    });
   });
 
   const label = env.PR_LABEL_RESOURCE || 'resource-suggestion';
@@ -874,26 +875,28 @@ async function createPullRequest(env, built, data, kind, edit) {
     sha: baseSha
   });
 
-  // 3. Commit the file. New submissions get a collision-free path; edits
-  //    update the existing file in place (the contents API needs its SHA).
   const noun = isEvent ? 'event' : 'job';
-  const filePath = edit ? built.path : await uniquePath(env, owner, repo, base, built.path);
-  await gh(env, 'PUT', `/repos/${owner}/${repo}/contents/${encodeURIPath(filePath)}`, {
-    message: (edit ? 'Update ' + noun + ': ' : 'Add ' + noun + ': ') + data.title,
-    content: b64encode(built.markdown),
-    branch,
-    ...(edit ? { sha: edit.sha } : {})
-  });
-
-  // 4. Open the pull request.
   const prTitle = edit
     ? (isEvent ? 'Event edit: ' : 'Job edit: ')
     : (isEvent ? 'Event submission: ' : 'Job submission: ');
-  const pr = await gh(env, 'POST', `/repos/${owner}/${repo}/pulls`, {
-    title: prTitle + data.title,
-    head: branch,
-    base,
-    body: isEvent ? eventPrBody(data, filePath, edit) : prBody(data, filePath, edit)
+  const pr = await cleanUpBranchOnError(env, branch, async () => {
+    // 3. Commit the file. New submissions get a collision-free path; edits
+    //    update the existing file in place (the contents API needs its SHA).
+    const filePath = edit ? built.path : await uniquePath(env, owner, repo, base, built.path);
+    await gh(env, 'PUT', `/repos/${owner}/${repo}/contents/${encodeURIPath(filePath)}`, {
+      message: (edit ? 'Update ' + noun + ': ' : 'Add ' + noun + ': ') + data.title,
+      content: b64encode(built.markdown),
+      branch,
+      ...(edit ? { sha: edit.sha } : {})
+    });
+
+    // 4. Open the pull request.
+    return gh(env, 'POST', `/repos/${owner}/${repo}/pulls`, {
+      title: prTitle + data.title,
+      head: branch,
+      base,
+      body: isEvent ? eventPrBody(data, filePath, edit) : prBody(data, filePath, edit)
+    });
   });
 
   // 5. Label it (best-effort; the merge workflow keys off the branch name, not the label).
@@ -930,9 +933,32 @@ async function gh(env, method, path, body) {
   let out;
   try { out = text ? JSON.parse(text) : {}; } catch (e) { out = { raw: text }; }
   if (!resp.ok) {
-    throw new Error((out && out.message) ? out.message : 'GitHub API ' + resp.status);
+    // Status, route and GitHub's message end up in the Worker logs via
+    // prFailResponse, so a failed submission can be diagnosed.
+    const err = new Error('GitHub API ' + resp.status + ' ' + method + ' ' + path.split('?')[0] +
+      ((out && out.message) ? ': ' + out.message : ''));
+    err.status = resp.status;
+    throw err;
   }
   return out;
+}
+
+/**
+ * Run the steps that follow creating a submission branch; if any of them
+ * fails, delete the branch again (best effort) so failed submissions don't
+ * leave stray branches behind, then rethrow.
+ */
+async function cleanUpBranchOnError(env, branch, steps) {
+  try {
+    return await steps();
+  } catch (err) {
+    try {
+      await gh(env, 'DELETE', `/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/git/refs/heads/${encodeURIPath(branch)}`);
+    } catch (e) {
+      console.error('Could not delete branch ' + branch + ' after a failed submission:', e.message);
+    }
+    throw err;
+  }
 }
 
 // Returns the first path variant (foo.md, foo-2.md, foo-3.md, ...) that does not
@@ -1095,7 +1121,7 @@ function errMsg(err) {
 }
 
 function prFailResponse(err) {
-  console.error('Pull request creation failed:', err);
+  console.error('Pull request creation failed: ' + errMsg(err));
   return json({
     ok: false,
     error: 'Could not create pull request. Please try again later or open one manually on GitHub.',
