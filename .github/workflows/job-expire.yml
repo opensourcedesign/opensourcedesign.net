@@ -90,7 +90,7 @@ jobs:
           fi
 
           # Required checks for the PR; they would not run on their own.
-          for wf in ci-checks.yml a11y.yml; do
+          for wf in ci-checks.yml a11y.yml content-lint.yml; do
             gh workflow run "$wf" --ref "$BRANCH"
           done
 
