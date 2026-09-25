@@ -19,6 +19,7 @@ links:
   - "https://github.com/Colorado-Mesh/mesh-client/blob/main/CONTRIBUTING.md"
 deliverables: |-
   Style guide and front-end mock-up demonstrating the style.
+slug: "ux-improvement-pass-style-guide-for-colorado-meshs-mesh-client-used-around-the-world"
 ---
 
 Howdy OSD Team!  Our pet project is now used around the world, in some cases to help bypass censorship and others to help out in emergencies and disasters. It has never had a UX pass by anyone who knows what they are doing. It needs one. We've tried to prototype some improvements, but our experiments have all ended in failure. This is because we are lacking a style guide.  We do have a codified style, flow, and accessibility features that work for our users. We want to have something more like a standard, and then we can perform a full UI audit against that standard. 
