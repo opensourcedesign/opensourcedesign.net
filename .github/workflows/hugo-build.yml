@@ -113,7 +113,11 @@ jobs:
           rm pagefind.tar.gz
           chmod +x pagefind
 
+      # Best effort: if Discourse is down, build with the committed
+      # data/forum-pulse.json (the homepage also refreshes it client-side)
+      # rather than blocking the deploy.
       - name: Refresh forum pulse cache
+        continue-on-error: true
         env:
           FORUM_URL: https://discourse.opensourcedesign.net
         run: node .github/scripts/forum-pulse-cache.mjs

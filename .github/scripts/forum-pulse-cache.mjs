@@ -12,6 +12,8 @@ const OUT = 'data/forum-pulse.json';
 async function main() {
   const res = await fetch(FORUM + '/latest.json', {
     headers: { accept: 'application/json' },
+    // Don't let a hanging forum stall the deploy that runs this.
+    signal: AbortSignal.timeout(20000),
   });
   if (!res.ok) throw new Error('Discourse HTTP ' + res.status);
   const data = await res.json();
