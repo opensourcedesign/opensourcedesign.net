@@ -23,3 +23,5 @@ date: '2018-02-06T09:46:55.717Z'
 timestamp: 1517910415
 slug: "design-a-chameleon-outline-for-the-opensuse-conference"
 ---
+
+The openSUSE Project has the Geeko and Alex Chameleons and are looking for a third one to be released at the openSUSE Conference. Design an outline of the

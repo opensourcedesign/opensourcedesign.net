@@ -16,3 +16,8 @@ how_to_apply:
 date: '2017-07-25T19:37:55.672Z'
 slug: "redesign-maven-website"
 ---
+
+Apache Maven is the defacto standard build tool for Java development.
+
+One of its strong features is being able to generate documentation in several forms based on the code and several markup languages.
+Maven is a huge project, but is missing visual creativity and fresh set of eyes on the content. e.g. https://maven.apache.org/index.html is the landing page, but is an overload of information for newbies.
