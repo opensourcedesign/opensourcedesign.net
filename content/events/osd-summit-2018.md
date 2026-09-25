@@ -8,6 +8,8 @@ eventDate: "2–4 November 2018"
 location: "Tirana, Albania"
 aliases:
   - /2018/12/25/osd-summit-2018/
+  # The old "Libre Graphics Meeting 2019" post carried this same recap.
+  - /2019/05/31/libre-graphics-meeting-no-design-without-research/
 ---
 
 During the first weekend of November we had the annual [Open Source Design Summit](https://opensourcedesign.net/summit) in the capital of Albania, Tirana.

@@ -12,6 +12,8 @@ timezone: Brussels local time (Central European Time)
 time: Exact times yet to be defined
 status: past
 permalink: /2021/02/06/opensourcedesign-fosdem-2021
+aliases:
+  - /2021/02/06/opensourcedesign-fosdem-2021/
 ---
 
 [FOSDEM](https://fosdem.org) is the Free and Open source Software Developers’ European Meeting, a free and non-commercial two-day weekend event that offers **all** open source contributors a place to meet, share ideas, learn and collaborate.

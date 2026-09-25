@@ -11,6 +11,8 @@ location: Toronto, Canada
 time: full days
 status: past
 permalink: /2015/04/29/libregraphicsmeeting
+aliases:
+  - /2015/04/29/libregraphicsmeeting/
 ---
 
 The [Libre Graphics Meeting (LGM)](https://libregraphicsmeeting.org/2015/) is an annual meeting on free and open source software for graphics.

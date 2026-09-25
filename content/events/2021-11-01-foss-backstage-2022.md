@@ -11,6 +11,8 @@ location: Online, Remote and In person in Berlin (limited seats)
 time: 1/2 days
 status: past
 permalink: /2021/11/01/fossback-stage-2022
+aliases:
+  - /2021/11/01/fossback-stage-2022/
 ---
 
 The conference on everything related to governance, collaboration, legal and economics within the scope of FOSS.
