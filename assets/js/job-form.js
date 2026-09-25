@@ -30,7 +30,7 @@ var form = document.getElementById('osd-job-form');
           str = (str || '').trim().toLowerCase();
           str = str.normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
           str = str.replace(/[^a-z0-9\s-]/g, '');
-          str = str.replace(/\s+/g, '-').replace(/-+/g, '-');
+          str = str.replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
           return str;
         }
 
@@ -243,7 +243,8 @@ var form = document.getElementById('osd-job-form');
             if (editMeta.date_posted) datePosted = editMeta.date_posted;
             if (editMeta.date) isoNow = editMeta.date;
           }
-          var slug = datePosted + '-' + slugify(data.title);
+          var urlSlug = slugify(data.title) || 'posting';
+          var slug = datePosted + '-' + urlSlug;
           var path = editFile ? 'content/jobs/' + editFile : 'content/jobs/' + slug + '.md';
 
           var applyList = linesToList(data.how_to_apply);
@@ -256,6 +257,9 @@ var form = document.getElementById('osd-job-form');
           fm.push('status: ' + (editFile ? (data.status || 'searching') : 'searching'));
           fm.push('date_posted: ' + yq(datePosted));
           fm.push('date: ' + yq(isoNow));
+          // Same explicit URL slug the Worker writes (it also de-duplicates
+          // against existing postings; check /jobs/<slug>/ is free by hand).
+          if (!editFile) fm.push('slug: ' + yq(urlSlug));
           if (editFile && editMeta) {
             if (editMeta.id) fm.push('_id: ' + yq(editMeta.id));
             if (editMeta.slug) fm.push('slug: ' + yq(editMeta.slug));

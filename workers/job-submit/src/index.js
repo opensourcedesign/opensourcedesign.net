@@ -234,10 +234,14 @@ async function handleSubmit(request, env) {
     return json({ ok: true, pr_url: pr.html_url });
   }
 
+  // The live job index (/jobs/index.json, built by Hugo) backs the duplicate
+  // check and URL slug allocation for jobs; null when it can't be fetched.
+  const jobIndex = kind === 'job' ? await fetchJobIndex(env) : null;
+
   // Duplicate detection for new jobs: compare against the live job index and
   // ask for confirmation (the form re-submits with force_duplicate).
   if (kind === 'job' && !edit && !data.force_duplicate) {
-    const dup = await findDuplicateJob(env, data);
+    const dup = findDuplicateJob(jobIndex, data);
     if (dup) {
       return json({
         ok: false,
@@ -281,6 +285,11 @@ async function handleSubmit(request, env) {
     edit.author = fm.scalar('author');
     edit.layout = fm.scalar('layout');
     edit.recurrence = fm.scalar('recurrence'); // e.g. the monthly community call
+    if (kind === 'job' && !edit.slug && !edit.url) {
+      // Legacy postings derive their URL from the title; pin the URL they
+      // already have so an edited title doesn't move (and break) the page.
+      edit.slug = currentJobSlug(jobIndex, edit.path);
+    }
     // The poster may change the status from the edit form (close a job,
     // cancel an event); anything not on the whitelist keeps the current value.
     const requested = String(data.status || '').trim();
@@ -295,7 +304,10 @@ async function handleSubmit(request, env) {
       : (fm.scalar('status') || (kind === 'event' ? 'upcoming' : 'searching'));
   }
 
-  const built = kind === 'event' ? buildEventMarkdown(data, env, edit) : buildMarkdown(data, env, edit);
+  // New jobs get an explicit, unique `slug:` so the URL is known before Hugo
+  // builds it and two postings with the same title never share a URL.
+  const jobSlug = kind === 'job' && !edit ? uniqueJobSlug(jobIndex, slugify(data.title) || 'posting') : '';
+  const built = kind === 'event' ? buildEventMarkdown(data, env, edit) : buildMarkdown(data, env, edit, jobSlug);
 
   let pr;
   try {
@@ -411,7 +423,7 @@ async function verifyTurnstile(secret, token, request) {
 /* Markdown generation (mirrors generateMarkdown in job-form.html)            */
 /* -------------------------------------------------------------------------- */
 
-function buildMarkdown(data, env, edit) {
+function buildMarkdown(data, env, edit, urlSlug) {
   const now = new Date();
   const today =
     now.getUTCFullYear() +
@@ -422,7 +434,7 @@ function buildMarkdown(data, env, edit) {
   const isoDate = (edit && edit.date) || now.toISOString();
   const status = (edit && edit.status) || 'searching';
 
-  const slug = datePosted + '-' + slugify(data.title);
+  const slug = datePosted + '-' + (urlSlug || slugify(data.title) || 'posting');
   const dir = (env.CONTENT_DIR || 'content/jobs').replace(/\/+$/, '');
   const path = edit ? edit.path : dir + '/' + slug + '.md';
 
@@ -436,6 +448,7 @@ function buildMarkdown(data, env, edit) {
   fm.push('status: ' + status);
   fm.push('date_posted: ' + yq(datePosted));
   fm.push('date: ' + yq(isoDate));
+  if (urlSlug) fm.push('slug: ' + yq(urlSlug));
   if (edit) {
     pushPreservedIdentity(fm, edit);
     fm.push('last_updated: ' + yq(today));
@@ -510,7 +523,7 @@ function buildEventMarkdown(data, env, edit) {
   const start = String(data.start_date).trim();
   const end = data.end_date ? String(data.end_date).trim() : '';
 
-  const slug = start + '-' + slugify(data.title);
+  const slug = start + '-' + (slugify(data.title) || 'event');
   const dir = (env.CONTENT_DIR_EVENTS || 'content/events').replace(/\/+$/, '');
   const path = edit ? edit.path : dir + '/' + slug + '.md';
 
@@ -564,7 +577,8 @@ function slugify(str) {
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
 /** Bigram Dice similarity of two slugs (0..1). */
@@ -587,12 +601,11 @@ function diceSimilarity(a, b) {
 }
 
 /**
- * Best-effort duplicate check for new job submissions against the site's
- * machine-readable index (/jobs/index.json, built by Hugo). Only open
- * (`searching`) postings count - reposting a solved job is legitimate.
- * Fails open: a network hiccup must never block a real submission.
+ * The site's machine-readable job index (/jobs/index.json, built by Hugo), or
+ * null when it can't be fetched. Callers fail open: a network hiccup must
+ * never block a real submission.
  */
-async function findDuplicateJob(env, data) {
+async function fetchJobIndex(env) {
   try {
     const base = (env.SITE_BASE_URL || 'https://opensourcedesign.net').replace(/\/+$/, '');
     const res = await fetch(base + '/jobs/index.json', {
@@ -601,20 +614,57 @@ async function findDuplicateJob(env, data) {
     });
     if (!res.ok) return null;
     const index = await res.json();
-    const newTitle = slugify(data.title);
-    const newOrg = slugify(data.organization || '');
-    for (const job of index.jobs || []) {
-      if (String(job.status || '').toLowerCase() !== 'searching') continue;
-      const title = slugify(job.title || '');
-      if (!title || !newTitle) continue;
-      if (title === newTitle) return job;
-      const sameOrg = newOrg && slugify(job.organization || '') === newOrg;
-      if (sameOrg && diceSimilarity(title, newTitle) >= 0.8) return job;
-    }
+    return index && Array.isArray(index.jobs) ? index : null;
   } catch (e) {
-    // Fail open.
+    return null;
+  }
+}
+
+/**
+ * Best-effort duplicate check for new job submissions. Only open
+ * (`searching`) postings count - reposting a solved job is legitimate.
+ */
+function findDuplicateJob(index, data) {
+  if (!index) return null;
+  const newTitle = slugify(data.title);
+  const newOrg = slugify(data.organization || '');
+  for (const job of index.jobs) {
+    if (String(job.status || '').toLowerCase() !== 'searching') continue;
+    const title = slugify(job.title || '');
+    if (!title || !newTitle) continue;
+    if (title === newTitle) return job;
+    const sameOrg = newOrg && slugify(job.organization || '') === newOrg;
+    if (sameOrg && diceSimilarity(title, newTitle) >= 0.8) return job;
   }
   return null;
+}
+
+// Section pages that live under /jobs/ and must never be shadowed by a posting.
+const RESERVED_JOB_SLUGS = ['job-form', 'archive', 'writing-job-posts', 'index', 'feed', 'feed-paid', 'feed-volunteer'];
+
+function jobUrlSlug(url) {
+  const m = String(url || '').match(/^\/jobs\/([^/]+)\/$/);
+  if (!m) return '';
+  try { return decodeURIComponent(m[1]).toLowerCase(); } catch (e) { return m[1].toLowerCase(); }
+}
+
+/** First of base, base-2, base-3, ... that no existing posting's URL uses. */
+function uniqueJobSlug(index, base) {
+  const taken = new Set(RESERVED_JOB_SLUGS);
+  for (const job of (index && index.jobs) || []) {
+    const s = jobUrlSlug(job.url);
+    if (s) taken.add(s);
+  }
+  let slug = base;
+  for (let n = 2; taken.has(slug); n++) slug = base + '-' + n;
+  return slug;
+}
+
+/** The URL slug the live site currently serves for a job file ('' if unknown). */
+function currentJobSlug(index, path) {
+  const file = String(path).split('/').pop();
+  const job = ((index && index.jobs) || []).find((j) => j.file === file);
+  return job ? jobUrlSlug(job.url) : '';
 }
 
 function yq(v) {
