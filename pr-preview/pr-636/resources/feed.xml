@@ -1,0 +1,1580 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Resources | Open Source Design</title><link>https://opensourcedesign.net/pr-preview/pr-636/resources/</link><description>Links, readings, and community-written guides for designers working in open source.</description><language>en</language><copyright>© 2026 Open Source Design. Content licensed under CC BY 4.0.</copyright><lastBuildDate>Fri, 25 Sep 2026 18:27:21 +0000</lastBuildDate><generator>Hugo 0.166.0</generator><docs>https://www.rssboard.org/rss-specification</docs><atom:link href="https://opensourcedesign.net/pr-preview/pr-636/resources/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://opensourcedesign.net/pr-preview/pr-636/images/favicons/apple-touch-icon.png</url><title>Open Source Design</title><link>https://opensourcedesign.net/pr-preview/pr-636/</link></image><item><title>How to Join</title><link>https://opensourcedesign.net/pr-preview/pr-636/resources/how-to-join/</link><guid isPermaLink="true">https://opensourcedesign.net/pr-preview/pr-636/resources/how-to-join/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>How to participate in the Open Source Design community - the forum, community calls, social media, and GitHub.</description><content:encoded>&lt;p&gt;Participating in the open source design community can mean engaging in discussions about design in open source, joining our community calls or organizing events.&lt;/p&gt;
+&lt;p&gt;Often, people who join the community are designers working on open source software, developers interested in design or people from other professional backgrounds.&lt;/p&gt;
+&lt;p&gt;There are no formal requirements to take part in the community other than following the code of conduct.&lt;/p&gt;
+&lt;h2 id="communicating-well"&gt;Communicating well&lt;/h2&gt;
+&lt;p&gt;In order to keep the Open Source Design community a warm, welcoming, and safe place we ask that all participants read and adhere to the &lt;a href="https://opensourcedesign.net/pr-preview/pr-636/about-us/code-of-conduct/"&gt;Code of Conduct&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="participation-channels"&gt;Participation channels&lt;/h2&gt;
+&lt;h3 id="social-media"&gt;Social media&lt;/h3&gt;
+&lt;p&gt;Our account on Mastodon is &lt;a href="https://mastodon.social/@opensourcedesign"&gt;@opensourcedesign@mastodon.social&lt;/a&gt;. The account is run by &lt;a href="https://opensourcedesign.net/pr-preview/pr-636/about-us/governance/"&gt;core members&lt;/a&gt;. If you want to join discussions or want to be found, use the #opensourcedesign hashtag.&lt;/p&gt;
+&lt;h3 id="community-call"&gt;Community call&lt;/h3&gt;
+&lt;p&gt;Our community call happens once per month on the first Wednesday of the month at 7pm CET (please check for when daylight savings happens in your timezone) and we meet via Jitsi: &lt;a href="https://meet.jit.si/opensourcedesign"&gt;https://meet.jit.si/opensourcedesign&lt;/a&gt; (an open source video, chat and audio service). Jitsi sometimes asks for you to ‘login’ but this should not be required to attend a community call.&lt;/p&gt;
+&lt;p&gt;Usually, we do a short introduction round, give updates on what is going on in the Open Source Design community and anything in the world of open source design and then chat about a few topics more in depth. New people are always welcome!&lt;/p&gt;
+&lt;h3 id="discourse-forum"&gt;Discourse forum&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://discourse.opensourcedesign.net/"&gt;Discourse&lt;/a&gt; is used for discussions around open source design. The account creation is not restricted - feel free to join.&lt;/p&gt;
+&lt;h3 id="github"&gt;GitHub&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/opensourcedesign"&gt;GitHub&lt;/a&gt; is used for working on the website and the job board. The content is written in markdown, the website’s theme is implemented in HTML and Hugo templates. You can file issues and make pull requests. Before submitting a pull request, it is best to open an issue first to describe the suggestion and to get feedback (except it is a fix for obvious bugs or spelling mistakes). Please do not submit AI-generated code changes, issues, documentation or code reviews.&lt;/p&gt;
+&lt;h2 id="ways-to-contribute"&gt;Ways to contribute&lt;/h2&gt;
+&lt;h3 id="contribute-design-work"&gt;Contribute design work&lt;/h3&gt;
+&lt;p&gt;Open source projects post design requests on our &lt;a href="https://opensourcedesign.net/pr-preview/pr-636/jobs/"&gt;job board&lt;/a&gt;. Some are paid, many are volunteer. If you have a project that needs a designer, you can &lt;a href="https://opensourcedesign.net/pr-preview/pr-636/jobs/job-form/"&gt;post a job&lt;/a&gt; there too.&lt;/p&gt;
+&lt;h3 id="come-to-events"&gt;Come to events&lt;/h3&gt;
+&lt;p&gt;We run and attend events throughout the year - meetups, conference devrooms, and design sprints. Browse &lt;a href="https://opensourcedesign.net/pr-preview/pr-636/events/"&gt;upcoming events&lt;/a&gt; or help organise one.&lt;/p&gt;
+&lt;h3 id="support-us-financially"&gt;Support us financially&lt;/h3&gt;
+&lt;p&gt;We accept contributions through &lt;a href="https://opencollective.com/opensourcedesign/contribute"&gt;Open Collective&lt;/a&gt; - one-off or recurring, whatever works for you.&lt;/p&gt;
+&lt;h2 id="what-membership-looks-like"&gt;What membership looks like&lt;/h2&gt;
+&lt;p&gt;There&amp;rsquo;s no membership card or formal sign-up. You&amp;rsquo;re part of the community when you participate - whether that means posting in the forum, helping someone on GitHub, attending events, or contributing financially. If you&amp;rsquo;re consistently active over time and start taking on responsibility for some aspect of OSD, you may naturally become a &lt;a href="https://opensourcedesign.net/pr-preview/pr-636/about-us/governance/"&gt;core contributor&lt;/a&gt;. There&amp;rsquo;s no formal process for that either - it just happens through sustained engagement.&lt;/p&gt;
+&lt;p style="margin-top:2em;font-size:0.9em;color:#666;"&gt;&lt;a href="https://opensourcedesign.net/pr-preview/pr-636/resources/how-to-join/"&gt;Read more on opensourcedesign.net →&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Resources</category></item><item><title>Links</title><link>https://opensourcedesign.net/pr-preview/pr-636/resources/links/</link><guid isPermaLink="true">https://opensourcedesign.net/pr-preview/pr-636/resources/links/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>Openly licensed tools, icons, fonts, images, and other resources for designers working in open source.</description><content:encoded>&lt;p&gt;&lt;strong&gt;This is a showcase of the many websites and platforms where you can find openly licensed icons, fonts, images, tools, and other resources.&lt;/strong&gt; You can use them for any purpose, also commercial (some works have specific licenses, so always make sure it&amp;rsquo;s fine to use).&lt;/p&gt;
+&lt;!-- The directory below is rendered from data/resources.yaml - edit that file
+to add or change resources. --&gt;
+&lt;section class="not-prose my-10" aria-labelledby="resources-directory-heading"&gt;
+&lt;h2 class="sr-only" id="resources-directory-heading"&gt;Resources directory&lt;/h2&gt;
+&lt;div class="flex flex-col gap-4 border-t border-slate-200 pt-8" role="search" aria-label="Filter resources"&gt;
+&lt;div class="flex max-w-md gap-2"&gt;
+&lt;label class="sr-only" for="resources-q"&gt;Search resources by name or description&lt;/label&gt;
+&lt;input class="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20" id="resources-q" type="search" placeholder="Search resources…" autocomplete="off" /&gt;
+&lt;button class="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" id="resources-clear" aria-label="Clear search"&gt;Clear&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="flex flex-wrap gap-1.5" role="group" aria-label="Filter by category"&gt;
+&lt;button class="osd-filter rounded-full border border-slate-900 bg-slate-900 px-3 py-1.5 text-[13px] font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="all" aria-pressed="true"&gt;All &lt;span class="opacity-60"&gt;135&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="projects" aria-pressed="false"&gt;Projects &lt;span class="opacity-60"&gt;21&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="icons" aria-pressed="false"&gt;Icons &lt;span class="opacity-60"&gt;17&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="fonts" aria-pressed="false"&gt;Fonts &lt;span class="opacity-60"&gt;11&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="images" aria-pressed="false"&gt;Images &lt;span class="opacity-60"&gt;11&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="cc-media" aria-pressed="false"&gt;Creative Commons media &lt;span class="opacity-60"&gt;4&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="tools" aria-pressed="false"&gt;Design tools &lt;span class="opacity-60"&gt;18&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="color" aria-pressed="false"&gt;Color &lt;span class="opacity-60"&gt;6&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="css" aria-pressed="false"&gt;CSS frameworks &lt;span class="opacity-60"&gt;8&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="design-reads" aria-pressed="false"&gt;Design reads &lt;span class="opacity-60"&gt;11&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="osd-reads" aria-pressed="false"&gt;Open source design reads &lt;span class="opacity-60"&gt;6&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="community" aria-pressed="false"&gt;Community &amp;amp; inspiration &lt;span class="opacity-60"&gt;10&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="learn-code" aria-pressed="false"&gt;Learn to code &lt;span class="opacity-60"&gt;9&lt;/span&gt;&lt;/button&gt;
+&lt;button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="learn-design" aria-pressed="false"&gt;Learn to design &lt;span class="opacity-60"&gt;3&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="mt-4 text-sm text-slate-500" aria-live="polite" aria-atomic="true"&gt;&lt;span id="resources-count"&gt;135&lt;/span&gt; resources&lt;/p&gt;
+&lt;p class="mt-6 hidden text-sm text-slate-600" id="resources-empty" role="status"&gt;No resources match your filters. Try a different category or search term.&lt;/p&gt;
+&lt;div id="resources-directory"&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="projects" data-cat="projects" aria-labelledby="cat-projects"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-projects"&gt;Projects &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;21&lt;/span&gt;&lt;/h3&gt;
+&lt;div class="mt-3 max-w-prose text-sm leading-relaxed text-slate-600 break-words [&amp;_a]:font-medium [&amp;_a]:text-slate-900 [&amp;_a]:underline [&amp;_a]:decoration-slate-300 [&amp;_a]:underline-offset-4 hover:[&amp;_a]:decoration-slate-900"&gt;Open source projects with active design teams, blogs, and processes: good places to see open design in practice or to start contributing.&lt;/div&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects mozilla makers of the firefox browser. ux blog"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://mozilla.org" target="_blank" rel="noopener noreferrer"&gt;Mozilla&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Makers of the Firefox browser.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://blog.mozilla.org/ux" target="_blank" rel="noopener noreferrer"&gt;UX blog&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects gnome desktop environment. design blog design team human interface guidelines"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.gnome.org/" target="_blank" rel="noopener noreferrer"&gt;GNOME&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Desktop environment.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://blogs.gnome.org/aday/category/gnome-ux" target="_blank" rel="noopener noreferrer"&gt;Design blog&lt;/a&gt; · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://gitlab.gnome.org/Teams/Design" target="_blank" rel="noopener noreferrer"&gt;Design team&lt;/a&gt; · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://developer.gnome.org/hig/" target="_blank" rel="noopener noreferrer"&gt;Human Interface Guidelines&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects gitlab git hosting and code collaboration. ux team"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://about.gitlab.com/" target="_blank" rel="noopener noreferrer"&gt;GitLab&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Git hosting and code collaboration.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://handbook.gitlab.com/handbook/product/ux/" target="_blank" rel="noopener noreferrer"&gt;UX team&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects nextcloud data sync and sharing. design page"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://nextcloud.com" target="_blank" rel="noopener noreferrer"&gt;Nextcloud&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Data sync and sharing.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://nextcloud.com/design" target="_blank" rel="noopener noreferrer"&gt;Design page&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects fedora linux distribution. design blog design team wiki"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://fedoraproject.org/" target="_blank" rel="noopener noreferrer"&gt;Fedora&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Linux distribution.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://communityblog.fedoraproject.org/category/design/" target="_blank" rel="noopener noreferrer"&gt;Design blog&lt;/a&gt; · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://fedoraproject.org/wiki/Design" target="_blank" rel="noopener noreferrer"&gt;Design team wiki&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects canonical (ubuntu) design blog"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://ubuntu.com" target="_blank" rel="noopener noreferrer"&gt;Canonical (Ubuntu)&lt;/a&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://ubuntu.com/blog/topics/design" target="_blank" rel="noopener noreferrer"&gt;Design blog&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects wordpress design discussion handbook"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://wordpress.org" target="_blank" rel="noopener noreferrer"&gt;WordPress&lt;/a&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://make.wordpress.org/design/" target="_blank" rel="noopener noreferrer"&gt;Design discussion&lt;/a&gt; · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://make.wordpress.org/design/handbook/" target="_blank" rel="noopener noreferrer"&gt;Handbook&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects drupal usability group ui standards"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.drupal.org/" target="_blank" rel="noopener noreferrer"&gt;Drupal&lt;/a&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://groups.drupal.org/usability" target="_blank" rel="noopener noreferrer"&gt;Usability group&lt;/a&gt; · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://drupal.org/ui-standards" target="_blank" rel="noopener noreferrer"&gt;UI standards&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects diaspora decentralized social network. ui issues on github"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://diasporafoundation.org/" target="_blank" rel="noopener noreferrer"&gt;Diaspora&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Decentralized social network.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/diaspora/diaspora/issues?labels=ui" target="_blank" rel="noopener noreferrer"&gt;UI issues on GitHub&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects mediagoblin media platform."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://mediagoblin.org/" target="_blank" rel="noopener noreferrer"&gt;MediaGoblin&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Media platform.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects bewelcome hospitality platform."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.bewelcome.org/" target="_blank" rel="noopener noreferrer"&gt;BeWelcome&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Hospitality platform.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects mailpile mail interface. issues on github"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.mailpile.is/" target="_blank" rel="noopener noreferrer"&gt;Mailpile&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Mail interface.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/mailpile/Mailpile/issues" target="_blank" rel="noopener noreferrer"&gt;Issues on GitHub&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects ghost simple blogging platform."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://ghost.org/" target="_blank" rel="noopener noreferrer"&gt;Ghost&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Simple blogging platform.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects terms of service; didn&amp;#39;t read contract rating."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://tosdr.org/" target="_blank" rel="noopener noreferrer"&gt;Terms of Service; Didn&amp;#39;t Read&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Contract rating.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects libreoffice design team wiki"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.libreoffice.org/" target="_blank" rel="noopener noreferrer"&gt;LibreOffice&lt;/a&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://wiki.documentfoundation.org/Design" target="_blank" rel="noopener noreferrer"&gt;Design team wiki&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects trustroots hospitality platform."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.trustroots.org/" target="_blank" rel="noopener noreferrer"&gt;Trustroots&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Hospitality platform.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects automattic the company behind wordpress.com, woocommerce, and jetpack. design blog"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://automattic.com/" target="_blank" rel="noopener noreferrer"&gt;Automattic&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; The company behind WordPress.com, WooCommerce, and Jetpack.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://automattic.design/" target="_blank" rel="noopener noreferrer"&gt;Design blog&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects xwiki development platform. design wiki"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.xwiki.org" target="_blank" rel="noopener noreferrer"&gt;XWiki&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Development platform.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://design.xwiki.org" target="_blank" rel="noopener noreferrer"&gt;Design wiki&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects elementary os linux distribution. human interface guidelines design blog"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://elementary.io/en/" target="_blank" rel="noopener noreferrer"&gt;elementary OS&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Linux distribution.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://docs.elementary.io/hig/" target="_blank" rel="noopener noreferrer"&gt;Human Interface Guidelines&lt;/a&gt; · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://blog.elementary.io/tags/#design" target="_blank" rel="noopener noreferrer"&gt;Design blog&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects plasma desktop environment by kde. kde design page human interface guidelines"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://kde.org/plasma-desktop/" target="_blank" rel="noopener noreferrer"&gt;Plasma&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Desktop environment by KDE.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://kde.org/" target="_blank" rel="noopener noreferrer"&gt;KDE&lt;/a&gt; · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://develop.kde.org/design/" target="_blank" rel="noopener noreferrer"&gt;Design page&lt;/a&gt; · &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://develop.kde.org/hig" target="_blank" rel="noopener noreferrer"&gt;Human Interface Guidelines&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="projects vibe coding ui specification free, mit-licensed interface-contract project for ai-assisted ui work, with reusable tokens, component states, responsive rules, accessibility requirements, motion constraints, and production review gates."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://horizonx.so/resources/vibe-coding-ui-specification" target="_blank" rel="noopener noreferrer"&gt;Vibe Coding UI Specification&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Free, MIT-licensed interface-contract project for AI-assisted UI work, with reusable tokens, component states, responsive rules, accessibility requirements, motion constraints, and production review gates.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="icons" data-cat="icons" aria-labelledby="cat-icons"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-icons"&gt;Icons &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;17&lt;/span&gt;&lt;/h3&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons bitcoin icons open source icons made for bitcoin applications, free to use. mit licensed."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://bitcoinicons.com/" target="_blank" rel="noopener noreferrer"&gt;Bitcoin Icons&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Open source icons made for Bitcoin applications, free to use. MIT licensed.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons circum icons consistent open source icons as svg for react, vue, and svelte."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://circumicons.com/" target="_blank" rel="noopener noreferrer"&gt;Circum Icons&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Consistent open source icons as SVG for React, Vue, and Svelte.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons font awesome the iconic font and css toolkit with a large free tier. github"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer"&gt;Font Awesome&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; The iconic font and CSS toolkit with a large free tier.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/FortAwesome/Font-Awesome" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons font fabulous a fabulous icon set packaged as a font, free to use. github"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.manageiq.org/font-fabulous/" target="_blank" rel="noopener noreferrer"&gt;Font Fabulous&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A fabulous icon set packaged as a font, free to use.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/ManageIQ/font-fabulous" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons icomoon cc icons and free-to-use icon-font creation software."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://icomoon.io/" target="_blank" rel="noopener noreferrer"&gt;IcoMoon&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; CC icons and free-to-use icon-font creation software.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons iconmonstr a large collection of glyph icons, free to use and modify without attribution."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://iconmonstr.com/" target="_blank" rel="noopener noreferrer"&gt;IconMonstr&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A large collection of glyph icons, free to use and modify without attribution.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons iconoir svg icons, mit licensed."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://iconoir.com/" target="_blank" rel="noopener noreferrer"&gt;Iconoir&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; SVG icons, MIT licensed.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons inkscape open symbols open source icon sets to use as inkscape symbols."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://github.com/PanderMusubi/inkscape-open-symbols" target="_blank" rel="noopener noreferrer"&gt;Inkscape Open Symbols&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Open source icon sets to use as Inkscape symbols.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons mono icons a simple, consistent open source icon set for a wide variety of digital products. mit licensed."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://github.com/mono-company/mono-icons" target="_blank" rel="noopener noreferrer"&gt;Mono Icons&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A simple, consistent open source icon set for a wide variety of digital products. MIT licensed.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons pictogramas open source free icons."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://github.com/adrianmg/pictogramas" target="_blank" rel="noopener noreferrer"&gt;Pictogramas&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Open source free icons.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons remix icons huge repository of consistent, neutrally styled icons. github"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://remixicon.com/" target="_blank" rel="noopener noreferrer"&gt;Remix Icons&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Huge repository of consistent, neutrally styled icons.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/Remix-Design/remixicon" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons react icons svg react icons from popular icon packs. github"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://react-icons.github.io/react-icons/" target="_blank" rel="noopener noreferrer"&gt;React Icons&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; SVG React icons from popular icon packs.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/react-icons/react-icons" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons feather icons simply beautiful open source icons. mit licensed. react version"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://feathericons.com/" target="_blank" rel="noopener noreferrer"&gt;Feather Icons&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Simply beautiful open source icons. MIT licensed.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/feathericons/react-feather" target="_blank" rel="noopener noreferrer"&gt;React version&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons styled icons icon packs like font awesome, material design, and octicons as react styled-components. github"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://styled-icons.js.org/" target="_blank" rel="noopener noreferrer"&gt;Styled Icons&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Icon packs like Font Awesome, Material Design, and Octicons as React styled-components.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/styled-icons/styled-icons" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons the noun project cc and purchasable icons for personal and commercial purposes."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://thenounproject.com" target="_blank" rel="noopener noreferrer"&gt;The Noun Project&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; CC and purchasable icons for personal and commercial purposes.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons tabler icons open source svg icons in a visually consistent style. mit licensed. github"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://tabler.io/icons" target="_blank" rel="noopener noreferrer"&gt;Tabler Icons&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Open source SVG icons in a visually consistent style. MIT licensed.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://github.com/tabler/tabler-icons" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="icons svgicons.com search and browse open-source svg icon sets with source and license context."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://svgicons.com/" target="_blank" rel="noopener noreferrer"&gt;SVGicons.com&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Search and browse open-source SVG icon sets with source and license context.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="fonts" data-cat="fonts" aria-labelledby="cat-fonts"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-fonts"&gt;Fonts &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;11&lt;/span&gt;&lt;/h3&gt;
+&lt;div class="mt-3 max-w-prose text-sm leading-relaxed text-slate-600 break-words [&amp;_a]:font-medium [&amp;_a]:text-slate-900 [&amp;_a]:underline [&amp;_a]:decoration-slate-300 [&amp;_a]:underline-offset-4 hover:[&amp;_a]:decoration-slate-900"&gt;Some of these platforms also take submissions, so if you designed a font with an open license, submit it there!&lt;/div&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts the league of moveable type "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.theleagueofmoveabletype.com/" target="_blank" rel="noopener noreferrer"&gt;The League of Moveable Type&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts font library "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://fontlibrary.org/" target="_blank" rel="noopener noreferrer"&gt;Font Library&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts google web fonts "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer"&gt;Google Web Fonts&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts libre fonts by womxn "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://design-research.be/by-womxn/" target="_blank" rel="noopener noreferrer"&gt;Libre Fonts by Womxn&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts open foundry "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://open-foundry.com" target="_blank" rel="noopener noreferrer"&gt;Open Foundry&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts open source publishing foundry "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://osp.kitchen/foundry/" target="_blank" rel="noopener noreferrer"&gt;Open Source Publishing Foundry&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts velvetyne "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.velvetyne.fr" target="_blank" rel="noopener noreferrer"&gt;Velvetyne&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts use &amp;amp; modify "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://usemodify.com" target="_blank" rel="noopener noreferrer"&gt;Use &amp;amp; Modify&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts fontforge font editor."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://fontforge.org/" target="_blank" rel="noopener noreferrer"&gt;FontForge&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Font editor.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts metaflop parametric font editor."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.metaflop.com" target="_blank" rel="noopener noreferrer"&gt;Metaflop&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Parametric font editor.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="fonts type:bits collaborative type design workshop."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://manufacturaindependente.org/typebits/" target="_blank" rel="noopener noreferrer"&gt;Type:Bits&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Collaborative type design workshop.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="images" data-cat="images" aria-labelledby="cat-images"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-images"&gt;Images &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;11&lt;/span&gt;&lt;/h3&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images pixabay "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://pixabay.com/" target="_blank" rel="noopener noreferrer"&gt;Pixabay&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images flickr creative commons "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.flickr.com/creativecommons/" target="_blank" rel="noopener noreferrer"&gt;Flickr Creative Commons&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images gratisography "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://gratisography.com/" target="_blank" rel="noopener noreferrer"&gt;Gratisography&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images the stocks "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://thestocks.im/" target="_blank" rel="noopener noreferrer"&gt;The Stocks&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images stocksnap "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://stocksnap.io/" target="_blank" rel="noopener noreferrer"&gt;StockSnap&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images nypl public domain images public-domain digital collections of the new york public library."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.nypl.org/research/collections/digital-collections/public-domain?hspace=331354" target="_blank" rel="noopener noreferrer"&gt;NYPL Public Domain Images&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Public-domain digital collections of the New York Public Library.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images undraw open source illustrations."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://undraw.co/" target="_blank" rel="noopener noreferrer"&gt;unDraw&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Open source illustrations.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images interfacer "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://interfacer.xyz/" target="_blank" rel="noopener noreferrer"&gt;Interfacer&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images open doodles free sketchy illustrations."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.opendoodles.com/" target="_blank" rel="noopener noreferrer"&gt;Open Doodles&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Free sketchy illustrations.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images unsplash "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://unsplash.com/" target="_blank" rel="noopener noreferrer"&gt;Unsplash&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="images pexels "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer"&gt;Pexels&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="cc-media" data-cat="cc-media" aria-labelledby="cat-cc-media"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-cc-media"&gt;Creative Commons media &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;4&lt;/span&gt;&lt;/h3&gt;
+&lt;div class="mt-3 max-w-prose text-sm leading-relaxed text-slate-600 break-words [&amp;_a]:font-medium [&amp;_a]:text-slate-900 [&amp;_a]:underline [&amp;_a]:decoration-slate-300 [&amp;_a]:underline-offset-4 hover:[&amp;_a]:decoration-slate-900"&gt;Media from big platforms published under Creative Commons licenses.&lt;/div&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="creative commons media openverse search over 800 million openly licensed images and audio files (formerly cc search)."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://openverse.org/" target="_blank" rel="noopener noreferrer"&gt;Openverse&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Search over 800 million openly licensed images and audio files (formerly CC Search).&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="creative commons media wikimedia commons "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://commons.wikimedia.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer"&gt;Wikimedia Commons&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="creative commons media youtube creative commons licensed videos on youtube."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://support.google.com/youtube/answer/2797468" target="_blank" rel="noopener noreferrer"&gt;YouTube&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Creative Commons licensed videos on YouTube.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="creative commons media soundcloud creative commons licensed sounds and music."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://soundcloud.com/search/sounds?filter.license=to_share" target="_blank" rel="noopener noreferrer"&gt;SoundCloud&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Creative Commons licensed sounds and music.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="tools" data-cat="tools" aria-labelledby="cat-tools"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-tools"&gt;Design tools &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;18&lt;/span&gt;&lt;/h3&gt;
+&lt;div class="mt-3 max-w-prose text-sm leading-relaxed text-slate-600 break-words [&amp;_a]:font-medium [&amp;_a]:text-slate-900 [&amp;_a]:underline [&amp;_a]:decoration-slate-300 [&amp;_a]:underline-offset-4 hover:[&amp;_a]:decoration-slate-900"&gt;Design discussion also happens right on a project&amp;rsquo;s issue tracker, for example at &lt;a href="https://github.com"&gt;GitHub&lt;/a&gt;: get an account, identify design issues, participate, and open new ones. A »Design« label groups them, like in the &lt;a href="https://github.com/nextcloud/core/issues?labels=Design"&gt;Nextcloud issues&lt;/a&gt;.&lt;/div&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools pen &amp;amp; paper mockups and prototypes without hi-fi photoshop work."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://alistapart.com/article/paperprototyping" target="_blank" rel="noopener noreferrer"&gt;Pen &amp;amp; paper&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Mockups and prototypes without hi-fi Photoshop work.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools draw.io diagrams, mockups."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.drawio.com/" target="_blank" rel="noopener noreferrer"&gt;draw.io&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Diagrams, mockups.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools pencil mockups."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://pencil.evolus.vn/" target="_blank" rel="noopener noreferrer"&gt;Pencil&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Mockups.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools penpot mockups."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://penpot.app/" target="_blank" rel="noopener noreferrer"&gt;Penpot&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Mockups.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools quant ux mockups, ux testing, heatmaps."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.quant-ux.com/#/" target="_blank" rel="noopener noreferrer"&gt;Quant UX&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Mockups, UX testing, heatmaps.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools krita art, digital painting."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://krita.org/en/" target="_blank" rel="noopener noreferrer"&gt;Krita&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Art, digital painting.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools blender 3d rendering, animation, textures."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.blender.org/" target="_blank" rel="noopener noreferrer"&gt;Blender&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; 3D rendering, animation, textures.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools darktable photo workflow."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.darktable.org/" target="_blank" rel="noopener noreferrer"&gt;darktable&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Photo workflow.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools rawtherapee photo workflow."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.rawtherapee.com" target="_blank" rel="noopener noreferrer"&gt;RawTherapee&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Photo workflow.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools digikam photo management."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.digikam.org/" target="_blank" rel="noopener noreferrer"&gt;digiKam&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Photo management.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools gimp image manipulation, compositing."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.gimp.org/" target="_blank" rel="noopener noreferrer"&gt;GIMP&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Image manipulation, compositing.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools inkscape vector elements, print export."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://inkscape.org/" target="_blank" rel="noopener noreferrer"&gt;Inkscape&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Vector elements, print export.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools synfig animation."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://synfig.org/" target="_blank" rel="noopener noreferrer"&gt;Synfig&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Animation.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools natron compositing, vfx, motion graphics."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://natrongithub.github.io/" target="_blank" rel="noopener noreferrer"&gt;Natron&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Compositing, VFX, motion graphics.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools scribus page layout, desktop publishing."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.scribus.net/" target="_blank" rel="noopener noreferrer"&gt;Scribus&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Page layout, desktop publishing.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools displaycal color calibration."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://displaycal.net/" target="_blank" rel="noopener noreferrer"&gt;DisplayCAL&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Color calibration.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools kdenlive video editing."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://kdenlive.org" target="_blank" rel="noopener noreferrer"&gt;Kdenlive&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Video editing.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design tools figma ui design, wireframes, prototypes."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.figma.com/" target="_blank" rel="noopener noreferrer"&gt;Figma&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; UI design, wireframes, prototypes.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="color" data-cat="color" aria-labelledby="cat-color"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-color"&gt;Color &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;6&lt;/span&gt;&lt;/h3&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="color blend css gradient generator."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.colinkeany.com/blend/" target="_blank" rel="noopener noreferrer"&gt;Blend&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; CSS gradient generator.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="color leonardo by adobe color contrast generator."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://leonardocolor.io/" target="_blank" rel="noopener noreferrer"&gt;Leonardo by Adobe&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Color contrast generator.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="color tanaguru contrast-finder for finding complementary colors."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://contrast-finder.tanaguru.com/" target="_blank" rel="noopener noreferrer"&gt;Tanaguru Contrast-Finder&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; For finding complementary colors.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="color colors.lol overly descriptive color palettes."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://colors.lol/" target="_blank" rel="noopener noreferrer"&gt;colors.lol&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Overly descriptive color palettes.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="color color hunt color palettes for designers and artists."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://colorhunt.co/" target="_blank" rel="noopener noreferrer"&gt;Color Hunt&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Color palettes for designers and artists.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="color nof complementary color palette generator."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://nofpg.netlify.app/" target="_blank" rel="noopener noreferrer"&gt;Nof&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Complementary Color Palette Generator.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="css" data-cat="css" aria-labelledby="cat-css"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-css"&gt;CSS frameworks &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;8&lt;/span&gt;&lt;/h3&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="css frameworks bootstrap fully featured, mature html, css (less), and javascript."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://getbootstrap.com" target="_blank" rel="noopener noreferrer"&gt;Bootstrap&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Fully featured, mature HTML, CSS (LESS), and JavaScript.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="css frameworks foundation fully featured, mature html, css (sass), and javascript."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://get.foundation/" target="_blank" rel="noopener noreferrer"&gt;Foundation&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Fully featured, mature HTML, CSS (Sass), and JavaScript.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="css frameworks basscss lightning-fast, modular css for designers."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://basscss.com/" target="_blank" rel="noopener noreferrer"&gt;Basscss&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Lightning-fast, modular CSS for designers.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="css frameworks bourbon a simple and lightweight mixin library for sass."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://bourbon.io/" target="_blank" rel="noopener noreferrer"&gt;Bourbon&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A simple and lightweight mixin library for Sass.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="css frameworks kickoff a lightweight front-end framework for scalable, responsive sites."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://tmwagency.github.io/kickoff/" target="_blank" rel="noopener noreferrer"&gt;Kickoff&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A lightweight front-end framework for scalable, responsive sites.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="css frameworks space base a sass-based responsive css framework."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://spacebase.space150.com/" target="_blank" rel="noopener noreferrer"&gt;Space Base&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A Sass-based responsive CSS framework.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="css frameworks rebar simple, lightweight html and css (less)."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://github.com/bnvk/Rebar" target="_blank" rel="noopener noreferrer"&gt;Rebar&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Simple, lightweight HTML and CSS (LESS).&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="css frameworks patternfly a community of designers and developers building a ui framework for enterprise web applications."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.patternfly.org/" target="_blank" rel="noopener noreferrer"&gt;PatternFly&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A community of designers and developers building a UI framework for enterprise web applications.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="design-reads" data-cat="design-reads" aria-labelledby="cat-design-reads"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-design-reads"&gt;Design reads &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;11&lt;/span&gt;&lt;/h3&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads first rule of usability? don&amp;#39;t listen to users jakob nielsen, 2001."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.nngroup.com/articles/first-rule-of-usability-dont-listen-to-users/" target="_blank" rel="noopener noreferrer"&gt;First Rule of Usability? Don&amp;#39;t Listen to Users&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Jakob Nielsen, 2001.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads 10 heuristics for user interface design jakob nielsen, 1995."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener noreferrer"&gt;10 Heuristics for User Interface Design&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Jakob Nielsen, 1995.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads principles of user interface design joshua porter."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="http://bokardo.com/archives/new-resource-principles-of-user-interface-design/" target="_blank" rel="noopener noreferrer"&gt;Principles of User Interface Design&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Joshua Porter.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads ten principles for good design dieter rams, 1970s."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.vitsoe.com/gb/about/good-design" target="_blank" rel="noopener noreferrer"&gt;Ten Principles for Good Design&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Dieter Rams, 1970s.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads a beginner&amp;#39;s guide to finding user needs "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://jdittrich.github.io/userNeedResearchBook/" target="_blank" rel="noopener noreferrer"&gt;A Beginner&amp;#39;s Guide to Finding User Needs&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads don&amp;#39;t make me think steve krug&amp;#39;s usability classic (book)."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.amazon.com/dp/0321344758" target="_blank" rel="noopener noreferrer"&gt;Don&amp;#39;t Make Me Think&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Steve Krug&amp;#39;s usability classic (book).&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads the design of everyday things don norman&amp;#39;s design classic (book)."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.amazon.com/dp/0465067107" target="_blank" rel="noopener noreferrer"&gt;The Design of Everyday Things&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Don Norman&amp;#39;s design classic (book).&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads humane by design "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://humanebydesign.com/" target="_blank" rel="noopener noreferrer"&gt;Humane by Design&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads human flourishing design guide "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://flourishing.cc/" target="_blank" rel="noopener noreferrer"&gt;Human Flourishing Design Guide&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads designing for trust data trust by design, principles, patterns, and best practices."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://medium.com/greater-than-experience-design/data-trust-by-design-principles-patterns-and-best-practices-part-1-defffaac014b" target="_blank" rel="noopener noreferrer"&gt;Designing for Trust&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Data trust by design, principles, patterns, and best practices.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="design reads inclusive design: cards for humanity "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://cardsforhumanity.frog.co/" target="_blank" rel="noopener noreferrer"&gt;Inclusive Design: Cards for Humanity&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="osd-reads" data-cat="osd-reads" aria-labelledby="cat-osd-reads"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-osd-reads"&gt;Open source design reads &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;6&lt;/span&gt;&lt;/h3&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="open source design reads free software ui havoc pennington, 2002."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://ometer.com/free-software-ui.html" target="_blank" rel="noopener noreferrer"&gt;Free Software UI&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Havoc Pennington, 2002.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="open source design reads how not to design a portfolio "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.alexcornell.com/the-worst-portfolio-ever/" target="_blank" rel="noopener noreferrer"&gt;How Not To Design a Portfolio&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="open source design reads open design now book."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://opendesignnow.org/" target="_blank" rel="noopener noreferrer"&gt;Open Design Now&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Book.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="open source design reads coordinating usability &amp;amp; testing in free software thesis, 2011."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://jancborchardt.net/usability-in-free-software" target="_blank" rel="noopener noreferrer"&gt;Coordinating usability &amp;amp; testing in Free Software&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Thesis, 2011.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="open source design reads barriers faced by newcomers to open source projects a systematic review by steinmacher, silva, and gerosa, 2014 (research paper)."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://link.springer.com/chapter/10.1007/978-3-642-55128-4_21" target="_blank" rel="noopener noreferrer"&gt;Barriers Faced by Newcomers to Open Source Projects&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A systematic review by Steinmacher, Silva, and Gerosa, 2014 (research paper).&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="open source design reads an exploration of fedora&amp;#39;s online open source development community ethnographic study by diana harrelson, 2010 (research paper)."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.cyber-anthro.com/beta-an-exploration-of-fedoras-online-open-source-development-community/" target="_blank" rel="noopener noreferrer"&gt;An Exploration of Fedora&amp;#39;s Online Open Source Development Community&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Ethnographic study by Diana Harrelson, 2010 (research paper).&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="community" data-cat="community" aria-labelledby="cat-community"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-community"&gt;Community &amp;amp; inspiration &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;10&lt;/span&gt;&lt;/h3&gt;
+&lt;div class="mt-3 max-w-prose text-sm leading-relaxed text-slate-600 break-words [&amp;_a]:font-medium [&amp;_a]:text-slate-900 [&amp;_a]:underline [&amp;_a]:decoration-slate-300 [&amp;_a]:underline-offset-4 hover:[&amp;_a]:decoration-slate-900"&gt;Other nice stuff in the design and open source space.&lt;/div&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration libre graphics magazine print magazine."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://libregraphicsmag.com/" target="_blank" rel="noopener noreferrer"&gt;Libre Graphics magazine&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Print magazine.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration libre projects collection of nice open source web apps."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://libreprojects.net" target="_blank" rel="noopener noreferrer"&gt;Libre Projects&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Collection of nice open source web apps.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration libre arts news for creative professionals using free software (formerly libre graphics world)."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://librearts.org/" target="_blank" rel="noopener noreferrer"&gt;Libre Arts&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; News for creative professionals using free software (formerly Libre Graphics World).&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration libre graphics meeting conference."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://libregraphicsmeeting.org/" target="_blank" rel="noopener noreferrer"&gt;Libre Graphics Meeting&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Conference.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration beautiful open beautiful sites for open source projects."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://beautifulopen.com" target="_blank" rel="noopener noreferrer"&gt;Beautiful Open&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Beautiful sites for open source projects.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration open design and hardware group okfn open design and hardware group."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://design.okfn.org/" target="_blank" rel="noopener noreferrer"&gt;Open Design and Hardware Group&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; OKFN open design and hardware group.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration pixls.us free and open source photography. software list"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://pixls.us" target="_blank" rel="noopener noreferrer"&gt;PIXLS.US&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Free and open source photography.&lt;/span&gt;
+&lt;span class="text-slate-500"&gt;
+· &lt;a class="break-words underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-900" href="https://pixls.us/software/" target="_blank" rel="noopener noreferrer"&gt;Software list&lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration photos of design research on wikimedia commons."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://commons.wikimedia.org/wiki/Category:Designethnography" target="_blank" rel="noopener noreferrer"&gt;Photos of Design Research&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; On Wikimedia Commons.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration checklist design a collection of ux and ui best practices."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.checklist.design/" target="_blank" rel="noopener noreferrer"&gt;Checklist Design&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A collection of UX and UI best practices.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="community &amp;amp; inspiration untools tools for better thinking."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://untools.co/" target="_blank" rel="noopener noreferrer"&gt;Untools&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Tools for better thinking.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="learn-code" data-cat="learn-code" aria-labelledby="cat-learn-code"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-learn-code"&gt;Learn to code &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;9&lt;/span&gt;&lt;/h3&gt;
+&lt;div class="mt-3 max-w-prose text-sm leading-relaxed text-slate-600 break-words [&amp;_a]:font-medium [&amp;_a]:text-slate-900 [&amp;_a]:underline [&amp;_a]:decoration-slate-300 [&amp;_a]:underline-offset-4 hover:[&amp;_a]:decoration-slate-900"&gt;Focused on HTML, CSS, and JavaScript. Ideally to implement your own suggestions, but also to better discuss with developers and understand why and how certain things work and don&amp;rsquo;t work.&lt;/div&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code mozilla developer network great web dev documentation."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer"&gt;Mozilla Developer Network&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Great web dev documentation.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code transitional interfaces, coded for good animations."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://css-tricks.com/transitional-interfaces-coded/" target="_blank" rel="noopener noreferrer"&gt;Transitional Interfaces, Coded&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; For good animations.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code codecademy interactive tutorials."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://www.codecademy.com/" target="_blank" rel="noopener noreferrer"&gt;Codecademy&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Interactive tutorials.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code git basics github&amp;#39;s guide to getting started with git."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://docs.github.com/en/get-started/git-basics/set-up-git" target="_blank" rel="noopener noreferrer"&gt;Git basics&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; GitHub&amp;#39;s guide to getting started with Git.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code code.org "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://code.org/" target="_blank" rel="noopener noreferrer"&gt;code.org&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code egghead video courses on web development."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://egghead.io/" target="_blank" rel="noopener noreferrer"&gt;Egghead&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Video courses on web development.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code tota11y a bookmarklet to check that your website is accessibility compliant."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://github.com/jdan/tota11y" target="_blank" rel="noopener noreferrer"&gt;tota11y&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; A bookmarklet to check that your website is accessibility compliant.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code open source guide: how to contribute to open source "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://opensource.guide/how-to-contribute/" target="_blank" rel="noopener noreferrer"&gt;Open Source Guide: How to Contribute to Open Source&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to code course: how to contribute to an open source project on github "&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github" target="_blank" rel="noopener noreferrer"&gt;Course: How to Contribute to an Open Source Project on GitHub&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="resource-cat mt-10 scroll-mt-24" id="learn-design" data-cat="learn-design" aria-labelledby="cat-learn-design"&gt;
+&lt;h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-learn-design"&gt;Learn to design &lt;span class="font-normal normal-case tracking-normal text-slate-500"&gt;3&lt;/span&gt;&lt;/h3&gt;
+&lt;ul class="mt-2 gap-x-10 sm:columns-2" role="list"&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to design hack design free design lessons by inspirational designers."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://hackdesign.org/" target="_blank" rel="noopener noreferrer"&gt;Hack Design&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Free design lessons by inspirational designers.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to design designlab design courses with mentorship and projects."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://designlab.com/" target="_blank" rel="noopener noreferrer"&gt;Designlab&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Design courses with mentorship and projects.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="resource-item break-inside-avoid py-1.5 text-sm leading-relaxed" data-haystack="learn to design voice and tone mailchimp&amp;#39;s guide to writing good copy."&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="https://styleguide.mailchimp.com/voice-and-tone/" target="_blank" rel="noopener noreferrer"&gt;Voice and Tone&lt;/a&gt;
+&lt;span class="text-slate-600"&gt; Mailchimp&amp;#39;s guide to writing good copy.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;script&gt;
+(function () {
+var root = document.getElementById('resources-directory');
+if (!root) return;
+var cats = Array.prototype.slice.call(root.querySelectorAll('.resource-cat'));
+var buttons = Array.prototype.slice.call(document.querySelectorAll('.osd-filter[data-cat]'));
+var input = document.getElementById('resources-q');
+var clearBtn = document.getElementById('resources-clear');
+var countEl = document.getElementById('resources-count');
+var emptyEl = document.getElementById('resources-empty');
+function setPressed(activeCat) {
+buttons.forEach(function (btn) {
+var on = btn.getAttribute('data-cat') === activeCat;
+btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+if (on) {
+btn.classList.add('border-slate-900', 'bg-slate-900', 'text-white');
+btn.classList.remove('border-slate-200', 'bg-white', 'text-slate-700', 'hover:border-slate-400');
+} else {
+btn.classList.remove('border-slate-900', 'bg-slate-900', 'text-white');
+btn.classList.add('border-slate-200', 'bg-white', 'text-slate-700', 'hover:border-slate-400');
+}
+});
+}
+function getState() {
+var params = new URLSearchParams(window.location.search);
+return { cat: params.get('cat') || 'all', q: params.get('q') || '' };
+}
+function setState(next) {
+var params = new URLSearchParams(window.location.search);
+if (next.cat &amp;&amp; next.cat !== 'all') params.set('cat', next.cat); else params.delete('cat');
+if (next.q) params.set('q', next.q); else params.delete('q');
+var qs = params.toString();
+window.history.replaceState({}, '', window.location.pathname + (qs ? ('?' + qs) : ''));
+}
+function apply() {
+var state = getState();
+var q = (state.q || '').trim().toLowerCase();
+setPressed(state.cat);
+if (input &amp;&amp; input.value !== state.q) input.value = state.q;
+var shown = 0;
+cats.forEach(function (cat) {
+var okCat = state.cat === 'all' || cat.getAttribute('data-cat') === state.cat;
+var visibleItems = 0;
+Array.prototype.slice.call(cat.querySelectorAll('.resource-item')).forEach(function (li) {
+var okQ = !q || (li.getAttribute('data-haystack') || '').indexOf(q) !== -1;
+var show = okCat &amp;&amp; okQ;
+li.hidden = !show;
+if (show) visibleItems++;
+});
+cat.hidden = visibleItems === 0;
+shown += visibleItems;
+});
+if (countEl) countEl.textContent = String(shown);
+if (emptyEl) emptyEl.classList.toggle('hidden', shown !== 0);
+}
+buttons.forEach(function (btn) {
+btn.addEventListener('click', function () {
+var next = getState();
+next.cat = btn.getAttribute('data-cat');
+setState(next);
+apply();
+});
+});
+if (input) {
+input.addEventListener('input', function () {
+var next = getState();
+next.q = input.value;
+setState(next);
+apply();
+});
+}
+if (clearBtn) {
+clearBtn.addEventListener('click', function () {
+var next = getState();
+next.q = '';
+setState(next);
+apply();
+if (input) input.focus();
+});
+}
+window.addEventListener('popstate', apply);
+apply();
+})();
+&lt;/script&gt;
+&lt;p style="margin-top:2em;font-size:0.9em;color:#666;"&gt;&lt;a href="https://opensourcedesign.net/pr-preview/pr-636/resources/links/"&gt;Read more on opensourcedesign.net →&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Resources</category></item><item><title>Bibliography</title><link>https://opensourcedesign.net/pr-preview/pr-636/resources/bibliography/</link><guid isPermaLink="true">https://opensourcedesign.net/pr-preview/pr-636/resources/bibliography/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>Articles, talks, papers, and books on design in open source.</description><content:encoded>&lt;!-- The bibliography below is rendered from data/bibliography.yaml - edit that
+file to add or change entries. --&gt;
+&lt;section class="not-prose my-8" aria-label="Reading &amp; Research bibliography"&gt;
+&lt;ul class="mt-6 space-y-4" role="list"&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://postcapitalist.design/" target="_blank" rel="noopener noreferrer"&gt;Unsustaining the Commodity-Machine – Commoning Practices in Postcapitalist Design&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Selçuk Balamir &amp;middot; Amsterdam School for Cultural Analysis
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2021&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://opensource.com/article/20/9/decentralization-signup" target="_blank" rel="noopener noreferrer"&gt;How Nextcloud simplified the signup process for decentralization&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Jan C. Borchardt &amp;middot; Opensource.com
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2020&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://opensource.com/article/20/6/open-source-design" target="_blank" rel="noopener noreferrer"&gt;Use your artistic skills to help open source&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Jeff Macharyas &amp;middot; Opensource.com
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2020&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://www.youtube.com/watch?v=4OE6HNPf93c" target="_blank" rel="noopener noreferrer"&gt;Open Design, Libre Graphics: Why terminology matters&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Ana Isabel Carvalho, Ricardo Lafuente &amp;middot; Libre Graphics Meeting Saarbrücken
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;talk&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2019&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://ixdaberlin.de/#71" target="_blank" rel="noopener noreferrer"&gt;Designing with not for - an observational report on the Wikimedia Movement&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Hanna Petruschat &amp;middot; IxDA Berlin
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;talk&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2019&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://copy-this-book.eu" target="_blank" rel="noopener noreferrer"&gt;Copy This Book. An Artist&amp;#39;s Guide to Copyright&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Eric Schrijver
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;book&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2018&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://medium.com/@dburka/open-source-identity-design-for-simple-4025c6d48acc" target="_blank" rel="noopener noreferrer"&gt;Open-source identity design for Simple&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Daniel Burka
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2018&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://www.youtube.com/watch?v=U5WAi933Q2k" target="_blank" rel="noopener noreferrer"&gt;State of Open Source Design in 2018&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Victoria Bondarchuk &amp;middot; FOSSASIA
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;talk&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2018&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://jdittrich.github.io/userNeedResearchBook/" target="_blank" rel="noopener noreferrer"&gt;A Beginner&amp;#39;s Guide to Finding User Needs&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Jan Dittrich
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;book&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2018&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://2017.fossasia.org/tracks.html#2017-03-19-Design,_Art,_Community" target="_blank" rel="noopener noreferrer"&gt;The Least You Can Do About Usability in Open Source&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Victoria Bondarchuk &amp;middot; FOSSASIA
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;talk&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2017&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://www.youtube.com/watch?v=IJE4I467JCw" target="_blank" rel="noopener noreferrer"&gt;Connecting design, culture, art, and technology across the archipelago&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Kathleen Azali &amp;middot; FOSSASIA
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;talk&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2017&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://www.youtube.com/watch?v=3M9ptBxFyP4" target="_blank" rel="noopener noreferrer"&gt;Expectations from Open Source Designers&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Ecaterina Moraru &amp;middot; FOSSASIA
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;talk&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2017&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="http://design-research.be/open-source/" target="_blank" rel="noopener noreferrer"&gt;Authorship alternatives, free / open source&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Loraine Furter, Eric Schrijver
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2016&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://medium.com/mobile-lifestyle/design-meet-open-a107c5eeeb7e" target="_blank" rel="noopener noreferrer"&gt;Design, meet Open&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Dan Makoski
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2016&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://vimeo.com/139094998" target="_blank" rel="noopener noreferrer"&gt;Everything is a Remix Remastered&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Kirby Ferguson
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;video&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2015&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://link.springer.com/chapter/10.1007/978-3-319-22698-9_2" target="_blank" rel="noopener noreferrer"&gt;Non-response, Social Exclusion, and False Acceptance: Gatekeeping Tactics and Usability Work in Free-Libre Open Source Software Development&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Mikko Rajanen, Netta Iivari, Arto Lanamäki
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;paper&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2015&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://opensource.com/life/15/7/get-designers-involved-software-project" target="_blank" rel="noopener noreferrer"&gt;How to get designers involved in your software project&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Nicole C. Baratta &amp;middot; Opensource.com
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2015&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://blog.freehive.com/designers-guide-transitioning-open-source-software/" target="_blank" rel="noopener noreferrer"&gt;A Designer&amp;#39;s Guide for Transitioning to Open-Source Software&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Ryan Gorley
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2015&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://24ways.org/2014/why-you-should-design-for-open-source/" target="_blank" rel="noopener noreferrer"&gt;Why You Should Design for Open Source&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Jina Anne &amp;middot; 24 ways
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2014&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://una.im/open-source-design/" target="_blank" rel="noopener noreferrer"&gt;Open Source Design&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Una Kravets
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2014&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://i.liketightpants.net/and/no-one-starts-from-scratch-type-design-and-the-logic-of-the-fork" target="_blank" rel="noopener noreferrer"&gt;No-one Starts From Scratch: Type Design and the Logic of the Fork&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Eric Schrijver
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2013&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://bradfrost.com/blog/post/designing-in-the-open/" target="_blank" rel="noopener noreferrer"&gt;Designing In The Open&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Brad Frost
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2013&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://ponnuki.net/2011/07/open-source-graphic-design/" target="_blank" rel="noopener noreferrer"&gt;Open source graphic design&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+studio ponnuki
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2011&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://jancborchardt.net/usability-in-free-software" target="_blank" rel="noopener noreferrer"&gt;Usability in Free Software&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Jan C. Borchardt
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;paper&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2011&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://markboulton.co.uk/journal/design-in-open-source/" target="_blank" rel="noopener noreferrer"&gt;Design in Open Source&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Mark Boulton
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2009&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://www.thepublicdomain.org/download/" target="_blank" rel="noopener noreferrer"&gt;The Public Domain: Enclosing the Commons of the Mind&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+James Boyle
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;book&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2008&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://factoryjoe.com/2008/01/03/the-problem-with-open-source-design/" target="_blank" rel="noopener noreferrer"&gt;The problem with open source design&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Chris Messina
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2008&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://firstmonday.org/ojs/index.php/fm/article/view/1484/1399#p2" target="_blank" rel="noopener noreferrer"&gt;Fundamental Issues with Open Source Software Development – User interface design&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Michelle Levesque &amp;middot; First Monday
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;paper&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2004&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="http://www.free-culture.cc/freecontent/" target="_blank" rel="noopener noreferrer"&gt;Free Culture: How Big Media Uses Technology and the Law to Lock Down Culture and Control Creativity&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Lawrence Lessig
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;book&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2004&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="http://firstmonday.org/article/view/1018/939" target="_blank" rel="noopener noreferrer"&gt;The Usability of Open Source Software&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+David M. Nichols, Michael B. Twidale &amp;middot; First Monday
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;paper&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2003&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="flex flex-col gap-1 border-b border-slate-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"&gt;
+&lt;div class="min-w-0"&gt;
+&lt;a class="break-words font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-900" href="https://ometer.com/preferences.html" target="_blank" rel="noopener noreferrer"&gt;Choosing our Preferences&lt;/a&gt;
+&lt;div class="mt-0.5 text-sm text-slate-600"&gt;
+Havoc Pennington
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex shrink-0 items-center gap-2 text-xs"&gt;
+&lt;span class="rounded-full bg-slate-100 px-2.5 py-1 font-medium capitalize text-slate-600"&gt;article&lt;/span&gt;
+&lt;span class="font-medium text-slate-500"&gt;2002&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;p style="margin-top:2em;font-size:0.9em;color:#666;"&gt;&lt;a href="https://opensourcedesign.net/pr-preview/pr-636/resources/bibliography/"&gt;Read more on opensourcedesign.net →&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Resources</category></item><item><title>Why one should be familiar with projects and their structure</title><link>https://opensourcedesign.net/pr-preview/pr-636/resources/why-know-projects-and-their-structure/</link><guid isPermaLink="true">https://opensourcedesign.net/pr-preview/pr-636/resources/why-know-projects-and-their-structure/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>Rather than joining some project that has design tasks, join one that you are or want to get familiar with</description><content:encoded>&lt;p&gt;How to start as a designer in an open source software project? It seems
+to be both very simple and very difficult: Simple because the formal
+barriers to participation are low: You do not need to be hired or show a
+certificate to contribute or participate in FOSS. Difficult because most
+projects do not have design projects that one can easily start with so
+involvement in FOSS as a designer can mean a lot of up-front
+clarification and effort to understand the needs of a FOSS project.&lt;/p&gt;
+&lt;p&gt;A common process is often described as one can just &amp;lsquo;pick up&amp;rsquo; a task in
+an open source project, and do a task based on one&amp;rsquo;s professional
+competency or interest: Some dialog is confusing? Propose a better
+wording or layout! The software looks old-fashioned and dated? Create a
+new style or design system! A function is confusing to use? Create a
+design based on current simple/usable interface techniques, customized
+to the needs of the project!&lt;/p&gt;
+&lt;p&gt;These are all valid design tasks and valid design solutions. They are
+not wrong, but also, such solutions almost never get implemented for
+many reasons, each unique to the FOSS project.&lt;/p&gt;
+&lt;p&gt;The infrastructure with its focus on single issues suggests that one can
+solve single, self-contained issues and it also matches the culture&amp;rsquo;s
+assumption that »everyone can contribute«. A lot of that culture and
+infrastructure is geared towards code, not interface design or any kinds
+of design practices.&lt;/p&gt;
+&lt;p&gt;But even for code, such quick, self-contained contributions are rare.
+They might apply best to abstract tasks like changing to a more
+efficient algorithm that still gets the same data and returns the same
+data. But most code changes interact with other parts of the code and
+quickly introduce ripple effects. In well-maintained and well-structured
+codebases these ripple effects are contained, but even to know that they
+are contained and do not cause a mess usually requires knowledge of the
+codebase, or the to know the right person to ask. This means, to
+contribute you need knowledge of the context even when contributing in
+code, the medium that infrastructure and culture are tailored to. And
+this applies even more to design contributions that are not received
+graciously or as easily with the culture and infrastructure of open
+source projects.&lt;/p&gt;
+&lt;p&gt;This means that design contributions usually require knowledge about the
+project one contributes to.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What the technology (programming language or framework) that creates
+the user interface can do and what not.&lt;/li&gt;
+&lt;li&gt;What users want to do with the software&lt;/li&gt;
+&lt;li&gt;What other contributors think the software should do.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The last two points are not always the same; many users want a
+replacement for a commercial product, many contributors want them to see
+their software as independent from such assumptions. They say that they
+are not Photoshop or MS Office, even though a free version of that is
+exactly what many users would like to have, since what they know will be
+intuitive for them.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s important to observe, and to understand how the project and the
+communication work. This can often be best explored by making small
+suggestions or changes rather than general redesigns that assert how
+design should be done, which easily miss what project might want to do
+and what can be done with the available technology.&lt;/p&gt;
+&lt;p style="margin-top:2em;font-size:0.9em;color:#666;"&gt;&lt;a href="https://opensourcedesign.net/pr-preview/pr-636/resources/why-know-projects-and-their-structure/"&gt;Read more on opensourcedesign.net →&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Resources</category></item><item><title>Typical Tasks in open source design</title><link>https://opensourcedesign.net/pr-preview/pr-636/resources/scenarios-for-usability/</link><guid isPermaLink="true">https://opensourcedesign.net/pr-preview/pr-636/resources/scenarios-for-usability/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>Some scenarios that often help to improve usability and user experience in projects</description><content:encoded>&lt;p&gt;Many of the below suggestions are accessible and non-invasive ways of
+getting involved in FOSS projects. This doesn&amp;rsquo;t mean you cannot attempt
+a large, ambitious project that attempts to &amp;rsquo;re-design&amp;rsquo; or change much
+of a FOSS project&amp;rsquo;s interface or experience but as first or early
+contributions those are often met with concern and caution. The FOSS
+project has to know that you will be there through the entire time for a
+large contribution project. It&amp;rsquo;s best to start small, actionable,
+visibly valuable and understandable for those not familiar with design
+terms, processes and practices.&lt;/p&gt;
+&lt;h2 id="improve-labels"&gt;Improve Labels&lt;/h2&gt;
+&lt;h3 id="what-is-this"&gt;What is this?&lt;/h3&gt;
+&lt;p&gt;Finding better, more concrete labels for buttons, menus and input fields.&lt;/p&gt;
+&lt;h3 id="how-does-it-help"&gt;How does it help?&lt;/h3&gt;
+&lt;p&gt;Labels shape expectations—and these expectations should match what
+the software actually will do.&lt;/p&gt;
+&lt;h3 id="example-dont-use-implementation-language-in-labels"&gt;Example: Don’t use implementation language in labels&lt;/h3&gt;
+&lt;p&gt;In this &lt;a href="https://gitlab.com/inkscape/inkscape/-/merge_requests/7048"&gt;issue on the inkscape project&lt;/a&gt; (via &lt;a href="https://g0v.social/@ltlnx/115883073086406019"&gt;@ltlnx&lt;/a&gt;)
+user Adam Belis suggests to replace lables like “Insert node at min X” with “Add node to Left”:
+Instead of terms referring to variable names (min X) the new lables use everyday concepts (to Left).&lt;/p&gt;
+&lt;p&gt;
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/typicalTasks/InsertNodeInkscapeOld_hu_cc3450684cab15ab.avif" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/typicalTasks/InsertNodeInkscapeOld_hu_8f051a87043bb150.webp" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/typicalTasks/InsertNodeInkscapeOld.png"
+alt="a screenshot of a toolbar menu in inkscape, showing entries like &amp;ldquo;insert node at min X&amp;rdquo;"
+loading="eager"
+fetchpriority="high"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="241"
+height="191"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;h3 id="when-and-why-does-it-work"&gt;When and why does it work?&lt;/h3&gt;
+&lt;p&gt;Adjusting labels is often easy, since they are commonly stored
+separately from the code and changing the labels usually does not mean
+that code needs to be changed. There are two risks when changing labels:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Existing users are familiar with the old label and that the change
+will be confusing to them.&lt;/li&gt;
+&lt;li&gt;The new label is longer than the available space, which is
+particularly relevant in languages like German, which typically have longer words than English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="resources"&gt;Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.theguardian.com/info/developer-blog/2013/jan/02/interactive-button-text-grammar"&gt;The Grammar of Interactivity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.nngroup.com/articles/ten-usability-heuristics/"&gt;10 Usability Heuristics&lt;/a&gt;, Match Between the System and the Real World.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="improve-icons"&gt;Improve Icons&lt;/h2&gt;
+&lt;h3 id="what-is-this-1"&gt;What is this?&lt;/h3&gt;
+&lt;p&gt;Finding concrete and familiar icons for buttons, menus and input fields
+that match the style of the currently used icons.&lt;/p&gt;
+&lt;h3 id="how-does-it-help-1"&gt;How does it help?&lt;/h3&gt;
+&lt;p&gt;Icons should be familiar to the user and signify the functionality they
+stand for. It is important that all icons follow a
+common style lest they make the interface look messy.&lt;/p&gt;
+&lt;h3 id="when-and-why-does-it-work-1"&gt;When and why does it work?&lt;/h3&gt;
+&lt;p&gt;Like labels, icons are stored separately from code and can be easily
+changed. &lt;em&gt;Risks&lt;/em&gt; of changing icons are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Existing users are familiar with the old icon; the change will be
+confusing to them&lt;/li&gt;
+&lt;li&gt;Changes are good in theory but introduce unfamiliar elements&lt;/li&gt;
+&lt;li&gt;There is no easy to recognize standard icon for what is meant and thus
+a label might be better.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="resources-1"&gt;Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://uxmyths.com/post/715009009/myth-icons-enhance-usability"&gt;Myth: Icons enhance usability&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="layout-of-existing-dialogs"&gt;Layout of existing dialogs&lt;/h2&gt;
+&lt;h3 id="what-is-this-2"&gt;What is this?&lt;/h3&gt;
+&lt;p&gt;Redesigning layout and widget choice for existing dialogs.&lt;/p&gt;
+&lt;h3 id="how-does-it-help-2"&gt;How does it help?&lt;/h3&gt;
+&lt;p&gt;Choosing widgets that are more familiar and more appropriate to the task
+increases usability. A meaningful layout that matches the user&amp;rsquo;s idea
+of the system and the user&amp;rsquo;s tasks helps to understand what needs to be
+done.&lt;/p&gt;
+&lt;h3 id="example-use-semantically-correct-widgets"&gt;Example: Use semantically correct widgets&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/penpot/penpot/issues/8083"&gt;”Interface standards violation, using checkboxes instead of radio
+buttons”&lt;/a&gt; points out that
+in a dialog in penpot, checkmarks are used for mutually exclusive options,
+which, following interface standards, is what radio buttons or dropdowns should be used for.&lt;/p&gt;
+&lt;h3 id="when-and-why-does-it-work-2"&gt;When and why does it work?&lt;/h3&gt;
+&lt;p&gt;Improving the layout of existing dialogs is actionable, since the
+changes focus on the interface itself and thus do not cause ripple
+effects through the code but only change one place. This needs basic
+knowledge of the available widgets and how they can be laid out.&lt;/p&gt;
+&lt;p&gt;Risks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Suggestions that can not be realized with the available technology&lt;/li&gt;
+&lt;li&gt;Not being familiar with the tasks users do might lead to suggestions
+that look visually more clean but do not match the user&amp;rsquo;s needs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="suggesting-new-features"&gt;Suggesting new features&lt;/h2&gt;
+&lt;h3 id="what-is-this-3"&gt;What is this?&lt;/h3&gt;
+&lt;p&gt;Suggesting features based on user needs.&lt;/p&gt;
+&lt;h3 id="how-does-it-help-3"&gt;How does it help?&lt;/h3&gt;
+&lt;p&gt;Suggesting features that are based on actual user needs helps to make
+applications more useful.&lt;/p&gt;
+&lt;h3 id="example-trash-in-penpot"&gt;Example: Trash in Penpot&lt;/h3&gt;
+&lt;p&gt;When one deleted a project in Penpot, one would get a warning, but upon
+confirmation the project would be gone. This is easy to habitually
+dismiss. A well-established mechanism that does not have the problem is
+implementing a trash-can, a temporary container from which deleted files
+can be retrieved again if one accidentally deleted them or changed one&amp;rsquo;s
+mind about them.&lt;/p&gt;
+&lt;p&gt;This feature was suggested by a user in the &lt;a href="https://community.penpot.app/t/feature-request-add-a-trash-can-for-deleted-files/5746"&gt;penpot community forum&lt;/a&gt;,
+jan transferred it to a &lt;a href="https://github.com/penpot/penpot/issues/4775"&gt;github issue&lt;/a&gt;.
+One user commented &amp;ldquo;I&amp;rsquo;ve never needed this feature until today 😭&amp;rdquo;,
+implying that they indeed accidentally deleted projects. The feature
+request was picked up at some point, so that penpot now has a trashcan
+for deleted files.&lt;/p&gt;
+&lt;p&gt;The feature is relatively simple, since it uses an established metaphor
+and mechanism and was probably also not complex to implement, as it
+relies on similar components as other ways to organize projects.&lt;/p&gt;
+&lt;h3 id="when-and-why-does-it-work-3"&gt;When and why does it work?&lt;/h3&gt;
+&lt;p&gt;The first question is: Is the feature actually useful?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A feature from another software that its users like and which you
+tried yourself and found to be helpful, too (relatively easy).&lt;/li&gt;
+&lt;li&gt;A feature based on observation and documentation of what you and/or
+other users do (relatively hard)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The other question is: How hard is this to implement? These are factors
+that usually lead to difficulties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the feature needs custom UI elements, it is usually harder to
+implement than a feature that can use existing widgets like input
+fields, menus or toolbars.&lt;/li&gt;
+&lt;li&gt;If the feature relies on complex, hard to define behavior: “If this
+happens, it does&amp;hellip; but if that happens&amp;hellip;”. Anything that “guesses”
+the wanted behavior is often impossible to get right.&lt;/li&gt;
+&lt;li&gt;If the feature needs a technology that is not part of the product at
+the moment. This is not easy to find out without knowing at least a
+bit about the code, but if developers mention that it would mean to
+introduce “command-pattern”, “real-time evaluation”, or “caching”, it
+hints that this is possible, but difficult. It might be worth it, but
+it needs a dedicated developer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style="margin-top:2em;font-size:0.9em;color:#666;"&gt;&lt;a href="https://opensourcedesign.net/pr-preview/pr-636/resources/scenarios-for-usability/"&gt;Read more on opensourcedesign.net →&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Resources</category></item><item><title>Tools and Code</title><link>https://opensourcedesign.net/pr-preview/pr-636/resources/tools-and-code/</link><guid isPermaLink="true">https://opensourcedesign.net/pr-preview/pr-636/resources/tools-and-code/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>What Open Source projects use for work and coordination</description><content:encoded>&lt;p&gt;There are basic tools that most projects use. It is helpful to be
+familiar with them, since this is where most coordination and work is
+done.
+There are tools for designers, some of them open source, too, but these tools vary and, if you are a designer
+you are likely to know them already. This article is about the tools that developers use.&lt;/p&gt;
+&lt;h2 id="issue-trackers"&gt;Issue trackers&lt;/h2&gt;
+&lt;p&gt;An issue tracker allows to register problems with the software and
+discussions about how to solve them. Prototypically, this is a technical
+problem like the program crashing in a certain condition. However, issue
+trackers are often used to collect all sorts of problems with the
+software, including usability problems and feature requests.&lt;/p&gt;
+&lt;p&gt;It is helpful to first read some existing issues to understand how the
+issue tracker is used and what tone of communication is typical. Don&amp;rsquo;t
+forget that many (but not all) issue trackers allow the use of images,
+which can be helpful for clarification of problems and to make redesign
+suggestions.&lt;/p&gt;
+&lt;h2 id="code"&gt;Code&lt;/h2&gt;
+&lt;p&gt;Just knowing how to program in general is helpful to follow some
+conversations of developers. However, to contribute code you need to
+know the specific programming language that is use on the project and
+often how to use other code (libraries) as well. You also need knowledge
+of the code of the project. Code of a non-trivial project can span
+hundreds of pages, and is usually not easy to understand. Usually,
+people learn how to contribute code by doing some small changes in
+particular parts of the code and then slowly expanding.&lt;/p&gt;
+&lt;h2 id="git"&gt;Git&lt;/h2&gt;
+&lt;p&gt;Open source programs are created in one or several programming
+languages. Different programmers can contribute code. Combining code
+from several programmers is done via a version management system. The
+one used most widely is git.&lt;/p&gt;
+&lt;p&gt;Even if you do not code, you might get in contact with git, since git is
+often used to manage non-code contributions as well, so icons,
+translations or text for documentation might also be added through git
+despite it being a tool made to manage source code &amp;ndash; so it more or less
+struggles with other kinds of content. A simple change or addition is
+usually not too difficult, though even that will get you in contact with
+the ideas of &lt;em&gt;commiting&lt;/em&gt; changes and then &lt;em&gt;pushing&lt;/em&gt; them to a central
+sever to share them. Git is sadly notoriously difficult to learn, so the
+use of a graphical git client or a platform like GitHub, GitLab or
+Gitea is helpful for beginners.&lt;/p&gt;
+&lt;h2 id="mailing-lists"&gt;Mailing lists&lt;/h2&gt;
+&lt;p&gt;Particularly older projects use mailing lists instead of web forums for
+their discussions. It is a way to send a mail to one address and have
+many people receive it, making to good for group discussions. To read
+and to post you need to &amp;ldquo;subscribe&amp;rdquo; to the list. Before you post, read
+along for a bit to see if the mailinglist is right for you and to know
+what tone is common on it.&lt;/p&gt;
+&lt;p style="margin-top:2em;font-size:0.9em;color:#666;"&gt;&lt;a href="https://opensourcedesign.net/pr-preview/pr-636/resources/tools-and-code/"&gt;Read more on opensourcedesign.net →&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Resources</category></item><item><title>You first contribution: Maintaining OSD job submissions</title><link>https://opensourcedesign.net/pr-preview/pr-636/resources/maintaining-job-submissions/</link><guid isPermaLink="true">https://opensourcedesign.net/pr-preview/pr-636/resources/maintaining-job-submissions/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><description>Looking to do your first contribution? Follow this guide to get started.</description><content:encoded>&lt;p&gt;Are you a designer looking to help out in the open source design community? A great way to get started is reviewing and approving pull requests submitted to post a job on the job board!&lt;/p&gt;
+&lt;h2 id="what-are-job-submissions"&gt;What are job submissions?&lt;/h2&gt;
+&lt;p&gt;Job submissions are the form people with open source projects fill out. Filling out the form creates a post on the website to let designers know their project needs assistance.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/postajob_hu_8eb25a7ad8419ac1.avif 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/postajob_hu_f55ba8fd15986d7f.avif 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/postajob_hu_bab6149a79c7dc32.avif 1528w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/postajob_hu_e0258e598f3200c3.webp 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/postajob_hu_f298085480a029e7.webp 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/postajob_hu_d3af52ac9f6cfd11.webp 1528w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/postajob.png"
+alt="screenshot of open source design job submission form"
+loading="eager"
+fetchpriority="high"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="1528"
+height="991"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;h2 id="where-do-i-find-the-job-submissions-to-reviewapprove"&gt;Where do I find the job submissions to review/approve?&lt;/h2&gt;
+&lt;p&gt;First, go to the &lt;a href="https://github.com/opensourcedesign/opensourcedesign.net/"&gt;open source design website repository&lt;/a&gt; on Github.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/osdrepo_hu_a4889c6be01d36da.avif 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/osdrepo_hu_1a573c740221957e.avif 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/osdrepo_hu_e23540ec45024031.avif 1521w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/osdrepo_hu_b198bcd1ccdd4734.webp 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/osdrepo_hu_89f27710de916b93.webp 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/osdrepo_hu_33901904e7a3c25b.webp 1521w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/osdrepo.png"
+alt="screenshot of open source design repo&amp;quot;"
+loading="lazy"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="1521"
+height="958"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;p&gt;Second, click on the &lt;a href="https://github.com/opensourcedesign/opensourcedesign.net/pulls"&gt;pull requests&lt;/a&gt; tab.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/pullrequests_hu_3d90362bcb4bb324.avif" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/pullrequests_hu_72bce0bc291d8962.webp" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/pullrequests.png"
+alt="screenshot of pull requests tab on open source design repo"
+loading="lazy"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="393"
+height="110"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pull requests are essentially someone asking, &amp;ldquo;Hey, can you add this to the website/make this change?&amp;rdquo; Our job is to say yes, no, or modify this before yes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Third, click on any pull request starting with &amp;ldquo;Job submission:&amp;rdquo; if there is none then there are no requests for approval at the moment. All job submissions are markdown files waiting to be approved so they can be added to the jobs section of the website.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/jobsubmissioninPR_hu_5550b1747a5c2d3f.avif 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/jobsubmissioninPR_hu_23397a5c55e61b32.avif 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/jobsubmissioninPR_hu_582700c9480d41a2.avif 1524w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/jobsubmissioninPR_hu_c4c511477849c584.webp 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/jobsubmissioninPR_hu_6b56f02c5e4f54a0.webp 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/jobsubmissioninPR_hu_690556b53dcbbdc7.webp 1524w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/jobsubmissioninPR.png"
+alt="screenshot of pull requests on the open source design repo"
+loading="lazy"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="1524"
+height="435"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;h3 id="theres-a-submission"&gt;There&amp;rsquo;s a submission!&lt;/h3&gt;
+&lt;p&gt;Click on that job submission and navigate to &amp;ldquo;Files changed&amp;rdquo;.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/fileschangedtab_hu_18bebad70114ab1f.avif 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/fileschangedtab_hu_e0f76ca278f2fa1b.avif 695w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/fileschangedtab_hu_161b570d45fb3058.webp 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/fileschangedtab_hu_9aae197db833a81f.webp 695w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/fileschangedtab.png"
+alt="screenshot of conversation of pull request highlighting files changed tab"
+loading="lazy"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="695"
+height="60"
+/&gt;
+&lt;/picture&gt;
+You&amp;rsquo;ll see something like this.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/markdown_hu_85cb925b67c7b034.avif 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/markdown_hu_12d390bb9c69e584.avif 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/markdown_hu_9b2b637a4ab08bb1.avif 1512w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/markdown_hu_e13dbae79978e01e.webp 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/markdown_hu_5efea0b378fab02b.webp 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/markdown_hu_44b46f180ac00a6a.webp 1512w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/markdown.png"
+alt="screenshot of example markdown file for job submission"
+loading="lazy"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="1512"
+height="1064"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;h2 id="what-criteria-do-i-need-to-look-out-for-when-reviewing-the-pull-request"&gt;What criteria do I need to look out for when reviewing the pull request?&lt;/h2&gt;
+&lt;p&gt;This is where you will need to some investigation and clicking through their links:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Can the organization name be found in their repository/organization URL or does the organization name match their repository/organization URL?&lt;/li&gt;
+&lt;li&gt;They are not required to have an email attached but is there some form of contact information like Discord, Telegram, etc?&lt;/li&gt;
+&lt;li&gt;Look through their project repository, is there anything malicious that is against what open source design stands for? Examples are gambling, anything discriminatory or offensive, etc. Unsure? Take a look at our &lt;a href="https://opensourcedesign.net/about-us/code-of-conduct/"&gt;code of conduct&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Is their project under the approved &lt;a href="https://opensource.org/licenses"&gt;Open Source Initiative licenses&lt;/a&gt;?&lt;/li&gt;
+&lt;li&gt;Does the deliverables and description make sense?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;All projects must pass these criteria to be approved.
+If everything looks good, in the top right there is a &amp;ldquo;Submit comments&amp;rdquo; button.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewbutton_hu_ae0cb93210cd029c.avif 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewbutton_hu_c7809fba75ab3a98.avif 670w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewbutton_hu_1daba3e8edbb3fc8.webp 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewbutton_hu_7d07804531b77c25.webp 670w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewbutton.png"
+alt="screenshot of submit comments button"
+loading="lazy"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="670"
+height="114"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;p&gt;You can either request changes, approve, or comment without explicit approval. If you approve, leave a comment letting us know it looks good.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewmenu_hu_7b5b1ab3608b49f.avif 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewmenu_hu_f3d9965ee87f7d5c.avif 875w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewmenu_hu_756cbd386fda286c.webp 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewmenu_hu_673cbc23baaeb746.webp 875w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/submitreviewmenu.png"
+alt="screenshot of submit comments dropdown and a comment saying looks good to me"
+loading="lazy"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="875"
+height="594"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;p&gt;Click submit review and you&amp;rsquo;re done! Congrats on your first approval and contribution to open source design.&lt;/p&gt;
+&lt;h2 id="optional"&gt;Optional&lt;/h2&gt;
+&lt;h3 id="pull-request-preview"&gt;Pull request preview&lt;/h3&gt;
+&lt;p&gt;In the PR, you can preview the job post by the &amp;ldquo;Conversation&amp;rdquo; tab and scrolling down. You will see a link called &amp;ldquo;PR Preview&amp;rdquo; to see it on the actually website.
+&lt;picture&gt;
+&lt;source type="image/avif" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/preview_hu_18b4bf10c27f2e05.avif 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/preview_hu_131ca9740021594b.avif 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/preview_hu_98657eb55ce19bb0.avif 968w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;source type="image/webp" srcset="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/preview_hu_86e1403796cc8a03.webp 480w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/preview_hu_658108f267fa6d9.webp 960w, https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/preview_hu_a67b277097ffda04.webp 968w" sizes="(min-width: 56rem) 56rem, 100vw" /&gt;
+&lt;img
+src="https://opensourcedesign.net/pr-preview/pr-636/images/resources/maintainingjobsubmissions/preview.png"
+alt="screenshot of PR preview under conversation tab"
+loading="lazy"
+decoding="async"
+class="mx-auto my-6 block rounded-lg shadow-sm"
+width="968"
+height="697"
+/&gt;
+&lt;/picture&gt;
+&lt;/p&gt;
+&lt;h3 id="improving-description-and-deliverables-of-job-submissions"&gt;Improving description and deliverables of job submissions&lt;/h3&gt;
+&lt;p&gt;Many projects struggle to know what they are looking for. If the deliverables or description are unclear and would benefit from more direction, feel free to leave a comment on their pull request.&lt;/p&gt;
+&lt;p&gt;Not limited to the below examples but these are good questions to ask yourself to understand if there are gaps for other designers looking at the job submissions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How might someone be a good fit for this role?&lt;/li&gt;
+&lt;li&gt;Looking at the deliverables, would you be able to get started as a designer?&lt;/li&gt;
+&lt;li&gt;What kind of background would you need about the organization to get started on their project?&lt;/li&gt;
+&lt;li&gt;What is their organizations mission?&lt;/li&gt;
+&lt;li&gt;If it&amp;rsquo;s help with their user experience, what are they expecting of users to do on their website, app, etc? What is the expected journey users will take?&lt;/li&gt;
+&lt;li&gt;If it&amp;rsquo;s a logo, icon, or branding, what visual style are they looking for?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style="margin-top:2em;font-size:0.9em;color:#666;"&gt;&lt;a href="https://opensourcedesign.net/pr-preview/pr-636/resources/maintaining-job-submissions/"&gt;Read more on opensourcedesign.net →&lt;/a&gt;&lt;/p&gt;</content:encoded><category>Resources</category></item></channel></rss>
