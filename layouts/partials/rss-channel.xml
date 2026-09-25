@@ -15,7 +15,7 @@
 <link>{{ $page.Permalink }}</link>
 <description>{{ with $page.Description }}{{ . | plainify | htmlUnescape }}{{ else }}{{ with $page.Site.Params.description }}{{ . | htmlUnescape }}{{ end }}{{ end }}</description>
 <language>{{ $page.Site.Language.Locale }}</language>
-<copyright>© {{ now.Year }} {{ $page.Site.Title }}. Content licensed under CC BY-SA 4.0.</copyright>
+<copyright>© {{ now.Year }} {{ $page.Site.Title }}. Content licensed under CC BY 4.0.</copyright>
 <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
 <generator>Hugo {{ hugo.Version }}</generator>
 <docs>https://www.rssboard.org/rss-specification</docs>
@@ -25,30 +25,31 @@
 <webMaster>{{ . }}</webMaster>
 {{- end }}
 <image>
-<url>{{ partial "site-abs-path.html" "images/opensourcedesign-logo-icon.png" }}</url>
+<url>{{ partial "site-abs-path.html" "images/favicons/apple-touch-icon.png" }}</url>
 <title>{{ $page.Site.Title }}</title>
 <link>{{ $page.Site.BaseURL }}</link>
-<width>144</width>
-<height>144</height>
 </image>
 {{- range $pages }}
+{{- $item := . -}}
 {{- $fullContent := "" -}}
 {{- with .Params.image -}}
-{{- $fullContent = printf "%s<figure><img src=\"%s\" alt=\"%s\"/></figure>" $fullContent (partial "site-abs-path.html" .) ($page.Title | htmlEscape) -}}
+{{- $fullContent = printf "%s<figure><img src=\"%s\" alt=\"%s\"/></figure>" $fullContent (partial "site-abs-path.html" .) ($item.Title | htmlEscape) -}}
 {{- end -}}
+{{- /* Front matter values come from public submissions: escape them before
+       they are spliced into the item's HTML (content:encoded). */ -}}
 {{- if eq .Section "jobs" -}}
 {{- $fullContent = printf "%s<div style=\"margin-bottom:1.5em;padding:1em;background:#f8f9fa;border-radius:8px;\">" $fullContent -}}
-{{- with .Params.organization }}{{ $fullContent = printf "%s<p><strong>Organization:</strong> %s</p>" $fullContent . }}{{ end -}}
-{{- with .Params.status }}{{ $fullContent = printf "%s<p><strong>Status:</strong> %s</p>" $fullContent . }}{{ end -}}
-{{- with .Params.compensation }}{{ $fullContent = printf "%s<p><strong>Compensation:</strong> %s</p>" $fullContent . }}{{ end -}}
-{{- with .Params.role }}{{ $fullContent = printf "%s<p><strong>Role:</strong> %s</p>" $fullContent . }}{{ end -}}
+{{- with .Params.organization }}{{ $fullContent = printf "%s<p><strong>Organization:</strong> %s</p>" $fullContent (printf "%v" . | htmlEscape) }}{{ end -}}
+{{- with .Params.status }}{{ $fullContent = printf "%s<p><strong>Status:</strong> %s</p>" $fullContent (printf "%v" . | htmlEscape) }}{{ end -}}
+{{- with .Params.compensation }}{{ $fullContent = printf "%s<p><strong>Compensation:</strong> %s</p>" $fullContent (printf "%v" . | htmlEscape) }}{{ end -}}
+{{- with .Params.role }}{{ $fullContent = printf "%s<p><strong>Role:</strong> %s</p>" $fullContent (printf "%v" . | htmlEscape) }}{{ end -}}
 {{- $fullContent = printf "%s</div>" $fullContent -}}
 {{- end -}}
 {{- if eq .Section "events" -}}
 {{- $fullContent = printf "%s<div style=\"margin-bottom:1.5em;padding:1em;background:#f8f9fa;border-radius:8px;\">" $fullContent -}}
-{{- with .Params.eventDate }}{{ $fullContent = printf "%s<p><strong>Date:</strong> %s</p>" $fullContent . }}{{ end -}}
-{{- with .Params.time }}{{ $fullContent = printf "%s<p><strong>Time:</strong> %s</p>" $fullContent . }}{{ end -}}
-{{- with .Params.location }}{{ $fullContent = printf "%s<p><strong>Location:</strong> %s</p>" $fullContent . }}{{ end -}}
+{{- with .Params.eventDate }}{{ $fullContent = printf "%s<p><strong>Date:</strong> %s</p>" $fullContent (printf "%v" . | htmlEscape) }}{{ end -}}
+{{- with .Params.time }}{{ $fullContent = printf "%s<p><strong>Time:</strong> %s</p>" $fullContent (printf "%v" . | htmlEscape) }}{{ end -}}
+{{- with .Params.location }}{{ $fullContent = printf "%s<p><strong>Location:</strong> %s</p>" $fullContent (printf "%v" . | htmlEscape) }}{{ end -}}
 {{- $fullContent = printf "%s</div>" $fullContent -}}
 {{- end -}}
 {{- $fullContent = printf "%s%s" $fullContent .Content -}}
@@ -57,10 +58,10 @@
 {{- $fullContent = printf "%s<div style=\"margin-top:1.5em;padding:1em;background:#e8f5e9;border-radius:8px;\"><p><strong>How to Apply:</strong></p>" $fullContent -}}
 {{- if reflect.IsSlice . -}}
 {{- $fullContent = printf "%s<ul>" $fullContent -}}
-{{- range . }}{{ $fullContent = printf "%s<li>%s</li>" $fullContent . }}{{ end -}}
+{{- range . }}{{ $fullContent = printf "%s<li>%s</li>" $fullContent (printf "%v" . | htmlEscape) }}{{ end -}}
 {{- $fullContent = printf "%s</ul>" $fullContent -}}
 {{- else -}}
-{{- $fullContent = printf "%s<p>%s</p>" $fullContent . -}}
+{{- $fullContent = printf "%s<p>%s</p>" $fullContent (printf "%v" . | htmlEscape) -}}
 {{- end -}}
 {{- $fullContent = printf "%s</div>" $fullContent -}}
 {{- end -}}
