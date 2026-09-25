@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ $jobsAll := partial "functions/job-postings.html" . }}
-  {{/* Deadline-aware: searching jobs whose application deadline passed are
-       excluded here and surface on the archive page instead (issue #84). */}}
+  {{/* Searching jobs that have lapsed (deadline passed or older than a year)
+       are excluded here and surface on the archive page instead (issue #84). */}}
   {{ $jobs := partial "functions/open-jobs.html" $jobsAll }}
   {{ $jobsArchivedCount := sub (len $jobsAll) (len $jobs) }}
   {{/* Robustly count compensation types (handles paid / gratis / volunteer / free / unspecified). */}}

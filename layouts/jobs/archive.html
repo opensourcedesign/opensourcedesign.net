@@ -1,13 +1,13 @@
 {{ define "main" }}
   <div class="mx-auto max-w-4xl px-4 py-14 sm:py-20">
     {{ $jobsAll := partial "functions/job-postings.html" . }}
-    {{/* Finished statuses, plus "searching" jobs whose application deadline
-         already passed - those are excluded from the open list, and the
-         job-expire workflow flips their status to "expired" within a day.
+    {{/* Finished statuses, plus "searching" jobs that have lapsed (deadline
+         passed or older than a year) - those are excluded from the open list,
+         and the job-expire workflow proposes flipping them to "expired".
          Complement keeps this in sync with the open-jobs partial. */}}
     {{ $finished := where $jobsAll "Params.status" "in" (slice "closed" "filled" "expired") }}
-    {{ $deadlinePassed := where $jobsAll "Params.status" "searching" | complement (partial "functions/open-jobs.html" $jobsAll) }}
-    {{ $jobs := $finished | union $deadlinePassed }}
+    {{ $lapsed := where $jobsAll "Params.status" "searching" | complement (partial "functions/open-jobs.html" $jobsAll) }}
+    {{ $jobs := $finished | union $lapsed }}
     {{ $scratch := newScratch }}
     {{ $scratch.Set "paid" 0 }}
     {{ $scratch.Set "gratis" 0 }}
@@ -90,8 +90,9 @@
                 {{ else if $isVol }}
                   {{ partial "badge.html" (dict "text" "Volunteer" "color" "violet" "size" "sm" "dot" false) }}
                 {{ end }}
-                {{/* A "searching" job only lands here when its deadline has
-                     passed; label it as expired ahead of the status flip. */}}
+                {{/* A "searching" job only lands here once it has lapsed
+                     (deadline passed or a year old); label it as expired
+                     ahead of the status flip. */}}
                 {{ $displayStatus := printf "%v" (.Params.status | default "") }}
                 {{ if eq (lower $displayStatus) "searching" }}{{ $displayStatus = "expired" }}{{ end }}
                 {{ with $displayStatus }}

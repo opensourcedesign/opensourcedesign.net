@@ -5,9 +5,15 @@
 #   2. the posting is older than a year with no update since
 #      (most recent of `date_posted` / `last_updated`).
 #
-# Expired postings drop off /jobs/ and surface on /jobs/archive/ instead.
-# Pushes made with GITHUB_TOKEN don't trigger other workflows, so the site
-# rebuild is dispatched explicitly at the end.
+# main is branch-protected, so the change is committed to the bot/expire-jobs
+# branch and proposed in a pull request (one PR, updated in place while it is
+# open). The site does not wait for the merge: templates already treat lapsed
+# postings as expired (layouts/partials/functions/job-lapsed.html), so the
+# workflow also dispatches a rebuild to take them off /jobs/ right away.
+#
+# Pushes and PRs made with GITHUB_TOKEN don't trigger other workflows, so the
+# required checks are dispatched on the branch explicitly (workflow_dispatch
+# is exempt from that restriction).
 name: Expire stale job postings
 
 on:
@@ -16,17 +22,21 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Report what would expire without committing"
+        description: "Report what would expire without opening a pull request"
         type: boolean
         default: false
 
 permissions:
-  contents: write
-  actions: write # to dispatch the Hugo build after pushing
+  contents: write # push the bot branch
+  pull-requests: write # open / update the expiry pull request
+  actions: write # dispatch checks and the Hugo build
 
 concurrency:
   group: job-expire
   cancel-in-progress: false
+
+env:
+  BRANCH: bot/expire-jobs
 
 jobs:
   expire:
@@ -35,25 +45,57 @@ jobs:
       # Actions are pinned to full commit SHAs (supply-chain hardening).
       - name: Checkout
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+        with:
+          ref: main
 
       - name: Expire postings past their deadline or older than a year
         id: expire
+        env:
+          EXPIRE_REPORT: ${{ runner.temp }}/expire-report.md
         run: node .github/scripts/job-expire.mjs
 
-      - name: Commit and push
+      - name: Open or update the expiry pull request
         if: steps.expire.outputs.count != '0' && inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COUNT: ${{ steps.expire.outputs.count }}
+          EXPIRE_REPORT: ${{ runner.temp }}/expire-report.md
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$BRANCH"
           git add content/jobs
-          git commit -m "Auto-expire ${{ steps.expire.outputs.count }} job posting(s) past deadline or older than a year"
-          git push
+          git commit -m "Expire ${COUNT} job posting(s) past deadline or older than a year"
+          # The branch is rebuilt from main on every run, so force-pushing
+          # keeps the open PR current instead of stacking daily commits.
+          git push --force origin "HEAD:refs/heads/${BRANCH}"
 
-      # Pushes authenticated with GITHUB_TOKEN don't fire the `push` trigger,
-      # so kick the deploy workflow directly (workflow_dispatch is exempt
-      # from that restriction).
+          title="Expire ${COUNT} lapsed job posting(s)"
+          body_file="${RUNNER_TEMP}/expire-body.md"
+          {
+            cat "$EXPIRE_REPORT"
+            echo
+            echo "Opened by the daily [job-expire workflow](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/workflows/job-expire.yml)."
+            echo "The live site already lists these postings as expired; merging records the status change."
+          } > "$body_file"
+
+          pr="$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number // empty')"
+          if [ -n "$pr" ]; then
+            gh pr edit "$pr" --title "$title" --body-file "$body_file"
+            echo "Updated pull request #${pr}"
+          else
+            gh pr create --base main --head "$BRANCH" --title "$title" --body-file "$body_file"
+            gh pr edit "$BRANCH" --add-label maintenance || true
+          fi
+
+          # Required checks for the PR; they would not run on their own.
+          for wf in ci-checks.yml a11y.yml; do
+            gh workflow run "$wf" --ref "$BRANCH"
+          done
+
       - name: Trigger site rebuild
         if: steps.expire.outputs.count != '0' && inputs.dry_run != true
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run hugo-build.yml --ref "${GITHUB_REF_NAME}"
+        run: gh workflow run hugo-build.yml --ref main

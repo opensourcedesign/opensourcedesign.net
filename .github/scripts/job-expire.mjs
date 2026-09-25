@@ -2,7 +2,10 @@
 /**
  * Auto-expire job postings past deadline or older than a year (job-expire.yml).
  *
- * Writes GITHUB_STEP_SUMMARY and GITHUB_OUTPUT (count=N).
+ * Rewrites the matching files in place (the workflow commits them to a bot
+ * branch and opens a pull request). Writes GITHUB_STEP_SUMMARY, GITHUB_OUTPUT
+ * (count=N) and, when EXPIRE_REPORT is set, the Markdown list of expired
+ * postings to that file for the pull request body.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -46,4 +49,5 @@ const summary = expired.length
   : 'No postings to expire today.\n';
 
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary);
+if (process.env.EXPIRE_REPORT) fs.writeFileSync(process.env.EXPIRE_REPORT, summary);
 if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, 'count=' + expired.length + '\n');
