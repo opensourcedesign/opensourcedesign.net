@@ -4,9 +4,9 @@
  * rather than the generic section list.
  *
  * Reads the PR's changed files via the GitHub API, fetches the merged content
- * file, and derives the permalink the same way Hugo does:
- *   - jobs:   /jobs/:slug/ (explicit url/permalink > slug > slugified title)
- *   - events: explicit url/permalink > slug > the filename
+ * file, and derives the permalink the same way Hugo does (job-url.mjs):
+ *   - jobs:   /jobs/:slug/ (explicit url > slug > urlized title)
+ *   - events: explicit url > slug > the filename
  *   - resources: /resources/links/#<category-id> (category found by locating
  *     the added line in data/resources.yaml)
  *
@@ -17,7 +17,7 @@
 
 import fs from 'node:fs';
 import { gh, ghPaginated } from './github-api.mjs';
-import { readYamlScalar } from './yaml-front-matter.mjs';
+import { eventPath, jobPath } from './job-url.mjs';
 
 const SITE = process.env.SITE || 'https://opensourcedesign.net';
 const { REPO, PR_NUMBER, HEAD_REF, MERGE_SHA } = process.env;
@@ -33,45 +33,14 @@ async function fileAt(path, ref) {
   return Buffer.from(data.content, 'base64').toString('utf8');
 }
 
-function frontMatter(text) {
-  const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  return m ? m[1] : '';
-}
-
-// Mirrors the Worker's slugify (itself mirroring Hugo's :slug fallback).
-function slugify(str) {
-  return String(str || '')
-    .trim()
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
-}
-
-function sitePath(p) {
-  return SITE + '/' + String(p).replace(/^\/+/, '').replace(/\/*$/, '/');
-}
-
 async function jobUrl(file) {
-  const fm = frontMatter(await fileAt(file, MERGE_SHA));
-  const explicit = readYamlScalar(fm, 'url') || readYamlScalar(fm, 'permalink');
-  if (explicit) return sitePath(explicit);
-  const slug = readYamlScalar(fm, 'slug') || slugify(readYamlScalar(fm, 'title'));
-  if (!slug) throw new Error(`no slug or title in ${file}`);
-  return `${SITE}/jobs/${slug}/`;
+  const path = jobPath(await fileAt(file, MERGE_SHA));
+  if (!path) throw new Error(`no slug or title in ${file}`);
+  return SITE + path;
 }
 
 async function eventUrl(file) {
-  const fm = frontMatter(await fileAt(file, MERGE_SHA));
-  const explicit = readYamlScalar(fm, 'url') || readYamlScalar(fm, 'permalink');
-  if (explicit) return sitePath(explicit);
-  const slug = readYamlScalar(fm, 'slug');
-  if (slug) return `${SITE}/events/${slug}/`;
-  // Hugo's default URL for the page is the urlized filename.
-  const base = file.split('/').pop().replace(/\.md$/, '');
-  return `${SITE}/events/${slugify(base)}/`;
+  return SITE + eventPath(file, await fileAt(file, MERGE_SHA));
 }
 
 // The resource PR adds item lines under a category in data/resources.yaml.

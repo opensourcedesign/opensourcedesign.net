@@ -54,5 +54,7 @@ checks:
   - '.github/scripts/sync-worker-yaml-front-matter.mjs'
   - '.github/scripts/job-redirect-aliases.mjs'
   - '.github/scripts/lint-data-yaml.mjs'
+  - '.github/scripts/job-url.mjs'
+  - '.github/scripts/job-url.test.mjs'
   - '.github/form-modules.sha256'
   - '.github/workflows/ci-checks.yml'
