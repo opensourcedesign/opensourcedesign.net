@@ -75,10 +75,13 @@
           {{ if .IsSection }}
             {{ $count = printf "%d %s" (len .RegularPages) (.Params.itemNoun | default "articles") }}
           {{ else if eq .File.ContentBaseName "links" }}
-            {{ $n := 0 }}{{ range hugo.Data.resources }}{{ $n = add $n (len .items) }}{{ end }}
-            {{ $count = printf "%d links in %d categories" $n (len hugo.Data.resources) }}
+            {{/* default slice: len of a missing file or an empty category's
+                 missing items would otherwise abort the build. */}}
+            {{ $categories := hugo.Data.resources | default slice }}
+            {{ $n := 0 }}{{ range $categories }}{{ $n = add $n (len (.items | default slice)) }}{{ end }}
+            {{ $count = printf "%d links in %d categories" $n (len $categories) }}
           {{ else if eq .File.ContentBaseName "bibliography" }}
-            {{ $count = printf "%d entries" (len hugo.Data.bibliography) }}
+            {{ $count = printf "%d entries" (len (hugo.Data.bibliography | default slice)) }}
           {{ end }}
           <a class="osd-surface group flex flex-col justify-between gap-4 rounded-xl border border-slate-200 p-5 transition hover:border-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" href="{{ .RelPermalink }}">
             <span>
