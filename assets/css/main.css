@@ -267,6 +267,16 @@
 }
 
 @layer components {
+  /* Links inside inline Markdown rendered from job front matter (How to apply
+     notes, related links, deliverables - see partials/inline-markdown.html). */
+  .osd-inline-md a {
+    @apply break-words text-current underline decoration-current/30 underline-offset-4 hover:decoration-current;
+  }
+
+  .osd-inline-md code {
+    @apply rounded bg-slate-100 px-1 py-0.5 text-[0.9em] dark:bg-slate-800;
+  }
+
   .osd-card {
     @apply rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-slate-300 hover:shadow dark:border-slate-700 dark:bg-slate-900 dark:hover:border-slate-600;
   }
