@@ -11,6 +11,6 @@
     "tail": "wrangler tail"
   },
   "devDependencies": {
-    "wrangler": "^4.134.0"
+    "wrangler": "^4.136.3"
   }
 }
