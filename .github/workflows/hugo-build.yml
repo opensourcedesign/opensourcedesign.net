@@ -45,7 +45,12 @@ jobs:
 
   build-and-deploy:
     needs: changes
-    if: github.event_name == 'workflow_dispatch' || needs.changes.outputs.site == 'true'
+    # `changes` is skipped on workflow_dispatch, and a job whose needs were
+    # skipped is itself skipped unless its condition calls a status function -
+    # so the dispatch branch needs !cancelled()/!failure() to ever run.
+    if: >-
+      ${{ !cancelled() && !failure() &&
+      (github.event_name == 'workflow_dispatch' || needs.changes.outputs.site == 'true') }}
     runs-on: ubuntu-latest
     steps:
       # Actions are pinned to full commit SHAs (supply-chain hardening).
