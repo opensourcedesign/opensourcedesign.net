@@ -47,8 +47,8 @@ brew install hugo
 **Linux (Debian/Ubuntu):**
 ```bash
 # Download the extended .deb (version pinned to match CI)
-wget https://github.com/gohugoio/hugo/releases/download/v0.164.0/hugo_extended_0.164.0_linux-amd64.deb
-sudo dpkg -i hugo_extended_0.164.0_linux-amd64.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.166.0/hugo_extended_0.166.0_linux-amd64.deb
+sudo dpkg -i hugo_extended_0.166.0_linux-amd64.deb
 
 # Verify installation
 hugo version
