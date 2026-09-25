@@ -26,6 +26,31 @@ var form = document.getElementById('osd-job-form');
         var outExtra = document.getElementById('osd-result-extra');
         var submitBtn = document.getElementById('osd-submit');
 
+        // Turnstile tokens are single-use: the Worker spends one on every
+        // request, whatever the outcome. Reset the widget after each attempt
+        // and wait for a fresh token, so a retry - e.g. "Post anyway" after a
+        // duplicate warning - doesn't fail with "Captcha verification failed".
+        var turnstileBox = form.querySelector('.cf-turnstile');
+        function turnstileValue() {
+          var el = form.querySelector('[name="cf-turnstile-response"]');
+          return el && el.value ? String(el.value) : '';
+        }
+        function resetTurnstile() {
+          try {
+            if (turnstileBox && window.turnstile && typeof window.turnstile.reset === 'function') window.turnstile.reset(turnstileBox);
+          } catch (e) { /* widget not rendered yet */ }
+        }
+        function freshTurnstileToken(timeoutMs) {
+          return new Promise(function (resolve) {
+            var until = Date.now() + (timeoutMs || 10000);
+            (function poll() {
+              var token = turnstileValue();
+              if (token || !turnstileBox || Date.now() > until) return resolve(token);
+              setTimeout(poll, 250);
+            })();
+          });
+        }
+
         function slugify(str) {
           str = (str || '').trim().toLowerCase();
           str = str.normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
@@ -424,13 +449,16 @@ var form = document.getElementById('osd-job-form');
             return;
           }
 
-          var turnstile = document.querySelector('[name="cf-turnstile-response"]');
-          var turnstileToken = turnstile && turnstile.value ? String(turnstile.value) : '';
-
           if (endpoint) {
             try {
               if (submitBtn) submitBtn.disabled = true;
               if (note) note.textContent = 'Submitting…';
+
+              var turnstileToken = await freshTurnstileToken();
+              if (turnstileBox && !turnstileToken) {
+                if (note) note.textContent = 'Please complete the captcha check, then submit again.';
+                return;
+              }
 
               var resp = await fetch(endpoint, {
                 method: 'POST',
@@ -487,7 +515,7 @@ var form = document.getElementById('osd-job-form');
               var msg = (json && json.error) ? String(json.error) : 'Submission failed.';
               throw new Error(msg);
             } catch (err) {
-              if (note) note.textContent = 'Could not submit automatically. Use the fallback below.';
+              if (note) note.textContent = 'Could not submit automatically' + (err && err.message ? ' (' + err.message + ')' : '') + '. Try again, or use the fallback below.';
               out.classList.remove('border-emerald-200', 'bg-emerald-50');
               out.classList.add('border-slate-200', 'bg-white');
 
@@ -500,6 +528,7 @@ var form = document.getElementById('osd-job-form');
               return;
             } finally {
               if (submitBtn) submitBtn.disabled = false;
+              resetTurnstile();
             }
           }
 

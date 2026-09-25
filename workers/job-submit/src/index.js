@@ -153,6 +153,9 @@ async function handleSubmit(request, env) {
       return json({ ok: false, error: 'Event website must be a valid http(s) URL.' }, 400);
     }
   } else if (kind === 'resource') {
+    // The description is a <textarea>, so pressing Enter is normal: fold line
+    // breaks into spaces (it's stored as one YAML line) instead of rejecting.
+    if (data.description) data.description = normalizeText(data.description).replace(/\s+/g, ' ').trim();
     if (!isHttpUrl(data.url)) {
       return json({ ok: false, error: 'The resource URL must be a valid http(s) URL.' }, 400);
     }

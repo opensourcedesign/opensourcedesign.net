@@ -94,6 +94,31 @@
           return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         }
 
+        // Turnstile tokens are single-use: the Worker spends one on every
+        // request, whatever the outcome. Reset the widget after each attempt
+        // and wait for a fresh token, so a retry doesn't fail with
+        // "Captcha verification failed".
+        var turnstileBox = form.querySelector('.cf-turnstile');
+        function turnstileValue() {
+          var el = form.querySelector('[name="cf-turnstile-response"]');
+          return el && el.value ? String(el.value) : '';
+        }
+        function resetTurnstile() {
+          try {
+            if (turnstileBox && window.turnstile && typeof window.turnstile.reset === 'function') window.turnstile.reset(turnstileBox);
+          } catch (e) { /* widget not rendered yet */ }
+        }
+        function freshTurnstileToken(timeoutMs) {
+          return new Promise(function (resolve) {
+            var until = Date.now() + (timeoutMs || 10000);
+            (function poll() {
+              var token = turnstileValue();
+              if (token || !turnstileBox || Date.now() > until) return resolve(token);
+              setTimeout(poll, 250);
+            })();
+          });
+        }
+
         function showResult(title, bodyHtml, extraHtml) {
           if (outTitle) outTitle.innerHTML = '<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> ' + title;
           if (outBody) outBody.innerHTML = bodyHtml || '';
@@ -160,12 +185,14 @@
             return;
           }
 
-          var turnstile = document.querySelector('[name="cf-turnstile-response"]');
-          var turnstileToken = turnstile && turnstile.value ? String(turnstile.value) : '';
-
           try {
             if (submitBtn) submitBtn.disabled = true;
             if (note) note.textContent = 'Submitting…';
+            var turnstileToken = await freshTurnstileToken();
+            if (turnstileBox && !turnstileToken) {
+              if (note) note.textContent = 'Please complete the captcha check, then submit again.';
+              return;
+            }
             var resp = await fetch(endpoint, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -183,6 +210,7 @@
             if (note) note.textContent = 'Could not submit - please use the GitHub link below.';
           } finally {
             if (submitBtn) submitBtn.disabled = false;
+            resetTurnstile();
           }
         });
       })();
