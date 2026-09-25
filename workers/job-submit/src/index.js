@@ -807,14 +807,13 @@ async function createResourcePullRequest(env, data) {
     sha: existing.sha,
   });
 
-  const cell = (v) => String(v == null ? '' : v).replace(/\|/g, '\\|').replace(/\r?\n/g, ' ');
   const body = [
     'Automated resource suggestion from the [suggest form](https://opensourcedesign.net/resources/suggest/).',
     '',
     '| Field | Value |',
     '| ----- | ----- |',
     '| Name | ' + cell(data.name) + ' |',
-    '| URL | ' + cell(data.url) + ' |',
+    '| URL | ' + cellText(data.url) + ' |',
     '| Category | ' + cell(catId) + ' |',
     ...(data.description ? ['| Description | ' + cell(data.description) + ' |'] : []),
     '',
@@ -946,8 +945,8 @@ function prBody(data, filePath, edit) {
   lines.push('| Field | Value |');
   lines.push('| --- | --- |');
   lines.push('| Project | ' + cell(data.organization) + ' |');
-  lines.push('| Website | ' + cell(data.org_url) + ' |');
-  lines.push('| License | ' + cell(data.license) + ' |');
+  lines.push('| Website | ' + cellText(data.org_url) + ' |');
+  lines.push('| License | ' + cellText(data.license) + ' |');
   lines.push('| Role | ' + cell(data.role) + ' |');
   lines.push('| Compensation | ' + cell(data.compensation) + (data.paid_details ? ' (' + cell(data.paid_details) + ')' : '') + ' |');
   if (data.rate_min) {
@@ -955,7 +954,7 @@ function prBody(data, filePath, edit) {
     lines.push('| Rate | ' + cell(range + ' ' + (data.rate_currency || 'USD') + ' per ' + (data.rate_period || 'hour')) + ' |');
   }
   if (data.deadline) lines.push('| Apply by | ' + cell(data.deadline) + ' |');
-  if (data.github_handle) lines.push('| Submitter GitHub | ' + cell(data.github_handle) + ' |');
+  if (data.github_handle) lines.push('| Submitter GitHub | ' + githubHandle(data.github_handle) + ' |');
   lines.push('| File | `' + filePath + '` |');
   lines.push('');
   lines.push('Review the file, then merge to publish. The submitter is emailed on merge or if the PR is closed without merging (their address is stored privately and is not shown here).');
@@ -978,14 +977,33 @@ function eventPrBody(data, filePath, edit) {
   lines.push('| Dates | ' + cell(formatEventDate(data.start_date, data.end_date)) + ' |');
   if (data.time) lines.push('| Time | ' + cell(data.time) + ' |');
   lines.push('| Location | ' + cell(data.location) + ' |');
-  if (data.website) lines.push('| Website | ' + cell(data.website) + ' |');
+  if (data.website) lines.push('| Website | ' + cellText(data.website) + ' |');
   lines.push('| File | `' + filePath + '` |');
   lines.push('');
   lines.push('Review the file, then merge to publish. The submitter is emailed on merge or if the PR is closed without merging (their address is stored privately and is not shown here).');
   return lines.join('\n');
 }
 
+// GitHub notifies everyone @mentioned in a PR body, so submitted values
+// (organization, role, resource name, …) could ping arbitrary users. A
+// zero-width space after "@" breaks the mention without changing the text.
+const ZWSP = String.fromCharCode(0x200b);
+function noMentions(s) {
+  return String(s).replace(/@(?=[A-Za-z0-9])/g, '@' + ZWSP);
+}
+
+// The submitter's own GitHub handle is mentioned on purpose so they can
+// follow the pull request; anything that isn't a valid handle is escaped.
+function githubHandle(v) {
+  const h = String(v || '').trim().replace(/^@/, '');
+  return /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$/.test(h) ? '@' + h : cell(v);
+}
+
 function cell(s) {
+  return noMentions(cellText(s));
+}
+
+function cellText(s) {
   return String(s == null ? '' : s).replace(/\|/g, '\\|').replace(/\r?\n/g, ' ');
 }
 
