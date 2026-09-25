@@ -34,7 +34,7 @@ What you have:
   -  Talent for creating elegant design solutions
   -  A strong portfolio of design work
 
- 
+
 What you will do:
 
   -  Design user experiences - working closely with the Lead Designer to outline how users will move through our products

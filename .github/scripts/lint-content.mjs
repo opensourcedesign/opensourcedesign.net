@@ -91,6 +91,17 @@ function lintFile(file) {
   const isEvent = kind === 'event';
   const isResource = kind === 'resource';
 
+  // A lone \r (or U+2028/U+2029) is a line break to YAML but invisible in a
+  // diff: inside a `|-` block it can end the block and inject front matter
+  // keys (aliases, url, …). The submission Worker strips these; flag any that
+  // slip through a manual edit.
+  // eslint-disable-next-line no-control-regex
+  const stray = text.match(/\r(?!\n)|[\u2028\u2029\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/);
+  if (stray) {
+    const line = text.slice(0, stray.index).split('\n').length;
+    errors.push(`line ${line}: stray control character U+${stray[0].charCodeAt(0).toString(16).toUpperCase().padStart(4, '0')} (a lone carriage return or similar) - remove it; it can break out of the front matter`);
+  }
+
   const fmMatch = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
   if (!fmMatch) {
     errors.push('missing or unterminated front matter block (`---` fences)');

@@ -476,7 +476,7 @@ function buildMarkdown(data, env, edit) {
   }
   fm.push('---');
   fm.push('');
-  fm.push(sanitizeMarkdown(String(data.description || '').trim()));
+  fm.push(sanitizeMarkdown(normalizeText(data.description).trim()));
   fm.push('');
 
   return { path, slug, markdown: fm.join('\n') };
@@ -528,7 +528,7 @@ function buildEventMarkdown(data, env, edit) {
   fm.push('location: ' + yq(data.location));
   fm.push('---');
   fm.push('');
-  fm.push(sanitizeMarkdown(String(data.description || '').trim()));
+  fm.push(sanitizeMarkdown(normalizeText(data.description).trim()));
   if (data.website) {
     fm.push('');
     // encodeURI keeps the URL working but percent-encodes <, >, " and
@@ -649,8 +649,21 @@ function sanitizeMarkdown(v) {
     .replace(/<(?=[a-zA-Z/!?])(?!(?:https?:\/\/|mailto:)[^\s<>]*>)/g, '&lt;');
 }
 
+// Normalize every line terminator YAML or a browser might honour (a lone \r
+// ends a line in YAML) to \n and drop the remaining control characters except
+// tab, so multi-line fields can't smuggle a line break past linesToList.
+function normalizeText(s) {
+  return String(s == null ? '' : s)
+    .replace(/\r\n?|[\u0085\u2028\u2029]/g, '\n')
+    // eslint-disable-next-line no-control-regex
+    .replace(/[\x00-\x08\x0b-\x1f\x7f]/g, '');
+}
+
+// One trimmed item per line. Every returned item is free of line breaks and
+// control characters, so it is safe inside a YAML block scalar (deliverables)
+// as well as in a quoted scalar.
 function linesToList(s) {
-  return String(s || '').split(/\r?\n/).map((x) => x.trim()).filter(Boolean);
+  return normalizeText(s).split('\n').map((x) => x.trim()).filter(Boolean);
 }
 
 function tagsToList(s) {
