@@ -273,6 +273,18 @@
     @apply break-words text-current underline decoration-current/30 underline-offset-4 hover:decoration-current;
   }
 
+  /* Text fields, textareas and selects on the job, event and resource
+     forms. A white fill and a slate-500 border (4.8:1 on white, 4.5:1 on the
+     slate-50 page, WCAG 1.4.11) make empty fields read as active rather than
+     disabled (#603). Dark mode colours live in dark-theme.css. */
+  .osd-input {
+    @apply w-full rounded-lg border border-slate-500 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-slate-900 focus:ring-2 focus:ring-slate-900/20;
+  }
+
+  .osd-input--compact {
+    @apply px-3 py-2.5;
+  }
+
   .osd-inline-md code {
     @apply rounded bg-slate-100 px-1 py-0.5 text-[0.9em] dark:bg-slate-800;
   }

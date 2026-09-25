@@ -162,8 +162,10 @@ html.dark :is(
   textarea,
   select
 ):not(.osd-on-light) {
-  background-color: var(--color-slate-900) !important;
-  border-color: var(--color-slate-600) !important;
+  /* slate-950 fill so fields stand out from the slate-900 page; slate-500
+     border (about 3.7:1 on the page) - see .osd-input in main.css. */
+  background-color: var(--color-slate-950) !important;
+  border-color: var(--color-slate-500) !important;
   color: var(--color-slate-100) !important;
 }
 
@@ -178,7 +180,7 @@ html.dark :is(
   border-color: var(--color-slate-300) !important;
 }
 
-html.dark .focus\:ring-slate-900\/20:focus {
+html.dark :is(.focus\:ring-slate-900\/20, .osd-input):focus {
   --tw-ring-color: color-mix(in oklab, var(--color-slate-100) 35%, transparent);
 }
 
