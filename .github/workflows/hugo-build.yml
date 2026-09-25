@@ -70,9 +70,12 @@ jobs:
       # encodes). This skips expensive re-encoding when the source images and
       # image templates are unchanged, keeping builds fast. The prod- prefix is
       # only ever saved by this workflow on main; previews restore it
-      # read-only, so a PR can't plant files that end up deployed.
-      - name: Cache Hugo resources
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      # read-only, so a PR can't plant files that end up deployed. Restore and
+      # save are separate steps so the cache is saved even when a later step
+      # fails (actions/cache only saves after a fully successful job).
+      - name: Restore Hugo resources cache
+        id: resources-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: resources/_gen
           key: hugo-resources-prod-${{ hashFiles('assets/**', 'hugo.toml', 'layouts/partials/resolve-image.html', 'layouts/_default/_markup/render-image.html') }}
@@ -87,6 +90,13 @@ jobs:
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
+
+      # Fail in seconds on a broken data file (like the resources.yaml indent
+      # error of #633) instead of after minutes of cold Hugo image processing.
+      - name: Validate data YAML
+        run: |
+          npm install --no-save yaml@2
+          node .github/scripts/lint-data-yaml.mjs
 
       - name: Compile Tailwind CSS
         run: |
@@ -110,6 +120,13 @@ jobs:
 
       - name: Build site
         run: bash .github/scripts/build-hugo-site.sh production
+
+      - name: Save Hugo resources cache
+        if: always() && steps.resources-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: resources/_gen
+          key: ${{ steps.resources-cache.outputs.cache-primary-key }}
 
       # Mirror public/ to gh-pages root but keep pr-preview/ so production
       # deploys do not wipe open PR previews (see preview.yml).

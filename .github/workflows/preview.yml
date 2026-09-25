@@ -91,6 +91,12 @@ jobs:
         with:
           node-version: 22
 
+      # Fail fast on a broken data file instead of after a cold Hugo build.
+      - name: Validate data YAML
+        run: |
+          npm install --no-save yaml@2
+          node .github/scripts/lint-data-yaml.mjs
+
       - name: Compile Tailwind CSS
         run: |
           npm install --no-save "tailwindcss@${TAILWIND_VERSION}" "@tailwindcss/cli@${TAILWIND_VERSION}"
