@@ -3,7 +3,7 @@ _id: c8bc8130-5c42-11f1-b307-b98ec334f62e
 status: searching
 date_posted: '2026-05-30'
 layout: jobs
-organization: Clairty
+organization: Clarity
 org_url: 'https://github.com/jcubic/Clarity'
 license: 'https://github.com/jcubic/Clarity/blob/master/LICENSE'
 title: Monoshape logo - favicon ready

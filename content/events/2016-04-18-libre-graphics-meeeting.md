@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Libre Graphics Meeting 2016"
-date: 2016-12-07
+date: 2016-04-18
 categories:
   - "design"
   - "hack"

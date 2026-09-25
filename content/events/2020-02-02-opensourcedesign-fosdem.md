@@ -6,7 +6,7 @@ categories:
   - "design"
   - "hack"
   - "meeting"
-eventDate: Sun, 2 Feb 2019
+eventDate: Sun, 2 Feb 2020
 location: Room not yet confirmed, Solbosch campus - Université Libre Brussels, Brussels, Belgium
 time: full days
 status: past

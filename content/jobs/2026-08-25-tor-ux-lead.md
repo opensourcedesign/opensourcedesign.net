@@ -1,9 +1,9 @@
 ---
-title: "TOR UX Lead"
+title: "Tor UX Lead"
 status: searching
 date_posted: "2026-08-25"
 date: "2026-08-25T04:43:56.262Z"
-organization: "TOR UX Lead"
+organization: "The Tor Project"
 org_url: "https://www.torproject.org/"
 license: "https://gitlab.torproject.org/tpo/core/tor/-/blob/main/LICENSE?ref_type=heads"
 role: "UX Lead"

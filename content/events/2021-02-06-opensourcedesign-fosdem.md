@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Call for Participation: Open Source Design Devroom at FOSDEM 2021"
-date: 2020-02-06
+date: 2021-02-06
 categories:
   - "design"
   - "hack"

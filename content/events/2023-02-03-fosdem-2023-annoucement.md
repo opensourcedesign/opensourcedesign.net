@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Open Source Design is at FOSDEM 2023!"
-date: 2022-02-03
+date: 2023-02-03
 categories:
   - "design"
   - "conference"
