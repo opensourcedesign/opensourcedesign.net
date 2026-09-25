@@ -44,13 +44,22 @@ jobs:
             exit 0
           fi
           base="${LOOKUP_URL%/lookup}"
-          sent="$(curl -fsS -H "Authorization: Bearer ${LOOKUP_SECRET}" "${base}/rejection-sent?pr=${PR_NUMBER}" | jq -r '.sent // false' || echo false)"
+          # Worker or network failures fail the run (so it can be re-run)
+          # instead of passing as "not sent" / "no email on file".
+          if ! sent_resp="$(curl -fsS --retry 3 --retry-all-errors -H "Authorization: Bearer ${LOOKUP_SECRET}" "${base}/rejection-sent?pr=${PR_NUMBER}")"; then
+            echo "::error::Rejection-status lookup failed - the Worker was unreachable or returned an error."
+            exit 1
+          fi
+          sent="$(printf '%s' "$sent_resp" | jq -r '.sent // false')"
           if [ "$sent" = "true" ]; then
             echo "Rejection email already sent for PR #${PR_NUMBER}; skipping."
             echo "found=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          resp="$(curl -fsS -H "Authorization: Bearer ${LOOKUP_SECRET}" "${LOOKUP_URL}?pr=${PR_NUMBER}" || true)"
+          if ! resp="$(curl -fsS --retry 3 --retry-all-errors -H "Authorization: Bearer ${LOOKUP_SECRET}" "${LOOKUP_URL}?pr=${PR_NUMBER}")"; then
+            echo "::error::Email lookup failed - the Worker was unreachable or returned an error."
+            exit 1
+          fi
           found="$(printf '%s' "$resp" | jq -r '.found // false')"
           if [ "$found" != "true" ]; then
             echo "No email on file for PR #${PR_NUMBER}; nothing to send."
@@ -188,4 +197,5 @@ jobs:
         run: |
           if [ -z "$LOOKUP_URL" ] || [ -z "$LOOKUP_SECRET" ]; then exit 0; fi
           base="${LOOKUP_URL%/lookup}"
-          curl -fsS -X POST -H "Authorization: Bearer ${LOOKUP_SECRET}" "${base}/rejection-sent?pr=${PR_NUMBER}" || true
+          curl -fsS --retry 3 --retry-all-errors -X POST -H "Authorization: Bearer ${LOOKUP_SECRET}" "${base}/rejection-sent?pr=${PR_NUMBER}" \
+            || echo "::warning::Could not mark the rejection email as sent; re-running this workflow would email again."

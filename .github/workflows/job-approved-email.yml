@@ -47,7 +47,12 @@ jobs:
             echo "found=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          resp="$(curl -fsS -H "Authorization: Bearer ${LOOKUP_SECRET}" "${LOOKUP_URL}?pr=${PR_NUMBER}" || true)"
+          # A Worker or network failure must fail the run (so it can be
+          # re-run), not pass as "no email on file" and silently skip.
+          if ! resp="$(curl -fsS --retry 3 --retry-all-errors -H "Authorization: Bearer ${LOOKUP_SECRET}" "${LOOKUP_URL}?pr=${PR_NUMBER}")"; then
+            echo "::error::Email lookup failed - the Worker was unreachable or returned an error."
+            exit 1
+          fi
           found="$(printf '%s' "$resp" | jq -r '.found // false')"
           if [ "$found" != "true" ]; then
             echo "No email on file for PR #${PR_NUMBER}; nothing to send."
