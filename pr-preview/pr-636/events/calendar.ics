@@ -7,7 +7,7 @@ X-WR-CALNAME:Open Source Design Events
 X-WR-CALDESC:Meetups, online calls, conference tracks, and community gatherings from Open Source Design.
 BEGIN:VEVENT
 UID:51ecacb2d7f4656c90ee96ac5ec873ae@opensourcedesign.net
-DTSTAMP:20260925T184043Z
+DTSTAMP:20260925T184217Z
 DTSTART;VALUE=DATE:20260701
 RRULE:FREQ=MONTHLY;BYDAY=1WE
 SUMMARY:Open Source Design monthly call
