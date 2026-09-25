@@ -1,0 +1,31 @@
+{{- /*
+  Link render hook - only emit links with a safe URL scheme.
+
+  Job and event pages are written by the public through the submission forms,
+  and goldmark runs with `unsafe = true`, so a Markdown link such as
+  [Apply](javascript:alert(1)) would otherwise go live as a clickable script
+  link. Allow http(s), mailto and tel plus scheme-less (relative, #anchor)
+  destinations; anything else renders as plain text. Browsers ignore ASCII
+  whitespace and control characters inside a scheme ("java\tscript:"), so they
+  are stripped before the scheme is read.
+
+  Autolinks (<https://…> and bare linkified URLs) hand the hook an unescaped
+  .Text, so when the text carries no markup it is printed from .PlainText and
+  escaped by the template engine, matching goldmark's own output. The href is
+  HTML-escaped by hand (not piped through safeURL) so the template engine
+  doesn't percent-encode ( ) ' + and every existing link renders byte-for-byte
+  as before.
+*/ -}}
+{{- $dest := .Destination -}}
+{{- $probe := lower (replaceRE `[\x00-\x20\x7f]+` "" $dest) -}}
+{{- $safe := true -}}
+{{- with findRESubmatch `^([a-z][a-z0-9+.\-]*):` $probe 1 -}}
+  {{- $safe = in (slice "http" "https" "mailto" "tel") (index (index . 0) 1) -}}
+{{- end -}}
+{{- $text := .Text | safeHTML -}}
+{{- if eq (string .Text) .PlainText }}{{ $text = .PlainText }}{{ end -}}
+{{- if $safe -}}
+<a {{ printf `href="%s"` (htmlEscape $dest) | safeHTMLAttr }}{{ with .Title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
+{{- else -}}
+{{ $text }}
+{{- end -}}
