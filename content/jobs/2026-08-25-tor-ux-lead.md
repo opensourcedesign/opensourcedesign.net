@@ -1,6 +1,6 @@
 ---
 title: "Tor UX Lead"
-status: searching
+status: expired
 date_posted: "2026-08-25"
 date: "2026-08-25T04:43:56.262Z"
 organization: "The Tor Project"

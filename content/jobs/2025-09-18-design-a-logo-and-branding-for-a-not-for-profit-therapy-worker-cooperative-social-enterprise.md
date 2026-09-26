@@ -1,6 +1,6 @@
 ---
 _id: aa276d10-94d9-11f0-a4b3-873de3dfe925
-status: searching
+status: expired
 date_posted: '2025-09-18'
 layout: jobs
 organization: Common Ground Therapy
