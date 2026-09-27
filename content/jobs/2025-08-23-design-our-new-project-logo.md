@@ -1,6 +1,6 @@
 ---
 _id: ca0b4290-802b-11f0-8929-d7eb9b335102
-status: searching
+status: expired
 date_posted: '2025-08-23'
 layout: jobs
 organization: Muchrooms

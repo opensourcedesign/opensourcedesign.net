@@ -1,6 +1,6 @@
 ---
 _id: b164e5a0-954f-11f0-ba7f-873e3654e788
-status: searching
+status: expired
 date_posted: '2025-09-19'
 layout: jobs
 organization: Collabora Online
