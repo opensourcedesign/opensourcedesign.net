@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="420mm"
+   height="594mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="opensourcedesign-poster-source.svg"
+   viewBox="0 0 1488.189 2104.7244"
+   inkscape:export-filename="/home/jan/Nextcloud/Open Source Design logo/opensourcedesign-poster-simple.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="900.3428"
+     inkscape:cy="1216.7143"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1046"
+     inkscape:window-x="0"
+     inkscape:window-y="1114"
+     inkscape:window-maximized="1"
+     units="mm" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,1052.3622)">
+    <path
+       d="m 1094.0945,-653.11906 -700.00002,0 0,700.00003 224.87182,3e-5 0.25641,-0.51282 c 0,0 71.02564,-191.53846 80.51281,-205.64101 0,0 -81.79486,-18.46155 -79.48717,-152.0513 2.30769,-133.58976 104.61537,-201.53848 104.61537,-201.53848 0,0 -17.94872,102.56411 63.33334,140.51282 0,0 78.20512,22.3077 76.92307,101.02566 -1.53846,78.71794 -50.51281,102.30769 -75.64102,113.07694 9.23076,13.58973 75.38461,192.05128 80.2564,204.87178 L 1094.0945,46.881 Z"
+       id="path4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccsccccccc" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4756"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';text-align:start;letter-spacing:-100px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-6.8986759,-1032.3622)"><flowRegion
+         id="flowRegion4758"><rect
+           id="rect4760"
+           width="1414.2855"
+           height="1400.0001"
+           x="45.714287"
+           y="1141.8672" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:125px;line-height:139.99999762%;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:center;letter-spacing:0px;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1"
+         id="flowPara4798">Open Source Design</flowPara></flowRoot>    <flowRoot
+       transform="translate(-9.6919376,-426.3622)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, Normal';text-align:start;letter-spacing:-100px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4797"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4799"><rect
+           y="1141.8672"
+           x="45.714287"
+           height="1400.0001"
+           width="1414.2855"
+           id="rect4801" /></flowRegion><flowPara
+         id="flowPara4837"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:87.5px;line-height:139.99999762%;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';text-align:center;letter-spacing:0px;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1">opensourcedesign.net</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5083"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion5085"><rect
+           id="rect5087"
+           width="892.97485"
+           height="464.67017"
+           x="-468.71078"
+           y="2273.3237" /></flowRegion><flowPara
+         id="flowPara5089"></flowPara></flowRoot>  </g>
+</svg>
