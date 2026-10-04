@@ -1,6 +1,6 @@
 ---
 _id: 63816530-a08e-11f0-a380-4dd8ed4d3931
-status: searching
+status: expired
 date_posted: '2025-10-03'
 layout: jobs
 organization: Owncast
