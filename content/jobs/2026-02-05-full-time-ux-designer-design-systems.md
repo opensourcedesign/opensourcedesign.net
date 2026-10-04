@@ -4,8 +4,9 @@ status: searching
 date_posted: "2026-02-05"
 date: "2026-02-05T14:35:35.613Z"
 _id: "eed6b4a0-029f-11f1-8a33-733de303306a"
+slug: "full-time-ux-designer-design-systems"
 layout: "jobs"
-last_updated: "2026-08-25"
+last_updated: "2026-10-02"
 organization: "Canonical design system"
 org_url: "https://vanillaframework.io/"
 license: "https://github.com/canonical/vanilla-framework/blob/main/LICENSE"
@@ -17,7 +18,6 @@ tags:
 how_to_apply:
   - "hayden.chambers@canonical.com"
   - "https://grnh.se/iqyypnh31us"
-slug: "full-time-ux-designer-design-systems"
 ---
 
 Please apply through: https://grnh.se/iqyypnh31us
