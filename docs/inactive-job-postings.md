@@ -21,19 +21,15 @@ If a job changes to filled or closed, simply remove it from the table. We only n
 
 | Job title                                                       | Link to edit job posting                                                                                                       | Status                      |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------- |
-| UI/UX Redesign for Therapy Worker Cooperative webpage           | https://opensourcedesign.net/jobs/job-form/?edit=2026-06-05-ui-ux-redesign-for-therapy-worker-cooperative-webpage.md           | Contacted October 2nd, 2026 |
 | Monoshape logo - favicon ready                                  | https://opensourcedesign.net/jobs/job-form/?edit=2026-05-30-monoshape-logo-favicon-ready.md                                    | Contacted October 2nd, 2026 |
 | Create visual identity, branding and catchy name                | https://opensourcedesign.net/jobs/job-form/?edit=2026-05-18-create-visual-identity-branding-and-catchy-name.md                 | Contacted October 2nd, 2026 |
 | The ArcOS project                                               | https://opensourcedesign.net/jobs/job-form/?edit=2026-05-17-the-arcos-project.md                                               | Contacted October 2nd, 2026 |
-| UI/UX Designer for Open Source F1 Widget App                    | https://opensourcedesign.net/jobs/job-form/?edit=2026-05-03-ui-ux-designer-for-open-source-f1-widget-app.md                    | Contacted October 2nd, 2026 |
 | Recruiting Digital Illustrator - Freelance position             | https://opensourcedesign.net/jobs/job-form/?edit=2026-04-16-recruiting-digital-illustrator-freelance-position.md               | Contacted October 2nd, 2026 |
 | Home page design for our No To Big Tech movement                | https://opensourcedesign.net/jobs/job-form/?edit=2026-04-16-home-page-design-for-our-no-to-big-tech-movement.md                | Contacted October 2nd, 2026 |
-| Full-time UX Designer - Design systems                          | https://opensourcedesign.net/jobs/job-form/?edit=2026-02-05-full-time-ux-designer-design-systems.md                            | Contacted October 2nd, 2026 |
+| Full-time UX Designer - Design systems                          | https://opensourcedesign.net/jobs/job-form/?edit=2026-02-05-full-time-ux-designer-design-systems.md                            | Contacted October 2nd, 2026 and is active |
 | Design logo for zsweep A minimalistic Web Game with Vim motions | https://opensourcedesign.net/jobs/job-form/?edit=2026-01-15-design-logo-for-zsweep-a-minimalistic-web-game-with-vim-motions.md | Contacted October 2nd, 2026 |
 | UX/UI Redesign for PlugBrain – Digital Wellbeing Android App    | https://opensourcedesign.net/jobs/job-form/?edit=2025-11-20-ux-ui-redesign-for-plugbrain-digital-wellbeing-android-app.md      | Contacted October 2nd, 2026 |
-| Design our new home page + web site theme                       | https://opensourcedesign.net/jobs/job-form/?edit=2025-10-03-design-our-new-home-page-web-site-theme.md                         | Contacted October 2nd, 2026 |
-
-
+| Homepage Redesign                                               | https://opensourcedesign.net/jobs/job-form/?edit=2026-03-13-homepage-redesign.md                                               | Contacted October 9th, 2026 |
 
 ## Email template
 
