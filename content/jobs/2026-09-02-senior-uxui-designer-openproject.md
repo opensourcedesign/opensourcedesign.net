@@ -5,7 +5,7 @@ date_posted: "2026-09-02"
 date: "2026-09-02T13:15:42.124Z"
 slug: "senior-ux-ui-designer-openproject"
 aliases:
-  - "/jobs/senior-ux/ui-designer-openproject/"
+  - /jobs/senior-ux/ui-designer-openproject/
 last_updated: "2026-10-01"
 organization: "OpenProject"
 org_url: "https://www.openproject.org/"
