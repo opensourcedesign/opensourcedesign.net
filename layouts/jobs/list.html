@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ $jobsAll := partial "functions/job-postings.html" . }}
-  {{/* Deadline-aware: searching jobs whose application deadline passed are
-       excluded here and surface on the archive page instead (issue #84). */}}
+  {{/* Searching jobs that have lapsed (deadline passed or older than a year)
+       are excluded here and surface on the archive page instead (issue #84). */}}
   {{ $jobs := partial "functions/open-jobs.html" $jobsAll }}
   {{ $jobsArchivedCount := sub (len $jobsAll) (len $jobs) }}
   {{/* Robustly count compensation types (handles paid / gratis / volunteer / free / unspecified). */}}
@@ -160,7 +160,7 @@
             {{ $posted = (time.AsTime .).Format "2006-01-02" }}
             {{ if gt (int (div (now.Sub (time.AsTime .)).Hours 24)) 90 }}{{ $staleNow = true }}{{ end }}
           {{ end }}
-          <a class="group block py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="{{ .RelPermalink }}" aria-label="{{ .Title }}{{ if $org }} at {{ $org }}{{ end }}">
+          <a class="group block py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="{{ .RelPermalink }}">
             <span class="flex items-start justify-between gap-4">
               <span class="text-lg font-semibold leading-snug text-slate-900 decoration-slate-300 underline-offset-4 group-hover:underline">{{ .Title }}</span>
               <span class="flex shrink-0 items-center gap-2">

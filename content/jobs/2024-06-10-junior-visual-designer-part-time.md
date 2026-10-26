@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: ''
 tags: [branding, visual design, ui]
 date: '2024-06-10T06:48:09.564Z'
+slug: "junior-visual-designer-part-time"
 ---
 About the Role
 

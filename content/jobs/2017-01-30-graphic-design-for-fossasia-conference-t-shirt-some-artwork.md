@@ -16,6 +16,7 @@ date: '2017-01-31T16:28:50.377Z'
 aliases:
   - /jobs/2017-01-30-Graphic design for FOSSASIA conference (t-shirt + some artwork)/
 
+slug: "graphic-design-for-fossasia-conference-t-shirt--some-artwork"
 ---
 
 FOSSASIA 2017 - one of the biggest open source conference in Asia, is looking for help to design few things:

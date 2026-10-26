@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo]
 date: '2020-06-18T18:50:24.242Z'
+slug: "new-logo-needed-for-safrano-opensource-odata-library"
 ---
 Just need a logo for an OpenSource OData library.
 It's ruby based so maybe it shall have something in common with ruby logo, but this is not a must.

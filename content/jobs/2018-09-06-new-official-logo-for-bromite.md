@@ -13,6 +13,7 @@ how_to_apply:
   - "https://www.bromite.org/news/2018-09-05-submissions-for-new-logo\r\nhttps://github.com/bromite/bromite/issues/120"
 tags: [logo, browser, privacy, open source]
 date: '2018-09-06T17:48:40.434Z'
+slug: "new-official-logo-for-bromite"
 ---
 # Submissions for new logo
 

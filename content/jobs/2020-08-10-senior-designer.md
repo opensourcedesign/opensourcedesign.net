@@ -14,6 +14,7 @@ how_to_apply:
   - 'https://www.hotosm.org/jobs/senior-designer/'
 github_handle: ''
 date: '2020-08-10T11:30:08.166Z'
+slug: "senior-designer"
 ---
 Humanitarian OpenStreetMap Team (HOT) is a US-based NGO and global community of thousands of volunteers working together to use maps and open data for humanitarian response and the Sustainable Development Goals. The Senior Designer will contribute their creative energy to a passionate team of open source hacktivists. You will be responsible for capturing user insights and creating a collage of imaginative ideas which can be realised through agile collaboration with a team of technical superstars. You will ignite HOT’s dynamic community of digital humanitarians by understanding the needs of a diverse group of staff, stakeholders, volunteers, contributors and users in order to inspire user flow and delight as we map an area home to one billion people.
 

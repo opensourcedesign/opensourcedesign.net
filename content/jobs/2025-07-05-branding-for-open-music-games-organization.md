@@ -16,6 +16,7 @@ how_to_apply:
 github_handle: 'https://github.com/marwin89'
 tags: [logo, branding, games]
 date: '2025-07-05T15:05:17.898Z'
+slug: "branding-for-open-music-games-organization"
 ---
 About Us:
 Open Music Games Organization is a voluntary small growing collective of karaoke geeks who continuously unite developers of open source scene to make high quality sing and band games. We are based in Germany and are founded in 2023.

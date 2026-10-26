@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, color]
 date: '2021-03-28T14:50:12.497Z'
+slug: "logo-design-for-community-network"
 ---
 DC Mesh Community Network is a brand new community operated wireless network in Washington DC. We are just starting outreach to the neighborhoods that we want to serve and are designing collateral to use for that purpose. 
 

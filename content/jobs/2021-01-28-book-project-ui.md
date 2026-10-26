@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: ''
 tags: [ui, design]
 date: '2021-01-28T18:00:54.816Z'
+slug: "ui-designer"
 ---
 
 ![logo one line@5x](https://user-images.githubusercontent.com/11173328/119092775-c1dd2d80-ba06-11eb-910c-2ddef42d60a5.png)

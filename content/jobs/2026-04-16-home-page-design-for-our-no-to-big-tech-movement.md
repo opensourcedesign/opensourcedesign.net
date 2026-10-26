@@ -16,6 +16,7 @@ how_to_apply:
 github_handle: ''
 tags: [web design]
 date: '2026-04-16T10:18:50.234Z'
+slug: "home-page-design-for-our-no-to-big-tech-movement"
 ---
 No To Big Tech is a decentralised, people-powered movement that aims to raise awareness and take action against Big Tech.
 

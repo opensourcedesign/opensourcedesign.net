@@ -15,6 +15,7 @@ how_to_apply:
   - Björn <bjoern@privact.org>
 github_handle: ''
 date: '2025-02-20T08:11:26.672Z'
+slug: "design-our-path-to-reclaiming-digital-privacy"
 ---
 With the non-profit organization privact e.V. we aim to overcome surveillance capitalism and reclaim digital privacy for all.
 

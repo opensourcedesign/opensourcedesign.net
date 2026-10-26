@@ -11,6 +11,7 @@ status: filled
 compensation: negotiated hourly rate
 date_posted: 2015-03-18
 how_to_apply: Contact contact at taoeffect dot com
+slug: "open-source-espionage-3"
 ---
 
 ## Toward Sustainable Open Source Development. Cocoa Developer Wanted.

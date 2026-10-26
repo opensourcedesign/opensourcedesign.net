@@ -16,6 +16,7 @@ date: '2018-12-13T01:21:04.690Z'
 aliases:
   - /jobs/2018-12-13-/
 
+slug: "design-10th-anniversary-logo-for-fossasia"
 ---
 2019 will be the 10th anniversary of FOSSASIA. We would like to have a special logo for this celebration. 
 

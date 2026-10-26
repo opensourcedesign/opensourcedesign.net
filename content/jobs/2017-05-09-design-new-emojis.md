@@ -21,6 +21,7 @@ how_to_apply:
   - "https://github.com/EmojiTwo/emojitwo/issues/ https://github.com/EmojiTwo/emojitwo/blob/master/CONTRIBUTING.md"
 tags: [emoji, icons]
 date: '2017-05-09T08:40:10.267Z'
+slug: "design-new-emojis"
 ---
 Emojitwo is a CC-BY-4.0 fork of the popular Emojione 2.2 artwork, because Emojione 3.0 now uses a freemium model without free access to SVG sources.
 

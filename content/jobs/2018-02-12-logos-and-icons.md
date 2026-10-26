@@ -20,3 +20,5 @@ tags: [logo, branding, graphic design]
 date: '2018-02-12T17:29:10.661Z'
 slug: logos-and-icons
 ---
+
+Pet Hero is an open-source project aimed to bring pet lovers together with animals who need loving homes. We are looking for a designer to make our logo and set of icons which will help to brand the web application. We are looking for a designer who is comfortable with comic-style art.

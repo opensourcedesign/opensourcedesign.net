@@ -14,6 +14,7 @@ date: '2017-02-05T15:44:26.626Z'
 aliases:
   - /jobs/2017-02-05-Usability Testing with coala/
 
+slug: "usability-testing-with-coala"
 ---
 
 Very simple: go to coala.io, do something useful.

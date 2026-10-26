@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: Dieterbe
 tags: [design, branding, ux]
 date: '2024-02-27T18:59:01.764Z'
+slug: "design-ux-direction-for-self-improvement-app"
 ---
 The mission of tapas.fit is to make self-improvement accessible and free to all, via a free database and open source mobile app.
 See the website for more information.

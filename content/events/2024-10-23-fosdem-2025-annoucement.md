@@ -11,6 +11,8 @@ location: université Libre Brussels, Belgium
 time: 13:00 to 17:00 CET
 status: past
 permalink: /2024/10/23/fosdem-2025-annoucement
+aliases:
+  - /2024/10/23/fosdem-2025-annoucement/
 ---
 
 ## FOSDEM 2025 has been annouced and we are excited for another in-person Open Source Design devroom!

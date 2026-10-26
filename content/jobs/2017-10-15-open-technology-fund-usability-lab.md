@@ -15,6 +15,7 @@ how_to_apply: "
   https://www.opentech.fund/requests/expanding-services-offered-otfs-usability-lab"
 tags: [rfp, usability testing, open technology fund, usability]
 date: '2017-10-15T14:26:51.952Z'
+slug: "rfp-expanding-services-offered-by-otfs-usability-lab"
 ---
 OTF seeks multiple service partners to help expand its services to better support the community as well as improve knowledge sharing around specific usability challenges facing internet freedom tools. To this end OTF seeks services toward three different objectives:-
 

@@ -16,6 +16,7 @@ how_to_apply:
 github_handle: '@jwflory'
 tags: [design strategy, community building, mentorship]
 date: '2021-12-20T16:03:39.330Z'
+slug: "design-specialist-programme-adviser-stockholm-sweden"
 ---
 * Level: [P-3](https://careers.un.org/lbw/home.aspx?viewtype=SC)
 * Location: Sweden

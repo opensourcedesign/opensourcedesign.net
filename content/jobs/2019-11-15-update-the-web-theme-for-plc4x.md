@@ -17,6 +17,7 @@ how_to_apply:
 github_handle: ''
 tags: [web design]
 date: '2019-11-15T14:02:54.403Z'
+slug: "update-the-web-theme-for-plc4x"
 ---
 It is our goal to create a set of libraries, that allow unified access to any type of Programmable Logic Controllers.
 

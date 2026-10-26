@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/git:1": {}
   },
-  "postCreateCommand": "HUGO_VERSION=0.164.0 && curl -fsSL -o /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb && sudo dpkg -i /tmp/hugo.deb && rm /tmp/hugo.deb",
+  "postCreateCommand": "HUGO_VERSION=0.166.0 && curl -fsSL -o /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb && sudo dpkg -i /tmp/hugo.deb && rm /tmp/hugo.deb",
   "postStartCommand": "nohup hugo server --bind 0.0.0.0 --buildDrafts --buildFuture >/tmp/hugo.log 2>&1 &",
   "forwardPorts": [1313],
   "portsAttributes": {

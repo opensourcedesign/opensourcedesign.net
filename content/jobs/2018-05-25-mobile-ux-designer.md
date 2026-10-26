@@ -21,6 +21,7 @@ tags:
   - comment-subscription
 date: '2018-05-25T11:54:41.164Z'
 timestamp: 1527249281
+slug: "mobile-ux-designer"
 ---
 Briar is a messaging app designed for activists, journalists, and anyone else who needs a safe, easy and robust way to communicate.
 

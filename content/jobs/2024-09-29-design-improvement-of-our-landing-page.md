@@ -18,5 +18,6 @@ how_to_apply:
 github_handle: '@cpvalente'
 tags: [web design]
 date: '2024-09-29T17:53:59.901Z'
+slug: "design-improvement-of-our-landing-page"
 ---
 Ontime is a growing FOSS application for rundown management, used mostly by video engineers and entertainment technicians. Our landing page needs improvement to better represent the application and attract potential users

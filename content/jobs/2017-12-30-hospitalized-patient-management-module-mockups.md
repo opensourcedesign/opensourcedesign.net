@@ -14,6 +14,7 @@ how_to_apply:
   - 'http://open-emr.org/'
 tags: [healthcare, ux, ui]
 date: '2017-12-31T07:44:19.432Z'
+slug: "hospitalized-patient-management-module-mockups"
 ---
 My name is Matthew Vita, a project admin on OpenEMR. I'm looking for design help on mocking up a hospitalized patient management module in OpenEMR. Most clinicians that use the system don't work in a hospital setting, but it's important that we better support those that do, especially in developing countries. This will open doors for healthcare providers that previously couldn't use the system because of such limitations.
 

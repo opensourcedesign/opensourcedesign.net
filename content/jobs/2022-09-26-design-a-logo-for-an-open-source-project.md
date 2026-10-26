@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: reshamas
 tags: [logo, branding, events, open source, calendar]
 date: '2022-09-26T20:15:58.575Z'
+slug: "design-a-logo-for-an-open-source-project"
 ---
 The Data Events Board is a platform for the community to share their events. In the spirit of open source, this event board has been built using open source software (Python, Django, React) and the application code is publicly available.
 

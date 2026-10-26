@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [branding, design, languages, librelingo]
 date: '2021-01-01T12:33:27.933Z'
+slug: "improve-librelingos-design"
 ---
 Looking for someone who wants to shape the future design on LibreLingo.
 

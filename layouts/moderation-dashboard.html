@@ -2,13 +2,12 @@
 {{ define "main" }}
   {{ $all := partial "functions/job-postings.html" . }}
   {{ $open := partial "functions/open-jobs.html" $all }}
-  {{ $today := now.Format "2006-01-02" }}
   {{ $filled := where $all "Params.status" "in" (slice "filled" "solved" "resolved" "completed") }}
   {{ $closed := where $all "Params.status" "closed" }}
   {{ $expired := where $all "Params.status" "expired" }}
   {{ $searching := where $all "Params.status" "searching" }}
   {{ $stale := slice }}
-  {{ $deadlinePassed := slice }}
+  {{ $lapsed := slice }}
   {{ $reminderWindow := slice }}
   {{ range $p := $searching }}
     {{ with $p.Params.date_posted }}
@@ -16,10 +15,7 @@
       {{ if gt $days 90 }}{{ $stale = $stale | append $p }}{{ end }}
       {{ if and (ge $days 42) (le $days 48) }}{{ $reminderWindow = $reminderWindow | append $p }}{{ end }}
     {{ end }}
-    {{ with $p.Params.deadline }}
-      {{ $d := (time.AsTime (printf "%v" .)).Format "2006-01-02" }}
-      {{ if lt $d $today }}{{ $deadlinePassed = $deadlinePassed | append $p }}{{ end }}
-    {{ end }}
+    {{ if partial "functions/job-lapsed.html" $p }}{{ $lapsed = $lapsed | append $p }}{{ end }}
   {{ end }}
 
   <article class="mx-auto max-w-5xl px-4 py-10">
@@ -28,7 +24,7 @@
       <h1 class="mt-1 text-3xl font-bold tracking-tight text-slate-950 dark:text-slate-50">{{ .Title }}</h1>
       <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
         Snapshot of the job board as of this site build ({{ now.Format "2 January 2006" }}).
-        Open counts exclude filled, closed, and expired listings, plus searching posts past their deadline.
+        Open counts exclude filled, closed, and expired listings, plus searching posts past their deadline or older than a year.
       </p>
     </header>
 
@@ -71,12 +67,12 @@
           {{ end }}
         </div>
         <div class="osd-card p-5">
-          <p class="font-medium text-slate-900 dark:text-slate-100">Deadline passed (still searching)</p>
-          <p class="mt-2 text-2xl font-bold text-amber-700 dark:text-amber-400">{{ len $deadlinePassed }}</p>
-          <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">The weekly expire workflow should flip these to <code class="rounded bg-slate-100 px-1 dark:bg-slate-800">expired</code> within a day.</p>
-          {{ if gt (len $deadlinePassed) 0 }}
+          <p class="font-medium text-slate-900 dark:text-slate-100">Lapsed (still searching)</p>
+          <p class="mt-2 text-2xl font-bold text-amber-700 dark:text-amber-400">{{ len $lapsed }}</p>
+          <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">Deadline passed or older than a year. The daily expire workflow opens a pull request flipping these to <code class="rounded bg-slate-100 px-1 dark:bg-slate-800">expired</code>; the site already treats them as expired.</p>
+          {{ if gt (len $lapsed) 0 }}
             <ul class="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300">
-              {{ range first 5 $deadlinePassed }}
+              {{ range first 5 $lapsed }}
                 <li><a class="underline decoration-slate-300 underline-offset-2 hover:text-slate-900 dark:hover:text-slate-50" href="{{ .RelPermalink }}">{{ .Title | truncate 60 }}</a></li>
               {{ end }}
             </ul>

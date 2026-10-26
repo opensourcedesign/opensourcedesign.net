@@ -14,5 +14,6 @@ how_to_apply:
 github_handle: ''
 tags: [logo, branding, open source]
 date: '2021-11-27T15:23:10.493Z'
+slug: "design-a-new-logo"
 ---
 Fosshost is a project the offers free hosting and other services to the FOSS community, and is run entirely by a team of volunteers. To help us advance our brand, we want a new logo that encompasses what we do and what our goals are

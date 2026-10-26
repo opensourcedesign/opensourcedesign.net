@@ -1,12 +1,12 @@
 ---
 title: "UI/UX Redesign for Therapy Worker Cooperative webpage"
-status: searching
+status: filled
 date_posted: "2026-06-05"
 date: "2026-06-06T00:45:55.066Z"
 _id: "134d2f30-6141-11f1-b203-a584b3889a09"
 slug: "ui-ux-redesign-for-therapy-worker-cooperative-webpage"
 layout: "jobs"
-last_updated: "2026-08-11"
+last_updated: "2026-10-02"
 organization: "Common Ground Therapy Worker Cooperative"
 org_url: "https://www.therapy.coop/"
 license: "https://github.com/Common-Ground-Therapy/Branding#CC0-1.0-1-ov-file"

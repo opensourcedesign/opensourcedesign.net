@@ -20,5 +20,11 @@ how_to_apply:
 tags: [privacy, web, javascript]
 date: '2018-02-09T15:48:13.529Z'
 timestamp: 1518191293
+slug: "helpful-ways-for-web-sites-to-warn-users-who-are-vulnerable-to-third-party-tracking"
 ---
- 
+
+Aloodo is a fake third-party tracker designed to help webmasters get their users protected from real third-party trackers.
+
+Include the Aloodo script on your site and it will generate JavaScript events when it detects that it can track the same browser from one site to another. 
+
+Design help is needed in presenting tracking warnings to the user in a way that will best help and encourage them to take action and get protected, without being confused for an ad, scam, or malware.

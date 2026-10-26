@@ -1,7 +1,11 @@
 {{- $pctx := . -}}
 {{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
 {{- $pages := slice -}}
-{{- if or $.IsHome $.IsSection -}}
+{{- if and $.IsSection (eq $.Section "jobs") -}}
+{{- /* Only actual postings: the form, archive and guide pages also live in
+       content/jobs/ but carry no status. */ -}}
+{{- $pages = (where $pctx.RegularPages "Params.status" "!=" nil).ByDate.Reverse -}}
+{{- else if or $.IsHome $.IsSection -}}
 {{- $pages = $pctx.RegularPages -}}
 {{- else -}}
 {{- $pages = $pctx.Pages -}}

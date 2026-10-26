@@ -15,6 +15,7 @@ how_to_apply: Contact via GitHub (silexlabs) — contact at silexlabs.org
 aliases:
   - /jobs/2016-08-03-MakeSilexWebsiteBuilderTemplatesResponsive/
 
+slug: "silex-website-builder-update-the-templates-and-make-them-responsive"
 ---
 [Silex](http://www.silex.me/) is a free and open source website builder (community driven), that can be used directly in a browser. It is an alternative to Wix, Squarespace, etc.
 

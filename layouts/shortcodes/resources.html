@@ -6,9 +6,11 @@
      Adds a category filter (chips), a live text search, and URL state
      (?cat=<id>&q=<query>) mirroring the jobs board interaction. `not-prose`
      opts the section out of typography styling. */ -}}
-{{- $categories := hugo.Data.resources -}}
+{{- /* default slice: a missing file or a category without items must not
+       abort the build with "len of nil". */ -}}
+{{- $categories := hugo.Data.resources | default slice -}}
 {{- $total := 0 -}}
-{{- range $categories }}{{ $total = add $total (len .items) }}{{ end -}}
+{{- range $categories }}{{ $total = add $total (len (.items | default slice)) }}{{ end -}}
 {{ with $categories }}
   <section class="not-prose my-10" aria-labelledby="resources-directory-heading">
     <h2 class="sr-only" id="resources-directory-heading">Resources directory</h2>
@@ -23,7 +25,7 @@
       <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filter by category">
         <button class="osd-filter rounded-full border border-slate-900 bg-slate-900 px-3 py-1.5 text-[13px] font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="all" aria-pressed="true">All <span class="opacity-60">{{ $total }}</span></button>
         {{ range . }}
-          <button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="{{ .id }}" aria-pressed="false">{{ .title }} <span class="opacity-60">{{ len .items }}</span></button>
+          <button class="osd-filter rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2" type="button" data-cat="{{ .id }}" aria-pressed="false">{{ .title }} <span class="opacity-60">{{ len (.items | default slice) }}</span></button>
         {{ end }}
       </div>
     </div>
@@ -38,7 +40,7 @@
       {{ range . }}
         {{ $cat := . }}
         <section class="resource-cat mt-10 scroll-mt-24" id="{{ .id }}" data-cat="{{ .id }}" aria-labelledby="cat-{{ .id }}">
-          <h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-{{ .id }}">{{ .title }} <span class="font-normal normal-case tracking-normal text-slate-500">{{ len .items }}</span></h3>
+          <h3 class="flex items-baseline gap-2 border-b border-slate-200 pb-2 text-xs font-semibold uppercase tracking-widest text-slate-500" id="cat-{{ .id }}">{{ .title }} <span class="font-normal normal-case tracking-normal text-slate-500">{{ len (.items | default slice) }}</span></h3>
           {{ with .note }}
             <div class="mt-3 max-w-prose text-sm leading-relaxed text-slate-600 break-words [&_a]:font-medium [&_a]:text-slate-900 [&_a]:underline [&_a]:decoration-slate-300 [&_a]:underline-offset-4 hover:[&_a]:decoration-slate-900">{{ . | markdownify }}</div>
           {{ end }}

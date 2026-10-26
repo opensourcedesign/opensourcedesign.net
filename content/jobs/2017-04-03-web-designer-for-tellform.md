@@ -15,6 +15,7 @@ how_to_apply:
 tags: [ui, web design, typeform, forms]
 date: '2017-04-03T19:22:08.944Z'
 timestamp: 1491247328
+slug: "web-designer-for-tellform"
 ---
 TellForm is an opensource, beautiful form builder that is similar to Typeform. We have over 10k unique visits per month and have been featured in BetaList, ProductHunt, HackerNews.
 

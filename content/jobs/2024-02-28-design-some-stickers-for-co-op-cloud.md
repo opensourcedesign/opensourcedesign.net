@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [stickers]
 date: '2024-02-28T12:29:21.892Z'
+slug: "design-some-stickers-for-co-op-cloud"
 ---
 About
 Co-op Cloud is a software stack that aims to make hosting libre software applications simple for small service providers such as tech co-operatives who are looking to standardise around an open, transparent and scalable infrastructure. It uses the latest container technologies and configurations are shared into the commons for the benefit of all. 

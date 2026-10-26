@@ -20,4 +20,7 @@ excerpt_separator: <!--more-->
 draft: true
 slug: dogfooding-github-badge
 ---
- 
+
+Hubi is a tool to generate code based on ubiquitous language.
+
+I tried to find a GitHub badge which showcases the project is created using the project itself but found none.

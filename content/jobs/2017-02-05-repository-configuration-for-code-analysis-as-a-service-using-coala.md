@@ -14,6 +14,7 @@ date: '2017-02-05T15:48:39.074Z'
 aliases:
   - /jobs/2017-02-05-Repository configuration for code analysis as a service using coala/
 
+slug: "repository-configuration-for-code-analysis-as-a-service-using-coala"
 ---
 
 Very simple: go to app.gitmate.io, set up a repository, set up code analysis.

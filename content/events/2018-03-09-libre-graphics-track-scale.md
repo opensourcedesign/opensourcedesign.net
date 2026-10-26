@@ -12,6 +12,8 @@ location: Pasadena Convention Center, Pasadena, CA USA
 time: full day
 status: past
 permalink: /2018/03/09/lg-scale-2018
+aliases:
+  - /2018/03/09/lg-scale-2018/
 ---
 
 SCaLE 16X – the 16th annual Southern California Linux Expo – will take place on March. 8-11, 2018, at the [Pasadena Convention Center](https://www.socallinuxexpo.org/scale/16x/venue).

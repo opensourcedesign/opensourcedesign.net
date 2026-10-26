@@ -15,5 +15,6 @@ how_to_apply:
 github_handle: ''
 tags: [logo, branding, graphic design, badges, hacktoberfest]
 date: '2024-09-12T05:09:36.034Z'
+slug: "holopins-contributors-design-badge"
 ---
 Mautic is an open-source marketing automation platform, and we're looking for creative designers to help create digital badges for our contributors on Holopin. These badges will celebrate contributions to our project, particularly for Hacktoberfest. We need eye-catching and memorable badge designs that can represent various levels of contribution and involvement.

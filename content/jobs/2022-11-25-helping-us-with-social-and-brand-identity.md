@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: '@davideimola'
 tags: [branding, social media graphics, logo]
 date: '2022-11-25T20:18:58.139Z'
+slug: "helping-us-with-social-and-brand-identity"
 ---
 Schrödinger Hat is an open-source community. Our mission is to share the love for open-source!
 

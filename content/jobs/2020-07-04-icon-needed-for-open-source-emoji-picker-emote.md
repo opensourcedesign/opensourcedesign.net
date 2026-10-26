@@ -17,6 +17,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, icons]
 date: '2020-07-04T14:50:53.705Z'
+slug: "icon-needed-for-open-source-emoji-picker-emote"
 ---
 Emote currently simply uses an emoji from the Twitter emoji set as its icon. This is by definition not unique at all and I don't think is particularly aesthetically pleasing either.
 

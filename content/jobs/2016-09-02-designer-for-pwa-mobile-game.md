@@ -13,6 +13,7 @@ status: filled
 compensation: gratis
 date_posted: 2016-09-02
 how_to_apply: Contact write@moritz.berlin
+slug: "designer-for-offline-first-progressive-web-app-mobile-game"
 ---
 
 I am looking for a designer to partner me for my currently in development progressive web app.

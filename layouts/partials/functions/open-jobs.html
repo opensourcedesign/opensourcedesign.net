@@ -1,18 +1,14 @@
 {{/* Returns the genuinely open jobs from the given page collection: status
-     "searching" AND no application deadline in the past (issue #84). Build
-     time is the no-JS baseline; the scheduled job-expire workflow flips
-     status to "expired" shortly after a deadline passes, so the two stay in
-     sync within a day.
+     "searching" AND not lapsed - no application deadline in the past and not
+     older than a year (issue #84, see functions/job-lapsed.html). Build time
+     is the no-JS baseline; the scheduled job-expire workflow proposes the
+     matching status flip to "expired" in a pull request.
 
      Built with complement (not append) so the result keeps the Pages type
      and supports .ByDate etc. */}}
 {{ $searching := where . "Params.status" "searching" }}
 {{ $expired := slice }}
-{{ $today := now.Format "2006-01-02" }}
 {{ range $p := $searching }}
-  {{ with $p.Params.deadline }}
-    {{ $d := (time.AsTime (printf "%v" .)).Format "2006-01-02" }}
-    {{ if lt $d $today }}{{ $expired = $expired | append $p }}{{ end }}
-  {{ end }}
+  {{ if partial "functions/job-lapsed.html" $p }}{{ $expired = $expired | append $p }}{{ end }}
 {{ end }}
 {{ return ($searching | complement $expired) }}

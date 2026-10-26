@@ -27,6 +27,7 @@
  */
 
 import fs from 'node:fs';
+import { jobPath } from './job-url.mjs';
 import { readYamlScalar } from './yaml-front-matter.mjs';
 
 const SITE = (process.env.SITE_BASE_URL || 'https://opensourcedesign.net').replace(/\/+$/, '');
@@ -43,30 +44,14 @@ function frontMatter(text) {
   return m ? m[1] : '';
 }
 
-// Mirrors the Worker's slugify (which itself mirrors Hugo's :slug fallback
-// for the /jobs/:slug/ permalink pattern).
-function slugify(str) {
-  return String(str || '')
-    .trim()
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
-}
-
 function jobFromFile(file) {
-  const fm = frontMatter(fs.readFileSync(file, 'utf8'));
+  const text = fs.readFileSync(file, 'utf8');
+  const fm = frontMatter(text);
   if (!fm) return null;
   const title = readYamlScalar(fm, 'title');
   if (!title) return null;
 
-  const explicitUrl = readYamlScalar(fm, 'url') || readYamlScalar(fm, 'permalink');
-  const slug = readYamlScalar(fm, 'slug') || slugify(title);
-  const url = explicitUrl
-    ? SITE + '/' + explicitUrl.replace(/^\/+/, '').replace(/\/*$/, '/')
-    : SITE + '/jobs/' + slug + '/';
+  const url = SITE + jobPath(text);
 
   const comp = readYamlScalar(fm, 'compensation').toLowerCase();
   return {

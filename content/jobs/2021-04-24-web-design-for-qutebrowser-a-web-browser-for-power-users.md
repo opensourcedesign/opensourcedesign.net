@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [web design, html, css, sphinx, pelican]
 date: '2021-04-24T08:46:52.463Z'
+slug: "web-design-for-qutebrowser-a-web-browser-for-power-users"
 ---
 The qutebrowser project is a web browser for power users, focused on keyboard usage. Its inspired by the vim editor and similar to projects like Tridactyl, Vimperator or Vimium.
 

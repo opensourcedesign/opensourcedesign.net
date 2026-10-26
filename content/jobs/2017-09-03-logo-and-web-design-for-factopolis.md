@@ -17,5 +17,6 @@ how_to_apply:
   - 'https://www.factopolis.com/contributing/#designers'
 tags: [logo, web design]
 date: '2017-09-04T04:03:26.132Z'
+slug: "logo-and-web-design-for-factopolis"
 ---
 Factopolis is an open, collaboratively edited database to track politician's lies. We need a logo and a new theme for our web site.

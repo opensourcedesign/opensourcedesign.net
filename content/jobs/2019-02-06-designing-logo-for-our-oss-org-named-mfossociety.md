@@ -13,5 +13,6 @@ how_to_apply:
   - piyush@linuxmail.org
 tags: [logo, branding, design, graphic design]
 date: '2019-02-05T22:19:53.403Z'
+slug: "designing-logo-for-our-oss-org-named-mfossociety"
 ---
 We need a logo to kick start our journey.

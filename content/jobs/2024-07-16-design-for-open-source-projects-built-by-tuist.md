@@ -15,5 +15,6 @@ how_to_apply:
 github_handle: pepicrft
 tags: [branding, web design, ui]
 date: '2024-07-16T13:27:47.916Z'
+slug: "design-for-open-source-projects-built-by-tuist"
 ---
 Tuist is an organization that builds a toolchain to empower organizations to build better apps faster. As part of that, we develop MIT-licensed technologies that need a design for their website and brand, so we are looking for people interested in helping with that. In exchange, we can give visibility to their work and potentially hire the person to work on paid projects.

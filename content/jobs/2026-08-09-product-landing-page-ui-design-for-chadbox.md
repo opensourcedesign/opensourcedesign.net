@@ -22,6 +22,7 @@ deliverables: |-
   UI UX design of product landing page
   Or full help in building end to end landing page
   Maybe logo
+slug: "product-landing-page-ui-design-for-chadbox"
 ---
 
 Chadbox is open source lightweight, fast and secure code execution engine. Let's you run untrusted code execution in secure sandbox environment. And our chadbox cloud API service, free community API for indie developers, students, and startups.

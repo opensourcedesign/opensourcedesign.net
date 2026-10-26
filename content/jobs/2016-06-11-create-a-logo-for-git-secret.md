@@ -15,6 +15,7 @@ how_to_apply: Contact via GitHub (https://github.com/sobolevn/git-secret) — ht
 aliases:
   - /jobs/2016-06-11-Create-A-Logo-For-git-secret/
 
+slug: "create-a-logo-for-git-secret"
 ---
 
 `git-secret` is a bash-tool to store your private data inside a `git` repository.

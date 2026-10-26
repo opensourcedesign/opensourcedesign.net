@@ -17,6 +17,7 @@ how_to_apply: Contact cbruckmayer@suse.com
 aliases:
   - /jobs/2016-06-13-openSUSE_101_shirt/
 
+slug: "opensuse-summer-of-code-shirt-design"
 ---
 At openSUSE we participate every year in several open source mentoring programs like [Google Summer of Code](https://summerofcode.withgoogle.com/organizations/4794149198888960/)  or [Rails Girls Summer of Code](http://railsgirlssummerofcode.org/).
 To centralize and organize our efforts we created the [openSUSE 101](http://101.opensuse.org/) mentoring program.

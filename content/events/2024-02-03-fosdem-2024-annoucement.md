@@ -11,6 +11,8 @@ location: université Libre Brussels, Belgium
 time: 13:00 to 17:00 CET
 status: past
 permalink: /2024/02/03/fosdem-2024-annoucement
+aliases:
+  - /2024/02/03/fosdem-2024-annoucement/
 ---
 
 The weekend of FOSDEM 2024 has been annouced and we are excited for another in-person Open Source Design devroom! Join us in Brussels for design talks, discussion and fun! Here's everything you need to know about getting to the Open Source Design devroom at FOSDEM.

@@ -11,6 +11,8 @@ location: San Francisco, California, United States
 time: 6:30 PM to 9:30 PM (PDT)
 status: past
 permalink: /2016/07/14/uxhighrisk
+aliases:
+  - /2016/07/14/uxhighrisk/
 ---
 
 [UX in a High Risk World](https://www.eventbrite.com/e/ux-in-a-high-risk-world-tickets-25739389206)

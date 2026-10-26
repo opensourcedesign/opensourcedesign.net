@@ -11,6 +11,8 @@ location: Tirana, Albania
 time: 5:00-8:00 PM
 status: past
 permalink: /2017/01/17/osd1tirana
+aliases:
+  - /2017/01/17/osd1tirana/
 ---
 
 At the first Open Source Design Workshop in Tirana, Albania we will showcase the basics of GIMP and Inkscape

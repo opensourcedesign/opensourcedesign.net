@@ -18,6 +18,7 @@ date: '2017-11-05T22:17:53.521Z'
 aliases:
   - /jobs/2017-11-06-help-fight-misinformation-with-your-design-/
 
+slug: "help-fight-misinformation-with-your-design"
 ---
 # The project
 

@@ -32,8 +32,8 @@ function isAutomatedComment(comment) {
   if (login.endsWith('[bot]') || login === 'github-actions') return true;
   const body = String(comment.body || '');
   if (!body.trim()) return true;
-  // PR preview, submission preview, and other workflow bot comments.
-  if (/<!--\s*(pr-preview|submission-preview|pr-preview-skipped)/i.test(body)) return true;
+  // PR preview, submission status/preview, and other workflow bot comments.
+  if (/<!--\s*(pr-preview|submission-preview|submission-status|pr-preview-skipped)/i.test(body)) return true;
   if (/^PR Preview Action\b/m.test(body)) return true;
   if (/^ℹ️ \*\*PR preview skipped\*\*/m.test(body)) return true;
   if (/^## Submission preview\b/m.test(body)) return true;

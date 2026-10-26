@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Libre Graphics Meeting 2016"
-date: 2016-12-07
+date: 2016-04-18
 categories:
   - "design"
   - "hack"
@@ -11,6 +11,8 @@ location: London, England
 time: full days
 status: past
 permalink: /2016/12/07/libre-graphics-meeeting
+aliases:
+  - /2016/12/07/libre-graphics-meeeting/
 ---
 
 The [Libre Graphics Meeting (LGM)](https://libregraphicsmeeting.org/2016/) is an annual meeting on free and open source software for graphics.

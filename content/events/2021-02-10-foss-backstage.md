@@ -11,6 +11,8 @@ location: Online, Remote
 time: 1/2 days
 status: past
 permalink: /2021/02/10/fossback-stage-2021
+aliases:
+  - /2021/02/10/fossback-stage-2021/
 ---
 
 FOSS Backstage 2021: Call for Participation from designers

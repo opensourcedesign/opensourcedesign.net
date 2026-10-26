@@ -12,6 +12,7 @@ status: closed
 compensation: gratis
 date_posted: 2019-07-13
 how_to_apply: Contact github, @sobolevn
+slug: "redesign-wemake-python-styleguide-logo"
 ---
 
 We are working on the strictest `python` linter ever.

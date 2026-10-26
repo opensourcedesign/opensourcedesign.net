@@ -14,6 +14,7 @@ how_to_apply:
   - "https://sleepeowl.com\r\nhttps://github.com/Sleepe-Owl"
 tags: [logo, branding, web, mobile, web design, app design, sketch, adobe, illustration, open source, non-profit, collaboration, education, animation]
 date: '2018-03-31T10:06:12.683Z'
+slug: "logo-and-branding-for-a-open-source-learning-community"
 ---
 Hi,
 

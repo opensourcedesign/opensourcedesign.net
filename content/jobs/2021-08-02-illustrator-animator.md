@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [animation, illustration, visual design, graphic design, video]
 date: '2021-08-02T09:33:19.050Z'
+slug: "illustrator-animator"
 ---
 Our marketing team is looking for a new member: You would create illustrations, animations and videos for our social media presence, website, and supporting our releases. You will work closely with other marketers on messaging and content. We're looking for somebody with great design skills and some marketing experience, able to work remote in a small, self-guided team and willing to learn and try new things!
 

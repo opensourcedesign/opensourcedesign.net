@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: '@olivierodo'
 tags: [logo, branding]
 date: '2022-08-16T16:21:30.649Z'
+slug: "reshape-our-logo"
 ---
 Hello,
 Our open source project is getting a new branding. As a part of it we already create a small mascot. However this is not matching with the self made logo (created by a developer 😛)

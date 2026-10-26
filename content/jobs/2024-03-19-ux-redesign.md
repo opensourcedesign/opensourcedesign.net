@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: matmair
 tags: [design, ux, accessibility]
 date: '2024-03-19T16:12:21.953Z'
+slug: "ux-redesign"
 ---
 InvenTree is an open-source PLM (parts libary managment) with a backend API server, a frontend based on Bootstrap/jquery /JS-based frontend and several apps.
 We are rewriting the frontend based on React and want to take this opportunity to create a more user-friendly, intuitive and accessible experience for everyone.

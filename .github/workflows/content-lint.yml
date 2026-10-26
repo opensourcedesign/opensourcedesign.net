@@ -3,36 +3,52 @@
 # Markdown pitfalls that render broken pages (4-space indents becoming code
 # blocks, `###Heading` without a space, pseudo-bullets). Errors fail the
 # check so moderators see problems before merging.
+#
+# Runs on every PR (a `changes` job gates the real work on the `content`
+# path filter) so `lint` always reports a status and can be a required
+# check - a skipped job counts as passing. workflow_dispatch lints what a
+# branch changed relative to main (used for bot PRs, which don't trigger
+# pull_request workflows).
 name: Lint changed content
 
 on:
   pull_request:
-    paths:
-      - "content/jobs/**"
-      - "content/events/**"
-      - "content/resources/**"
-      - "data/resources.yaml"
-      - "data/bibliography.yaml"
   push:
     branches: [main]
-    paths:
-      - "content/jobs/**"
-      - "content/events/**"
-      - "content/resources/**"
-      - "data/resources.yaml"
-      - "data/bibliography.yaml"
+  workflow_dispatch:
 
 permissions:
   contents: read
   pull-requests: write
 
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      content: ${{ steps.filter.outputs.content }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 2
+
+      - name: Detect content changes
+        uses: dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d # v4.0.3
+        id: filter
+        with:
+          filters: .github/path-filters.yml
+
   lint:
+    needs: changes
+    if: needs.changes.outputs.content == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       # Actions are pinned to full commit SHAs (supply-chain hardening).
       - name: Checkout
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
 
@@ -41,29 +57,21 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        # Three-dot diff: only what the PR changed since it branched off, not
+        # files that changed on main in the meantime (base.sha is main's tip).
         run: |
-          files="$(git diff --diff-filter=AM --name-only "$BASE_SHA" "$HEAD_SHA" -- 'content/jobs/*.md' 'content/events/*.md' 'content/resources/*.md' 'content/resources/articles/*.md')"
+          files="$(git diff --diff-filter=AM --name-only "$BASE_SHA...$HEAD_SHA" -- 'content/jobs/*.md' 'content/events/*.md' 'content/resources/*.md' 'content/resources/articles/*.md')"
           if [ -n "$files" ]; then
             # shellcheck disable=SC2086
             node .github/scripts/lint-content.mjs $files
           else
             echo "No job/event/resource content changed."
           fi
-          data_files="$(git diff --diff-filter=AM --name-only "$BASE_SHA" "$HEAD_SHA" -- 'data/resources.yaml' 'data/bibliography.yaml')"
+          data_files="$(git diff --diff-filter=AM --name-only "$BASE_SHA...$HEAD_SHA" -- 'data/resources.yaml' 'data/bibliography.yaml')"
           if [ -n "$data_files" ]; then
             npm install --no-save yaml@2
             node .github/scripts/lint-data-yaml.mjs
           fi
-
-      - name: Post submission preview comment
-        if: github.event_name == 'pull_request'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          HEAD_REF: ${{ github.head_ref }}
-          PREVIEW_BASE: https://opensourcedesign.net/pr-preview/pr-${{ github.event.pull_request.number }}
-        run: node .github/scripts/submission-preview-comment.mjs
 
       - name: Lint changed content files on push
         if: github.event_name == 'push'
@@ -87,3 +95,16 @@ jobs:
             npm install --no-save yaml@2
             node .github/scripts/lint-data-yaml.mjs
           fi
+
+      - name: Lint content changed on this branch
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          files="$(git diff --diff-filter=AM --name-only origin/main...HEAD -- 'content/jobs/*.md' 'content/events/*.md' 'content/resources/*.md' 'content/resources/articles/*.md')"
+          if [ -n "$files" ]; then
+            # shellcheck disable=SC2086
+            node .github/scripts/lint-content.mjs $files
+          else
+            echo "No job/event/resource content changed relative to main."
+          fi
+          npm install --no-save yaml@2
+          node .github/scripts/lint-data-yaml.mjs

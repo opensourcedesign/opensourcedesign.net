@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, branding, design]
 date: '2020-12-15T16:57:05.392Z'
+slug: "help-design-a-logo-for-pip"
 ---
 pip is the package installer for Python. You can use pip to install packages from the Python Package Index and other indexes. pip has never had a dedicated identity or logo, but the pip team would love to have a stronger visual identity and brand.
 

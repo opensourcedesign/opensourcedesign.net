@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: ''
 tags: [ux]
 date: '2020-03-17T19:58:37.079Z'
+slug: "ux-prototype-for-an-open-data-repository"
 ---
 The [Tricoteuses](https://tricoteuses.fr/a_propos) non-profit collective wants to publish [datasets](https://en.wikipedia.org/wiki/Data_set) originating from the [French national assembly](http://data.assemblee-nationale.fr/) at [data.tricoteuses.fr](https://data.tricoteuses.fr) for [software developers](https://forum.en-root.org/t/persona-developer-working-with-datasets/165) to use. Three [epics](https://forum.en-root.org/tags/epic) were written based on the [user research report](https://forum.en-root.org/t/user-research-report-developers-and-dataset-repositories/164) for [the developer persona](https://forum.en-root.org/t/persona-developer-working-with-datasets/165/):
 

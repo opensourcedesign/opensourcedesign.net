@@ -14,6 +14,7 @@ how_to_apply:
   - "Github repo: https://github.com/turt2live/matrix-dimension\r\n"
 tags: [graphic design, artwork, stickers]
 date: '2018-03-26T17:02:14.509Z'
+slug: "sticker-pack-artwork"
 ---
 Dimension (an open source integrations manager for clients like Riot.im) is tackling stickers in an upcoming update and needs some stickers to be included in the launch.
 

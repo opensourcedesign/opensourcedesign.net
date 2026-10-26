@@ -16,6 +16,7 @@ how_to_apply:
   - '- https://dustri.org/b/mat2-for-the-web.html'
 tags: [web, metadata, simple, privacy]
 date: '2019-02-03T13:57:13.856Z'
+slug: "improving-the-two-webpages-of-a-simple-web-interface-to-a-metadata-removal-tool"
 ---
 Mat2 is an open-source [metadata]( https://en.wikipedia.org/wiki/Metadata ) removal tool. Currently the two main ways of using it are either the command line interface, of a file-browser extension. I recently wrote a web interface to make it more accessible to non-technical people (see the demo instance [here](https://mat2-web.dustri.org)), but it doesn't look super-pretty. Some journalist organizations already deployed their own private instance, but their users are complaining about the lack of prettiness and usability of it.
 

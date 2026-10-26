@@ -11,6 +11,8 @@ location: Université Libre Brussels (Solbosch campus), Belgium
 time: pending
 status: past
 permalink: /2017/02/05/opensourcedesign-fosdem-2017
+aliases:
+  - /2017/02/05/opensourcedesign-fosdem-2017/
 ---
 
 [FOSDEM](https://fosdem.org) is one of the biggest open source conferences. For the third time there will be a dedicated [Open Source Design track](https://fosdem.org/2017/schedule/track/open_source_design/)!

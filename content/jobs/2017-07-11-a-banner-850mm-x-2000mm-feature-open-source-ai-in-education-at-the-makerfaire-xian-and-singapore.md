@@ -14,6 +14,7 @@ skills: "* we need it by Wed/Thurs this week if possible (sorry for the short no
 how_to_apply:
   - "hp@fossasia.org \r\ngitter: hpdang\r\n"
 date: '2017-07-11T06:23:04.005Z'
+slug: "a-banner-850mm-x-2000mm-feature-open-source-ai-in-education-at-the-makerfaire-xian-and-singapore"
 ---
 The banner should include: 
 

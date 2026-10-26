@@ -53,7 +53,7 @@
                 {{ $img = index (index . 0) 1 }}
               {{ end }}
               <article class="group border-b border-slate-200">
-                <a class="flex flex-col gap-5 py-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20 sm:flex-row" href="{{ .RelPermalink }}" aria-label="{{ .Title }} (recap)">
+                <a class="flex flex-col gap-5 py-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20 sm:flex-row" href="{{ .RelPermalink }}">
                   {{ if $img }}
                     <span class="block h-40 w-full shrink-0 overflow-hidden rounded-lg bg-slate-100 sm:h-28 sm:w-44">
                       <img class="h-full w-full object-cover" src="{{ $img }}" alt="" loading="lazy" />
@@ -86,7 +86,9 @@
           <h2 id="upcoming-heading" class="border-b border-slate-200 pb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Upcoming</h2>
           {{ if $upcoming }}
             <ul role="list">
-              {{ range first 5 (sort $upcoming "Date" "desc") }}
+              {{/* Soonest first, by the event's start date - .Date is when the
+                   event was submitted, not when it happens. */}}
+              {{ range first 5 (sort $upcoming "Params.eventStart" "asc") }}
                 <li class="border-b border-slate-200">
                   <a class="group block py-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20" href="{{ .RelPermalink }}">
                     <span class="block font-semibold leading-snug text-slate-900 decoration-slate-300 underline-offset-4 group-hover:underline">{{ .Title }}</span>

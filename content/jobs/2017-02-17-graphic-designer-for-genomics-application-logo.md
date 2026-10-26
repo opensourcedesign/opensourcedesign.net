@@ -16,6 +16,7 @@ how_to_apply:
   - 'https://github.com/labsquare/fastQt/issues/35'
 tags: [bioinformatics]
 date: '2017-02-17T13:21:51.383Z'
+slug: "graphic-designer-for-genomics-application-logo"
 ---
 Labsquare is a community of bioinformatics scientist whose aims to create
 opensource genomics tools. It is a great necessity with the arrival of new

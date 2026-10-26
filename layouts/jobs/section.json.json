@@ -8,12 +8,18 @@
   {{- with .Params.deadline -}}
     {{- $deadline = (time.AsTime (printf "%v" .)).Format "2006-01-02" -}}
   {{- end -}}
+  {{- /* Lapsed "searching" postings are reported as expired so consumers
+       (Worker duplicate check, homepage pulse) match the job board. */ -}}
+  {{- $status := printf "%v" (.Params.status | default "") -}}
+  {{- if and (eq (lower $status) "searching") (partial "functions/job-lapsed.html" .) -}}
+    {{- $status = "expired" -}}
+  {{- end -}}
   {{- $items = $items | append (dict
         "title" .Title
         "organization" (printf "%v" (.Params.organization | default ""))
         "role" (printf "%v" (.Params.role | default ""))
         "compensation" (printf "%v" (.Params.compensation | default ""))
-        "status" (printf "%v" (.Params.status | default ""))
+        "status" $status
         "url" .RelPermalink
         "date_posted" (.Date.Format "2006-01-02")
         "deadline" $deadline

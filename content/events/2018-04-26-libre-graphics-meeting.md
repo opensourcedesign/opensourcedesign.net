@@ -11,6 +11,8 @@ location: C / Pasaje Mallol 22, 41003, Seville, Spain
 time: full days
 status: past
 permalink: /2018/4/26/libre-graphics-meeeting
+aliases:
+  - /2018/4/26/libre-graphics-meeeting/
 ---
 
 The [Libre Graphics Meeting (LGM)](https://libregraphicsmeeting.org/2018/) is an annual meeting of free and open source graphics software users and developers.

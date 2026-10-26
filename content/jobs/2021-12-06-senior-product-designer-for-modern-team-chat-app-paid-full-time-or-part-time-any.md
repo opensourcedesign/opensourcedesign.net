@@ -20,6 +20,7 @@ date: '2021-12-06T23:09:24.982Z'
 aliases:
   - /jobs/2021-12-06-/
 
+slug: "senior-product-designer-for-modern-team-chat-app-paid-full-time-or-part-time-anywhere-in-the-world"
 ---
 We are looking for a designer to join our team.
 

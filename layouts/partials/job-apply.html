@@ -119,9 +119,9 @@
     {{ end }}
 
     {{ if $notes }}
-      <div class="{{ if $contacts }}mt-4 border-t border-slate-100 pt-4{{ end }} space-y-2 text-sm leading-relaxed text-slate-600">
+      <div class="osd-inline-md {{ if $contacts }}mt-4 border-t border-slate-100 pt-4{{ end }} space-y-2 text-sm leading-relaxed text-slate-600">
         {{ range $notes }}
-          <p>{{ partial "linkify" (dict "text" .) }}</p>
+          <p>{{ partial "inline-markdown.html" (dict "page" $ "text" .) }}</p>
         {{ end }}
       </div>
     {{ end }}

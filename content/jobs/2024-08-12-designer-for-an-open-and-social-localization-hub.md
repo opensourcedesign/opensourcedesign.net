@@ -16,6 +16,7 @@ how_to_apply:
 github_handle: '@pepicrft.me'
 tags: [design, localization, open source]
 date: '2024-08-12T07:47:38.529Z'
+slug: "designer-for-an-open-and-social-localization-hub"
 ---
 We are building an open localization platform that embraces ideas and principles from GitHub's social approach to coding. We'd like to design a platform that empowers translators, and tears downs the walls that the localization industry has built over the years.
 We believe most of the internet remains inaccessible due to linguistic barriers, and we want to contribute to change that.

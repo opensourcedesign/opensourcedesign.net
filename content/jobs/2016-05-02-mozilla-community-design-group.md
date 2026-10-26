@@ -17,6 +17,7 @@ how_to_apply: Contact via GitHub (mozilla) — https://github.com/mozilla/Commun
 aliases:
   - /jobs/2016-05-02-Mozilla-Community-Design/
 
+slug: "mozilla-community-design-group"
 ---
 
 The [Community Design Group](https://blog.mozilla.org/community/2016/03/31/participation-lab-notes-the-sweet-spot-between-constraint-and-freedom/) collects design requests from various teams and communities related to Mozilla.

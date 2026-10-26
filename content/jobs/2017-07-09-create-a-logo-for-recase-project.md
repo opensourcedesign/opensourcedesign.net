@@ -13,6 +13,7 @@ how_to_apply:
   - "Nikita Sobolev - mail@sobolevn.me\r\nOr github: https://github.com/sobolevn"
 tags: [logo, elixir]
 date: '2017-07-09T09:53:37.981Z'
+slug: "create-a-logo-for-recase-project"
 ---
 `Recase` is a small `elixir` project to convert string from any case to any case.
 It now supports `camelCase`, `UpperCase`, `snake_case` and `kebab_case`.

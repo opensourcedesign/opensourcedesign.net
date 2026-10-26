@@ -16,6 +16,7 @@ how_to_apply:
     mentioning @akosyakov in the comment.
 tags: [logo, graphic design]
 date: '2017-09-03T13:26:21.096Z'
+slug: "design-a-logo-for-theia-the-open-source-js-based-ide-framework"
 ---
 Theia is a cloud & desktop IDE framework implemented in TypeScript. Read more here: http://typefox.io/theia-one-ide-for-desktop-cloud.
 

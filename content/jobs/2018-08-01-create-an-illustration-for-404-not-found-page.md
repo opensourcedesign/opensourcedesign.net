@@ -14,6 +14,7 @@ how_to_apply:
   - "Here are some of the sample links of 404 illustrations.\r\nhttps://github.com/zxcvbg\r\nhttps://sailsjs.com/asd"
 tags: [graphic design]
 date: '2018-08-01T05:45:11.858Z'
+slug: "create-an-illustration-for-404-not-found-page"
 ---
 Vali Admin is a free and open source dashboard theme.
 

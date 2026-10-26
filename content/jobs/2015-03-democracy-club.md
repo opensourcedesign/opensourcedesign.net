@@ -11,6 +11,7 @@ status: closed
 compensation: gratis
 date_posted: 2015-03-02
 how_to_apply: Email sym@democracyclub.org.uk
+slug: "democracyclub-projects"
 ---
 
 This web site is really in need of some love, particularly to convert it in to more of a call to action site that can do two things: 1. point people to the other sites (listed below) and ask them to be involved in some way and 2. to explain what DC is about and it’s aims.

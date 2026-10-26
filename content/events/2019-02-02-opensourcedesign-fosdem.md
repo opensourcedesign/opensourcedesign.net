@@ -11,6 +11,8 @@ location: Room not yet confirmed, Solbosch campus - Université Libre Brussels, 
 time: full days
 status: past
 permalink: /2019/02/02/opensourcedesign-fosdem-2019
+aliases:
+  - /2019/02/02/opensourcedesign-fosdem-2019/
 ---
 
 [FOSDEM](https://fosdem.org) is the Free and Open source Software Developers’ European Meeting, a free and non-commercial two-day weekend event that offers **all** open source contributors a place to meet, share ideas, learn and collaborate.

@@ -14,6 +14,7 @@ how_to_apply:
   - "https://adonisjs.com\r\nhttps://projects.invisionapp.com/share/8FOOWXKNCPU#/screens"
 tags: [ui, branding]
 date: '2018-11-02T23:38:37.031Z'
+slug: "re-designing-adonisjs-from-scratch"
 ---
 AdonisJs is a MVC framework for Node.js, used by thousands of companies and individuals to write web servers.
 

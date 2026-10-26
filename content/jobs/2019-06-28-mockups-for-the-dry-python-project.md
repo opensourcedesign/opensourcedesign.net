@@ -12,6 +12,7 @@ status: closed
 compensation: gratis
 date_posted: 2019-06-28
 how_to_apply: Contact dry.python.org@gmail.com
+slug: "dry-python"
 ---
 
 The dry-python project is a set of libraries for pluggable business logic components.

@@ -14,6 +14,7 @@ how_to_apply: See the GitHub repository (okfn) or description below
 aliases:
   - /jobs/2015-02-okfn-frontend-developer-UX-designer/
 
+slug: "data-driven-project"
 ---
 
 ## Frontend Developer and UX Designer for Data-Driven Project

@@ -12,6 +12,7 @@ status: filled
 compensation: gratis
 date_posted: 2015-09-02
 how_to_apply: Contact prologic@shortcircuit.net.au, prologic, #circuits (FreeNode)
+slug: "circuits-logo-redesign"
 ---
 
 Hi, Currently our logo is less than ideal and cannot be used easily with

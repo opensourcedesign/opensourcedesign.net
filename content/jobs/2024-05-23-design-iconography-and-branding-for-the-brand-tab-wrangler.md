@@ -17,5 +17,6 @@ how_to_apply:
 github_handle: '@ssorallen'
 tags: [logo, branding, browser extension]
 date: '2024-05-24T02:44:15.800Z'
+slug: "design-iconography-and-branding-for-the-brand-tab-wrangler"
 ---
 Design a logo and new branding for Tab Wrangler, a browser extension for Chrome and Firefox with 60,000+ users. Tab Wrangler has been an open source extension for 10+ years that has never had professional branding. I am looking for icons and branding to use in the Chrome + Firefox Web Stores.

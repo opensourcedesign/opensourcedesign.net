@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, branding, open source, non-profit, ux]
 date: '2021-11-13T03:59:20.156Z'
+slug: "brand-designer"
 ---
 Internet Freedom Nonprofit Seeks Brand Designed for User Experience Team
 November 2, 2021

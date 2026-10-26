@@ -14,6 +14,7 @@ how_to_apply:
   - "http://epoberezkin.github.io/ajv/\r\nhttps://gitter.im/ajv-validator/ajv"
 tags: [design, branding, logo]
 date: '2017-05-11T20:44:11.912Z'
+slug: "ajv-github-pages-design-for-desktop-and-mobile"
 ---
 Ajv is the fastest and the most feature rich JSON-schema validator with 12m+ monthly downloads.
 A modern minimalist responsive design for its GitHub pages would be welcome.

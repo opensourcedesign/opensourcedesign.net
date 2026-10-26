@@ -18,6 +18,7 @@ date: '2021-03-03T18:14:46.598Z'
 aliases:
   - /jobs/2021-03-03-/
 
+slug: "healthcare-designer"
 ---
 We’re looking for a designer and an engineer to join our intimate studio.
 

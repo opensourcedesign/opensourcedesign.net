@@ -1,8 +1,7 @@
 {{- /*
   Content-Security-Policy for the static site. GitHub Pages does not support
   custom HTTP response headers, so we emit an http-equiv meta tag (enforced by
-  modern browsers). static/_headers mirrors this for hosts that honour it
-  (e.g. Cloudflare Pages). Tune script-src when adding third-party widgets.
+  modern browsers). Tune script-src when adding third-party widgets.
 */ -}}
 {{- $endpoint := site.Params.jobSubmitEndpoint | default "" -}}
 {{- $eventEndpoint := site.Params.eventSubmitEndpoint | default "" -}}

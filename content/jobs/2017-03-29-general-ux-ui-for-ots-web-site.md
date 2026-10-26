@@ -15,6 +15,7 @@ how_to_apply:
 tags: [ui, ux, web design]
 date: '2017-03-29T11:08:36.105Z'
 timestamp: 1490785716
+slug: "general-ux-ui-for-ots-web-site"
 ---
 OpenTechSchool, is a distributed community initiative organising welcoming and inclusive code learning happenings with real people in the real world. Our offers are for technology enthusiasts of all ages, genders, backgrounds, and experience levels. 
 We support whoever wants to learn with co-learning events or one day workshop all made possible by volunteers coaches. 

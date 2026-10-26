@@ -14,5 +14,6 @@ how_to_apply:
 github_handle: GitHub @Oknolaz
 tags: [logo, icons, voice assistant, app design]
 date: '2021-08-22T11:56:32.661Z'
+slug: "logo-and-icon-for-the-voice-assistant-app"
 ---
 We need a logo & icon for the voice assistant.

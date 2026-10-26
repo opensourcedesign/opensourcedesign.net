@@ -3,6 +3,12 @@ main = "src/index.js"
 compatibility_date = "2025-09-01"
 workers_dev = true
 
+# Keep Worker logs (e.g. the GitHub status and message logged when a
+# submission can't open its pull request) so failures can be diagnosed in the
+# Cloudflare dashboard instead of only via a live `wrangler tail`.
+[observability]
+enabled = true
+
 # --- Public, non-secret configuration -------------------------------------
 # Override any of these in the Cloudflare dashboard or here as needed.
 [vars]
@@ -37,8 +43,7 @@ RATE_LIMIT_MAX = "5"
 binding = "EMAILS"
 id = "a1b92469f51c4677a252d77f58561109"
 
-# --- Per-IP rate limiting (recommended). Create the namespace, paste the id,
-# then uncomment:
+# --- Per-IP daily submission cap (RATE_LIMIT_MAX). Created with:
 #   npx wrangler kv namespace create RATE_LIMIT
 [[kv_namespaces]]
 binding = "RATE_LIMIT"

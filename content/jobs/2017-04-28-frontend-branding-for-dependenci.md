@@ -14,6 +14,7 @@ how_to_apply:
   - Send a mail to dependenci@miguelpiedrafita.com
 tags: [branding, logo, design, volunteer]
 date: '2017-04-28T13:28:04.234Z'
+slug: "branding-for-composerci"
 ---
 
 ## What is DependenCI?

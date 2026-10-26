@@ -28,7 +28,7 @@ jobs:
        startsWith(github.event.pull_request.head.ref, 'resource/'))
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Look up submitter email
         id: lookup
@@ -44,13 +44,22 @@ jobs:
             exit 0
           fi
           base="${LOOKUP_URL%/lookup}"
-          sent="$(curl -fsS -H "Authorization: Bearer ${LOOKUP_SECRET}" "${base}/rejection-sent?pr=${PR_NUMBER}" | jq -r '.sent // false' || echo false)"
+          # Worker or network failures fail the run (so it can be re-run)
+          # instead of passing as "not sent" / "no email on file".
+          if ! sent_resp="$(curl -fsS --retry 3 --retry-all-errors -H "Authorization: Bearer ${LOOKUP_SECRET}" "${base}/rejection-sent?pr=${PR_NUMBER}")"; then
+            echo "::error::Rejection-status lookup failed - the Worker was unreachable or returned an error."
+            exit 1
+          fi
+          sent="$(printf '%s' "$sent_resp" | jq -r '.sent // false')"
           if [ "$sent" = "true" ]; then
             echo "Rejection email already sent for PR #${PR_NUMBER}; skipping."
             echo "found=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          resp="$(curl -fsS -H "Authorization: Bearer ${LOOKUP_SECRET}" "${LOOKUP_URL}?pr=${PR_NUMBER}" || true)"
+          if ! resp="$(curl -fsS --retry 3 --retry-all-errors -H "Authorization: Bearer ${LOOKUP_SECRET}" "${LOOKUP_URL}?pr=${PR_NUMBER}")"; then
+            echo "::error::Email lookup failed - the Worker was unreachable or returned an error."
+            exit 1
+          fi
           found="$(printf '%s' "$resp" | jq -r '.found // false')"
           if [ "$found" != "true" ]; then
             echo "No email on file for PR #${PR_NUMBER}; nothing to send."
@@ -96,7 +105,7 @@ jobs:
 
       - name: Send rejection email
         if: steps.lookup.outputs.found == 'true'
-        uses: dawidd6/action-send-mail@42942bc2f8fba4e611b459a018967a6a7c78c68c # v17
+        uses: dawidd6/action-send-mail@67ce3558d613188179559c61d3565140cf389968 # v22
         with:
           server_address: ${{ secrets.SMTP_HOST }}
           server_port: ${{ secrets.SMTP_PORT }}
@@ -188,4 +197,5 @@ jobs:
         run: |
           if [ -z "$LOOKUP_URL" ] || [ -z "$LOOKUP_SECRET" ]; then exit 0; fi
           base="${LOOKUP_URL%/lookup}"
-          curl -fsS -X POST -H "Authorization: Bearer ${LOOKUP_SECRET}" "${base}/rejection-sent?pr=${PR_NUMBER}" || true
+          curl -fsS --retry 3 --retry-all-errors -X POST -H "Authorization: Bearer ${LOOKUP_SECRET}" "${base}/rejection-sent?pr=${PR_NUMBER}" \
+            || echo "::warning::Could not mark the rejection email as sent; re-running this workflow would email again."

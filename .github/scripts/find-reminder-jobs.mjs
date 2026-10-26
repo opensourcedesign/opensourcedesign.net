@@ -25,23 +25,13 @@
 
 import fs from 'node:fs';
 import { gh, ghPaginated } from './github-api.mjs';
+import { jobPath } from './job-url.mjs';
 import { readYamlScalar } from './yaml-front-matter.mjs';
 const SITE = 'https://opensourcedesign.net';
 const REPO = process.env.REPO || 'opensourcedesign/opensourcedesign.net';
 const MAX_AGE = 49; // exclusive
 
 const MIN_AGE = 42;
-
-function slugify(str) {
-  return String(str || '')
-    .trim()
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
-}
 
 async function prNumberForFile(file) {
   // Oldest commit touching the path is the one that introduced it.
@@ -97,7 +87,6 @@ for (const name of fs.readdirSync('content/jobs').filter((f) => f.endsWith('.md'
       continue;
     }
     const title = readYamlScalar(fm, 'title');
-    const slug = readYamlScalar(fm, 'slug') || slugify(title);
     include.push({
       email,
       title,
@@ -109,7 +98,7 @@ for (const name of fs.readdirSync('content/jobs').filter((f) => f.endsWith('.md'
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;'),
       file: name,
-      job_url: `${SITE}/jobs/${slug}/`,
+      job_url: SITE + jobPath(text),
       edit_url: `${SITE}/jobs/job-form/?edit=${encodeURIComponent(name)}`,
     });
     console.log(`  reminder queued (PR #${pr})`);

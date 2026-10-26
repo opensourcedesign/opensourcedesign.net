@@ -16,5 +16,6 @@ date: '2017-01-23T19:05:13.590Z'
 aliases:
   - /jobs/2017-01-23-Web & Logo Designer for an Idea Sharing Platform/
 
+slug: "web-logo-designer-for-an-idea-sharing-platform"
 ---
 ThoughtStreamer is a web-based platform for sharing ideas and thoughts while not compromising ones privacy.  At the moment, the project is at pre-release stage and you can visit the test env at the link provided.  An individual (or a team) is needed to implement the design of the web app along with the creation of the logo and possibly the improvement of the UX.

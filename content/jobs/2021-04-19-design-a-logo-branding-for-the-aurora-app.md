@@ -18,6 +18,7 @@ date: '2021-04-19T18:15:12.332Z'
 aliases:
   - /jobs/2021-04-19-/
 
+slug: "design-a-logo-branding-for-the-aurora-app"
 ---
 I have built this open-source project to implement the analytics in a website, and I need simple branding in order to keep the repo clean & beautiful.
 

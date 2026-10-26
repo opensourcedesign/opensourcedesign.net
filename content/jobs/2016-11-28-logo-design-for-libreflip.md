@@ -15,6 +15,7 @@ how_to_apply: Contact ijon@c-base.org, hanging out on freenode, usually in #c-ba
 aliases:
   - /jobs/2016-11-28-Logo-for-Libreflip/
 
+slug: "logo-design-for-libreflip"
 ---
 I need a Logo for an opensource pageturning  Bookscanner that I will be building.
 The name of the project is "Libreflip"

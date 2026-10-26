@@ -14,6 +14,7 @@ how_to_apply:
   - 'https://www.eff.org/opportunities/jobs/designer'
 tags: [graphic design, web design, mobile, human-centered design]
 date: '2018-11-26T18:55:07.890Z'
+slug: "designer-full-time-san-francisco"
 ---
 The Electronic Frontier Foundation (EFF) is seeking a designer with a strong background in web and graphic design. A successful candidate will have a good understanding of the principles of web design, a portfolio demonstrating their skills, and experience collaborating with web developers.
 

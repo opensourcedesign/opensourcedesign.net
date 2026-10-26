@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [icons]
 date: '2021-02-19T15:35:18.997Z'
+slug: "android-and-desktop-icon-for-hexadecimal-editor"
 ---
 BinEd is very basic editor for binary data (hexadecimal editor) and also plugin for various IDEs. 
 

@@ -8,7 +8,7 @@ type: page
 
 ## Introduction
 
-Hello everyone! If you plan on publishing a job post on the OpenSource Design website, here are a few steps that can improve your post's coherence and visibility. An effective job post is not just about listing the requirements; it's about engaging with the community, being transparent about the role, and inviting potential collaborators to join your OSS journey.
+Hello everyone! If you plan on publishing a job post on the Open Source Design website, here are a few steps that can improve your post's coherence and visibility. An effective job post is not just about listing the requirements; it's about engaging with the community, being transparent about the role, and inviting potential collaborators to join your OSS journey.
 
 ## How to Submit Your Job Post
 

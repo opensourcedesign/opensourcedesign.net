@@ -19,4 +19,7 @@ how_to_apply:
 tags: [logo, branding, app design, web design, privacy]
 date: '2018-04-04T13:02:23.497Z'
 timestamp: 1522846943
+slug: "logo-design-for-a-one-page-web-app"
 ---
+
+We would love a pretty design for https://cloudcover.me it's 100% open source, and while it works now it's not pretty can could need a logo, and a favicon with some minor design for the webpage it self.

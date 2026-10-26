@@ -1,6 +1,6 @@
 ---
 _id: aa276d10-94d9-11f0-a4b3-873de3dfe925
-status: searching
+status: expired
 date_posted: '2025-09-18'
 layout: jobs
 organization: Common Ground Therapy
@@ -22,6 +22,7 @@ how_to_apply:
 github_handle: commonground@therapy.coop
 tags: [logo, branding, design system]
 date: '2025-09-18T21:51:43.393Z'
+slug: "design-a-logo-and-branding-for-a-not-for-profit-therapy-worker-cooperative-social-enterprise"
 ---
 Logo design, Branding of a design or visual language that we can use to create our website
 

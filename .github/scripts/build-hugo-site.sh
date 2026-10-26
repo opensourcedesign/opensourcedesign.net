@@ -42,14 +42,12 @@ build_pagefind() {
 
 case "$MODE" in
   production)
-    node .github/scripts/generate-headers.mjs
     hugo --minify --gc
     build_pagefind
     ;;
   preview)
     PREVIEW_NUM="${2:-}"
     [[ -n "$PREVIEW_NUM" ]] || usage
-    node .github/scripts/generate-headers.mjs
     PREVIEW_HOST="${PREVIEW_SITE_URL:-https://opensourcedesign.net}"
     PREVIEW_HOST="${PREVIEW_HOST%/}"
     if [[ ! "$PREVIEW_HOST" =~ ^https?:// ]]; then

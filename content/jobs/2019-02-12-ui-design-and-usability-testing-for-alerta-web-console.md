@@ -14,6 +14,7 @@ how_to_apply:
   - "https://alerta.io/\r\nhttps://github.com/alerta/alerta/\r\nhttps://docs.alerta.io\r\nhttps://beta.alerta.io\r\nhttps://twitter.com/alertaio\r\nhttps://vuejs.org\r\nhttps://vuetifyjs.com"
 tags: [interaction design, system administration, ui, usability testing]
 date: '2019-02-12T09:35:04.329Z'
+slug: "ui-design-and-usability-testing-for-alerta-web-console"
 ---
 Alerta is looking for help to evaluate the usability of it's new version and also improve interface design which is currently in beta.
 

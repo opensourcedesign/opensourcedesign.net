@@ -18,6 +18,7 @@ how_to_apply:
   - Philippe Jadin (main dev) <info@agorakit.org>
   - "Github : https://github.com/agorakit/agorakit\r\nHosted instance : https://app.agorakit.org/"
 date: '2017-12-11T00:00:00.000Z'
+slug: "enhance-the-ux-and-design-of-agorakit-an-organization-tool-for-citizens-collectives"
 ---
 Agorakit is web-based, open source groupware for citizens. 
 By creating collaborative groups, people can discuss topics, organize events, store files and keep everyone updated as needed. 

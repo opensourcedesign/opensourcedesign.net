@@ -14,6 +14,7 @@ how_to_apply:
 github_handle: '@DataDaoDe'
 tags: [graphic design, web design, ui, ux, design thinking]
 date: '2022-03-26T22:18:53.151Z'
+slug: "lead-designer"
 ---
 We are building an open education platform for lifelong learners!
 

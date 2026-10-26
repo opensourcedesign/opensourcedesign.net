@@ -16,6 +16,7 @@ how_to_apply:
     https://github.com/fossasia/jugaadfest-artwork/issues/1
 tags: [logo, jugaadfest]
 date: '2018-09-07T08:37:02.067Z'
+slug: "create-an-svg-of-the-jugaadfest-logo"
 ---
 Please create a SVG with the following specifications of the colorful logo of Jugaadfest:
 

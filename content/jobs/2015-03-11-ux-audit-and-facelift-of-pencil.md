@@ -14,6 +14,7 @@ how_to_apply: See http://pencil.evolus.vn or the description below
 aliases:
   - /jobs/2015-03-UX-audit-and-facelift-of-Pencil/
 
+slug: "ux-audit-and-facelift-of-pencil"
 ---
 
 Pencil is a promising feature rich wireframe tool for multiple desktop platforms. However, upon using it there are fair number of UX quirks and bugs that lay in code. Performing an official UX audit and creating issues for these bugs is in order.

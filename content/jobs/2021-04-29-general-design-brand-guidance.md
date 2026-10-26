@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, branding, graphic design, usability]
 date: '2021-04-29T06:18:46.879Z'
+slug: "general-design-brand-guidance"
 ---
 OSArch.org is all about "Creating a built environment with free software, increased transparency, and a more ethical approach. OSArch is for the architects, engineers, designers, builders, planners, operators, and you. Let's change the industry together."
 

@@ -14,6 +14,7 @@ how_to_apply:
     - "Existing newsletters:  https://www.jenkins.io/node/tags/newsletter/"
     - "My role as Jenkins Events Officer: https://www.jenkins.io/blog/2022/11/17/jenkins-election-candidates-and-results/"
 date_posted: "2022-12-20"
+slug: "jenkins-newsletter"
 ---
 
 Jenkins is an open source automation server, it is used by millions of users around the world. A few months ago we started the monthly Jenkins Newsletter. We don't have access to a design team and as you can see our newsletter headline design is quite generic and boring. Oleg Nenashev suggested that we reach out to you for your contribution to our newsletter design.

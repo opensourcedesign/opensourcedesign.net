@@ -19,6 +19,7 @@ how_to_apply:
 github_handle: '@gilgongo or @mulyaj'
 tags: [graphic design, icons, ui]
 date: '2022-02-08T16:05:39.490Z'
+slug: "instrument-icons-for-an-online-music-performance-project-and-design-contributors"
 ---
 Jamulus is open-source software that enables musicians to perform music in real-time online. Currently, elements of our UI are outdated and need some updating. 
 

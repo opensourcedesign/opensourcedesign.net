@@ -16,6 +16,7 @@ date: '2020-04-29T00:21:16.660Z'
 aliases:
   - /jobs/2020-04-29-/
 
+slug: "turn-based-strategy-game-looking-for-concept-artist-creatures-and-structures"
 ---
 Heya! I'm making a turn based strategy game, that has a lot of creatures. Mainly looking for help with coloring creature linearts, redrawing some of the them in interesting poses, making new ones and such or designing dwellings (where each creature lives).
 

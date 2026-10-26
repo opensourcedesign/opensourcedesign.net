@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: GitHub @sunny-chung
 tags: [ux]
 date: '2024-04-14T10:02:38.736Z'
+slug: "design-improvement-or-even-revamp-of-a-desktop-app"
 ---
 This is a cross-platform desktop app for developers and manual testers to test server APIs easily. The work needed is to let the app looks user friendly, attractive and helpful without the need of a user manual.
 

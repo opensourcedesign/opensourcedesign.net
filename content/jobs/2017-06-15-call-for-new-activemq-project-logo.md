@@ -15,5 +15,6 @@ how_to_apply:
 tags: [logo, apache, activemq]
 timestamp: 1497506065
 date: '2017-06-15T05:54:25.222Z'
+slug: "call-for-new-activemq-project-logo"
 ---
 The Apache ActiveMQ logo was created a few years ago. While the project continues to evolve, the logo needs to be updated to reflect current ActiveMQ technology. So, the PMC has discussed making a “Call For Entry” where you can submit a new ActiveMQ Logo.

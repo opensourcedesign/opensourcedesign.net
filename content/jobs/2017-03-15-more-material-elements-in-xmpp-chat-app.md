@@ -18,6 +18,7 @@ date: '2017-03-15'
 aliases:
   - /jobs/2017-03-15-Enhance-UI-Aspects-in-Conversations-app/
 
+slug: "more-material-elements-in-xmpp-chat-app"
 ---
 
 Conversations is a modern XMPP chat client for android. It already has some nice

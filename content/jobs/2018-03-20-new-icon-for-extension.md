@@ -14,6 +14,7 @@ how_to_apply:
   - "Source code: https://github.com/freaktechnik/notification-sounds\r\nCurrent icon: https://github.com/freaktechnik/notification-sounds/blob/master/images/icon-64.png"
 tags: [logo, icons, browser extension, firefox]
 date: '2018-03-20T20:31:30.957Z'
+slug: "new-icon-for-extension"
 ---
 Notification Sound plays a sound when Firefox shows a notification, since not all notification daemons do that.
 

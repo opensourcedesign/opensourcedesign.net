@@ -11,6 +11,7 @@ submited_by: mairin
 compensation: unspecified
 date_posted: 2015-02-12
 how_to_apply: Apply at http://jobs.redhat.com/jobs/descriptions/senior-interaction-designer-user-experience-westford-massachusetts-job-4-4919601
+slug: "open-source-storage-technologies"
 ---
 
 To apply, please visit http://jobs.redhat.com/jobs/descriptions/senior-interaction-designer-user-experience-westford-massachusetts-job-4-4919601

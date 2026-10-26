@@ -13,6 +13,7 @@ how_to_apply:
   - likid.geimfari@gmail.com
 tags: [logo, illustration, open source]
 date: '2018-12-24T15:15:23.064Z'
+slug: "redesign-a-logo-for-an-open-source-data-generation-tool"
 ---
 Redraw current logo in higher resolution. We already have a logo, so we just need to redraw it in higher resolution.
 

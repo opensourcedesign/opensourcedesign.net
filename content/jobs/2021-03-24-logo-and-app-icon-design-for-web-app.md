@@ -15,6 +15,7 @@ how_to_apply:
 github_handle: ''
 tags: [logo, branding]
 date: '2021-03-24T20:13:58.530Z'
+slug: "logo-and-app-icon-design-for-web-app"
 ---
 Bloben is set of end to end encrypted web apps - calendar, notes.
 

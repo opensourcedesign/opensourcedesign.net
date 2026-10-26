@@ -1,6 +1,6 @@
 ---
 _id: 0b5f0d80-840f-11f0-8131-61ff9e5f448a
-status: searching
+status: expired
 date_posted: '2025-08-28'
 layout: jobs
 organization: TUF (The Update Framework)
@@ -22,6 +22,7 @@ how_to_apply:
 github_handle: JustinCappos
 tags: [book]
 date: '2025-08-28T13:01:00.036Z'
+slug: "wed-like-a-childrens-book-for-tuf"
 ---
 Want to make a children's book?
 
