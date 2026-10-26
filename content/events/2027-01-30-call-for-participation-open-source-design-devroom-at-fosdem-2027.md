@@ -74,8 +74,6 @@ In 2027, all talks at the Open Source Design devroom would be in-person and reco
 
 ## How can I submit a talk?
 
-Submissions open as soon as we get the notice of acceptance for our devroom in October/November 2026. It is possible we may not be accepted so we don't encourage talks until we know.
-
 Talk submissions will be sent directly to FOSDEM's [Pretalx](https://pretalx.com/p/about/) system. Submissions for talks must select **'Open Source Design & Open User Research'** under **'Track'**. 
 
 Then the [Open Source Design Core Maintainer team](https://discourse.opensourcedesign.net/t/open-source-design-core-team/888) will review talks and accept and reject. We should have space for between 6-10 talks depending on whether we are awarded a half day or a full day.
