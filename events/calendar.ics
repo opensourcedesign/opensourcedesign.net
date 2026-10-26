@@ -6,8 +6,19 @@ METHOD:PUBLISH
 X-WR-CALNAME:Open Source Design Events
 X-WR-CALDESC:Meetups, online calls, conference tracks, and community gatherings from Open Source Design.
 BEGIN:VEVENT
+UID:a7d3077c94df8bab96da6beb695b9fe8@opensourcedesign.net
+DTSTAMP:20261026T145308Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270201
+SUMMARY:Call for Participation: Open Source Design Devroom at FOSDEM 2027
+DESCRIPTION:Call for Participation: Open Source Design and Open User Research Devroom at FOSDEM 2027 TL\;DR: Submit session proposals for the Open Source Design Devroom of FOSDEM 2027 in Brussels until end of November 2026.\nFOSDEM is the Free and Open source Software Developers’ European Meeting\, a free and non-commercial two-day weekend event that offers all open source contributors a place to meet\, share ideas\, learn and collaborate.\nEvery year\, thousands of free and open source software contributors from all over the world gather at the event in Brussels\, Belgium. After the success of open source design at previous FOSDEM’s\, we are gearing up for the next edition of FOSDEM\, taking place at the Université Libre Brussels on January 30th & 31st 2027.\n
+LOCATION:Université Libre Brussels\, Brussels\, Belgium
+URL:https://opensourcedesign.net/events/2027-01-30-call-for-participation-open-source-design-devroom-at-fosdem-2027/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:51ecacb2d7f4656c90ee96ac5ec873ae@opensourcedesign.net
-DTSTAMP:20261026T081542Z
+DTSTAMP:20261026T145308Z
 DTSTART;VALUE=DATE:20260701
 RRULE:FREQ=MONTHLY;BYDAY=1WE
 SUMMARY:Open Source Design monthly call
