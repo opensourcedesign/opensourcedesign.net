@@ -10,11 +10,14 @@ time: "TBC"
 location: "Université Libre Brussels, Brussels, Belgium"
 ---
 
+
 # Call for Participation: Open Source Design and Open User Research Devroom at FOSDEM 2027
+
+**TL;DR:** _[Submit session proposals](https://pretalx.fosdem.org/fosdem-2027/cfp) for the Open Source Design Devroom of [FOSDEM 2027](https://fosdem.org/2027/) in Brussels until end of November 2026._
 
 [FOSDEM](https://fosdem.org) is the Free and Open source Software Developers’ European Meeting, a free and non-commercial two-day weekend event that offers all open source contributors a place to meet, share ideas, learn and collaborate.
 
-Every year, thousands of free and open source software contributors from all over the world gather at the event in Brussels, Belgium. After the success of open source design at previous FOSDEM's, we are gearing up for the next edition of FOSDEM, taking place at the Université Libre Brussels on January 30th & 31st 2027.
+Every year, thousands of free and open source software contributors from all over the world gather at the event in Brussels, Belgium. After the success of open source design at previous FOSDEM's, we are gearing up for the next edition of FOSDEM, taking place at the [Université Libre Brussels](https://www.ulb.be/) on January 30th & 31st 2027.
 
 ## Open Source Design @ FOSDEM
 
@@ -74,7 +77,7 @@ In 2027, all talks at the Open Source Design devroom would be in-person and reco
 
 ## How can I submit a talk?
 
-Talk submissions will be sent directly to FOSDEM's [Pretalx](https://pretalx.com/p/about/) system. Submissions for talks must select **'Open Source Design & Open User Research'** under **'Track'**. 
+Talk submissions will be sent directly to [FOSDEM's Pretalx](https://pretalx.fosdem.org/fosdem-2027/cfp) system. Submissions for talks must select **'Open Source Design & Open User Research'** under **'Track'**. 
 
 Then the [Open Source Design Core Maintainer team](https://discourse.opensourcedesign.net/t/open-source-design-core-team/888) will review talks and accept and reject. We should have space for between 6-10 talks depending on whether we are awarded a half day or a full day.
 
