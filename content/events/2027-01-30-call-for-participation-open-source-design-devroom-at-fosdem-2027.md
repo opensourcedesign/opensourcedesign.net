@@ -6,7 +6,7 @@ date: "2026-09-12T11:52:56.051Z"
 eventDate: "30–31 January 2027"
 eventStart: "2027-01-30"
 endDate: "2027-01-31"
-time: "TBC"
+time: "Sunday 31st 09.00 - 12.55"
 location: "Université Libre Brussels, Brussels, Belgium"
 ---
 
@@ -21,7 +21,9 @@ Every year, thousands of free and open source software contributors from all ove
 
 ## Open Source Design @ FOSDEM
 
-Open Source Design has been part of FOSDEM for over a decade now! giving designers and user researchers who work with or contribute to free, libre and open source software (FLOSS) a platform to share their ideas. Much like the previous years, Open Source Design is applying for a devroom at FOSDEM 2027 and will update this article if and when we are accepted and also what day/times we have for the open source design and open user research devroom.
+Open Source Design has been part of FOSDEM for over a decade now! giving designers and user researchers who work with or contribute to free, libre and open source software (FLOSS) a platform to share their ideas. Much like the previous years, Open Source Design has had it's devroom accepted and has been renamed to 'Open Source Design and Open User Research Devroom' to be more inclusive of Open Source User Research topics. 
+
+We have been assigned a **half-day from 09.00am until 12.55pm on Sunday 31st of January**
 
 ## Travel support
 
@@ -94,3 +96,16 @@ All deadlines are 23:59 UTC. If your talk is accepted, an Open Source Design vol
 Be sure to read the [FOSDEM Code of Conduct](https://fosdem.org/2027/practical/conduct/) and also the [news from the FOSDEM team](https://fosdem.org/2027/news/).
 
 More information: <https://fosdem.org/>
+
+## Volunteer for the Open Source Design + Open User Research devroom
+
+The devroom operates on a minimum of 2 volunteers to run the talks and set up but runs much smoother when we have more volunteers!
+Some of the volunteer task are:
+1. Promo and helping select and prepare talks with speakers ahead of FOSDEM
+2. Making sure speakers are present and have a microphone attached ahead of their talks (and turned on!)
+3. Speakers know where the camera recording is
+4. Ensuring the room doesn't exceed maximum capacity for safety reasons
+5. Accessibility support from sign language speakers and other ways to support our impaired attendees or attendees that need accommodations for comfort and safety
+6. Clean up and socialising!
+
+Please contact erioldoesdesign@gmail.com if you'd like to volunteer to help the room run smoothly on the day!
