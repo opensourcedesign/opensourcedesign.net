@@ -77,9 +77,12 @@ If a participant engages in behavior violating this code of conduct, the core me
 
 ## Reporting violations
 
-If you are aware of a violation of our code of conduct, please report it by e-mailing our core contributors at `core at opensourcedesign.net`. They will investigate as soon as possible. If you would like to remain anonymous in the report, please note this.
+If you are aware of a violation of our code of conduct, please report it by mailing our Conduct team at `conduct at opensourcedesign.net`. They will investigate as soon as possible. If you would like to remain anonymous in the report, please note this.
 
-For the list of who receives e-mail sent to that address, check [this issue discussing the core e-mail address](https://github.com/opensourcedesign/organization/issues/63#issuecomment-293839577).
+The Conduct team is:
+- Caroline Sinders `caroline.sinders at opensourcedesign.net`
+- Eriol Fox `eriol.fox at opensourcedesign.net`
+- Jan C. Borchardt `jan.borchardt at opensourcedesign.net`
 
 ## Decisions about consequences
 
