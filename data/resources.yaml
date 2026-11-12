@@ -219,6 +219,12 @@
     - name: SVGicons.com
       url: https://svgicons.com/
       description: Search and browse open-source SVG icon sets with source and license context.
+    - name: Iconito Food Icons
+      url: https://iconi.to/free-food-icons
+      description: 120 colour food icons drawn to stay readable at 24 px, each with a one-colour version. MIT licensed.
+      links:
+        - text: GitHub
+          url: https://github.com/iconi-to/free-food
 
 - id: fonts
   title: Fonts
