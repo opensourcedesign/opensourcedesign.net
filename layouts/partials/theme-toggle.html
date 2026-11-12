@@ -2,20 +2,19 @@
   theme-toggle.html - colour-scheme switch.
 
   Two variants:
-    "icon" – single header button that cycles light → system → dark
+    "icon" – single header button that cycles light → dark
              (data-theme-toggle; icon reflects the active state).
     "menu" – mobile-menu row: a labelled segmented control with one button
              per state (data-theme-set), so the choice is a single tap and
              nothing wraps in the narrow dropdown.
 
-  The choice is persisted in localStorage ("osd-theme": "light" | "dark",
-  absent = system) and applied by the synchronous head script in baseof.html
+  The choice is persisted in localStorage ("osd-theme": "light" | "dark")
+  and applied by the synchronous head script in baseof.html
   (window.osdSyncTheme). Controls ship hidden and are revealed by main.js, so
   no-JS visitors never see a dead control.
 */}}
 {{ $variant := .variant | default "icon" }}
 {{ $iconLight := `<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>` }}
-{{ $iconSystem := `<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25"/></svg>` }}
 {{ $iconDark := `<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>` }}
 {{ if eq $variant "menu" }}
   {{/* Styled to match the surrounding menu rows exactly: same padding,
@@ -31,10 +30,6 @@
         {{ $iconLight | safeHTML }}
         Light
       </button>
-      <button type="button" data-theme-set="system" class="{{ $row }}">
-        {{ $iconSystem | safeHTML }}
-        System
-      </button>
       <button type="button" data-theme-set="dark" class="{{ $row }}">
         {{ $iconDark | safeHTML }}
         Dark
@@ -46,7 +41,6 @@
     class="inline-flex h-9 w-9 items-center justify-center rounded-md text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-50 dark:focus-visible:ring-slate-100/30 dark:focus-visible:ring-offset-slate-950"
     data-theme-toggle data-theme-pending>
     <span class="osd-theme-icon-light">{{ replace $iconLight "h-4 w-4" "h-5 w-5" | safeHTML }}</span>
-    <span class="osd-theme-icon-system">{{ replace $iconSystem "h-4 w-4" "h-5 w-5" | safeHTML }}</span>
     <span class="osd-theme-icon-dark">{{ replace $iconDark "h-4 w-4" "h-5 w-5" | safeHTML }}</span>
   </button>
 {{ end }}
