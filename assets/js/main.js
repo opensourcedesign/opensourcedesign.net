@@ -68,18 +68,20 @@
     var setButtons = document.querySelectorAll('[data-theme-set]');
     var groups = document.querySelectorAll('[data-theme-group]');
     if (!cycleButtons.length && !setButtons.length) return;
-    var ORDER = ['light', 'system', 'dark'];
-    var LABELS = { light: 'Light', system: 'System', dark: 'Dark' };
+    var ORDER = ['light', 'dark'];
+    var LABELS = { light: 'Light', dark: 'Dark' };
     function current() {
       try {
         var v = localStorage.getItem('osd-theme');
-        return v === 'light' || v === 'dark' ? v : 'system';
-      } catch (e) { return 'system'; }
+        if (v === 'light' || v === 'dark') return v;
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      } catch (e) { 
+        return 'light'; 
+      }
     }
     function apply(state) {
       try {
-        if (state === 'system') localStorage.removeItem('osd-theme');
-        else localStorage.setItem('osd-theme', state);
+        localStorage.setItem('osd-theme', state);
       } catch (e) { /* private mode: theme just won't persist */ }
       if (window.osdSyncTheme) window.osdSyncTheme();
       render();
