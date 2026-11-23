@@ -1,6 +1,6 @@
 ---
 _id: 6d35bd00-c65a-11f0-a38b-e7acfcabc052
-status: searching
+status: expired
 date_posted: '2025-11-20'
 layout: jobs
 organization: PlugBrain
